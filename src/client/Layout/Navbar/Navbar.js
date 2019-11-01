@@ -1,18 +1,9 @@
 import React from 'react';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Toolbar, Typography, Button, Fab } from '@material-ui/core';
+import { AppBar, Toolbar, Button, Fab } from '@material-ui/core';
 import { Facebook, Twitter, Instagram } from '@material-ui/icons';
-
-const fabTheme = createMuiTheme({
-  overrides: {
-    MuiFab: {
-      primary: {
-        backgroundColor: '#00a650'
-      }
-    }
-  }
-});
+import TestLogo from './test_logo.png';
+import MenuDrawer from './Drawer';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -25,7 +16,9 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     flexGrow: 1,
-    color: 'black'
+    color: 'black',
+    verticalAlign: 'middle',
+    margin: theme.spacing(1)
   },
   button: {
     background: 'black',
@@ -40,6 +33,11 @@ const useStyles = makeStyles(theme => ({
     ':hover&': {
       background: '#00a650'
     }
+  },
+  logo: {
+    height: '50px',
+    width: '50px',
+    marginRight: theme.spacing(1)
   }
 }));
 
@@ -50,25 +48,25 @@ export default function ButtonAppBar() {
     <div className={classes.root}>
       <AppBar position="static" className={classes.appBar}>
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            LOGO
-          </Typography>
+          <img className={classes.logo} src={TestLogo} alt="logo" />
+          <h2 className={classes.title}>Lorem</h2>
+
           <Button color="inherit" className={classes.button}>
             Register
           </Button>
           <Button color="inherit" className={classes.button}>
             Login
           </Button>
-          <ThemeProvider theme={fabTheme}>
-            <Fab
-              size="small"
-              color="primary"
-              aria-label="add"
-              className={classes.fab}
-            >
-              <Facebook />
-            </Fab>
-          </ThemeProvider>
+
+          <Fab
+            size="small"
+            color="primary"
+            aria-label="add"
+            className={classes.fab}
+          >
+            <Facebook />
+          </Fab>
+
           <Fab
             size="small"
             color="primary"
@@ -85,6 +83,7 @@ export default function ButtonAppBar() {
           >
             <Instagram />
           </Fab>
+          <MenuDrawer />
         </Toolbar>
       </AppBar>
     </div>
