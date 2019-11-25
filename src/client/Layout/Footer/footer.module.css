@@ -10,7 +10,6 @@
 
 .container1{
     width: 700px;
-    ;
     position: relative;
     top:50px;
     left: 50px;
@@ -19,18 +18,20 @@
 }
 
 .footerheadline{
-    color: rgb(16, 233, 70);
+    color: white;
+    
     
 }
 
 .subtextheadline{
-    color: white;
+    color: rgb(185, 185, 185);
     text-align: justify;
+    
     
 }
 
 .container2{
-    color: white;
+    color: rgb(185, 185, 185);
     width: 700px;
     text-align: justify;
     position: relative;

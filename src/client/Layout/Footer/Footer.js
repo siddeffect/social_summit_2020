@@ -4,6 +4,7 @@ import { makeStyles,withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { Facebook, Twitter, Instagram } from '@material-ui/icons';
+import { decorator } from '@babel/types';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -59,19 +60,19 @@ export default function Footer() {
               <div className={styles.icons}>
 
                 <div >
-                  <a href = "#" target = "_blank" rel="noopener noreferrer" style={{color:'#4267b2'}}>
+                  <a href = "#" target = "_blank" rel="noopener noreferrer" style={{color:'#ffffff'}}>
                   <Facebook/>
                   </a>
                 </div>
 
                 <div>
-                  <a href = "#" target = "_blank" rel="noopener noreferrer" style={{color:'#1da1f2'}}>
+                  <a href = "#" target = "_blank" rel="noopener noreferrer" style={{color:'#ffffff'}}>
                   <Twitter/>
                   </a>
                 </div>
                 
                 <div>
-                  <a href = "#" target = "_blank" rel="noopener noreferrer" style={{color:'#de5c82'}}>
+                  <a href = "#" target = "_blank" rel="noopener noreferrer" style={{color:'#ffffff'}}>
                   <Instagram/>
                   </a>
                 </div>
