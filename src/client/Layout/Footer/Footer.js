@@ -59,19 +59,19 @@ export default function Footer() {
               <div className={styles.icons}>
 
                 <div >
-                  <a href = "https://www.tutorialspoint.com" target = "_blank" rel="noopener noreferrer">
+                  <a href = "#" target = "_blank" rel="noopener noreferrer" style={{color:'#4267b2'}}>
                   <Facebook/>
                   </a>
                 </div>
 
                 <div>
-                  <a href = "https://www.tutorialspoint.com" target = "_blank" rel="noopener noreferrer">
+                  <a href = "#" target = "_blank" rel="noopener noreferrer" style={{color:'#1da1f2'}}>
                   <Twitter/>
                   </a>
                 </div>
                 
                 <div>
-                  <a href = "https://www.tutorialspoint.com" target = "_blank" rel="noopener noreferrer">
+                  <a href = "#" target = "_blank" rel="noopener noreferrer" style={{color:'#de5c82'}}>
                   <Instagram/>
                   </a>
                 </div>
@@ -98,21 +98,17 @@ export default function Footer() {
 
             <div className={styles.container4}>
               <div className={styles.links}>
-                  <div><strong><a href = "#" target = "_blank" rel="noopener noreferrer">Home</a></strong></div>
-                  <div><strong><a href = "#" target = "_blank" rel="noopener noreferrer">Events</a></strong></div>
-                  <div><strong><a href = "#" target = "_blank" rel="noopener noreferrer">Partners</a></strong></div>
-                  <div><strong><a href = "#" target = "_blank" rel="noopener noreferrer">Team</a></strong></div>
-                  <div><strong><a href = "#" target = "_blank" rel="noopener noreferrer">About</a></strong></div>
+              
+                  <div><strong><a href = "#" target = "_blank" rel="noopener noreferrer" style={{color: 'white'}}>Home</a></strong></div>
+                  <div><strong><a href = "#" target = "_blank" rel="noopener noreferrer" style={{color: 'white'}}>Events</a></strong></div>
+                  <div><strong><a href = "#" target = "_blank" rel="noopener noreferrer" style={{color: 'white'}}>Partners</a></strong></div>
+                  <div><strong><a href = "#" target = "_blank" rel="noopener noreferrer" style={{color: 'white'}}>Team</a></strong></div>
+                  <div><strong><a href = "#" target = "_blank" rel="noopener noreferrer" style={{color: 'white'}}>About</a></strong></div>
+               
               </div>
 
               <div className={styles.text3}>Do you have any question, send us a word!</div>
             </div>
         </div>
-       
-
-        
-
-
-        
     )
 }
