@@ -1,115 +1,132 @@
-import React from 'react'
-import styles from './footer.module.css'
-import { makeStyles,withStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-import { Facebook, Twitter, Instagram } from '@material-ui/icons';
-import { decorator } from '@babel/types';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { Fab } from "@material-ui/core";
+import { Facebook, Twitter, Instagram } from "@material-ui/icons";
+import EmailIcon from "@material-ui/icons/Email";
+import PhoneIcon from "@material-ui/icons/Phone";
+import LocationOnIcon from "@material-ui/icons/LocationOn";
 
 const useStyles = makeStyles(theme => ({
-    root: {
-      '& > *': {
-        width: 350,
-      },
-    },
-    button: {
-      color: 'white',
-      background:'green',
-      borderRadius: '0 8px 8px 0 !important'
-
-    },
-  }));
-
-  const CssTextField = withStyles({
-    root: {
-      '& label.Mui-focused': {
-        color: 'green',
-      },
-      '& .MuiInput-underline:after': {
-        borderBottomColor: 'green',
-      },
-      '& .MuiOutlinedInput-root': {
-        '& fieldset': {
-          borderColor: 'black',
-        },
-        '&:hover fieldset': {
-          borderColor: 'green',
-        },
-        '&.Mui-focused fieldset': {
-          borderColor: 'green',
-        },
-      },
-    },
-  })(TextField);
+  root: {
+    background: "#111111",
+    height: 400,
+    display: "flex",
+    padding: "150px 200px 150px 200px"
+  },
+  contentBox: {
+    display: "flex",
+    flexGrow: 2,
+    flexDirection: "column"
+  },
+  header: {
+    color: "#46A651",
+    fontSize: "40px",
+    fontFamily: "Serif"
+  },
+  themeContent: {
+    margin: "40px 100px 0 0",
+    maxWidth: "600px",
+    color: "#545D5F",
+    fontSize: "1.1em"
+  },
+  fabs: {
+    marginTop: 100,
+    display: "flex",
+    flexDirection: "row"
+  },
+  fab: {
+    margin: theme.spacing(1),
+    background: "#1A1E21",
+    ":hover&": {
+      background: "#00a650"
+    }
+  },
+  emailLinkBox: {
+    flexGrow: 1
+  },
+  links: {
+    display: "flex",
+    flexDirection: "row",
+    listStyleType: "none"
+  },
+  link: {
+    margin: 10
+  },
+  icon: {
+    color: "#fff",
+    marginRight: "20px"
+  },
+  text: {
+    color: "#fff",
+    verticalAlign: "middle"
+  }
+}));
 
 export default function Footer() {
-    const classes = useStyles();
-    return (
+  const classes = useStyles();
+  return (
+    <footer className={classes.root}>
+      <div className={classes.contentBox}>
+        <h1 className={classes.header}>Let's Innovate for the Nature</h1>
 
-        <div className={styles.outercontainer}>
-            <div className={styles.container1}>
-
-              <h1 className={styles.footerheadline}>Lorem voluptua vero</h1>
-              <p className={styles.subtextheadline}>Lorem voluptua vero voluptua justo no. Sanctus The stately burden in agreeing laden my velvet voluptua vero</p>
-
-            </div>
-            
-            <div className={styles.container2}>
-            <p>The wished i the entrance bird nevermore, he hear now and desert in, by dirges what i as minute and Lorem voluptua vero voluptua justo no. Sanctus The stately Lorem voluptua vero voluptua justo no. Sanctus The stately burden in agreeing laden my velvet voluptua veroLorem voluptua vero voluptua justo no. Sanctus The stately burden in agreeing laden my velvet voluptua vero.</p>
-
-              <div className={styles.icons}>
-
-                <div >
-                  <a href = "#" target = "_blank" rel="noopener noreferrer" style={{color:'#ffffff'}}>
-                  <Facebook/>
-                  </a>
-                </div>
-
-                <div>
-                  <a href = "#" target = "_blank" rel="noopener noreferrer" style={{color:'#ffffff'}}>
-                  <Twitter/>
-                  </a>
-                </div>
-                
-                <div>
-                  <a href = "#" target = "_blank" rel="noopener noreferrer" style={{color:'#ffffff'}}>
-                  <Instagram/>
-                  </a>
-                </div>
-
-              </div>
-            </div>
-
-            <div className={styles.container3}>
-                <form className={classes.root} noValidate autoComplete="off">
-                    <CssTextField
-                        id="outlined-secondary"
-                        label="Email Address"
-                        variant="outlined"
-                        color="primary"
-                        borderColor='#248a24'
-                        className={classes.margin}
-                    />
-                </form>
-
-                <Button className={classes.button}>
-                Sign In
-                </Button>
-            </div>
-
-            <div className={styles.container4}>
-              <div className={styles.links}>
-              
-                  <div><strong><a href = "#" target = "_blank" rel="noopener noreferrer" style={{color: 'white'}}>Home</a></strong></div>
-                  <div><strong><a href = "#" target = "_blank" rel="noopener noreferrer" style={{color: 'white'}}>Events</a></strong></div>
-                  <div><strong><a href = "#" target = "_blank" rel="noopener noreferrer" style={{color: 'white'}}>Partners</a></strong></div>
-                  <div><strong><a href = "#" target = "_blank" rel="noopener noreferrer" style={{color: 'white'}}>Team</a></strong></div>
-                  <div><strong><a href = "#" target = "_blank" rel="noopener noreferrer" style={{color: 'white'}}>About</a></strong></div>
-               
-              </div>
-
-              <div className={styles.text3}>Do you have any question, send us a word!</div>
-            </div>
+        <div className={classes.themeContent}>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
+          accusamus similique nostrum soluta vitae, odit consequuntur aspernatur
+          cumque laudantium eveniet obcaecati alias veniam repudiandae
+          doloribus. Illo iure beatae ipsum voluptatum hic, id autem nihil
+          consequatur dolore sed dolorem fugit sequi. Et quasi accusantium nisi
+          tenetur debitis voluptatibus ipsum iusto quisquam.
         </div>
-    )
+        <div className={classes.fabs}>
+          <Fab
+            size="small"
+            color="primary"
+            aria-label="add"
+            className={classes.fab}
+          >
+            <Facebook />
+          </Fab>
+
+          <Fab
+            size="small"
+            color="primary"
+            aria-label="add"
+            className={classes.fab}
+          >
+            <Twitter />
+          </Fab>
+          <Fab
+            size="small"
+            color="primary"
+            aria-label="add"
+            className={classes.fab}
+          >
+            <Instagram />
+          </Fab>
+        </div>
+      </div>
+      <div className={classes.emailLinkBox}>
+        <div className={classes.emailBox}>
+          <h2 className={classes.header}>Contact</h2>
+        </div>
+        <div className={classes.contactInfo}>
+          <div>
+            <PhoneIcon className={classes.icon} />
+            <span className={classes.text}>+91-9572851250</span>
+          </div>
+          <div>
+            <EmailIcon className={classes.icon} />
+            <span className={classes.text}>socialsummit.contact@gmail.com</span>
+          </div>
+          <div>
+            <LocationOnIcon className={classes.icon} />
+            <span className={classes.text}>
+              NSS Office, 2nd floor, Multi Activity Centre (MAC), IIT Roorkee
+              ZIP - 247667
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 }
