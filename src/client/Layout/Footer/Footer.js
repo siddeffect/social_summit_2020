@@ -11,7 +11,13 @@ const useStyles = makeStyles(theme => ({
     background: "#111111",
     height: 400,
     display: "flex",
-    padding: "150px 200px 150px 200px"
+    padding: "150px 200px 150px 200px",
+    ["@media (max-width:780px)"]: {
+      // eslint-disable-line no-useless-computed-key
+      height: 500,
+      padding: "20px 20px 15px 20px",
+      flexDirection: "column"
+    }
   },
   contentBox: {
     display: "flex",
@@ -21,18 +27,31 @@ const useStyles = makeStyles(theme => ({
   header: {
     color: "#46A651",
     fontSize: "40px",
-    fontFamily: "Serif"
+    fontFamily: "Serif",
+    ["@media (max-width:780px)"]: {
+      // eslint-disable-line no-useless-computed-key
+      fontSize: "24px"
+    }
   },
   themeContent: {
     margin: "40px 100px 0 0",
     maxWidth: "600px",
     color: "#545D5F",
-    fontSize: "1.1em"
+    fontSize: "1.1em",
+    ["@media (max-width:780px)"]: {
+      // eslint-disable-line no-useless-computed-key
+      fontSize: "0.9em",
+      margin: "10px 40px 0 0"
+    }
   },
   fabs: {
     marginTop: 100,
     display: "flex",
-    flexDirection: "row"
+    flexDirection: "row",
+    ["@media (max-width:780px)"]: {
+      // eslint-disable-line no-useless-computed-key
+      marginTop: 20
+    }
   },
   fab: {
     margin: theme.spacing(1),
@@ -42,7 +61,11 @@ const useStyles = makeStyles(theme => ({
     }
   },
   emailLinkBox: {
-    flexGrow: 1
+    flexGrow: 1,
+    ["@media (max-width:780px)"]: {
+      // eslint-disable-line no-useless-computed-key
+      paddingBottom: 40
+    }
   },
   links: {
     display: "flex",
@@ -58,7 +81,11 @@ const useStyles = makeStyles(theme => ({
   },
   text: {
     color: "#fff",
-    verticalAlign: "middle"
+    verticalAlign: "middle",
+    ["@media (max-width:780px)"]: {
+      // eslint-disable-line no-useless-computed-key
+      fontSize: "12px"
+    }
   }
 }));
 
@@ -70,12 +97,10 @@ export default function Footer() {
         <h1 className={classes.header}>Let's Innovate for the Nature</h1>
 
         <div className={classes.themeContent}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
-          accusamus similique nostrum soluta vitae, odit consequuntur aspernatur
-          cumque laudantium eveniet obcaecati alias veniam repudiandae
-          doloribus. Illo iure beatae ipsum voluptatum hic, id autem nihil
-          consequatur dolore sed dolorem fugit sequi. Et quasi accusantium nisi
-          tenetur debitis voluptatibus ipsum iusto quisquam.
+          National social summit-2020, IIT Roorkee, aims for the upliftment of
+          the nation by identifying and working on problems on the ground level.
+          It is a two-day serving of collaborative workshops, networking, and an
+          insight from the industry’s thought leader!
         </div>
         <div className={classes.fabs}>
           <Fab

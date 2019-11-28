@@ -7,18 +7,32 @@ import MenuDrawer from "./Drawer";
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    padding: " 10px",
-    background: "#111111"
+    background: "transparent",
+    ["@media (max-width:780px)"]: {
+      // eslint-disable-line no-useless-computed-key
+      width: "420px"
+    }
   },
   appBar: {
-    background: "#111111",
-    boxShadow: "none"
+    position: "absolute",
+    padding: " 10px",
+
+    background: "transparent",
+    boxShadow: "none",
+    ["@media (max-width:780px)"]: {
+      // eslint-disable-line no-useless-computed-key
+      width: "410px"
+    }
   },
   button: {
     background: "black",
     marginEnd: "20px",
     ":hover&": {
       background: "#00a650"
+    },
+    ["@media (max-width:780px)"]: {
+      // eslint-disable-line no-useless-computed-key
+      display: "none"
     }
   },
   fab: {
@@ -26,6 +40,10 @@ const useStyles = makeStyles(theme => ({
     background: "#0e1113",
     ":hover&": {
       background: "#00a650"
+    },
+    ["@media (max-width:780px)"]: {
+      // eslint-disable-line no-useless-computed-key
+      display: "none"
     }
   },
   logo: {
@@ -33,7 +51,14 @@ const useStyles = makeStyles(theme => ({
     height: "70px",
     width: "50px",
     paddingRight: "1300px",
-    marginRight: theme.spacing(1)
+    marginRight: theme.spacing(1),
+    ["@media (max-width:780px)"]: {
+      // eslint-disable-line no-useless-computed-key
+      flex: 0,
+      height: "40px",
+      width: "auto",
+      paddingRight: "230px"
+    }
   }
 }));
 
