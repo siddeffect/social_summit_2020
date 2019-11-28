@@ -29,7 +29,6 @@ class CounterNumberUp extends Component {
 
     render(){
         let count=50
-        // let endTime=this.props.time;
         
         count = count + setTimeout(this.countup,this.props.time)
 

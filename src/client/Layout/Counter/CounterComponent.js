@@ -134,7 +134,6 @@ const useStyles = makeStyles(theme => ({
         background:'#272727',
         flexWrap:'wrap',
         textAlign:'center',
-        // alignContent:'center',
         
     },
 
@@ -160,7 +159,6 @@ const useStyles = makeStyles(theme => ({
         height:"auto",
         color:"#ffffff",
         fontFamily: ["Oxygen", "sans-serif"].join(","),
-        // border:"5px solid yellow",
     },
 }))    
 
