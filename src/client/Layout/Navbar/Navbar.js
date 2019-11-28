@@ -1,43 +1,64 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Toolbar, Button, Fab } from '@material-ui/core';
-import { Facebook, Twitter, Instagram } from '@material-ui/icons';
-import TestLogo from './test_logo.png';
-import MenuDrawer from './Drawer';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { AppBar, Toolbar, Button, Fab } from "@material-ui/core";
+import { Facebook, Twitter, Instagram } from "@material-ui/icons";
+import MenuDrawer from "./Drawer";
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    height: '100px !important'
+    background: "transparent",
+    ["@media (max-width:780px)"]: {
+      // eslint-disable-line no-useless-computed-key
+      width: "420px"
+    }
   },
   appBar: {
-    background: '#e0e0e0',
-    boxShadow: 'none'
-  },
-  title: {
-    flexGrow: 1,
-    color: 'black',
-    verticalAlign: 'middle',
-    margin: theme.spacing(1)
+    position: "absolute",
+    padding: " 10px",
+
+    background: "transparent",
+    boxShadow: "none",
+    ["@media (max-width:780px)"]: {
+      // eslint-disable-line no-useless-computed-key
+      width: "410px"
+    }
   },
   button: {
-    background: 'black',
-    marginEnd: '20px',
-    ':hover&': {
-      background: '#00a650'
+    background: "black",
+    marginEnd: "20px",
+    ":hover&": {
+      background: "#00a650"
+    },
+    ["@media (max-width:780px)"]: {
+      // eslint-disable-line no-useless-computed-key
+      display: "none"
     }
   },
   fab: {
     margin: theme.spacing(1),
-    background: '#0e1113',
-    ':hover&': {
-      background: '#00a650'
+    background: "#0e1113",
+    ":hover&": {
+      background: "#00a650"
+    },
+    ["@media (max-width:780px)"]: {
+      // eslint-disable-line no-useless-computed-key
+      display: "none"
     }
   },
   logo: {
-    height: '50px',
-    width: '50px',
-    marginRight: theme.spacing(1)
+    flexGrow: 1,
+    height: "70px",
+    width: "50px",
+    paddingRight: "1300px",
+    marginRight: theme.spacing(1),
+    ["@media (max-width:780px)"]: {
+      // eslint-disable-line no-useless-computed-key
+      flex: 0,
+      height: "40px",
+      width: "auto",
+      paddingRight: "230px"
+    }
   }
 }));
 
@@ -48,8 +69,11 @@ export default function ButtonAppBar() {
     <div className={classes.root}>
       <AppBar position="static" className={classes.appBar}>
         <Toolbar>
-          <img className={classes.logo} src={TestLogo} alt="logo" />
-          <h2 className={classes.title}>Lorem</h2>
+          <img
+            className={classes.logo}
+            src="/Images/Logo_Main.svg"
+            alt="logo"
+          />
 
           <Button color="inherit" className={classes.button}>
             Register

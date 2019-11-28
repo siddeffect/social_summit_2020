@@ -1,5 +1,5 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import {
   IconButton,
   ListItemText,
@@ -8,24 +8,25 @@ import {
   Divider,
   List,
   Drawer
-} from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+} from "@material-ui/core";
+import MenuIcon from "@material-ui/icons/Menu";
+import InboxIcon from "@material-ui/icons/MoveToInbox";
+import MailIcon from "@material-ui/icons/Mail";
 
 const useStyles = makeStyles({
   list: {
-    width: 300
+    width: 300,
+    marginTop: "300px"
   },
   drawer: {
-    background: '#00a650'
+    background: "#00a650"
   },
   paper: {
-    background: 'black',
-    color: 'white'
+    background: "black",
+    color: "white"
   },
   menuButton: {
-    color: 'black'
+    color: "white"
   }
 });
 
@@ -37,8 +38,8 @@ function MenuDrawer() {
 
   const toggleDrawer = (side, open) => event => {
     if (
-      event.type === 'keydown' &&
-      (event.key === 'Tab' || event.key === 'Shift')
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
     ) {
       return;
     }
@@ -54,7 +55,7 @@ function MenuDrawer() {
       onKeyDown={toggleDrawer(side, false)}
     >
       <List>
-        {['Home', 'Events', 'Partners', 'Team', 'About', 'Contact'].map(
+        {["Home", "Events", "Partners", "Team", "About", "Contact"].map(
           (text, index) => (
             <ListItem button key={text}>
               <ListItemIcon>
@@ -70,9 +71,9 @@ function MenuDrawer() {
   );
 
   return (
-    <div>
+    <div className={classes.root}>
       <IconButton
-        onClick={toggleDrawer('right', true)}
+        onClick={toggleDrawer("right", true)}
         edge="end"
         className={classes.menuButton}
         color="inherit"
@@ -85,9 +86,9 @@ function MenuDrawer() {
         classes={{ paper: classes.paper }}
         anchor="right"
         open={state.right}
-        onClose={toggleDrawer('right', false)}
+        onClose={toggleDrawer("right", false)}
       >
-        {sideList('right')}
+        {sideList("right")}
       </Drawer>
     </div>
   );
