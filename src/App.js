@@ -10,7 +10,7 @@ function App() {
     <div>
       <Navbar />
       <Hero />
-      <Grid /> <br />
+      <Grid />
       <EventNSS />
       <Footer />
     </div>
