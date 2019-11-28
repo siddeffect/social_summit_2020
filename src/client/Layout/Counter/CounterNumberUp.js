@@ -6,12 +6,13 @@ class CounterNumberUp extends Component {
         super(props);
     
         this.state = {
-             count: 0
+             count: 0,
         }
     }
     
-    countup=()=> {
-        let end=1000
+    countup=(props)=> {
+        let end=this.props.endValue;
+        let endTime=this.props.time;
 
         if(end>this.state.count){
             this.setState(prevState => ({
@@ -28,8 +29,9 @@ class CounterNumberUp extends Component {
 
     render(){
         let count=50
+        // let endTime=this.props.time;
         
-        count = count + setTimeout(this.countup,10)
+        count = count + setTimeout(this.countup,this.props.time)
 
         return (
             <div>
