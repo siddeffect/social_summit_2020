@@ -1,42 +1,38 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Toolbar, Button, Fab } from '@material-ui/core';
-import { Facebook, Twitter, Instagram } from '@material-ui/icons';
-import TestLogo from './test_logo.png';
-import MenuDrawer from './Drawer';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { AppBar, Toolbar, Button, Fab } from "@material-ui/core";
+import { Facebook, Twitter, Instagram } from "@material-ui/icons";
+import MenuDrawer from "./Drawer";
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    height: '100px !important'
+    padding: " 10px",
+    background: "#111111"
   },
   appBar: {
-    background: '#e0e0e0',
-    boxShadow: 'none'
-  },
-  title: {
-    flexGrow: 1,
-    color: 'black',
-    verticalAlign: 'middle',
-    margin: theme.spacing(1)
+    background: "#111111",
+    boxShadow: "none"
   },
   button: {
-    background: 'black',
-    marginEnd: '20px',
-    ':hover&': {
-      background: '#00a650'
+    background: "black",
+    marginEnd: "20px",
+    ":hover&": {
+      background: "#00a650"
     }
   },
   fab: {
     margin: theme.spacing(1),
-    background: '#0e1113',
-    ':hover&': {
-      background: '#00a650'
+    background: "#0e1113",
+    ":hover&": {
+      background: "#00a650"
     }
   },
   logo: {
-    height: '50px',
-    width: '50px',
+    flexGrow: 1,
+    height: "70px",
+    width: "50px",
+    paddingRight: "1300px",
     marginRight: theme.spacing(1)
   }
 }));
@@ -48,8 +44,11 @@ export default function ButtonAppBar() {
     <div className={classes.root}>
       <AppBar position="static" className={classes.appBar}>
         <Toolbar>
-          <img className={classes.logo} src={TestLogo} alt="logo" />
-          <h2 className={classes.title}>Lorem</h2>
+          <img
+            className={classes.logo}
+            src="/Images/Logo_Main.svg"
+            alt="logo"
+          />
 
           <Button color="inherit" className={classes.button}>
             Register
