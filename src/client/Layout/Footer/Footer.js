@@ -4,7 +4,6 @@ import { makeStyles,withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { Facebook, Twitter, Instagram } from '@material-ui/icons';
-import { decorator } from '@babel/types';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -45,6 +44,7 @@ const useStyles = makeStyles(theme => ({
 export default function Footer() {
     const classes = useStyles();
     return (
+      
 
         <div className={styles.outercontainer}>
             <div className={styles.container1}>
@@ -100,16 +100,17 @@ export default function Footer() {
             <div className={styles.container4}>
               <div className={styles.links}>
               
-                  <div><strong><a href = "#" target = "_blank" rel="noopener noreferrer" style={{color: 'white'}}>Home</a></strong></div>
-                  <div><strong><a href = "#" target = "_blank" rel="noopener noreferrer" style={{color: 'white'}}>Events</a></strong></div>
-                  <div><strong><a href = "#" target = "_blank" rel="noopener noreferrer" style={{color: 'white'}}>Partners</a></strong></div>
-                  <div><strong><a href = "#" target = "_blank" rel="noopener noreferrer" style={{color: 'white'}}>Team</a></strong></div>
-                  <div><strong><a href = "#" target = "_blank" rel="noopener noreferrer" style={{color: 'white'}}>About</a></strong></div>
+                  <div><strong><a href = "#" target = "_blank"  style={{color: 'green'},{'text-decoration':'none'}}>Home</a></strong></div>
+                  <div><strong><a href = "#" target = "_blank"  style={{color: 'white'},{'text-decoration':'none'}}>Events</a></strong></div>
+                  <div><strong><a href = "#" target = "_blank"  style={{color: 'white'},{'text-decoration':'none'}}>Partners</a></strong></div>
+                  <div><strong><a href = "#" target = "_blank"  style={{color: 'white'},{'text-decoration':'none'}}>Team</a></strong></div>
+                  <div><strong><a href = "#" target = "_blank"  style={{color: 'white'},{'text-decoration':'none'}}>About</a></strong></div>
                
               </div>
 
               <div className={styles.text3}>Do you have any question, send us a word!</div>
             </div>
         </div>
+        
     )
 }

@@ -78,14 +78,17 @@
 .links{
     display: flex;
     flex-direction: row;
-    color: rgb(255, 255, 255);
     margin: 10px;
     font-size: 10;
+    
 
 }
 
 .links > div{
     margin-right: 40px;
+    
+
+    
   
 }
 
