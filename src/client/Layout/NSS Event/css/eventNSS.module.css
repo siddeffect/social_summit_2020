@@ -1,0 +1,76 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  margin-right: 15%;
+  margin-left: 15%;
+}
+
+.leftContainer,
+.middleContainer,
+.rightContainer {
+  width: 360px;
+  border-radius: 16px;
+}
+
+.leftPara,
+.rightPara,
+.middlePara {
+  font-family: "Ubuntu";
+  font-size: 20px;
+  color: #5d5d5d;
+}
+
+.leftContent,
+.rightContent,
+.middleContent {
+  box-sizing: border-box;
+  padding: 24px 36px 0 24px;
+  text-align: center;
+}
+
+.leftHeader,
+.rightHeader,
+.middleHeader {
+  font-size: 30px;
+  font-family: "Ubuntu";
+}
+
+.leftHeading,
+.rightHeading {
+  box-sizing: border-box;
+  padding: 24px 36px 24px 24px;
+  text-align: center;
+}
+
+.leftHeading,
+.rightHeading {
+  box-sizing: border-box;
+  margin-top: 15%;
+  border-radius: 0 0 16px 16px;
+}
+
+.leftHeader,
+.rightHeader {
+  color: #5d5d5d;
+}
+
+.leftContainer,
+.rightContainer {
+  background-color: #f2f2f2;
+}
+
+.middleContainer {
+  background-color: #00a650;
+}
+.middleHeading {
+  box-sizing: border-box;
+  margin-top: 15%;
+  padding: 24px 36px 24px 24px;
+  text-align: center;
+}
+
+.middlePara,
+.middleHeader {
+  color: #fff;
+}
