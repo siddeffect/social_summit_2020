@@ -29,11 +29,13 @@ render() {
 					       <figure className={Styles.effectImgCard}>
 					          <img src={Image1} className={Styles.img} alt="" style={{width:"500px",height:"300px"}}/>
 						        <figcaption className={Styles.imgCaption}>
-						          <label className={Styles.header}> Social <span style={{fontWeight:"bold"}}>Summit</span></label>
+						          <label className={Styles.header}> 
+                        Social <span style={{fontWeight:"bold"}}>Summit</span> 
+                      </label> 
 							        <p className={Styles.description}>
-                         Lorem ipsum dolor sit amet,<br/> consectetur adipiscing elit,
+                        Lorem ipsum dolor sit amet,<br/> consectetur adipiscing elit,
                          sed do eiusmod tempor <br/>incididunt ut labore et dolore magna aliqua. 
-                     </p>
+                      </p>
 					      	</figcaption>			
 					      </figure>
               </div>          
@@ -143,7 +145,7 @@ render() {
           <div className={Styles.wraper1}>
                <div className={Styles.imgCard}>
 					       <figure className={Styles.effectImgCard}>
-					          <img src={Image1} className={Styles.img} alt="" style={{width:"150px",height:"100px"}}/>
+					          <img src={Image1} className={Styles.imgMobile} alt="" style={{width:"550px",height:"300px"}}/>
 						        <figcaption className={Styles.imgCaption}>
 						          <label className={Styles.header}> Social <span style={{fontWeight:"bold"}}>Summit</span></label>
 							       
@@ -153,54 +155,62 @@ render() {
             
               <div className={Styles.imgCard}>
 					       <figure className={Styles.effectImgCard}>
-					          <img src={Image2} className={Styles.img}alt="" style={{width:"150px",height:"100px"}}/>
+					          <img src={Image2} className={Styles.imMobileg}alt="" style={{width:"550px",height:"300px"}}/>
 						        <figcaption className={Styles.imgCaption}>
 						          <label className={Styles.header}>Social <span style={{fontWeight:"bold"}}>Summit</span></label>
 							       
 					      	</figcaption>			
 					      </figure>
-              </div>     
+              </div>              
+        </div >
+
+        <div className={Styles.wraper2}>
+              <div className={Styles.imgCard}>
+					       <figure className={Styles.effectImgCard}>
+					          <img src={Image3} className={Styles.imMobileg}alt="" style={{width:"550px",height:"300px"}}/>
+						        <figcaption className={Styles.imgCaption}>
+						          <label className={Styles.header}>Social <span style={{fontWeight:"bold"}}>Summit</span></label>
+							       
+					      	</figcaption>			
+					      </figure>
+              </div> 
 
               <div className={Styles.imgCard}>
 					       <figure className={Styles.effectImgCard}>
-					          <img src={Image3} className={Styles.img}alt="" style={{width:"150px",height:"100px"}}/>
+					          <img src={Image4} className={Styles.imMobileg}alt="" style={{width:"550px",height:"300px"}}/>
 						        <figcaption className={Styles.imgCaption}>
 						          <label className={Styles.header}>Social <span style={{fontWeight:"bold"}}>Summit</span></label>
 							       
 					      	</figcaption>			
 					      </figure>
               </div>          
-        </div >
-
-        <div className={Styles.wraper2}>
-              <div className={Styles.imgCard}>
-					       <figure className={Styles.effectImgCard}>
-					          <img src={Image4} className={Styles.img}alt="" style={{width:"150px",height:"151px"}}/>
-						        <figcaption className={Styles.imgCaption}>
-						          <label className={Styles.header}>Social <span style={{fontWeight:"bold"}}>Summit</span></label>
-							       
-					      	</figcaption>			
-					      </figure>
-              </div>      
-            
-              <div className={Styles.imgCard}>
-					       <figure className={Styles.effectImgCard}>
-					          <img src={Image5} className={Styles.img}alt="" style={{width:"150px",height:"151px"}}/>
-						        <figcaption className={Styles.imgCaption}>
-						          <label className={Styles.header}>Social <span style={{fontWeight:"bold"}}>Summit</span></label>
- 
-					      	</figcaption>			
-					      </figure>
-              </div>      
          </div>
   
          <div className={Styles.wraper3}>
+             <div className={Styles.imgCard}>
+					       <figure className={Styles.effectImgCard}>
+					          <img src={Image3} className={Styles.imMobileg}alt="" style={{width:"550px",height:"300px"}}/>
+						        <figcaption className={Styles.imgCaption}>
+						          <label className={Styles.header}>Social <span style={{fontWeight:"bold"}}>Summit</span></label>    
+					      	</figcaption>			
+					      </figure>
+              </div> 
             <div className={Styles.imgCard}>
 					       <figure className={Styles.effectImgCard}>
-					          <img src={Image6} className={Styles.img}alt="" style={{width:"150px",height:"100px"}}/>
+					          <img src={Image6} className={Styles.imMobileg}alt="" style={{width:"550px",height:"300px"}}/>
 						        <figcaption className={Styles.imgCaption}>
 						          <label className={Styles.header}>Social <span style={{fontWeight:"bold"}}>Summit</span></label>
-      						  
+					      	</figcaption>			
+					      </figure>
+              </div> 
+          </div>
+          
+         <div className={Styles.wraper4}>
+              <div className={Styles.imgCard}>
+					       <figure className={Styles.effectImgCard}>
+					          <img src={Image7} className={Styles.imMobileg}alt="" style={{width:"550px",height:"300px"}}/>
+						        <figcaption className={Styles.imgCaption}>
+						          <label className={Styles.header}>Social <span style={{fontWeight:"bold"}}>Summit</span></label>
 							       
 					      	</figcaption>			
 					      </figure>
@@ -208,17 +218,7 @@ render() {
 
               <div className={Styles.imgCard}>
 					       <figure className={Styles.effectImgCard}>
-					          <img src={Image7} className={Styles.img}alt="" style={{width:"150px",height:"100px"}}/>
-						        <figcaption className={Styles.imgCaption}>
-						          <label className={Styles.header}>Social <span style={{fontWeight:"bold"}}>Summit</span></label>
-							       
-					      	</figcaption>			
-					      </figure>
-              </div>      
-
-              <div className={Styles.imgCard}>
-					       <figure className={Styles.effectImgCard}>
-					          <img src={Image8} className={Styles.img}alt="" style={{width:"150px",height:"100px"}}/>
+					          <img src={Image8} className={Styles.imMobileg}alt="" style={{width:"550px",height:"300px"}}/>
 						        <figcaption className={Styles.imgCaption}>
 						          <label className={Styles.header}>Social <span style={{fontWeight:"bold"}}>Summit</span></label>
 							       
