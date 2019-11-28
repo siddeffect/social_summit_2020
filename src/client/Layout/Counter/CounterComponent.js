@@ -45,7 +45,7 @@ const useStyles = makeStyles(theme => ({
         fontSize:70,
         marginBottom:'10%',
         color:"#ffffff",
-        fontFamily:"Montserrat",
+        fontFamily: ["Oxygen", "sans-serif"].join(","),
         textAlign:'center',
        
     },
@@ -81,7 +81,7 @@ const useStyles = makeStyles(theme => ({
         fontSize:70,
         marginBottom:'10%',
         color:"#ffffff",
-        fontFamily:"Montserrat",
+        fontFamily: ["Oxygen", "sans-serif"].join(","),
         textAlign:'center',
 
     },
@@ -119,7 +119,7 @@ const useStyles = makeStyles(theme => ({
         fontSize:70,
         marginBottom:'10%',
         color:"#ffffff",
-        fontFamily:"Montserrat",
+        fontFamily: ["Oxygen", "sans-serif"].join(","),
         textAlign:'center',
     },
 
@@ -159,7 +159,7 @@ const useStyles = makeStyles(theme => ({
         textAlign:'center',
         height:"auto",
         color:"#ffffff",
-        fontFamily:"Montserrat",
+        fontFamily: ["Oxygen", "sans-serif"].join(","),
         // border:"5px solid yellow",
     },
 }))    
