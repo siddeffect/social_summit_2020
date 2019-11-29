@@ -8,8 +8,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     background: "transparent",
-    ["@media (max-width:780px)"]: {
-      // eslint-disable-line no-useless-computed-key
+    "@media (max-width:780px)": {
       width: "420px"
     }
   },
@@ -19,8 +18,7 @@ const useStyles = makeStyles(theme => ({
 
     background: "transparent",
     boxShadow: "none",
-    ["@media (max-width:780px)"]: {
-      // eslint-disable-line no-useless-computed-key
+    "@media (max-width:780px)": {
       width: "410px"
     }
   },
@@ -30,8 +28,7 @@ const useStyles = makeStyles(theme => ({
     ":hover&": {
       background: "#00a650"
     },
-    ["@media (max-width:780px)"]: {
-      // eslint-disable-line no-useless-computed-key
+    "@media (max-width:780px)": {
       display: "none"
     }
   },
@@ -41,8 +38,7 @@ const useStyles = makeStyles(theme => ({
     ":hover&": {
       background: "#00a650"
     },
-    ["@media (max-width:780px)"]: {
-      // eslint-disable-line no-useless-computed-key
+    "@media (max-width:780px)": {
       display: "none"
     }
   },
@@ -52,8 +48,7 @@ const useStyles = makeStyles(theme => ({
     width: "50px",
     paddingRight: "1300px",
     marginRight: theme.spacing(1),
-    ["@media (max-width:780px)"]: {
-      // eslint-disable-line no-useless-computed-key
+    "@media (max-width:780px)": {
       flex: 0,
       height: "40px",
       width: "auto",

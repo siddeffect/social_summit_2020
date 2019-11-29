@@ -12,8 +12,7 @@ const useStyles = makeStyles(theme => ({
     height: 400,
     display: "flex",
     padding: "150px 200px 150px 200px",
-    ["@media (max-width:780px)"]: {
-      // eslint-disable-line no-useless-computed-key
+    "@media (max-width:780px)": {
       height: 500,
       padding: "20px 20px 15px 20px",
       flexDirection: "column"
@@ -28,8 +27,7 @@ const useStyles = makeStyles(theme => ({
     color: "#46A651",
     fontSize: "40px",
     fontFamily: "Serif",
-    ["@media (max-width:780px)"]: {
-      // eslint-disable-line no-useless-computed-key
+    "@media (max-width:780px)": {
       fontSize: "24px"
     }
   },
@@ -38,8 +36,7 @@ const useStyles = makeStyles(theme => ({
     maxWidth: "600px",
     color: "#545D5F",
     fontSize: "1.1em",
-    ["@media (max-width:780px)"]: {
-      // eslint-disable-line no-useless-computed-key
+    "@media (max-width:780px)": {
       fontSize: "0.9em",
       margin: "10px 40px 0 0"
     }
@@ -48,8 +45,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: 100,
     display: "flex",
     flexDirection: "row",
-    ["@media (max-width:780px)"]: {
-      // eslint-disable-line no-useless-computed-key
+    "@media (max-width:780px)": {
       marginTop: 20
     }
   },
@@ -62,8 +58,7 @@ const useStyles = makeStyles(theme => ({
   },
   emailLinkBox: {
     flexGrow: 1,
-    ["@media (max-width:780px)"]: {
-      // eslint-disable-line no-useless-computed-key
+    "@media (max-width:780px)": {
       paddingBottom: 40
     }
   },
@@ -82,8 +77,7 @@ const useStyles = makeStyles(theme => ({
   text: {
     color: "#fff",
     verticalAlign: "middle",
-    ["@media (max-width:780px)"]: {
-      // eslint-disable-line no-useless-computed-key
+    "@media (max-width:780px)": {
       fontSize: "12px"
     }
   }
