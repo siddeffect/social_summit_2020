@@ -96,16 +96,27 @@
   .middleContainer {
     width: 320px;
     box-sizing: border-box;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     margin-left: 5%;
-    border-radius: 0;
+    border-radius: 10px;
+  }
+
+  .leftContainer {
+    margin-top: 5%;
   }
 
   .leftHeading,
   .rightHeading,
   .middleHeading {
-    padding: 16px 36px 24px 24px;
-    margin-top: 7.5%;
+    padding: 10px 36px 10px 24px;
+    margin-top: 0;
+  }
+
+  .leftHeader,
+  .rightHeader,
+  .middleHeader {
+    font-size: 28px;
+    font-family: "Ubuntu";
   }
 
   .leftImg,
@@ -113,7 +124,20 @@
   .middleImg {
     display: flex;
     box-sizing: border-box;
-    padding: 5% 0 0 25%;
+    padding: 5% 0 0 26%;
+  }
+
+  .leftContent,
+  .rightContent,
+  .middleContent {
+    box-sizing: border-box;
+    padding: 14px 36px 0 24px;
+  }
+  .leftPara,
+  .rightPara,
+  .middlePara {
+    font-family: "Ubuntu";
+    font-size: 17.5px;
   }
 }
 
