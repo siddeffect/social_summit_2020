@@ -10,8 +10,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     height: "985px",
     display: "flex",
-    ["@media (max-width:780px)"]: {
-      // eslint-disable-line no-useless-computed-key
+    "@media (max-width:780px)": {
       height: "700px",
       width: "auto"
     }
@@ -23,8 +22,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 2,
     flexDirection: "column",
     padding: "150px 0px 150px 100px",
-    ["@media (max-width:780px)"]: {
-      // eslint-disable-line no-useless-computed-key
+    "@media (max-width:780px)": {
       padding: "60px 30px 15px 30px"
     }
   },
@@ -32,8 +30,7 @@ const useStyles = makeStyles(theme => ({
     color: "#ffffff",
     fontSize: "5.5em",
     fontFamily: ["'Raleway'", "sans-serif"].join(","),
-    ["@media (max-width:780px)"]: {
-      // eslint-disable-line no-useless-computed-key
+    "@media (max-width:780px)": {
       fontSize: "2.4em"
     }
   },
@@ -48,8 +45,7 @@ const useStyles = makeStyles(theme => ({
     color: "#545D5F",
     fontSize: "1.3em",
     fontFamily: ["'Roboto'", "sans-serif"].join(","),
-    ["@media (max-width:780px)"]: {
-      // eslint-disable-line no-useless-computed-key
+    "@media (max-width:780px)": {
       fontSize: "1em"
     }
   },
@@ -59,8 +55,7 @@ const useStyles = makeStyles(theme => ({
     height: "60px",
     color: "#fff",
     fontSize: "1.2em",
-    ["@media (max-width:780px)"]: {
-      // eslint-disable-line no-useless-computed-key
+    "@media (max-width:780px)": {
       width: "150px",
       height: "40px",
       fontSize: "1.0em",
@@ -74,8 +69,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: "center",
     flexGrow: 1,
     padding: "150px 200px 150px 200px",
-    ["@media (max-width:780px)"]: {
-      // eslint-disable-line no-useless-computed-key
+    "@media (max-width:780px)": {
       display: "none"
     }
   }
