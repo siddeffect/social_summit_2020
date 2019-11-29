@@ -8,7 +8,7 @@ import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: 980,
+    height: "985px",
     display: "flex",
     ["@media (max-width:780px)"]: {
       // eslint-disable-line no-useless-computed-key
