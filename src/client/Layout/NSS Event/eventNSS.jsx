@@ -5,20 +5,20 @@ import Image2 from "../Image Grid/images/img2.jpeg";
 import Image3 from "../Image Grid/images/img3.jpeg";
 
 export class eventNSS extends Component {
+  state = {
+    width: window.innerWidth
+  };
   render() {
+    const imageClasses = [Styles.lapImage];
+    if (this.state.width < 780) {
+      imageClasses.push(Styles.phImage);
+    }
+
     return (
       <div className={Styles.container}>
         <div className={Styles.leftContainer}>
           <div className={Styles.leftImg}>
-            <img
-              src={Image1}
-              alt=""
-              style={{
-                width: "360px",
-                height: "200px",
-                borderRadius: "16px 16px 0 0"
-              }}
-            />
+            <img src={Image1} alt="" className={imageClasses.join(" ")} />
           </div>
           <div className={Styles.leftContent}>
             <label htmlFor="" className={Styles.leftPara}>
@@ -37,15 +37,7 @@ export class eventNSS extends Component {
 
         <div className={Styles.middleContainer}>
           <div className={Styles.middleImg}>
-            <img
-              src={Image2}
-              alt=""
-              style={{
-                width: "360px",
-                height: "200px",
-                borderRadius: "16px 16px 0 0"
-              }}
-            />
+            <img src={Image2} alt="" className={imageClasses.join(" ")} />
           </div>
 
           <div className={Styles.middleContent}>
@@ -66,15 +58,7 @@ export class eventNSS extends Component {
 
         <div className={Styles.rightContainer}>
           <div className={Styles.rightImg}>
-            <img
-              src={Image3}
-              alt=""
-              style={{
-                width: "360px",
-                height: "200px",
-                borderRadius: "16px 16px 0 0"
-              }}
-            />
+            <img src={Image3} alt="" className={imageClasses.join(" ")} />
           </div>
 
           <div className={Styles.rightContent}>

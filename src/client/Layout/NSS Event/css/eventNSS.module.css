@@ -6,6 +6,12 @@
   margin-left: 15%;
 }
 
+.lapImage {
+  width: 360px;
+  height: 200px;
+  border-radius: 16px 16px 0 0;
+}
+
 .leftContainer,
 .middleContainer,
 .rightContainer {
@@ -41,11 +47,6 @@
   box-sizing: border-box;
   padding: 24px 36px 24px 24px;
   text-align: center;
-}
-
-.leftHeading,
-.rightHeading {
-  box-sizing: border-box;
   margin-top: 15%;
   border-radius: 0 0 16px 16px;
 }
@@ -73,4 +74,111 @@
 .middlePara,
 .middleHeader {
   color: #fff;
+}
+
+/* code for mobile */
+
+.phImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .leftContainer,
+  .rightContainer,
+  .middleContainer {
+    width: 320px;
+    box-sizing: border-box;
+    margin-bottom: 10%;
+    margin-left: 5%;
+    border-radius: 0;
+  }
+
+  .leftHeading,
+  .rightHeading,
+  .middleHeading {
+    padding: 16px 36px 24px 24px;
+    margin-top: 7.5%;
+  }
+
+  .leftImg,
+  .rightImg,
+  .middleImg {
+    display: flex;
+    box-sizing: border-box;
+    padding: 5% 0 0 25%;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .leftContainer,
+  .rightContainer,
+  .middleContainer {
+    width: 280px;
+    margin-left: 5.5%;
+  }
+}
+
+@media screen and (min-width: 365px) and (max-width: 375px) {
+  .leftContainer,
+  .rightContainer,
+  .middleContainer {
+    margin-left: 7%;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 420px) {
+  .leftContainer,
+  .rightContainer,
+  .middleContainer {
+    margin-left: 11%;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 605px) {
+  .leftContainer,
+  .rightContainer,
+  .middleContainer {
+    margin-left: 22.5%;
+  }
+}
+
+@media screen and (min-width: 760px) and (max-width: 800px) {
+  .leftContainer,
+  .rightContainer,
+  .middleContainer {
+    width: 400px;
+    margin-left: 24%;
+  }
+
+  .leftImg,
+  .rightImg,
+  .middleImg {
+    padding: 5% 0 0 30%;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1024px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+  .leftContainer,
+  .rightContainer,
+  .middleContainer {
+    width: 300px;
+    margin: 0;
+  }
+  .lapImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
 }
