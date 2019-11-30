@@ -4,7 +4,7 @@ import CounterNumberUp from "./CounterNumberUp";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    background: "#272727",
+    background: "#111111",
     height: 250,
     width: "auto",
     display: "flex",
@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     flexDirection: "column",
     flexGrow: 1,
-    background: "#272727",
+    background: "#111111",
     flexWrap: "wrap",
     alignContent: "center"
   },
@@ -54,14 +54,14 @@ export default function CounterComponent() {
       <div className={classes.container}>
         <div className={classes.header}>Events</div>
         <div className={classes.data}>
-          <CounterNumberUp endValue="10" time="100" />
+          <CounterNumberUp endValue="20" time="100" />
         </div>
       </div>
 
       <div className={classes.container}>
         <div className={classes.header}>Partners</div>
         <div className={classes.data}>
-          <CounterNumberUp endValue="20" time="100" />
+          <CounterNumberUp endValue="30" time="100" />
         </div>
       </div>
 
