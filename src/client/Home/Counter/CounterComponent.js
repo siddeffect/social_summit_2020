@@ -11,7 +11,14 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "row",
     margin: "0 0 20px 0",
     textAlign: "center",
-    padding: "0 100px 0 100px"
+    padding: "0 100px 0 100px",
+    "@media (max-width:780px)": {
+      padding: 0,
+      height: 160
+    },
+    "@media (max-width:320px)": {
+      height: 140
+    }
   },
 
   container: {
@@ -35,7 +42,18 @@ const useStyles = makeStyles(theme => ({
     fontSize: 55,
     verticalAlign: "center",
     color: "#4aa651",
-    fontFamily: ["Roboto Condensed", "sans-serif"].join(",")
+    fontFamily: ["Roboto Condensed", "sans-serif"].join(","),
+    "@media (max-width:780px)": {
+      fontSize: 32,
+      flexGrow: 0.6,
+      marginTop: "30%"
+    },
+    "@media (min-width:350px) and (max-width:420px)": {
+      fontSize: 22
+    },
+    "@media (max-width:320px)": {
+      fontSize: 20
+    }
   },
 
   data: {
@@ -43,7 +61,17 @@ const useStyles = makeStyles(theme => ({
     fontSize: 70,
     color: "#ffffff",
     fontFamily: ["Roboto Condensed", "sans-serif"].join(","),
-    textAlign: "center"
+    textAlign: "center",
+    "@media (max-width:780px)": {
+      fontSize: 35,
+      flexGrow: 0.6
+    },
+    "@media (min-width:350px) and (max-width:375px)": {
+      fontSize: 30
+    },
+    "@media (max-width:320px)": {
+      fontSize: 20
+    }
   }
 }));
 
