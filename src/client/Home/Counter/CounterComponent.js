@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
     width: "auto",
     display: "flex",
     flexDirection: "row",
-    margin: "20px 0 20px 0",
+    margin: "0 0 20px 0",
     textAlign: "center",
     padding: "0 100px 0 100px"
   },
