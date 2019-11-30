@@ -381,7 +381,7 @@ class Carousel extends Component {
                 <figure className={Styles.effectImgCard}>
                   <img
                     src={Image8}
-                    className={Styles.imMobileg}
+                    className={Styles.imgMobile}
                     alt=""
                     style={{
                       width: "160px",
