@@ -1,6 +1,6 @@
 .container {
   padding: 40px;
-  background: #45969b;
+  background: #fff;
 }
 .slick-slide img {
   margin: auto;
@@ -9,6 +9,15 @@
 .slick-prev:before,
 .slick-next:before {
   opacity: 1;
+  font-size: 35px;
+  color: darkgrey;
+}
+
+.slick-next {
+  right: 5px !important;
+}
+.slik-prev {
+  left: 5px !important;
 }
 
 .slick-list {
@@ -103,6 +112,14 @@
 }
 
 /* for mobile */
+@media screen and (max-width: 768px) {
+  .slick-prev:before,
+  .slick-next:before {
+    opacity: 0;
+    color: #fff;
+  }
+}
+
 @media screen and (min-width: 500px) and (max-width: 605px) {
   .slick-slide img {
     margin-top: 5%;
