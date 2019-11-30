@@ -11,131 +11,265 @@ import Image7 from "../Image Grid/images/img7.jpeg";
 import Image8 from "../Image Grid/images/img8.jpeg";
 
 class Carousel extends React.Component {
+  state = {
+    width: window.innerWidth
+  };
+
   render() {
-    let settings = {
+    let lapSettings = {
       dots: true,
       infinite: true,
       speed: 500,
       slidesToShow: 3,
       slidesToScroll: 3
     };
+
+    let phSettings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
+
     return (
       <div className="container">
-        <Slider {...settings}>
-          <div className="leftContainer">
-            <div className="leftImg">
-              <img src={Image1} alt="" className="image" />
+        {this.state.width > 1024 ? (
+          <Slider {...lapSettings}>
+            <div className="leftContainer">
+              <div className="leftImg">
+                <img src={Image1} alt="" className="image" />
+              </div>
+              <div className="leftContent">
+                <label htmlFor="" className="leftPara">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </label>
+              </div>
+              <div className="leftHeading">
+                <label htmlFor="" className="leftHeader">
+                  {" "}
+                  Social
+                  <span style={{ fontWeight: "bold" }}> Summit </span>
+                </label>
+              </div>
             </div>
-            <div className="leftContent">
-              <label htmlFor="" className="leftPara">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </label>
-            </div>
-            <div className="leftHeading">
-              <label htmlFor="" className="leftHeader">
-                {" "}
-                Social
-                <span style={{ fontWeight: "bold" }}> Summit </span>
-              </label>
-            </div>
-          </div>
 
-          <div className="rightContainer">
-            <div className="rightImg">
-              <img src={Image2} alt="" className="image" />
+            <div className="rightContainer">
+              <div className="rightImg">
+                <img src={Image2} alt="" className="image" />
+              </div>
+              <div className="rightContent">
+                <label htmlFor="" className="rightPara">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </label>
+              </div>
+              <div className="rightHeading">
+                <label htmlFor="" className="rightHeader">
+                  {" "}
+                  Social
+                  <span style={{ fontWeight: "bold" }}> Summit </span>
+                </label>
+              </div>
             </div>
-            <div className="rightContent">
-              <label htmlFor="" className="rightPara">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </label>
-            </div>
-            <div className="rightHeading">
-              <label htmlFor="" className="rightHeader">
-                {" "}
-                Social
-                <span style={{ fontWeight: "bold" }}> Summit </span>
-              </label>
-            </div>
-          </div>
 
-          <div className="leftContainer">
-            <div className="leftImg">
-              <img src={Image3} alt="" className="image" />
+            <div className="leftContainer">
+              <div className="leftImg">
+                <img src={Image3} alt="" className="image" />
+              </div>
+              <div className="leftContent">
+                <label htmlFor="" className="leftPara">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </label>
+              </div>
+              <div className="leftHeading">
+                <label htmlFor="" className="leftHeader">
+                  {" "}
+                  Social
+                  <span style={{ fontWeight: "bold" }}> Summit </span>
+                </label>
+              </div>
             </div>
-            <div className="leftContent">
-              <label htmlFor="" className="leftPara">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </label>
-            </div>
-            <div className="leftHeading">
-              <label htmlFor="" className="leftHeader">
-                {" "}
-                Social
-                <span style={{ fontWeight: "bold" }}> Summit </span>
-              </label>
-            </div>
-          </div>
 
-          <div className="rightContainer">
-            <div className="rightImg">
-              <img src={Image6} alt="" className="image" />
+            <div className="rightContainer">
+              <div className="rightImg">
+                <img src={Image6} alt="" className="image" />
+              </div>
+              <div className="rightContent">
+                <label htmlFor="" className="rightPara">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </label>
+              </div>
+              <div className="rightHeading">
+                <label htmlFor="" className="rightHeader">
+                  {" "}
+                  Social
+                  <span style={{ fontWeight: "bold" }}> Summit </span>
+                </label>
+              </div>
             </div>
-            <div className="rightContent">
-              <label htmlFor="" className="rightPara">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </label>
-            </div>
-            <div className="rightHeading">
-              <label htmlFor="" className="rightHeader">
-                {" "}
-                Social
-                <span style={{ fontWeight: "bold" }}> Summit </span>
-              </label>
-            </div>
-          </div>
 
-          <div className="leftContainer">
-            <div className="leftImg">
-              <img src={Image7} alt="" className="image" />
+            <div className="leftContainer">
+              <div className="leftImg">
+                <img src={Image7} alt="" className="image" />
+              </div>
+              <div className="leftContent">
+                <label htmlFor="" className="leftPara">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </label>
+              </div>
+              <div className="leftHeading">
+                <label htmlFor="" className="leftHeader">
+                  {" "}
+                  Social
+                  <span style={{ fontWeight: "bold" }}> Summit </span>
+                </label>
+              </div>
             </div>
-            <div className="leftContent">
-              <label htmlFor="" className="leftPara">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </label>
-            </div>
-            <div className="leftHeading">
-              <label htmlFor="" className="leftHeader">
-                {" "}
-                Social
-                <span style={{ fontWeight: "bold" }}> Summit </span>
-              </label>
-            </div>
-          </div>
 
-          <div className="rightContainer">
-            <div className="rightImg">
-              <img src={Image8} alt="" className="image" />
+            <div className="rightContainer">
+              <div className="rightImg">
+                <img src={Image8} alt="" className="image" />
+              </div>
+              <div className="rightContent">
+                <label htmlFor="" className="rightPara">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </label>
+              </div>
+              <div className="rightHeading">
+                <label htmlFor="" className="rightHeader">
+                  {" "}
+                  Social
+                  <span style={{ fontWeight: "bold" }}> Summit </span>
+                </label>
+              </div>
             </div>
-            <div className="rightContent">
-              <label htmlFor="" className="rightPara">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </label>
+          </Slider>
+        ) : null}
+
+        {/* for moblie */}
+        {this.state.width <= 1024 ? (
+          <Slider {...phSettings}>
+            <div className="leftContainer">
+              <div className="leftImg">
+                <img src={Image1} alt="" className="image" />
+              </div>
+              <div className="leftContent">
+                <label htmlFor="" className="leftPara">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </label>
+              </div>
+              <div className="leftHeading">
+                <label htmlFor="" className="leftHeader">
+                  {" "}
+                  Social
+                  <span style={{ fontWeight: "bold" }}> Summit </span>
+                </label>
+              </div>
             </div>
-            <div className="rightHeading">
-              <label htmlFor="" className="rightHeader">
-                {" "}
-                Social
-                <span style={{ fontWeight: "bold" }}> Summit </span>
-              </label>
+
+            <div className="rightContainer">
+              <div className="rightImg">
+                <img src={Image2} alt="" className="image" />
+              </div>
+              <div className="rightContent">
+                <label htmlFor="" className="rightPara">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </label>
+              </div>
+              <div className="rightHeading">
+                <label htmlFor="" className="rightHeader">
+                  {" "}
+                  Social
+                  <span style={{ fontWeight: "bold" }}> Summit </span>
+                </label>
+              </div>
             </div>
-          </div>
-        </Slider>
+
+            <div className="leftContainer">
+              <div className="leftImg">
+                <img src={Image3} alt="" className="image" />
+              </div>
+              <div className="leftContent">
+                <label htmlFor="" className="leftPara">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </label>
+              </div>
+              <div className="leftHeading">
+                <label htmlFor="" className="leftHeader">
+                  {" "}
+                  Social
+                  <span style={{ fontWeight: "bold" }}> Summit </span>
+                </label>
+              </div>
+            </div>
+
+            <div className="rightContainer">
+              <div className="rightImg">
+                <img src={Image6} alt="" className="image" />
+              </div>
+              <div className="rightContent">
+                <label htmlFor="" className="rightPara">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </label>
+              </div>
+              <div className="rightHeading">
+                <label htmlFor="" className="rightHeader">
+                  {" "}
+                  Social
+                  <span style={{ fontWeight: "bold" }}> Summit </span>
+                </label>
+              </div>
+            </div>
+
+            <div className="leftContainer">
+              <div className="leftImg">
+                <img src={Image7} alt="" className="image" />
+              </div>
+              <div className="leftContent">
+                <label htmlFor="" className="leftPara">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </label>
+              </div>
+              <div className="leftHeading">
+                <label htmlFor="" className="leftHeader">
+                  {" "}
+                  Social
+                  <span style={{ fontWeight: "bold" }}> Summit </span>
+                </label>
+              </div>
+            </div>
+
+            <div className="rightContainer">
+              <div className="rightImg">
+                <img src={Image8} alt="" className="image" />
+              </div>
+              <div className="rightContent">
+                <label htmlFor="" className="rightPara">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </label>
+              </div>
+              <div className="rightHeading">
+                <label htmlFor="" className="rightHeader">
+                  {" "}
+                  Social
+                  <span style={{ fontWeight: "bold" }}> Summit </span>
+                </label>
+              </div>
+            </div>
+          </Slider>
+        ) : null}
       </div>
     );
   }

@@ -78,11 +78,31 @@
   color: #fff;
 }
 
-/* for mobile */
-
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 1400px) and (max-width: 1440px) {
+  .slick-list {
+    margin-left: 5%;
+  }
 }
 
+@media screen and (min-width: 1600px) {
+  .slick-list {
+    margin-left: 10%;
+  }
+}
+
+@media screen and (min-width: 760px) and (max-width: 900px) {
+  .slick-list {
+    margin-left: 25%;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1030px) {
+  .slick-list {
+    margin-left: 30%;
+  }
+}
+
+/* for mobile */
 @media screen and (min-width: 500px) and (max-width: 605px) {
   .slick-slide img {
     margin-top: 5%;
