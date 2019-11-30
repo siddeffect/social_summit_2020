@@ -13,8 +13,8 @@ function App() {
       <Navbar />
       <Hero />
       {/* <Grid />
-      <CounterComponent />
-      <EventNSS /> */}
+      <CounterComponent /> */}
+      {/* <EventNSS /> <br /> */}
       <Carousel />
       <Footer />
     </div>

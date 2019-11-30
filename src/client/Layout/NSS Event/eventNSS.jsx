@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+// import Slider from "react-slick";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 import Styles from "./css/eventNSS.module.css";
 import Image1 from "../Image Grid/images/img1.jpeg";
 import Image2 from "../Image Grid/images/img2.jpeg";
@@ -13,7 +16,10 @@ export class eventNSS extends Component {
     if (this.state.width < 780) {
       imageClasses.push(Styles.phImage);
     }
-
+    // let settings = {
+    //   dots: true,
+    //   slidesToShow: 1
+    // };
     return (
       <div className={Styles.container}>
         <div className={Styles.leftContainer}>
