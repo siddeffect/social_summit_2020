@@ -68,7 +68,7 @@ export default function CounterComponent() {
       <div className={classes.container}>
         <div className={classes.header}>FootFall</div>
         <div className={classes.data}>
-          <CounterNumberUp endValue="1000" time="10" Increment="5" />
+          <CounterNumberUp endValue="1000" time="10" />
         </div>
       </div>
 
