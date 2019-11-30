@@ -10,26 +10,24 @@ class CounterNumberUp extends Component {
   }
 
   countup = props => {
-    let end = this.props.endValue;
-    let endTime = this.props.time;
+    const end = this.props.endValue;
 
-    if (end > this.state.count) {
+    if (this.state.count < end) {
       this.setState(prevState => ({
         count: prevState.count + 1
       }));
     } else {
-      this.setState(prevState => ({
+      this.setState({
         count: end
-      }));
+      });
     }
   };
 
   render() {
-    let count = 50;
+    // eslint-disable-next-line
+    const count = setInterval(this.countup, this.props.time);
 
-    count = count + setTimeout(this.countup, this.props.time);
-
-    return <div>{this.state.count}+</div>;
+    return <div> {this.state.count} +</div>;
   }
 }
 
