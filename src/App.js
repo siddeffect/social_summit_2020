@@ -1,21 +1,21 @@
 import React from "react";
-import Navbar from "./client/Layout/Navbar/Navbar";
-import Grid from "./client/Home/Image Grid/imageGrid";
-import Footer from "./client/Layout/Footer/Footer";
-import Hero from "./client/Home/Hero/Hero.js";
-import CounterComponent from "./client/Home/Counter/CounterComponent";
-import EventNSS from "./client/Home/NSSEvent/eventNSS";
+import Home from "./client/Home/Home";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <CounterComponent />
-      <Grid />
-      <EventNSS />
-      <Footer />
-    </div>
+    <Router>
+      <div>
+        <Switch>
+          <Route exact path="/home">
+            <Home />
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

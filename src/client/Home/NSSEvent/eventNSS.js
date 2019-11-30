@@ -3,12 +3,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./eventNSS.css";
-import Image1 from "../Image Grid/images/img1.jpeg";
-import Image2 from "../Image Grid/images/img2.jpeg";
-import Image3 from "../Image Grid/images/img3.jpeg";
-import Image6 from "../Image Grid/images/img6.jpeg";
-import Image7 from "../Image Grid/images/img7.jpeg";
-import Image8 from "../Image Grid/images/img8.jpeg";
+import Image1 from "../ImageGrid/images/img1.jpeg";
+import Image2 from "../ImageGrid/images/img2.jpeg";
+import Image3 from "../ImageGrid/images/img3.jpeg";
+import Image6 from "../ImageGrid/images/img6.jpeg";
+import Image7 from "../ImageGrid/images/img7.jpeg";
+import Image8 from "../ImageGrid/images/img8.jpeg";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
