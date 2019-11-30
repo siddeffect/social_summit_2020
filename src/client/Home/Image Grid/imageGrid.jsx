@@ -38,13 +38,13 @@ class Carousel extends Component {
                       Case<span style={{ fontWeight: "bold" }}>Studies</span>
                     </label>
 
-                    <p className={Styles.description}>
+                    <div className={Styles.description}>
                       Lorem ipsum dolor sit amet,
                       <br /> consectetur adipiscing elit, sed do eiusmod tempor{" "}
                       <br />
                       incididunt ut labore et dolore magna aliqua.
                       <div className={Styles.greenLine}></div>
-                    </p>
+                    </div>
                   </figcaption>
                 </figure>
               </div>
@@ -61,13 +61,13 @@ class Carousel extends Component {
                     <label className={Styles.header}>
                       Workshops<span style={{ fontWeight: "bold" }}></span>
                     </label>
-                    <p className={Styles.description}>
+                    <div className={Styles.description}>
                       Lorem ipsum dolor sit amet,
                       <br /> consectetur adipiscing elit, sed do eiusmod tempor{" "}
                       <br />
                       incididunt ut labore et dolore magna aliqua.
                       <div className={Styles.greenLine}></div>
-                    </p>
+                    </div>
                   </figcaption>
                 </figure>
               </div>
@@ -91,13 +91,13 @@ class Carousel extends Component {
                     <label className={Styles.header}>
                       Guest<span style={{ fontWeight: "bold" }}>Lectures</span>
                     </label>
-                    <p className={Styles.description}>
+                    <div className={Styles.description}>
                       Lorem ipsum dolor sit amet,
                       <br /> consectetur adipiscing elit, sed do eiusmod tempor{" "}
                       <br />
                       incididunt ut labore et dolore magna aliqua.
                       <div className={Styles.greenLine}></div>
-                    </p>
+                    </div>
                   </figcaption>
                 </figure>
               </div>
@@ -115,13 +115,13 @@ class Carousel extends Component {
                     <label className={Styles.header}>
                       Street<span style={{ fontWeight: "bold" }}>Play</span>
                     </label>
-                    <p className={Styles.description}>
+                    <div className={Styles.description}>
                       Lorem ipsum dolor sit amet,
                       <br /> consectetur adipiscing elit, sed do eiusmod tempor{" "}
                       <br />
                       incididunt ut labore et dolore magna aliqua.
                       <div className={Styles.greenLine}></div>
-                    </p>
+                    </div>
                   </figcaption>
                 </figure>
               </div>
@@ -138,13 +138,13 @@ class Carousel extends Component {
                     <label className={Styles.header}>
                       Action<span style={{ fontWeight: "bold" }}>Plan</span>
                     </label>
-                    <p className={Styles.description}>
+                    <div className={Styles.description}>
                       Lorem ipsum dolor sit amet,
                       <br /> consectetur adipiscing elit, sed do eiusmod tempor{" "}
                       <br />
                       incididunt ut labore et dolore magna aliqua.
                       <div className={Styles.greenLine}></div>
-                    </p>
+                    </div>
                   </figcaption>
                 </figure>
               </div>
@@ -169,13 +169,13 @@ class Carousel extends Component {
                       <span style={{ fontWeight: "bold" }}>Presentation</span>
                     </label>
 
-                    <p className={Styles.description}>
+                    <div className={Styles.description}>
                       Lorem ipsum dolor sit amet,
                       <br /> consectetur adipiscing elit, sed do eiusmod tempor{" "}
                       <br />
                       incididunt ut labore et dolore magna aliqua.
                       <div className={Styles.greenLine}></div>
-                    </p>
+                    </div>
                   </figcaption>
                 </figure>
               </div>
@@ -193,13 +193,13 @@ class Carousel extends Component {
                       Cultural
                       <span style={{ fontWeight: "bold" }}>Nights</span>
                     </label>
-                    <p className={Styles.description}>
+                    <div className={Styles.description}>
                       Lorem ipsum dolor sit amet,
                       <br /> consectetur adipiscing elit, sed do eiusmod tempor{" "}
                       <br />
                       incididunt ut labore et dolore magna aliqua.
                       <div className={Styles.greenLine}></div>
-                    </p>
+                    </div>
                   </figcaption>
                 </figure>
               </div>
@@ -223,13 +223,13 @@ class Carousel extends Component {
                     <label className={Styles.header}>
                       Hackathon<span style={{ fontWeight: "bold" }}></span>
                     </label>
-                    <p className={Styles.description}>
+                    <div className={Styles.description}>
                       Lorem ipsum dolor sit amet,
                       <br /> consectetur adipiscing elit, sed do eiusmod tempor{" "}
                       <br />
                       incididunt ut labore et dolore magna aliqua.
                       <div className={Styles.greenLine}></div>
-                    </p>
+                    </div>
                   </figcaption>
                 </figure>
               </div>

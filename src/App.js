@@ -12,8 +12,8 @@ function App() {
     <div>
       <Navbar />
       <Hero />
-      <Grid />
       <CounterComponent />
+      <Grid />
       <EventNSS />
       <Carousel />
       <Footer />
