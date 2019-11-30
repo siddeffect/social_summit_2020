@@ -153,7 +153,7 @@ class Carousel extends React.Component {
         ) : null}
 
         {/* for moblie */}
-        {this.state.width <= 1024 ? (
+        {this.state.width < 1024 ? (
           <Slider {...phSettings}>
             <div className="leftContainer">
               <div className="leftImg">

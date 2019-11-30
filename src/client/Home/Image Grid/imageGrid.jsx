@@ -1,12 +1,5 @@
 import React, { Component } from "react";
 import Styles from "./css/imageGrid.module.css";
-import Image2 from "./images/img2.jpeg";
-import Image3 from "./images/img3.jpeg";
-import Image4 from "./images/img4.jpeg";
-import Image5 from "./images/img5.jpg";
-import Image6 from "./images/img6.jpeg";
-import Image7 from "./images/img7.jpeg";
-import Image8 from "./images/img8.jpeg";
 
 class Carousel extends Component {
   constructor() {
@@ -59,7 +52,8 @@ class Carousel extends Component {
                   />
                   <figcaption className={Styles.imgCaption}>
                     <label className={Styles.header}>
-                      Workshops<span style={{ fontWeight: "bold" }}></span>
+                      {" "}
+                      <span style={{ fontWeight: "bold" }}> Workshops</span>
                     </label>
                     <div className={Styles.description}>
                       Lorem ipsum dolor sit amet,
@@ -221,7 +215,7 @@ class Carousel extends Component {
                     style={{ borderBottomRightRadius: "12px " }}
                   >
                     <label className={Styles.header}>
-                      Hackathon<span style={{ fontWeight: "bold" }}></span>
+                      <span style={{ fontWeight: "bold" }}> Hackathon</span>
                     </label>
                     <div className={Styles.description}>
                       Lorem ipsum dolor sit amet,
@@ -256,7 +250,7 @@ class Carousel extends Component {
                   <figcaption className={Styles.imgCaption}>
                     <label className={Styles.header}>
                       {" "}
-                      Social <span style={{ fontWeight: "bold" }}>Summit</span>
+                      Case <span style={{ fontWeight: "bold" }}>Studies</span>
                     </label>
                   </figcaption>
                 </figure>
@@ -265,7 +259,7 @@ class Carousel extends Component {
               <div className={Styles.imgCard}>
                 <figure className={Styles.effectImgCard}>
                   <img
-                    src={Image2}
+                    src="/Images/previous_year_events/workshop.jpg"
                     className={Styles.imMobileg}
                     alt=""
                     style={{
@@ -276,7 +270,8 @@ class Carousel extends Component {
                   />
                   <figcaption className={Styles.imgCaption}>
                     <label className={Styles.header}>
-                      Social <span style={{ fontWeight: "bold" }}>Summit</span>
+                      {" "}
+                      <span style={{ fontWeight: "bold" }}> Workshops</span>
                     </label>
                   </figcaption>
                 </figure>
@@ -287,7 +282,7 @@ class Carousel extends Component {
               <div className={Styles.imgCard}>
                 <figure className={Styles.effectImgCard}>
                   <img
-                    src={Image3}
+                    src="/Images/previous_year_events/guest_lecture.jpg"
                     className={Styles.imMobileg}
                     alt=""
                     style={{
@@ -297,7 +292,7 @@ class Carousel extends Component {
                   />
                   <figcaption className={Styles.imgCaption}>
                     <label className={Styles.header}>
-                      Social <span style={{ fontWeight: "bold" }}>Summit</span>
+                      Guest <span style={{ fontWeight: "bold" }}>Lectures</span>
                     </label>
                   </figcaption>
                 </figure>
@@ -306,14 +301,14 @@ class Carousel extends Component {
               <div className={Styles.imgCard}>
                 <figure className={Styles.effectImgCard}>
                   <img
-                    src={Image4}
-                    className={Styles.imMobileg}
+                    src="/Images/previous_year_events/street_play.jpg"
+                    className={Styles.imgMobile}
                     alt=""
                     style={{ width: "160px", height: "180px" }}
                   />
                   <figcaption className={Styles.imgCaption}>
                     <label className={Styles.header}>
-                      Social <span style={{ fontWeight: "bold" }}>Summit</span>
+                      Street <span style={{ fontWeight: "bold" }}>Play</span>
                     </label>
                   </figcaption>
                 </figure>
@@ -324,14 +319,14 @@ class Carousel extends Component {
               <div className={Styles.imgCard}>
                 <figure className={Styles.effectImgCard}>
                   <img
-                    src={Image3}
+                    src="/Images/previous_year_events/action_plan.jpg"
                     className={Styles.imMobileg}
                     alt=""
                     style={{ width: "160px", height: "180px" }}
                   />
                   <figcaption className={Styles.imgCaption}>
                     <label className={Styles.header}>
-                      Social <span style={{ fontWeight: "bold" }}>Summit</span>
+                      Action <span style={{ fontWeight: "bold" }}>Plan</span>
                     </label>
                   </figcaption>
                 </figure>
@@ -339,14 +334,15 @@ class Carousel extends Component {
               <div className={Styles.imgCard}>
                 <figure className={Styles.effectImgCard}>
                   <img
-                    src={Image6}
+                    src="/Images/previous_year_events/work_presentation.jpg"
                     className={Styles.imMobileg}
                     alt=""
                     style={{ width: "160px", height: "180px" }}
                   />
                   <figcaption className={Styles.imgCaption}>
                     <label className={Styles.header}>
-                      Social <span style={{ fontWeight: "bold" }}>Summit</span>
+                      Work{" "}
+                      <span style={{ fontWeight: "bold" }}>Presentation</span>
                     </label>
                   </figcaption>
                 </figure>
@@ -357,7 +353,7 @@ class Carousel extends Component {
               <div className={Styles.imgCard}>
                 <figure className={Styles.effectImgCard}>
                   <img
-                    src={Image7}
+                    src="/Images/previous_year_events/cultural_night.jpg"
                     className={Styles.imMobileg}
                     alt=""
                     style={{
@@ -371,7 +367,8 @@ class Carousel extends Component {
                     style={{ borderBottomLeftRadius: "12px" }}
                   >
                     <label className={Styles.header}>
-                      Social <span style={{ fontWeight: "bold" }}>Summit</span>
+                      Cultural{" "}
+                      <span style={{ fontWeight: "bold" }}>Nights</span>
                     </label>
                   </figcaption>
                 </figure>
@@ -380,7 +377,7 @@ class Carousel extends Component {
               <div className={Styles.imgCard}>
                 <figure className={Styles.effectImgCard}>
                   <img
-                    src={Image8}
+                    src="/Images/previous_year_events/hackathon.jpg"
                     className={Styles.imgMobile}
                     alt=""
                     style={{
@@ -394,7 +391,7 @@ class Carousel extends Component {
                     style={{ borderRadius: "0 12px 0 0" }}
                   >
                     <label className={Styles.header}>
-                      Social <span style={{ fontWeight: "bold" }}>Summit</span>
+                      <span style={{ fontWeight: "bold" }}> Hackathon</span>
                     </label>
                   </figcaption>
                 </figure>
