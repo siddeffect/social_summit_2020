@@ -6,27 +6,22 @@ const useStyles = makeStyles(theme => ({
     textAlign: "center"
   },
   comingSoon: {
-    height: "70vh",
-    margin: "4vh 0 0 0"
-  },
-  header: {
-    color: "#319788",
-    fontSize: "3em"
+    height: "40vh",
+    margin: "10vh 0 0 0"
   }
 }));
 
-function ComingSoon() {
+function PageNotFound() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <img
-        src="/Images/coming_soon.svg"
+        src="/Images/404.svg"
         alt="coming soon"
         className={classes.comingSoon}
       ></img>
-      <h1 className={classes.header}>Stay Tuned...</h1>
     </div>
   );
 }
 
-export default ComingSoon;
+export default PageNotFound;
