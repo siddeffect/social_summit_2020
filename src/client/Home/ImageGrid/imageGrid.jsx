@@ -27,15 +27,11 @@ class Carousel extends Component {
                     }}
                   />
                   <figcaption className={Styles.imgCaption}>
-                    <label className={Styles.header}>
-                      Case<span style={{ fontWeight: "bold" }}>Studies</span>
-                    </label>
-
+                    <label className={Styles.header}>Case Studies</label>
                     <div className={Styles.description}>
-                      Lorem ipsum dolor sit amet,
-                      <br /> consectetur adipiscing elit, sed do eiusmod tempor{" "}
-                      <br />
-                      incididunt ut labore et dolore magna aliqua.
+                      Channelize your thoughts to design better <br />
+                      lines of action to achieve a multi-dimensional <br />
+                      solution to the persisting social problems.
                       <div className={Styles.greenLine}></div>
                     </div>
                   </figcaption>
@@ -51,15 +47,11 @@ class Carousel extends Component {
                     style={{ width: "500px", height: "300px" }}
                   />
                   <figcaption className={Styles.imgCaption}>
-                    <label className={Styles.header}>
-                      {" "}
-                      <span style={{ fontWeight: "bold" }}> Workshops</span>
-                    </label>
+                    <label className={Styles.header}>B PLANS</label>
                     <div className={Styles.description}>
-                      Lorem ipsum dolor sit amet,
-                      <br /> consectetur adipiscing elit, sed do eiusmod tempor{" "}
+                      Prepare your business plans and get ready to
                       <br />
-                      incididunt ut labore et dolore magna aliqua.
+                      convince the inconvincible
                       <div className={Styles.greenLine}></div>
                     </div>
                   </figcaption>
@@ -83,13 +75,13 @@ class Carousel extends Component {
                     style={{ borderBottomLeftRadius: "12px" }}
                   >
                     <label className={Styles.header}>
-                      Guest<span style={{ fontWeight: "bold" }}>Lectures</span>
+                      Round Table Conference
                     </label>
                     <div className={Styles.description}>
-                      Lorem ipsum dolor sit amet,
-                      <br /> consectetur adipiscing elit, sed do eiusmod tempor{" "}
-                      <br />
-                      incididunt ut labore et dolore magna aliqua.
+                      Best ideas are surfaced only through an immense <br />
+                      clash of wisdom. This event presents a broad <br />
+                      discussion forum to reach a practical solution for <br />
+                      societal ills.
                       <div className={Styles.greenLine}></div>
                     </div>
                   </figcaption>
@@ -106,14 +98,13 @@ class Carousel extends Component {
                     style={{ width: "500px", height: "450px" }}
                   />
                   <figcaption className={Styles.imgCaption}>
-                    <label className={Styles.header}>
-                      Street<span style={{ fontWeight: "bold" }}>Play</span>
-                    </label>
+                    <label className={Styles.header}>Street Play</label>
                     <div className={Styles.description}>
-                      Lorem ipsum dolor sit amet,
-                      <br /> consectetur adipiscing elit, sed do eiusmod tempor{" "}
+                      Just pick up your drums, tambourines and get ready to{" "}
                       <br />
-                      incididunt ut labore et dolore magna aliqua.
+                      scream,shout and bustle up the streets,intriguing your{" "}
+                      <br />
+                      audience against a social dogma
                       <div className={Styles.greenLine}></div>
                     </div>
                   </figcaption>
@@ -130,13 +121,12 @@ class Carousel extends Component {
                   />
                   <figcaption className={Styles.imgCaption}>
                     <label className={Styles.header}>
-                      Action<span style={{ fontWeight: "bold" }}>Plan</span>
+                      Model United Nations Conference
                     </label>
                     <div className={Styles.description}>
-                      Lorem ipsum dolor sit amet,
-                      <br /> consectetur adipiscing elit, sed do eiusmod tempor{" "}
-                      <br />
-                      incididunt ut labore et dolore magna aliqua.
+                      An event to negotiate all the important agendas <br />
+                      and bring the best of the delegates, attachés and <br />
+                      moderators in an explicit and diplomatic way.
                       <div className={Styles.greenLine}></div>
                     </div>
                   </figcaption>
@@ -158,16 +148,10 @@ class Carousel extends Component {
                     }}
                   />
                   <figcaption className={Styles.imgCaption}>
-                    <label className={Styles.header}>
-                      Work
-                      <span style={{ fontWeight: "bold" }}>Presentation</span>
-                    </label>
-
+                    <label className={Styles.header}>Work Presentation</label>
                     <div className={Styles.description}>
-                      Lorem ipsum dolor sit amet,
-                      <br /> consectetur adipiscing elit, sed do eiusmod tempor{" "}
-                      <br />
-                      incididunt ut labore et dolore magna aliqua.
+                      Grab a chance for the rightful acknowledgment
+                      <br /> of your unparalleled social work.
                       <div className={Styles.greenLine}></div>
                     </div>
                   </figcaption>
@@ -183,15 +167,11 @@ class Carousel extends Component {
                     style={{ width: "500px", height: "300px" }}
                   />
                   <figcaption className={Styles.imgCaption}>
-                    <label className={Styles.header}>
-                      Cultural
-                      <span style={{ fontWeight: "bold" }}>Nights</span>
-                    </label>
+                    <label className={Styles.header}>Cultural Nights</label>
                     <div className={Styles.description}>
-                      Lorem ipsum dolor sit amet,
-                      <br /> consectetur adipiscing elit, sed do eiusmod tempor{" "}
-                      <br />
-                      incididunt ut labore et dolore magna aliqua.
+                      Have something different to stand out from the crowd? Then
+                      this is the moment to perform in front of an audience and
+                      steal the show.
                       <div className={Styles.greenLine}></div>
                     </div>
                   </figcaption>
@@ -214,14 +194,10 @@ class Carousel extends Component {
                     className={Styles.imgCaption}
                     style={{ borderBottomRightRadius: "12px " }}
                   >
-                    <label className={Styles.header}>
-                      <span style={{ fontWeight: "bold" }}> Hackathon</span>
-                    </label>
+                    <label className={Styles.header}>Hackathon</label>
                     <div className={Styles.description}>
-                      Lorem ipsum dolor sit amet,
-                      <br /> consectetur adipiscing elit, sed do eiusmod tempor{" "}
-                      <br />
-                      incididunt ut labore et dolore magna aliqua.
+                      Think ,refine,code and test your potential <br />
+                      to transfigure the current scenario of society.
                       <div className={Styles.greenLine}></div>
                     </div>
                   </figcaption>
@@ -248,10 +224,7 @@ class Carousel extends Component {
                     }}
                   />
                   <figcaption className={Styles.imgCaption}>
-                    <label className={Styles.header}>
-                      {" "}
-                      Case <span style={{ fontWeight: "bold" }}>Studies</span>
-                    </label>
+                    <label className={Styles.header}>Case Studies</label>
                   </figcaption>
                 </figure>
               </div>
@@ -269,10 +242,7 @@ class Carousel extends Component {
                     }}
                   />
                   <figcaption className={Styles.imgCaption}>
-                    <label className={Styles.header}>
-                      {" "}
-                      <span style={{ fontWeight: "bold" }}> Workshops</span>
-                    </label>
+                    <label className={Styles.header}>B PLANS</label>
                   </figcaption>
                 </figure>
               </div>
@@ -291,9 +261,7 @@ class Carousel extends Component {
                     }}
                   />
                   <figcaption className={Styles.imgCaption}>
-                    <label className={Styles.header}>
-                      Guest <span style={{ fontWeight: "bold" }}>Lectures</span>
-                    </label>
+                    <label className={Styles.header}>R.T.C</label>
                   </figcaption>
                 </figure>
               </div>
@@ -307,9 +275,7 @@ class Carousel extends Component {
                     style={{ width: "160px", height: "180px" }}
                   />
                   <figcaption className={Styles.imgCaption}>
-                    <label className={Styles.header}>
-                      Street <span style={{ fontWeight: "bold" }}>Play</span>
-                    </label>
+                    <label className={Styles.header}>Street Play</label>
                   </figcaption>
                 </figure>
               </div>
@@ -325,9 +291,7 @@ class Carousel extends Component {
                     style={{ width: "160px", height: "180px" }}
                   />
                   <figcaption className={Styles.imgCaption}>
-                    <label className={Styles.header}>
-                      Action <span style={{ fontWeight: "bold" }}>Plan</span>
-                    </label>
+                    <label className={Styles.header}>M.U.N</label>
                   </figcaption>
                 </figure>
               </div>
@@ -340,10 +304,7 @@ class Carousel extends Component {
                     style={{ width: "160px", height: "180px" }}
                   />
                   <figcaption className={Styles.imgCaption}>
-                    <label className={Styles.header}>
-                      Work{" "}
-                      <span style={{ fontWeight: "bold" }}>Presentation</span>
-                    </label>
+                    <label className={Styles.header}>Work Presentation</label>
                   </figcaption>
                 </figure>
               </div>
@@ -366,10 +327,7 @@ class Carousel extends Component {
                     className={Styles.imgCaption}
                     style={{ borderBottomLeftRadius: "12px" }}
                   >
-                    <label className={Styles.header}>
-                      Cultural{" "}
-                      <span style={{ fontWeight: "bold" }}>Nights</span>
-                    </label>
+                    <label className={Styles.header}>Cultural Nights</label>
                   </figcaption>
                 </figure>
               </div>
@@ -390,9 +348,7 @@ class Carousel extends Component {
                     className={Styles.imgCaption}
                     style={{ borderRadius: "0 12px 0 0" }}
                   >
-                    <label className={Styles.header}>
-                      <span style={{ fontWeight: "bold" }}> Hackathon</span>
-                    </label>
+                    <label className={Styles.header}>Hackathon</label>
                   </figcaption>
                 </figure>
               </div>

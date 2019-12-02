@@ -8,8 +8,10 @@ import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: "985px",
+    height: "900px",
+    width: "100vw",
     display: "flex",
+    overflowX: "hidden",
     "@media (max-width:780px)": {
       height: "700px",
       width: "auto"
@@ -19,9 +21,16 @@ const useStyles = makeStyles(theme => ({
     // eslint-disable-next-line
     backgroundImage: "url(" + "/Images/Subtle-Prism.svg" + ")",
     display: "flex",
-    flexGrow: 2,
+    flexGrow: 1,
     flexDirection: "column",
-    padding: "150px 0px 150px 100px",
+    padding: "150px 0px 150px 120px",
+    "@media (min-width:1300px) and (max-width:1380px)": {
+      flexGrow: 0.3
+    },
+    "@media (min-width:1360px) and (max-width:1440px)": {
+      padding: "0px 0px 0px 50px"
+    },
+
     "@media (max-width:780px)": {
       padding: "60px 30px 15px 30px"
     }
@@ -29,6 +38,9 @@ const useStyles = makeStyles(theme => ({
   header: {
     color: "#ffffff",
     fontSize: "5.5em",
+    "@media (min-width:1360px) and (max-width:1440px)": {
+      fontSize: "4em"
+    },
     fontFamily: ["'Raleway'", "sans-serif"].join(","),
     "@media (max-width:780px)": {
       fontSize: "2.4em"
@@ -41,7 +53,7 @@ const useStyles = makeStyles(theme => ({
   },
   themeContent: {
     margin: "20px 50px 0 0",
-    maxWidth: "600px",
+    maxWidth: "450px",
     color: "#545D5F",
     fontSize: "1.3em",
     fontFamily: ["'Roboto'", "sans-serif"].join(","),
@@ -50,11 +62,11 @@ const useStyles = makeStyles(theme => ({
     }
   },
   button: {
-    marginTop: "40px",
+    marginTop: "50px",
     width: "300px",
     height: "60px",
     color: "#fff",
-    fontSize: "1.2em",
+    fontSize: "20px",
     "@media (max-width:780px)": {
       width: "150px",
       height: "40px",
@@ -69,6 +81,10 @@ const useStyles = makeStyles(theme => ({
     textAlign: "center",
     flexGrow: 1,
     padding: "150px 200px 150px 200px",
+    "@media (min-width:1300px) and (max-width:1380px)": {
+      padding: "0px 0px 0px 50px",
+      flexGrow: 0.7
+    },
     "@media (max-width:780px)": {
       display: "none"
     }
