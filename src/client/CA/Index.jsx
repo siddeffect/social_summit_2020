@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import RoleCA from "./RoleCA";
-// import WhyCA from "./WhyCA";
+import WhyCA from "./WhyCA";
 import CABackground from "./CABackground";
 
 export class Index extends Component {
@@ -8,7 +8,7 @@ export class Index extends Component {
     return (
       <div>
         <CABackground></CABackground>
-        {/* <WhyCA></WhyCA> */}
+        <WhyCA></WhyCA>
         {/* <RoleCA> </RoleCA> */}
       </div>
     );
