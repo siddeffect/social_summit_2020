@@ -3,7 +3,6 @@
   height: 100vh;
   display: flex;
   flex-flow: column;
-  /* background: linear-gradient(to right, #4ca2cd, #67b26f); */
   background: linear-gradient(
     68.2deg,
     rgba(3, 126, 243, 1) -0.3%,
