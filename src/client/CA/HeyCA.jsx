@@ -7,7 +7,7 @@ export class HeyCA extends Component {
       <div className={Styles.outercontainer}>
         <div className={Styles.outerbox}>
           <div className={Styles.box}>
-            <h1 className={Styles.heyca}>Hey Campus Ambassador</h1>
+            <h1 className={Styles.heyca}>Social Attaché</h1>
 
             <h1 className={Styles.heyca1}> </h1>
 

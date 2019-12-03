@@ -22,10 +22,10 @@
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: 600;
-  font-size: 46px;
+  font-size: 5em;
   line-height: 60px;
   color: #000000;
-  margin: 0px;
+  margin: 0 0 4vh 0;
 }
 .heyca1 {
   font-family: "Ubuntu";
@@ -35,7 +35,7 @@
   line-height: 34px;
   /* identical to box height */
 
-  text-align: right;
+  text-align: left;
   /* text-transform: uppercase; */
 
   color: #000000;

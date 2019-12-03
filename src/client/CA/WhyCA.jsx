@@ -30,31 +30,6 @@ const reasonsArray = [
     content: [
       { text: "Faucibus purus in massa tempor nec feugiat nisl pretium." }
     ]
-  },
-  {
-    name: "Certificate",
-    src: Certificate,
-    // style: "nowrap",
-    heading: "Certificate of Appreciation",
-    content: [
-      { text: "Faucibus purus in massa tempor nec feugiat nisl pretium." }
-    ]
-  },
-  {
-    name: "faceOfSummit20",
-    src: Networking,
-    heading: "Face of Social Summit 2020",
-    content: [
-      { text: "Faucibus purus in massa tempor nec feugiat nisl pretium." }
-    ]
-  },
-  {
-    name: "internshipOffers",
-    src: Id,
-    heading: "Internship Offers",
-    content: [
-      { text: "Faucibus purus in massa tempor nec feugiat nisl pretium." }
-    ]
   }
 ];
 
