@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./client/Home/Home";
 import ComingSoon from "./client/ComingSoon/ComingSoon";
 import PageNotFound from "./client/404/404";
+import CAPage from "./client/CA/Index";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const Page404 = ({ location }) => (
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route exact path="/campus ambassador">
+            <CAPage />
           </Route>
           <Route exact path="/events">
             <ComingSoon />

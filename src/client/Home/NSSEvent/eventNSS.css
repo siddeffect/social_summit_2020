@@ -2,6 +2,11 @@
   padding: 40px;
   background: #fff;
 }
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+}
 .slick-slide img {
   margin: auto;
 }
@@ -9,31 +14,33 @@
 .slick-prev:before,
 .slick-next:before {
   opacity: 1;
-  font-size: 35px;
-  color: darkgrey;
+  color: #5d5d5d;
 }
 
+/*
 .slick-next {
   right: 5px !important;
 }
 .slik-prev {
   left: 5px !important;
 }
+*/
 
-.slick-list {
-  margin-left: 3%;
-}
+/* .slick-list {
+  margin-left: 30%;
+} */
 
 .image {
-  width: 360px;
+  width: 380px;
   height: 200px;
-  border-radius: 16px 16px 0 0;
+  border-radius: 8px 8px 0 0;
 }
 
 .leftContainer,
 .rightContainer {
-  width: 360px !important;
-  border-radius: 16px !important;
+  min-height: 500px !important;
+  width: 380px !important;
+  border-radius: 8px !important;
 }
 
 .leftContainer {
@@ -63,13 +70,13 @@
 
 .leftPara {
   font-family: "Ubuntu";
-  font-size: 20px;
+  font-size: 18px;
   color: #5d5d5d;
 }
 
 .rightPara {
   font-family: "Ubuntu";
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .leftHeader {
@@ -78,7 +85,7 @@
 
 .leftHeader,
 .rightHeader {
-  font-size: 30px;
+  font-size: 26px;
   font-family: "Ubuntu";
 }
 
@@ -95,7 +102,7 @@
 
 @media screen and (min-width: 1600px) {
   .slick-list {
-    margin-left: 10%;
+    margin-left: 9%;
   }
 }
 
@@ -112,13 +119,13 @@
 }
 
 /* for mobile */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .slick-prev:before,
   .slick-next:before {
     opacity: 0;
     color: #fff;
   }
-}
+} */
 
 @media screen and (min-width: 500px) and (max-width: 605px) {
   .slick-slide img {
@@ -143,7 +150,7 @@
 @media screen and (min-width: 400px) and (max-width: 420px) {
   .leftContainer,
   .rightContainer {
-    width: 320px !important;
+    width: 300px !important;
     border-radius: 8px;
   }
 
@@ -174,9 +181,6 @@
   .slick-slide img {
     margin-left: 15%;
     margin-top: 5%;
-  }
-
-  .slick-slide img {
     display: block;
   }
 
@@ -213,9 +217,6 @@
   .slick-slide img {
     margin-left: 16%;
     margin-top: 5%;
-  }
-
-  .slick-slide img {
     display: block;
   }
 

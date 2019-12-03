@@ -1,0 +1,25 @@
+.caBackgroundContainer {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  /* background: linear-gradient(
+    68.2deg,
+    rgba(3, 126, 243, 1) -0.3%,
+    rgba(48, 195, 158, 1) 100.2%
+  ); */
+}
+.mainBackground {
+  background-image: url("../Images/hero_image.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  box-sizing: border-box;
+  flex: 1 1;
+}
+@media only screen and (max-width: 768px) {
+  .mainBackground {
+    background: none;
+  }
+}

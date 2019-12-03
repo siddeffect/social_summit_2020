@@ -7,23 +7,24 @@ import MenuDrawer from "./Drawer";
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    background: "transparent",
+    background: "black",
+    overflowX: "hidden",
+    width: "100vw",
     "@media (max-width:780px)": {
-      width: "420px"
+      width: "100vw"
     }
   },
   appBar: {
-    position: "absolute",
+    position: "",
     padding: " 10px",
-
     background: "transparent",
     boxShadow: "none",
     "@media (max-width:780px)": {
-      width: "410px"
+      width: "1vw"
     }
   },
   button: {
-    background: "black",
+    background: "#545D5F",
     marginEnd: "20px",
     ":hover&": {
       background: "#00a650"
@@ -34,7 +35,7 @@ const useStyles = makeStyles(theme => ({
   },
   fab: {
     margin: theme.spacing(1),
-    background: "#0e1113",
+    background: "#545D5F",
     ":hover&": {
       background: "#00a650"
     },
@@ -45,14 +46,38 @@ const useStyles = makeStyles(theme => ({
   logo: {
     flexGrow: 1,
     height: "70px",
-    width: "50px",
-    paddingRight: "1300px",
+    marginLeft: "-70%",
     marginRight: theme.spacing(1),
-    "@media (max-width:780px)": {
-      flex: 0,
-      height: "40px",
+    "@media (min-width:1300px) and (max-width:1400px)": {
+      marginLeft: "-60%"
+    },
+    "@media (min-width:1405px) and (max-width:1450px)": {
+      marginLeft: "-62.5%"
+    },
+    "@media (min-width:700px) and (max-width:800px)": {
+      height: "45px",
       width: "auto",
-      paddingRight: "230px"
+      paddingRight: "75vw"
+    },
+    "@media (min-width:500px) and (max-width:600px)": {
+      height: "45px",
+      width: "auto",
+      paddingRight: "67.5vw"
+    },
+    "@media (min-width:365px) and (max-width:420px)": {
+      height: "45px",
+      width: "auto",
+      paddingRight: "55vw"
+    },
+    "@media (min-width:320px) and (max-width:360px)": {
+      height: "45px",
+      width: "auto",
+      paddingRight: "50vw"
+    },
+    "@media (max-width:320px)": {
+      height: "45px",
+      width: "auto",
+      paddingRight: "42.5vw"
     }
   }
 }));

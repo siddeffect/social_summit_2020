@@ -1,0 +1,151 @@
+.whyCAOuterContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  background: linear-gradient(
+    68.2deg,
+    rgba(3, 126, 243, 1) -0.3%,
+    rgba(48, 195, 158, 1) 100.2%
+  );
+}
+.headingContainer {
+  width: 100%;
+  height: 13vh;
+  box-sizing: border-box;
+  padding: 25px;
+  display: flex;
+}
+.headingContainer > p {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: normal;
+  white-space: nowrap;
+  margin: 0 auto;
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 56px;
+}
+.reasonsOuterContainer {
+  width: 90%;
+  height: fit-content;
+  margin: 0 auto;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.imgTextWrapper {
+  box-sizing: border-box;
+  display: flex;
+  width: 46.3%;
+  height: 27.2%;
+  padding: 1% 3%;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 4px 8px 24px rgba(0, 0, 0, 0.15);
+
+  justify-content: space-around;
+  border-radius: 2px;
+}
+.imgTextWrapper img {
+  width: 37px;
+}
+.imgTextWrapper > p {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+.reasonsText {
+  display: none;
+}
+.reasonsHeading {
+  font-family: "Roboto", sans-serif !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 13px !important;
+  line-height: 15px;
+  text-align: center !important;
+  color: #000000 !important;
+  margin: 0 !important;
+}
+
+@media (min-width: 750px) {
+  .imgTextWrapper img {
+    width: auto;
+  }
+  .reasonsHeading {
+    margin: 1rem;
+    font-size: 20px !important;
+    line-height: 23px !important;
+    white-space: nowrap;
+  }
+
+  .imgTextWrapper {
+    border-radius: 10px;
+    width: 29%;
+    height: 40%;
+  }
+
+  .reasonsText {
+    display: flex;
+    margin-bottom: 0;
+  }
+  .headingContainer > p {
+    font-size: 40px;
+    line-height: 70px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .imgTextWrapper {
+    width: 24.5%;
+    margin: 0 4%;
+  }
+  .reasonsOuterContainer {
+    width: 90%;
+  }
+}
+@media (min-width: 1440px) {
+  .imgTextWrapper {
+    width: 23.5%;
+  }
+  .reasonsOuterContainer {
+    width: 85%;
+  }
+}
+
+@media (min-width: 755px) and (max-width: 1011px) {
+  .imgTextWrapper img {
+    width: auto;
+  }
+  .reasonsHeading {
+    margin: 1rem;
+    font-size: 15px !important;
+    line-height: 23px !important;
+    white-space: nowrap;
+  }
+  .imgTextWrapper {
+    border-radius: 10px;
+    width: 32%;
+    height: 46%;
+    font-size: 12px;
+  }
+
+  .reasonsText {
+    display: flex;
+    margin-bottom: 0;
+  }
+  .headingContainer > p {
+    font-size: 40px;
+    line-height: 70px;
+  }
+}

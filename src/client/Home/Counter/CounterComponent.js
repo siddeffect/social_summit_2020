@@ -63,7 +63,7 @@ const useStyles = makeStyles(theme => ({
     fontFamily: ["Roboto Condensed", "sans-serif"].join(","),
     textAlign: "center",
     "@media (max-width:780px)": {
-      fontSize: 35,
+      fontSize: 32,
       flexGrow: 0.6
     },
     "@media (min-width:350px) and (max-width:375px)": {
