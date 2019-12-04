@@ -7,15 +7,15 @@ import MenuDrawer from "./Drawer";
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    background: "black",
-    overflowX: "hidden",
+    background: "transparent",
+    // overflowX: "hidden",
     width: "100vw",
     "@media (max-width:780px)": {
       width: "100vw"
     }
   },
   appBar: {
-    position: "",
+    position: "absolute",
     padding: " 10px",
     background: "transparent",
     boxShadow: "none",
@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   button: {
-    background: "#545D5F",
+    background: "#000",
     marginEnd: "20px",
     ":hover&": {
       background: "#00a650"
@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
   },
   fab: {
     margin: theme.spacing(1),
-    background: "#545D5F",
+    background: "#000",
     ":hover&": {
       background: "#00a650"
     },
@@ -45,7 +45,7 @@ const useStyles = makeStyles(theme => ({
   },
   logo: {
     flexGrow: 1,
-    height: "70px",
+    height: "90px",
     marginLeft: "-70%",
     marginRight: theme.spacing(1),
     "@media (min-width:1300px) and (max-width:1400px)": {
@@ -94,7 +94,6 @@ export default function ButtonAppBar() {
             src="/Images/Logo_Main.svg"
             alt="logo"
           />
-
           <Button color="inherit" className={classes.button}>
             Register
           </Button>
