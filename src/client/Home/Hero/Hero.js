@@ -9,9 +9,12 @@ import Button from "@material-ui/core/Button";
 const useStyles = makeStyles(theme => ({
   root: {
     height: "900px",
-    width: "100vw",
+    width: "99.2vw",
     display: "flex",
     overflowX: "hidden",
+    "@media (min-width:1360px) and (max-width:1440px)": {
+      width: "100vw"
+    },
     "@media (max-width:780px)": {
       height: "700px",
       width: "auto"
@@ -21,14 +24,16 @@ const useStyles = makeStyles(theme => ({
     // eslint-disable-next-line
     backgroundImage: "url(" + "/Images/Subtle-Prism.svg" + ")",
     display: "flex",
-    flexGrow: 1,
+    flexGrow: 0.5,
     flexDirection: "column",
     padding: "150px 0px 150px 120px",
     "@media (min-width:1300px) and (max-width:1380px)": {
-      flexGrow: 0.3
+      flexGrow: 0.3,
+      padding: "90px 0px 0px 50px"
     },
-    "@media (min-width:1360px) and (max-width:1440px)": {
-      padding: "0px 0px 0px 50px"
+    "@media (min-width:1400px) and (max-width:1440px)": {
+      padding: "90px 0px 0px 50px",
+      flexGrow: 1
     },
 
     "@media (max-width:780px)": {
@@ -53,7 +58,7 @@ const useStyles = makeStyles(theme => ({
   },
   themeContent: {
     margin: "20px 50px 0 0",
-    maxWidth: "450px",
+    maxWidth: "650px",
     color: "#545D5F",
     fontSize: "1.3em",
     fontFamily: ["'Roboto'", "sans-serif"].join(","),
