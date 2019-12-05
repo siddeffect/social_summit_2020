@@ -6,15 +6,17 @@ import Hero from "./Hero/Hero.js";
 import CounterComponent from "./Counter/CounterComponent";
 import EventNSS from "./NSSEvent/eventNSS";
 import About from "./About/About";
+import PreviousSpeakers from "./PreviousSpeakers/PreviousSpeakers";
 
 function Home() {
   return (
     <div>
       <Navbar />
       <Hero />
-      {/* <CounterComponent /> */}
+      <CounterComponent />
       <About />
       <Grid />
+      <PreviousSpeakers />
       <EventNSS />
       <Footer />
     </div>
