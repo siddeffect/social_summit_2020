@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
     width: "auto",
     display: "flex",
     flexDirection: "row",
-    margin: "0 0 20px 0",
+    margin: "0 0 0 0",
     textAlign: "center",
     padding: "0 100px 0 100px",
     "@media (max-width:780px)": {
@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   header: {
-    marginTop: "20px",
+    marginTop: "0px",
     alignContent: "center",
     textAlign: "center",
     width: "100%",
@@ -57,6 +57,8 @@ const useStyles = makeStyles(theme => ({
   },
 
   data: {
+    marginTop: "20px",
+
     flexGrow: 1,
     fontSize: 70,
     color: "#ffffff",
@@ -80,31 +82,31 @@ export default function CounterComponent() {
   return (
     <div className={classes.root}>
       <div className={classes.container}>
-        <div className={classes.header}>Events</div>
         <div className={classes.data}>
           <CounterNumberUp endValue="20" time="100" />
         </div>
+        <div className={classes.header}>Events</div>
       </div>
 
       <div className={classes.container}>
-        <div className={classes.header}>Partners</div>
         <div className={classes.data}>
           <CounterNumberUp endValue="30" time="100" />
         </div>
+        <div className={classes.header}>Partners</div>
       </div>
 
       <div className={classes.container}>
-        <div className={classes.header}>FootFall</div>
         <div className={classes.data}>
           <CounterNumberUp endValue="1000" time="0" />
         </div>
+        <div className={classes.header}>FootFall</div>
       </div>
 
       <div className={classes.container}>
-        <div className={classes.header}>Team</div>
         <div className={classes.data}>
           <CounterNumberUp endValue="50" time="50" />
         </div>
+        <div className={classes.header}>Team</div>
       </div>
     </div>
   );
