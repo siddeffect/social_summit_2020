@@ -179,21 +179,26 @@
   }
 
   .slick-slide img {
-    margin-left: 15%;
+    margin-left: 25%;
     margin-top: 5%;
     display: block;
   }
 
   .image {
-    width: 175px;
-    height: 175px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
   }
 
   .leftContainer,
   .rightContainer {
     width: 270px !important;
+    min-height: 470px !important;
     border-radius: 8px;
+  }
+  .leftHeading,
+  .rightHeading {
+    padding: 24px 36px 8px 24px;
   }
 }
 

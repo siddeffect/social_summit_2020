@@ -9,6 +9,10 @@ class CounterNumberUp extends Component {
     };
   }
 
+  // componentDidMount() {
+  //   this.interval = setInterval(() => this.countup(), 100);
+  // }
+
   countup = props => {
     const end = this.props.endValue;
 
@@ -17,9 +21,7 @@ class CounterNumberUp extends Component {
         count: prevState.count + 1
       }));
     } else {
-      this.setState({
-        count: end
-      });
+      clearInterval(this.interval);
     }
   };
 
@@ -27,7 +29,7 @@ class CounterNumberUp extends Component {
     // eslint-disable-next-line
     const count = setInterval(this.countup, this.props.time);
 
-    return <div> {this.state.count} +</div>;
+    return <div> {this.state.count}+ </div>;
   }
 }
 

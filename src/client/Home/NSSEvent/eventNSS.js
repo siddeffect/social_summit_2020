@@ -10,16 +10,6 @@ import Image6 from "../ImageGrid/images/img6.jpeg";
 import Image7 from "../ImageGrid/images/img7.jpeg";
 import Image8 from "../ImageGrid/images/img8.jpeg";
 
-// function SampleNextArrow(props) {
-//   const { className, style, onClick } = props;
-//   return <div className={className} style={{ ...style }} onClick={onClick} />;
-// }
-
-// function SamplePrevArrow(props) {
-//   const { className, style, onClick } = props;
-//   return <div className={className} style={{ ...style }} onClick={onClick} />;
-// }
-
 class Carousel extends React.Component {
   state = {
     width: window.innerWidth
@@ -32,6 +22,8 @@ class Carousel extends React.Component {
       speed: 500,
       slidesToShow: 3,
       slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
       responsive: [
         {
           breakpoint: 768,
@@ -39,13 +31,12 @@ class Carousel extends React.Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             infinite: true,
-            dots: true
+            dots: true,
+            autoplay: false,
+            fade: true
           }
         }
       ]
-      // autoplay: false,
-      // prevArrow: <SamplePrevArrow />,
-      // nextArrow: <SampleNextArrow />
     };
 
     return (
