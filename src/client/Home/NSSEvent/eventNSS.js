@@ -33,7 +33,6 @@ function Carousel() {
       }
     ]
   };
-
   return (
     <div className="container">
       <Slider {...Settings}>
