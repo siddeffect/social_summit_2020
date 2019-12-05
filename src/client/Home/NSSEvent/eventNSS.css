@@ -1,4 +1,5 @@
 .container {
+  margin: 0 15rem 0 15rem;
   padding: 40px;
   background: #fff;
 }
@@ -17,19 +18,6 @@
   color: #5d5d5d;
 }
 
-/*
-.slick-next {
-  right: 5px !important;
-}
-.slik-prev {
-  left: 5px !important;
-}
-*/
-
-/* .slick-list {
-  margin-left: 30%;
-} */
-
 .image {
   width: 380px;
   height: 200px;
@@ -45,12 +33,10 @@
 
 .leftContainer {
   background-color: #f2f2f2;
-  /* background-color: #00a650; */
 }
 
 .rightContainer {
   background-color: #00a650;
-  /* background-color: #f2f2f2; */
 }
 
 .leftHeading,
@@ -98,6 +84,10 @@
   .slick-list {
     margin-left: 5%;
   }
+
+  .container {
+    margin: 0;
+  }
 }
 
 @media screen and (min-width: 1600px) {
@@ -110,22 +100,19 @@
   .slick-list {
     margin-left: 25%;
   }
+  .container {
+    margin: 0;
+  }
 }
 
 @media screen and (min-width: 900px) and (max-width: 1030px) {
   .slick-list {
     margin-left: 30%;
   }
-}
-
-/* for mobile */
-/* @media screen and (max-width: 768px) {
-  .slick-prev:before,
-  .slick-next:before {
-    opacity: 0;
-    color: #fff;
+  .container {
+    margin: 0;
   }
-} */
+}
 
 @media screen and (min-width: 500px) and (max-width: 605px) {
   .slick-slide img {
@@ -135,6 +122,9 @@
     margin-left: 15%;
   }
 
+  .container {
+    margin: 0;
+  }
   .image {
     width: 185px;
     height: 185px;
@@ -158,6 +148,9 @@
     margin-top: 5%;
   }
 
+  .container {
+    margin: 0;
+  }
   .slick-list {
     margin-left: 2%;
   }
@@ -189,7 +182,9 @@
     height: 130px;
     border-radius: 50%;
   }
-
+  .container {
+    margin: 0;
+  }
   .leftContainer,
   .rightContainer {
     width: 270px !important;
@@ -206,17 +201,24 @@
   .slick-list {
     margin-left: 1.5%;
   }
+  .container {
+    margin: 0;
+  }
 }
 
 @media screen and (min-width: 370px) and (max-width: 380px) {
   .slick-list {
     margin-left: 4.5%;
   }
+  .container {
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 320px) {
   .container {
     padding-left: 42px;
+    margin: 0;
   }
 
   .slick-slide img {
