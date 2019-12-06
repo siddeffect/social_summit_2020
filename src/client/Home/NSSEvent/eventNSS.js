@@ -28,7 +28,8 @@ function Carousel() {
           slidesToScroll: 1,
           infinite: true,
           dots: true,
-          fade: true
+          fade: true,
+          autoplay: false
         }
       }
     ]
