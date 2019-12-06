@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import React, { Component } from "react";
+import { withStyles } from "@material-ui/styles";
 import { AppBar, Toolbar, Button, Fab } from "@material-ui/core";
 import { Facebook, Twitter, Instagram, LinkedIn } from "@material-ui/icons";
 import MenuDrawer from "./Drawer";
 
-const useStyles = makeStyles(theme => ({
+const styles = theme => ({
   root: {
     flexGrow: 1,
     background: "transparent",
@@ -14,19 +14,14 @@ const useStyles = makeStyles(theme => ({
     }
   },
   appBar: {
-    position: "absolute",
+    // position: "absolute",
     padding: " 10px",
-    background: "transparent",
+    // background: "transparent",
     boxShadow: "none",
     "@media (max-width:780px)": {
       width: "1vw"
     }
   },
-  stickyAppBar: {
-    background: "black",
-    position: "fixed"
-  },
-
   button: {
     background: "#000",
     marginEnd: "20px",
@@ -38,7 +33,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   fab: {
-    margin: theme.spacing(1),
+    margin: "10px",
     background: "#000",
     ":hover&": {
       background: "#00a650"
@@ -50,13 +45,12 @@ const useStyles = makeStyles(theme => ({
   logo: {
     flexGrow: 1,
     height: "90px",
-    marginLeft: "-60%",
-    marginRight: theme.spacing(1),
+    marginLeft: "-70%",
     "@media (min-width:1300px) and (max-width:1400px)": {
-      marginLeft: "-60%"
+      marginLeft: "-58%"
     },
     "@media (min-width:1405px) and (max-width:1450px)": {
-      marginLeft: "-62.5%"
+      marginLeft: "-60%"
     },
     "@media (min-width:700px) and (max-width:800px)": {
       height: "45px",
@@ -84,87 +78,104 @@ const useStyles = makeStyles(theme => ({
       paddingRight: "42.5vw"
     }
   }
-}));
+});
 
-export default function ButtonAppBar() {
-  const classes = useStyles();
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      const isTop = window.scrollY > 100;
-      const nav = document.getElementById("nav");
-      if (isTop) {
-        nav.classList.add("stickyAppBar");
-      } else {
-        nav.classList.remove("stickyAppBar");
-      }
-    });
-
-    return () => {
-      window.removeEventListener("scroll", () => {});
+class Navbar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      scrolled: false
     };
-  }, []);
 
-  return (
-    <div className={classes.root}>
-      <AppBar id="nav" position="static" className={classes.appBar}>
-        <Toolbar>
-          <img
-            className={classes.logo}
-            src="/Images/Logo_Main.svg"
-            alt="logo"
-          />
-          <Button color="inherit" className={classes.button}>
-            Register
-          </Button>
-          <Button color="inherit" className={classes.button}>
-            Login
-          </Button>
+    this.handleScroll = this.handleScroll.bind(this);
+  }
 
-          <Fab
-            href="https://www.facebook.com/iitrsocialsummit/"
-            target="_blank"
-            size="small"
-            color="primary"
-            aria-label="add"
-            className={classes.fab}
-          >
-            <Facebook />
-          </Fab>
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
 
-          <Fab
-            href="https://www.instagram.com/iitrsocialsummit/"
-            target="_blank"
-            size="small"
-            color="primary"
-            aria-label="add"
-            className={classes.fab}
-          >
-            <Instagram />
-          </Fab>
-          <Fab
-            href="https://www.linkedin.com/company/national-social-summit/?originalSubdomain=in"
-            target="_blank"
-            size="small"
-            color="primary"
-            aria-label="add"
-            className={classes.fab}
-          >
-            <LinkedIn />
-          </Fab>
-          <Fab
-            href="https://twitter.com/natsocialsummit"
-            target="_blank"
-            size="small"
-            color="primary"
-            aria-label="add"
-            className={classes.fab}
-          >
-            <Twitter />
-          </Fab>
-          <MenuDrawer />
-        </Toolbar>
-      </AppBar>
-    </div>
-  );
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  handleScroll() {
+    if (window.scrollY > 100) {
+      this.setState({ scrolled: true });
+    } else {
+      this.setState({ scrolled: false });
+    }
+  }
+
+  render() {
+    const { classes } = this.props;
+    return (
+      <div className={classes.root}>
+        <AppBar
+          style={{
+            position: this.state.scrolled ? "fixed" : "absolute",
+            background: this.state.scrolled ? "black" : "transparent"
+          }}
+          className={classes.appBar}
+        >
+          <Toolbar>
+            <img
+              className={classes.logo}
+              src="/Images/Logo_Main.svg"
+              alt="logo"
+            />
+            <Button color="inherit" className={classes.button}>
+              Register
+            </Button>
+            <Button color="inherit" className={classes.button}>
+              Login
+            </Button>
+
+            <Fab
+              href="https://www.facebook.com/iitrsocialsummit/"
+              target="_blank"
+              size="small"
+              color="primary"
+              aria-label="add"
+              className={classes.fab}
+            >
+              <Facebook />
+            </Fab>
+
+            <Fab
+              href="https://www.instagram.com/iitrsocialsummit/"
+              target="_blank"
+              size="small"
+              color="primary"
+              aria-label="add"
+              className={classes.fab}
+            >
+              <Instagram />
+            </Fab>
+            <Fab
+              href="https://www.linkedin.com/company/national-social-summit/?originalSubdomain=in"
+              target="_blank"
+              size="small"
+              color="primary"
+              aria-label="add"
+              className={classes.fab}
+            >
+              <LinkedIn />
+            </Fab>
+            <Fab
+              href="https://twitter.com/natsocialsummit"
+              target="_blank"
+              size="small"
+              color="primary"
+              aria-label="add"
+              className={classes.fab}
+            >
+              <Twitter />
+            </Fab>
+            <MenuDrawer />
+          </Toolbar>
+        </AppBar>
+      </div>
+    );
+  }
 }
+export default withStyles(styles)(Navbar);
