@@ -60,9 +60,9 @@ export default function About() {
     speed: 700,
     slidesToShow: 2,
     slidesToScroll: 1,
-    arrows: false
-    // autoplay: true,
-    // autoplaySpeed: 2000
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 2000
   };
   return (
     <div className={classes.root}>

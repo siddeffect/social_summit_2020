@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { AppBar, Toolbar, Button, Fab } from "@material-ui/core";
-import { Facebook, Twitter, Instagram } from "@material-ui/icons";
+import { Facebook, Twitter, Instagram, LinkedIn } from "@material-ui/icons";
 import MenuDrawer from "./Drawer";
 
 const useStyles = makeStyles(theme => ({
@@ -46,7 +46,7 @@ const useStyles = makeStyles(theme => ({
   logo: {
     flexGrow: 1,
     height: "90px",
-    marginLeft: "-70%",
+    marginLeft: "-60%",
     marginRight: theme.spacing(1),
     "@media (min-width:1300px) and (max-width:1400px)": {
       marginLeft: "-60%"
@@ -102,6 +102,8 @@ export default function ButtonAppBar() {
           </Button>
 
           <Fab
+            href="https://www.facebook.com/iitrsocialsummit/"
+            target="_blank"
             size="small"
             color="primary"
             aria-label="add"
@@ -111,20 +113,34 @@ export default function ButtonAppBar() {
           </Fab>
 
           <Fab
-            size="small"
-            color="primary"
-            aria-label="add"
-            className={classes.fab}
-          >
-            <Twitter />
-          </Fab>
-          <Fab
+            href="https://www.instagram.com/iitrsocialsummit/"
+            target="_blank"
             size="small"
             color="primary"
             aria-label="add"
             className={classes.fab}
           >
             <Instagram />
+          </Fab>
+          <Fab
+            href="https://www.linkedin.com/company/national-social-summit/?originalSubdomain=in"
+            target="_blank"
+            size="small"
+            color="primary"
+            aria-label="add"
+            className={classes.fab}
+          >
+            <LinkedIn />
+          </Fab>
+          <Fab
+            href="https://twitter.com/natsocialsummit"
+            target="_blank"
+            size="small"
+            color="primary"
+            aria-label="add"
+            className={classes.fab}
+          >
+            <Twitter />
           </Fab>
           <MenuDrawer />
         </Toolbar>
