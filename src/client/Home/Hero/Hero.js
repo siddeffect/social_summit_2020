@@ -8,7 +8,7 @@ import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: "900px",
+    height: "100vh",
     width: "99.2vw",
     display: "flex",
     overflowX: "hidden",
@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
       width: "100vw"
     },
     "@media (max-width:780px)": {
-      height: "700px",
+      height: "750px",
       width: "auto"
     }
   },

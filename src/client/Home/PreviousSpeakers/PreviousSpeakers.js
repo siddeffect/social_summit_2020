@@ -10,7 +10,19 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#F2F2F2",
     padding: "6rem 0 6rem 0",
     alignItem: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    "@media(min-width:500px) and (max-width:605px)": {
+      padding: "2rem 0 11rem 0"
+    },
+    "@media(min-width:350px) and (max-width:361px)": {
+      padding: "3rem 0 6rem 0"
+    },
+    "@media(min-width:365px) and (max-width:380px)": {
+      padding: "4rem 0 6rem 0"
+    },
+    "@media(min-width:400px) and (max-width:420px)": {
+      padding: "5rem 0 10rem 0"
+    }
   },
   header: {
     fontFamily: ["'ibm plex serif'", "serif"].join(","),
@@ -18,14 +30,27 @@ const useStyles = makeStyles(theme => ({
     color: "#000",
     letterSpacing: "-.03rem",
     fontWeight: "600",
-    lineHeight: "1.2"
+    lineHeight: "1.2",
+    "@media(min-width:350px) and (max-width:605px)": {
+      fontSize: "44px",
+      fontWeight: 550,
+      letterSpacing: 0
+    },
+    "@media(min-width:350px) and (max-width:420px)": {
+      fontSize: "46px",
+      fontWeight: 500,
+      letterSpacing: 0
+    }
   },
   mainSlider: {
     margin: "5vh 15vw 0 15vw"
   },
   container: {
     maxWidth: "25vw",
-    marginRight: "5vw"
+    marginRight: "5vw",
+    "@media(min-width:350px) and (max-width:605px)": {
+      maxWidth: "50vw"
+    }
   },
   image: {
     heignt: "5rem",
@@ -40,7 +65,17 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 600,
     fontSize: "1.6rem",
     marginBottom: "2rem",
-    color: "#49AB5A"
+    color: "#49AB5A",
+    "@media(min-width:500px) and (max-width:605px)": {
+      fontWeight: 550,
+      fontSize: "1.8rem",
+      marginBottom: "0.5rem"
+    },
+    "@media(min-width:350px) and (max-width:420px)": {
+      fontWeight: 525,
+      fontSize: "28px",
+      marginBottom: "0.5rem"
+    }
   },
   followContent: {
     textAlign: "center",
@@ -60,9 +95,22 @@ export default function About() {
     speed: 700,
     slidesToShow: 2,
     slidesToScroll: 1,
-    arrows: false
-    // autoplay: true,
-    // autoplaySpeed: 2000
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 780,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+          autoplay: false
+          // fade: true
+        }
+      }
+    ]
   };
   return (
     <div className={classes.root}>

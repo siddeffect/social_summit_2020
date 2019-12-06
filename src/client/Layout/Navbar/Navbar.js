@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { AppBar, Toolbar, Button, Fab } from "@material-ui/core";
 import { Facebook, Twitter, Instagram } from "@material-ui/icons";
@@ -8,7 +8,6 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     background: "transparent",
-    // overflowX: "hidden",
     width: "100vw",
     "@media (max-width:780px)": {
       width: "100vw"
@@ -23,6 +22,11 @@ const useStyles = makeStyles(theme => ({
       width: "1vw"
     }
   },
+  stickyAppBar: {
+    background: "black",
+    position: "fixed"
+  },
+
   button: {
     background: "#000",
     marginEnd: "20px",
@@ -85,9 +89,25 @@ const useStyles = makeStyles(theme => ({
 export default function ButtonAppBar() {
   const classes = useStyles();
 
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      const isTop = window.scrollY > 100;
+      const nav = document.getElementById("nav");
+      if (isTop) {
+        nav.classList.add("stickyAppBar");
+      } else {
+        nav.classList.remove("stickyAppBar");
+      }
+    });
+
+    return () => {
+      window.removeEventListener("scroll", () => {});
+    };
+  }, []);
+
   return (
     <div className={classes.root}>
-      <AppBar position="static" className={classes.appBar}>
+      <AppBar id="nav" position="static" className={classes.appBar}>
         <Toolbar>
           <img
             className={classes.logo}
