@@ -4,6 +4,7 @@ import {
   createMuiTheme,
   ThemeProvider
 } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles(theme => ({
@@ -71,7 +72,7 @@ const useStyles = makeStyles(theme => ({
     width: "300px",
     height: "60px",
     color: "#fff",
-    fontSize: "20px",
+    fontSize: "22px",
     "@media (max-width:780px)": {
       width: "150px",
       height: "40px",
@@ -122,14 +123,16 @@ export default function Hero() {
         </div>
         <div>
           <ThemeProvider theme={theme}>
-            <Button
-              variant="contained"
-              color="primary"
-              size="large"
-              className={classes.button}
-            >
-              REGISTER
-            </Button>
+            <Link to="/campusambassador">
+              <Button
+                variant="contained"
+                color="primary"
+                size="large"
+                className={classes.button}
+              >
+                CAMPUS AMBASSADOR
+              </Button>
+            </Link>
           </ThemeProvider>
         </div>
       </div>

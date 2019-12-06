@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/styles";
 import { AppBar, Toolbar, Button, Fab } from "@material-ui/core";
-import { Facebook, Twitter, Instagram } from "@material-ui/icons";
+import { Facebook, Twitter, Instagram, LinkedIn } from "@material-ui/icons";
 import MenuDrawer from "./Drawer";
 
 const styles = theme => ({
@@ -131,6 +131,8 @@ class Navbar extends Component {
             </Button>
 
             <Fab
+              href="https://www.facebook.com/iitrsocialsummit/"
+              target="_blank"
               size="small"
               color="primary"
               aria-label="add"
@@ -140,20 +142,34 @@ class Navbar extends Component {
             </Fab>
 
             <Fab
-              size="small"
-              color="primary"
-              aria-label="add"
-              className={classes.fab}
-            >
-              <Twitter />
-            </Fab>
-            <Fab
+              href="https://www.instagram.com/iitrsocialsummit/"
+              target="_blank"
               size="small"
               color="primary"
               aria-label="add"
               className={classes.fab}
             >
               <Instagram />
+            </Fab>
+            <Fab
+              href="https://www.linkedin.com/company/national-social-summit/?originalSubdomain=in"
+              target="_blank"
+              size="small"
+              color="primary"
+              aria-label="add"
+              className={classes.fab}
+            >
+              <LinkedIn />
+            </Fab>
+            <Fab
+              href="https://twitter.com/natsocialsummit"
+              target="_blank"
+              size="small"
+              color="primary"
+              aria-label="add"
+              className={classes.fab}
+            >
+              <Twitter />
             </Fab>
             <MenuDrawer />
           </Toolbar>
@@ -162,5 +178,4 @@ class Navbar extends Component {
     );
   }
 }
-
 export default withStyles(styles)(Navbar);
