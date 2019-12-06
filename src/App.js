@@ -3,6 +3,8 @@ import Home from "./client/Home/Home";
 import ComingSoon from "./client/ComingSoon/ComingSoon";
 import PageNotFound from "./client/404/404";
 import CAPage from "./client/CA/Index";
+import CARegistration from "./client/CA/Registration/Registration";
+import CALogin from "./client/CA/Registration/Login";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const Page404 = ({ location }) => (
@@ -27,6 +29,12 @@ function App() {
           </Route>
           <Route exact path="/campusambassador">
             <CAPage />
+          </Route>
+          <Route exact path="/campusambassador/registration">
+            <CARegistration />
+          </Route>
+          <Route exact path="/campusambassador/login">
+            <CALogin />
           </Route>
           <Route exact path="/events">
             <ComingSoon />
