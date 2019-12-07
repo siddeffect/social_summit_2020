@@ -14,12 +14,11 @@ const styles = theme => ({
     }
   },
   appBar: {
-    // position: "absolute",
     padding: " 10px",
-    // background: "transparent",
     boxShadow: "none",
     "@media (max-width:780px)": {
-      width: "1vw"
+      position: "absolute",
+      background: "transparent"
     }
   },
   button: {
@@ -45,12 +44,12 @@ const styles = theme => ({
   logo: {
     flexGrow: 1,
     height: "90px",
-    marginLeft: "-70%",
+    marginLeft: "-65%",
     "@media (min-width:1300px) and (max-width:1400px)": {
-      marginLeft: "-58%"
+      marginLeft: "-52%"
     },
     "@media (min-width:1405px) and (max-width:1450px)": {
-      marginLeft: "-60%"
+      marginLeft: "-55%"
     },
     "@media (min-width:700px) and (max-width:800px)": {
       height: "45px",
@@ -60,23 +59,28 @@ const styles = theme => ({
     "@media (min-width:500px) and (max-width:600px)": {
       height: "45px",
       width: "auto",
-      paddingRight: "67.5vw"
+      marginLeft: "-80%"
     },
     "@media (min-width:365px) and (max-width:420px)": {
       height: "45px",
       width: "auto",
-      paddingRight: "55vw"
+      marginLeft: "-64%"
     },
     "@media (min-width:320px) and (max-width:360px)": {
       height: "45px",
       width: "auto",
-      paddingRight: "50vw"
+      marginLeft: "-63%"
     },
     "@media (max-width:320px)": {
       height: "45px",
-      width: "auto",
-      paddingRight: "42.5vw"
+      width: "auto"
     }
+  },
+  // class of <AppBar/> comp.
+  PositionFixed: {
+    right: 550,
+    left: "auto !important",
+    top: "0 !important"
   }
 });
 
@@ -84,7 +88,8 @@ class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      scrolled: false
+      scrolled: false,
+      width: window.innerWidth
     };
 
     this.handleScroll = this.handleScroll.bind(this);
@@ -110,70 +115,133 @@ class Navbar extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <AppBar
-          style={{
-            position: this.state.scrolled ? "fixed" : "absolute",
-            background: this.state.scrolled ? "black" : "transparent"
-          }}
-          className={classes.appBar}
-        >
-          <Toolbar>
-            <img
-              className={classes.logo}
-              src="/Images/Logo_Main.svg"
-              alt="logo"
-            />
-            <Button color="inherit" className={classes.button}>
-              Register
-            </Button>
-            <Button color="inherit" className={classes.button}>
-              Login
-            </Button>
+        {this.state.width > 768 ? (
+          <AppBar
+            style={{
+              position: this.state.scrolled ? "fixed" : "absolute",
+              background: this.state.scrolled ? "black" : "transparent",
+              transition: "0.5s ease-in"
+            }}
+            className={classes.appBar}
+          >
+            <Toolbar>
+              <img
+                className={classes.logo}
+                src="/Images/Logo_Main.svg"
+                alt="logo"
+              />
+              <Button color="inherit" className={classes.button}>
+                Register
+              </Button>
+              <Button color="inherit" className={classes.button}>
+                Login
+              </Button>
 
-            <Fab
-              href="https://www.facebook.com/iitrsocialsummit/"
-              target="_blank"
-              size="small"
-              color="primary"
-              aria-label="add"
-              className={classes.fab}
-            >
-              <Facebook />
-            </Fab>
+              <Fab
+                href="https://www.facebook.com/iitrsocialsummit/"
+                target="_blank"
+                size="small"
+                color="primary"
+                aria-label="add"
+                className={classes.fab}
+              >
+                <Facebook />
+              </Fab>
 
-            <Fab
-              href="https://www.instagram.com/iitrsocialsummit/"
-              target="_blank"
-              size="small"
-              color="primary"
-              aria-label="add"
-              className={classes.fab}
-            >
-              <Instagram />
-            </Fab>
-            <Fab
-              href="https://www.linkedin.com/company/national-social-summit/?originalSubdomain=in"
-              target="_blank"
-              size="small"
-              color="primary"
-              aria-label="add"
-              className={classes.fab}
-            >
-              <LinkedIn />
-            </Fab>
-            <Fab
-              href="https://twitter.com/natsocialsummit"
-              target="_blank"
-              size="small"
-              color="primary"
-              aria-label="add"
-              className={classes.fab}
-            >
-              <Twitter />
-            </Fab>
-            <MenuDrawer />
-          </Toolbar>
-        </AppBar>
+              <Fab
+                href="https://www.instagram.com/iitrsocialsummit/"
+                target="_blank"
+                size="small"
+                color="primary"
+                aria-label="add"
+                className={classes.fab}
+              >
+                <Instagram />
+              </Fab>
+              <Fab
+                href="https://www.linkedin.com/company/national-social-summit/?originalSubdomain=in"
+                target="_blank"
+                size="small"
+                color="primary"
+                aria-label="add"
+                className={classes.fab}
+              >
+                <LinkedIn />
+              </Fab>
+              <Fab
+                href="https://twitter.com/natsocialsummit"
+                target="_blank"
+                size="small"
+                color="primary"
+                aria-label="add"
+                className={classes.fab}
+              >
+                <Twitter />
+              </Fab>
+              <MenuDrawer />
+            </Toolbar>
+          </AppBar>
+        ) : (
+          // for mobile version without scrolling effect
+          <AppBar className={classes.appBar}>
+            <Toolbar>
+              <img
+                className={classes.logo}
+                src="/Images/Logo_Main.svg"
+                alt="logo"
+              />
+              <Button color="inherit" className={classes.button}>
+                Register
+              </Button>
+              <Button color="inherit" className={classes.button}>
+                Login
+              </Button>
+
+              <Fab
+                href="https://www.facebook.com/iitrsocialsummit/"
+                target="_blank"
+                size="small"
+                color="primary"
+                aria-label="add"
+                className={classes.fab}
+              >
+                <Facebook />
+              </Fab>
+
+              <Fab
+                href="https://www.instagram.com/iitrsocialsummit/"
+                target="_blank"
+                size="small"
+                color="primary"
+                aria-label="add"
+                className={classes.fab}
+              >
+                <Instagram />
+              </Fab>
+              <Fab
+                href="https://www.linkedin.com/company/national-social-summit/?originalSubdomain=in"
+                target="_blank"
+                size="small"
+                color="primary"
+                aria-label="add"
+                className={classes.fab}
+              >
+                <LinkedIn />
+              </Fab>
+              <Fab
+                href="https://twitter.com/natsocialsummit"
+                target="_blank"
+                size="small"
+                color="primary"
+                aria-label="add"
+                className={classes.fab}
+              >
+                <Twitter />
+              </Fab>
+              <MenuDrawer />
+            </Toolbar>
+          </AppBar>
+        )}
       </div>
     );
   }
