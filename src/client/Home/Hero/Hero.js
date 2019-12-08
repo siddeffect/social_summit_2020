@@ -74,9 +74,9 @@ const useStyles = makeStyles(theme => ({
     color: "#fff",
     fontSize: "22px",
     "@media (max-width:780px)": {
-      width: "150px",
-      height: "40px",
-      fontSize: "1.0em",
+      width: "250px",
+      height: "50px",
+      fontSize: "17.5px",
       marginTop: "20px"
     }
   },

@@ -13,7 +13,19 @@ import { Link } from "react-router-dom";
 const useStyles = makeStyles({
   list: {
     width: 300,
-    marginTop: "300px"
+    marginTop: "300px",
+    "@media (max-width:340px)": {
+      width: 220,
+      marginTop: "80px"
+    },
+    "@media (min-width:350px) and (max-width:380px)": {
+      width: 250,
+      marginTop: "120px"
+    },
+    "@media (min-width:400px) and (max-width:420px)": {
+      width: 275,
+      marginTop: "150px"
+    }
   },
   drawer: {
     background: "#00a650"
