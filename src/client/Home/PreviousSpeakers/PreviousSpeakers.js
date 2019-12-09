@@ -111,7 +111,6 @@ export default function About() {
         }
       }
     ]
-
   };
   return (
     <div className={classes.root}>
@@ -128,11 +127,10 @@ export default function About() {
               ></img>
             </div>
             <div className={classes.bio}>
-              <h3 className={classes.followHeader}>Lorem, ipsum.</h3>
+              <h3 className={classes.followHeader}>Deepak Ramola</h3>
               <p className={classes.followContent}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis
-                animi eaque sunt autem inventore minus! Laborum facere numquam
-                recusandae ex.
+                Ted speaker <br />
+                Founder Project Fuel
               </p>
             </div>
           </div>
@@ -145,11 +143,9 @@ export default function About() {
               ></img>
             </div>
             <div className={classes.bio}>
-              <h3 className={classes.followHeader}>Lorem, ipsum.</h3>
+              <h3 className={classes.followHeader}>Priyanka Raina</h3>
               <p className={classes.followContent}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis
-                animi eaque sunt autem inventore minus! Laborum facere numquam
-                recusandae ex.
+                Founder <br /> Gracia Raina Foundation
               </p>
             </div>
           </div>
@@ -162,11 +158,35 @@ export default function About() {
               ></img>
             </div>
             <div className={classes.bio}>
-              <h3 className={classes.followHeader}>Lorem, ipsum.</h3>
+              <h3 className={classes.followHeader}>Kiren Bedi</h3>
+              <p className={classes.followContent}>Retired IPS Officer</p>
+            </div>
+          </div>
+          <div className={classes.container}>
+            <div>
+              <img
+                src="/Images/PreviousSpeakers/sample.jpg"
+                alt="speaker"
+                className={classes.image}
+              ></img>
+            </div>
+            <div className={classes.bio}>
+              <h3 className={classes.followHeader}>Amarpreet Singh</h3>
+              <p className={classes.followContent}>Director - Khalsa Aid</p>
+            </div>
+          </div>
+          <div className={classes.container}>
+            <div>
+              <img
+                src="/Images/PreviousSpeakers/sample.jpg"
+                alt="speaker"
+                className={classes.image}
+              ></img>
+            </div>
+            <div className={classes.bio}>
+              <h3 className={classes.followHeader}>Vijay Pal Singh</h3>
               <p className={classes.followContent}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis
-                animi eaque sunt autem inventore minus! Laborum facere numquam
-                recusandae ex.
+                Deputy Director <br /> <em>fssai</em>
               </p>
             </div>
           </div>
@@ -179,11 +199,9 @@ export default function About() {
               ></img>
             </div>
             <div className={classes.bio}>
-              <h3 className={classes.followHeader}>Lorem, ipsum.</h3>
+              <h3 className={classes.followHeader}>Anil Swaroop</h3>
               <p className={classes.followContent}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis
-                animi eaque sunt autem inventore minus! Laborum facere numquam
-                recusandae ex.
+                Secretary of school education
               </p>
             </div>
           </div>
@@ -196,28 +214,10 @@ export default function About() {
               ></img>
             </div>
             <div className={classes.bio}>
-              <h3 className={classes.followHeader}>Lorem, ipsum.</h3>
+              <h3 className={classes.followHeader}>Madhukar Banuri</h3>
               <p className={classes.followContent}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis
-                animi eaque sunt autem inventore minus! Laborum facere numquam
-                recusandae ex.
-              </p>
-            </div>
-          </div>
-          <div className={classes.container}>
-            <div>
-              <img
-                src="/Images/PreviousSpeakers/sample.jpg"
-                alt="speaker"
-                className={classes.image}
-              ></img>
-            </div>
-            <div className={classes.bio}>
-              <h3 className={classes.followHeader}>Lorem, ipsum.</h3>
-              <p className={classes.followContent}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis
-                animi eaque sunt autem inventore minus! Laborum facere numquam
-                recusandae ex.
+                Technical Advisor <br />
+                Teach for india
               </p>
             </div>
           </div>
