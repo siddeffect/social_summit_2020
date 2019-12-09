@@ -26,6 +26,9 @@ const useStyles = makeStyles(theme => ({
     },
     "@media(min-width:350px) and (max-width:360px)": {
       padding: "2.5rem 0 3rem 0"
+    },
+    "@media (max-width:320px)": {
+      padding: "2.5rem 0 3rem 0"
     }
   },
   header: {
@@ -43,6 +46,9 @@ const useStyles = makeStyles(theme => ({
       marginBottom: 0
     },
     "@media(min-width:350px) and (max-width:420px)": {
+      fontSize: "32px"
+    },
+    "@media (max-width:320px)": {
       fontSize: "32px"
     }
   },
@@ -81,6 +87,14 @@ const useStyles = makeStyles(theme => ({
       marginBottom: "0.3%",
       fontWeight: 1.4,
       lineHeight: "1.2"
+    },
+    "@media (max-width:320px)": {
+      fontSize: "17px",
+      // textAlign: "left",
+      maxWidth: "85vw",
+      marginBottom: "0.3%",
+      fontWeight: 1.4,
+      lineHeight: "1.2"
     }
   },
   mainSlider: {
@@ -102,6 +116,9 @@ const useStyles = makeStyles(theme => ({
     },
     "@media(min-width:350px) and (max-width:420px)": {
       maxWidth: "100vw"
+    },
+    "@media (max-width:320px)": {
+      maxWidth: "100vw"
     }
   },
   followHeader: {
@@ -119,6 +136,13 @@ const useStyles = makeStyles(theme => ({
       marginLeft: "34%"
     },
     "@media(min-width:350px) and (max-width:420px)": {
+      fontSize: "28px",
+      marginBottom: "0.5%",
+      textAlign: "center",
+      fontWeight: 550,
+      marginLeft: 0
+    },
+    "@media (max-width:320px)": {
       fontSize: "28px",
       marginBottom: "0.5%",
       textAlign: "center",
@@ -148,8 +172,8 @@ const useStyles = makeStyles(theme => ({
       marginBottom: 0,
       lineHeight: "1"
     },
-    "@media and (max-width:320px)": {
-      fontSize: "18.5px",
+    "@media (max-width:320px)": {
+      fontSize: "17px",
       textAlign: "center",
       marginBottom: 0,
       lineHeight: "1"

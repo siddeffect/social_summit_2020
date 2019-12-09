@@ -11,9 +11,9 @@ import PreviousSpeakers from "./PreviousSpeakers/PreviousSpeakers";
 function Home() {
   return (
     <div>
-      {/* <Navbar /> */}
-      {/* <Hero /> */}
-      {/* <CounterComponent /> */}
+      <Navbar />
+      <Hero />
+      <CounterComponent />
       <About />
       <Grid />
       <PreviousSpeakers />
