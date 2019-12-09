@@ -1,12 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import {
-  IconButton,
-  ListItemText,
-  ListItem,
-  List,
-  Drawer
-} from "@material-ui/core";
+import { Fab, ListItemText, ListItem, List, Drawer } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Link } from "react-router-dom";
 
@@ -35,7 +29,11 @@ const useStyles = makeStyles({
     color: "white"
   },
   menuButton: {
-    color: "white"
+    background: "#000",
+    color: "#fff",
+    ":hover&": {
+      background: "#00a650"
+    }
   },
   text: {
     color: "#fff",
@@ -105,7 +103,7 @@ function MenuDrawer() {
 
   return (
     <div className={classes.root}>
-      <IconButton
+      <Fab
         onClick={toggleDrawer("right", true)}
         edge="end"
         className={classes.menuButton}
@@ -113,8 +111,8 @@ function MenuDrawer() {
         aria-label="menu"
         size="medium"
       >
-        <MenuIcon />
-      </IconButton>
+        <MenuIcon fontSize="large" />
+      </Fab>
       <Drawer
         classes={{ paper: classes.paper }}
         anchor="right"

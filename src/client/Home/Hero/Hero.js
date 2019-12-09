@@ -47,7 +47,8 @@ const useStyles = makeStyles(theme => ({
     "@media (min-width:1360px) and (max-width:1440px)": {
       fontSize: "4em"
     },
-    fontFamily: ["'Cantora One'", "sans-serif"].join(","),
+    fontFamily: ["'ibm plex serif'", "serif"].join(","),
+    fontWeight: 600,
     "@media (max-width:780px)": {
       fontSize: "2.4em"
     }

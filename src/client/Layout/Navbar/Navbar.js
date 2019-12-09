@@ -130,53 +130,46 @@ class Navbar extends Component {
                 src="/Images/Logo_Main.svg"
                 alt="logo"
               />
-              <Button color="inherit" className={classes.button}>
-                Register
-              </Button>
-              <Button color="inherit" className={classes.button}>
-                Login
-              </Button>
-
               <Fab
                 href="https://www.facebook.com/iitrsocialsummit/"
                 target="_blank"
-                size="small"
+                size="medium"
                 color="primary"
                 aria-label="add"
                 className={classes.fab}
               >
-                <Facebook />
+                <Facebook fontSize="large" />
               </Fab>
 
               <Fab
                 href="https://www.instagram.com/iitrsocialsummit/"
                 target="_blank"
-                size="small"
+                size="medium"
                 color="primary"
                 aria-label="add"
                 className={classes.fab}
               >
-                <Instagram />
+                <Instagram fontSize="large" />
               </Fab>
               <Fab
                 href="https://www.linkedin.com/company/national-social-summit/?originalSubdomain=in"
                 target="_blank"
-                size="small"
+                size="medium"
                 color="primary"
                 aria-label="add"
                 className={classes.fab}
               >
-                <LinkedIn />
+                <LinkedIn fontSize="large" />
               </Fab>
               <Fab
                 href="https://twitter.com/natsocialsummit"
                 target="_blank"
-                size="small"
+                size="medium"
                 color="primary"
                 aria-label="add"
                 className={classes.fab}
               >
-                <Twitter />
+                <Twitter fontSize="large" />
               </Fab>
               <MenuDrawer />
             </Toolbar>
