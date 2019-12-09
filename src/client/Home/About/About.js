@@ -6,6 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
   root: {
+    height: "100vh",
     textAlign: "center",
     backgroundColor: "#00a650",
     padding: "10rem 0 12.5rem 0",
@@ -25,6 +26,9 @@ const useStyles = makeStyles(theme => ({
     },
     "@media(min-width:350px) and (max-width:360px)": {
       padding: "2.5rem 0 3rem 0"
+    },
+    "@media (max-width:320px)": {
+      padding: "2.5rem 0 3rem 0"
     }
   },
   header: {
@@ -43,6 +47,9 @@ const useStyles = makeStyles(theme => ({
     },
     "@media(min-width:350px) and (max-width:420px)": {
       fontSize: "32px"
+    },
+    "@media (max-width:320px)": {
+      fontSize: "32px"
     }
   },
   leadContent: {
@@ -51,7 +58,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: "1.6rem",
     lineHeight: "1.538",
     marginBottom: "3.6rem",
-    maxWidth: "40vw",
+    maxWidth: "70vw",
     color: "rgba(255,255,255,.7)",
     margin: "1rem auto auto auto",
     "@media(min-width:1360px) and (max-width:1400px)": {
@@ -62,25 +69,55 @@ const useStyles = makeStyles(theme => ({
     },
     "@media(min-width:500px) and (max-width:605px)": {
       fontSize: "22px",
-      maxWidth: "50vw",
+      maxWidth: "90vw",
       marginBottom: "2.5rem"
     },
-    "@media(min-width:350px) and (max-width:420px)": {
+    "@media(min-width:400px) and (max-width:420px)": {
       fontSize: "20px",
-      maxWidth: "80vw",
-      marginBottom: "0.5%",
-      fontWeight: 1.4
+      maxWidth: "85vw",
+      // textAlign: "left",
+      marginBottom: "0.3%",
+      fontWeight: 1.4,
+      lineHeight: "1.2"
+    },
+    "@media(min-width:350px) and (max-width:380px)": {
+      fontSize: "18.5px",
+      // textAlign: "left",
+      maxWidth: "85vw",
+      marginBottom: "0.3%",
+      fontWeight: 1.4,
+      lineHeight: "1.2"
+    },
+    "@media (max-width:320px)": {
+      fontSize: "17px",
+      // textAlign: "left",
+      maxWidth: "85vw",
+      marginBottom: "0.3%",
+      fontWeight: 1.4,
+      lineHeight: "1.2"
     }
   },
   mainSlider: {
-    margin: "0 15vw 0 15vw"
+    margin: "0 15vw 0 7.5vw",
+    "@media(min-width:1300px) and (max-width:1450px)": {
+      margin: "0 10vw 0 7vw"
+    },
+    "@media(min-width:500px) and (max-width:600px)": {
+      margin: "0 15vw 0 3.5vw;"
+    }
   },
   container: {
-    maxWidth: "15vw",
+    maxWidth: "20vw",
+    "@media(min-width:1300px) and (max-width:1450px)": {
+      maxWidth: "21vw"
+    },
     "@media(min-width:500px) and (max-width:605px)": {
-      maxWidth: "50vw"
+      maxWidth: "85vw"
     },
     "@media(min-width:350px) and (max-width:420px)": {
+      maxWidth: "100vw"
+    },
+    "@media (max-width:320px)": {
       maxWidth: "100vw"
     }
   },
@@ -88,41 +125,58 @@ const useStyles = makeStyles(theme => ({
     textAlign: "justify",
     fontFamily: ["'ibm plex serif'", "serif"].join(","),
     fontWeight: 600,
+    letterSpacing: "2px",
     fontSize: "2rem",
     marginBottom: "2rem",
     color: "#fff",
+    marginLeft: "25%",
     "@media(min-width:500px) and (max-width:605px)": {
-      fontSize: "36px",
-      marginBottom: "1rem"
-    },
-    "@media(min-width:385px) and (max-width:420px)": {
       fontSize: "30px",
       marginBottom: "1rem",
-      textAlign: "center",
-      fontWeight: 550
+      marginLeft: "34%"
     },
-    "@media(min-width:350px) and (max-width:380px)": {
+    "@media(min-width:350px) and (max-width:420px)": {
       fontSize: "28px",
       marginBottom: "0.5%",
       textAlign: "center",
-      fontWeight: 550
+      fontWeight: 550,
+      marginLeft: 0
+    },
+    "@media (max-width:320px)": {
+      fontSize: "28px",
+      marginBottom: "0.5%",
+      textAlign: "center",
+      fontWeight: 550,
+      marginLeft: 0
     }
   },
   followContent: {
     textAlign: "left",
     color: "rgba(255,255,255,.7)",
     fontFamily: ["'ibm plex serif'", "serif"].join(","),
-    fontSize: "1.2rem",
-    lineHeight: "1.3",
+    fontSize: "20px",
+    lineHeight: "1.5",
     "@media(min-width:500px) and (max-width:605px)": {
-      fontSize: "20px"
-    },
-    "@media(min-width:350px) and (max-width:420px)": {
       fontSize: "20px",
       textAlign: "center"
     },
+    "@media(min-width:400px) and (max-width:420px)": {
+      fontSize: "20px",
+      textAlign: "center",
+      marginBottom: 0,
+      lineHeight: "1.3"
+    },
     "@media(min-width:350px) and (max-width:380px)": {
-      marginBottom: 0
+      fontSize: "18.5px",
+      textAlign: "center",
+      marginBottom: 0,
+      lineHeight: "1"
+    },
+    "@media (max-width:320px)": {
+      fontSize: "17px",
+      textAlign: "center",
+      marginBottom: 0,
+      lineHeight: "1"
     }
   }
 }));
@@ -131,14 +185,14 @@ export default function About() {
   const classes = useStyles();
 
   const settings = {
-    dots: true,
+    // dots: true,
     infinite: true,
     speed: 700,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,
-    autoplay: true,
-    autoplaySpeed: 2000,
+    // autoplay: true,
+    // autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 780,
@@ -155,66 +209,47 @@ export default function About() {
   };
   return (
     <div className={classes.root}>
-      <label className={classes.header}>
-        The Most Popular And <br /> Number 1 Mail App.
-      </label>
-
+      <label className={classes.header}>Our Story</label>
       <p className={classes.leadContent}>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
-        reprehenderit vel similique, suscipit voluptatibus culpa voluptatum
-        laboriosam praesentium ullam, omnis consequuntur, consequatur ipsam esse
-        atque.
+        Social summit, started in 2016, by the inspired youths who believed in
+        crystallizing their vision for a better society. Identifying the most
+        pressing social problems and thus evolving actionable insights for
+        contemporary challenges, Social Summit has constantly grown, evolved and
+        pushed the boundaries of what a social fest can be, by pioneering in
+        past themes such as “Empowerment through education” and “Women and child
+        welfare”.
       </p>
 
       {/* This is the carousel */}
       <div>
         <Slider {...settings} className={classes.mainSlider}>
           <div className={classes.container}>
-            <h3 className={classes.followHeader}>Lorem, ipsum.</h3>
+            <h3 className={classes.followHeader}> Mission </h3>
             <p className={classes.followContent}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis
-              animi eaque sunt autem inventore minus! Laborum facere numquam
-              recusandae ex.
+              Social integration is indispensable to create an inclusive
+              society. We devise ‘sustainable solution model’ to the social
+              problems engaging with the community and stakeholders, creating a
+              sense of responsibility and awareness in the society.
             </p>
           </div>
           <div className={classes.container}>
-            <h3 className={classes.followHeader}>Lorem, ipsum.</h3>
+            <h3 className={classes.followHeader}>Vision</h3>
             <p className={classes.followContent}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis
-              animi eaque sunt autem inventore minus! Laborum facere numquam
-              recusandae ex.
+              Eradication of disparity in different sections of society,
+              propagating the propaganda of curing indifferences, Summit aims to
+              clear the path of its inspired manifestation by uplifting the
+              burdened sections of society to bridge the existing communal
+              chasm.
             </p>
           </div>
           <div className={classes.container}>
-            <h3 className={classes.followHeader}>Lorem, ipsum.</h3>
+            <h3 className={classes.followHeader}>Dynamics</h3>
             <p className={classes.followContent}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis
-              animi eaque sunt autem inventore minus! Laborum facere numquam
-              recusandae ex.
-            </p>
-          </div>
-          <div className={classes.container}>
-            <h3 className={classes.followHeader}>Lorem, ipsum.</h3>
-            <p className={classes.followContent}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis
-              animi eaque sunt autem inventore minus! Laborum facere numquam
-              recusandae ex.
-            </p>
-          </div>
-          <div className={classes.container}>
-            <h3 className={classes.followHeader}>Lorem, ipsum.</h3>
-            <p className={classes.followContent}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis
-              animi eaque sunt autem inventore minus! Laborum facere numquam
-              recusandae ex.
-            </p>
-          </div>
-          <div className={classes.container}>
-            <h3 className={classes.followHeader}>Lorem, ipsum.</h3>
-            <p className={classes.followContent}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis
-              animi eaque sunt autem inventore minus! Laborum facere numquam
-              recusandae ex.
+              Collaboration with 30+ NGO’s and various stakeholders to sketch
+              the inspired imagination of ‘curving indifferences’ on paper.
+              Entrenched connections with social activists at ground level
+              encompassing contemporary social problems and their excavation
+              from roots.
             </p>
           </div>
         </Slider>

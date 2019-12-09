@@ -8,15 +8,15 @@
 }
 .outerbox {
   display: flex;
-  width: 80vw;
+  width: 95vw;
   height: 48vh;
   align-items: flex-end;
   justify-content: flex-end;
 }
 .box {
-  width: 50vw;
+  width: 40vw;
   height: 40vh;
-  text-align: right;
+  text-align: center;
 }
 .heyca {
   font-family: "Ubuntu";
@@ -31,7 +31,7 @@
   font-family: "Ubuntu";
   font-style: normal;
   /* font-weight: bold; */
-  font-size: 28px;
+  font-size: 20px;
   line-height: 34px;
   /* identical to box height */
 
