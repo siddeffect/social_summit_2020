@@ -82,7 +82,7 @@ const useStyles = makeStyles(theme => ({
   },
   imageBox: {
     // eslint-disable-next-line
-    backgroundImage: "url(" + "/Images/main_hero.svg" + ")",
+    backgroundImage: "url(" + "/Images/hero_main.svg" + ")",
     backgroundSize: "cover",
     textAlign: "center",
     flexGrow: 1,

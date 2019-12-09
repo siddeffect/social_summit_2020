@@ -30,6 +30,11 @@ export const signOut = () => {
   };
 };
 
+function pad(n) {
+  var s = "000" + n;
+  return s.substr(s.length - 4);
+}
+
 export const signUp = newUser => {
   return (dispatch, getState, { getFirebase, getFirestore }) => {
     const firebase = getFirebase();
@@ -49,7 +54,36 @@ export const signUp = newUser => {
             phoneNumber: newUser.phoneNumber,
             college: newUser.college,
             state: newUser.state,
-            year_branch: newUser.year_branch
+            year_branch: newUser.year_branch,
+            role: "CA",
+            ca_count: null,
+            payment_done: false
+          })
+          .then(
+            firestore
+              .collection("caCount")
+              .doc("ca_count_value")
+              .get()
+              .then(function(doc) {
+                if (doc.exists) {
+                  firestore
+                    .collection("caData")
+                    .doc(resp.user.uid)
+                    .update({
+                      ca_count: doc.data().ca_count
+                    });
+                } else {
+                  console.log("No such document!");
+                }
+              })
+          )
+          .then(() => {
+            firestore
+              .collection("caCount")
+              .doc("ca_count_value")
+              .update({
+                ca_count: firebase.firestore.FieldValue.increment(1)
+              });
           })
           .then(() => {
             dispatch({
