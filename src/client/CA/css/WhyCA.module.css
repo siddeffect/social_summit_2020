@@ -129,7 +129,7 @@
 }
 @media screen and (min-width: 350px) and (max-width: 380px) {
   .reasonsOuterContainer {
-    flex: 0.49;
+    flex: 0.498;
   }
   .imgTextWrapper {
     height: 12vh;
