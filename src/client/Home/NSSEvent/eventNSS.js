@@ -3,12 +3,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./eventNSS.css";
-import Image1 from "../ImageGrid/images/img1.jpeg";
-import Image2 from "../ImageGrid/images/img2.jpeg";
-import Image3 from "../ImageGrid/images/img3.jpeg";
-import Image6 from "../ImageGrid/images/img6.jpeg";
-import Image7 from "../ImageGrid/images/img7.jpeg";
-import Image8 from "../ImageGrid/images/img8.jpeg";
 
 function Carousel() {
   const Settings = {
@@ -39,7 +33,7 @@ function Carousel() {
       <Slider {...Settings}>
         <div className="leftContainer">
           <div className="leftImg">
-            <img src={Image1} alt="" className="image" />
+            <img src="/Images/coming_soon.svg" alt="" className="image" />
           </div>
           <div className="leftContent">
             <label htmlFor="" className="leftPara">
@@ -60,7 +54,7 @@ function Carousel() {
 
         <div className="rightContainer">
           <div className="rightImg">
-            <img src={Image2} alt="" className="image" />
+            <img src="/Images/coming_soon.svg" alt="" className="image" />
           </div>
           <div className="rightContent">
             <label htmlFor="" className="rightPara">
@@ -80,7 +74,7 @@ function Carousel() {
 
         <div className="leftContainer">
           <div className="leftImg">
-            <img src={Image3} alt="" className="image" />
+            <img src="/Images/coming_soon.svg" alt="" className="image" />
           </div>
           <div className="leftContent">
             <label htmlFor="" className="leftPara">
@@ -101,7 +95,7 @@ function Carousel() {
 
         <div className="rightContainer">
           <div className="rightImg">
-            <img src={Image6} alt="" className="image" />
+            <img src="/Images/coming_soon.svg" alt="" className="image" />
           </div>
           <div className="rightContent">
             <label htmlFor="" className="rightPara">
@@ -121,7 +115,7 @@ function Carousel() {
 
         <div className="leftContainer">
           <div className="leftImg">
-            <img src={Image7} alt="" className="image" />
+            <img src="/Images/coming_soon.svg" alt="" className="image" />
           </div>
           <div className="leftContent">
             <label htmlFor="" className="leftPara">
@@ -142,7 +136,7 @@ function Carousel() {
 
         <div className="rightContainer">
           <div className="rightImg">
-            <img src={Image8} alt="" className="image" />
+            <img src="/Images/coming_soon.svg" alt="" className="image" />
           </div>
           <div className="rightContent">
             <label htmlFor="" className="rightPara">

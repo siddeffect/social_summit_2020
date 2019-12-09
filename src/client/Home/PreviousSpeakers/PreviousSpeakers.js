@@ -70,8 +70,8 @@ const useStyles = makeStyles(theme => ({
     }
   },
   image: {
-    heignt: "5rem",
-    width: "5rem",
+    heignt: "8rem",
+    width: "8rem",
     borderRadius: "50%",
     flexGrowth: "1",
     "@media (max-width:420px)": {
@@ -125,7 +125,7 @@ export default function About() {
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 780,
@@ -135,7 +135,6 @@ export default function About() {
           infinite: true,
           dots: true,
           autoplay: false
-          // fade: true
         }
       }
     ]
@@ -149,7 +148,7 @@ export default function About() {
           <div className={classes.container}>
             <div>
               <img
-                src="/Images/PreviousSpeakers/sample.jpg"
+                src="/Images/PreviousSpeakers/deepak_ramola.jpg"
                 alt="speaker"
                 className={classes.image}
               ></img>
@@ -165,7 +164,7 @@ export default function About() {
           <div className={classes.container}>
             <div>
               <img
-                src="/Images/PreviousSpeakers/sample.jpg"
+                src="/Images/PreviousSpeakers/priyanka_raina.jpg"
                 alt="speaker"
                 className={classes.image}
               ></img>
@@ -180,20 +179,20 @@ export default function About() {
           <div className={classes.container}>
             <div>
               <img
-                src="/Images/PreviousSpeakers/sample.jpg"
+                src="/Images/PreviousSpeakers/kiran_bedi.jpg"
                 alt="speaker"
                 className={classes.image}
               ></img>
             </div>
             <div className={classes.bio}>
-              <h3 className={classes.followHeader}>Kiren Bedi</h3>
+              <h3 className={classes.followHeader}>Kiran Bedi</h3>
               <p className={classes.followContent}>Retired IPS Officer</p>
             </div>
           </div>
           <div className={classes.container}>
             <div>
               <img
-                src="/Images/PreviousSpeakers/sample.jpg"
+                src="/Images/PreviousSpeakers/amarpreet_singh.jpg"
                 alt="speaker"
                 className={classes.image}
               ></img>
@@ -206,7 +205,7 @@ export default function About() {
           <div className={classes.container}>
             <div>
               <img
-                src="/Images/PreviousSpeakers/sample.jpg"
+                src="/Images/PreviousSpeakers/vijay_pal_singh.jpg"
                 alt="speaker"
                 className={classes.image}
               ></img>
@@ -221,7 +220,7 @@ export default function About() {
           <div className={classes.container}>
             <div>
               <img
-                src="/Images/PreviousSpeakers/sample.jpg"
+                src="/Images/PreviousSpeakers/anil_swaroop.jpg"
                 alt="speaker"
                 className={classes.image}
               ></img>
@@ -236,7 +235,7 @@ export default function About() {
           <div className={classes.container}>
             <div>
               <img
-                src="/Images/PreviousSpeakers/sample.jpg"
+                src="/Images/PreviousSpeakers/madhukar_banuri.jpg"
                 alt="speaker"
                 className={classes.image}
               ></img>
