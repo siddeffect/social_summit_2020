@@ -8,48 +8,60 @@ import RoleCASub from "./RoleCASub";
 
 const reasonsArray = [
   {
-    name: "Certificate",
+    name: "certificate",
     src: Certificate,
     heading: "Certificate of Appreciation",
     content: [
-      { text: "Faucibus purus in massa tempor nec feugiat nisl pretium." }
+      {
+        text:
+          "A certificate will be provided for your crucial role as a Social Attaché"
+      }
     ]
   },
   {
-    name: "faceOfSummit20",
+    name: "acknowledgement",
     src: Networking,
-    heading: "Face of Social Summit 2020",
+    heading: "Acknowledgement",
     content: [
-      { text: "Faucibus purus in massa tempor nec feugiat nisl pretium." }
+      {
+        text:
+          "You’ll get an opportunity to get featured on our official website"
+      }
     ]
   },
   {
-    name: "internshipOffers",
+    name: "free entry",
     src: Id,
-    heading: "Internship Offers",
+    heading: "Free Entry Tickets",
     content: [
-      { text: "Faucibus purus in massa tempor nec feugiat nisl pretium." }
+      {
+        text:
+          "Experience flagship event, workshops and guest lectures absolutely free"
+      }
     ]
   }
 ];
 const rolesArray = [
   {
-    name: "represent",
-    heading: "Represent Summit",
+    name: "personify",
+    heading: "Personify Summit",
     src: Id,
-    content: " Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    content:
+      " Be the face of Summit by encouraging and facilitating participation from your college"
   },
   {
-    name: "innovation",
-    heading: "Innovation and New Ideaz",
+    name: "re-create",
+    heading: "Revolutionize and Re-create",
     src: Certificate,
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    content:
+      "Work out new events ideas and revitalize strategies to promote Summit"
   },
   {
-    name: "Promotion",
-    heading: "Promote Summit ",
+    name: "elevate",
+    heading: "Elevate our brand ",
     src: Networking,
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    content:
+      "Publicize and promote Summit through social media platforms to increase our reach"
   }
 ];
 
@@ -82,11 +94,11 @@ export class mainCA extends Component {
     return (
       <div className={Styles.whyCAOuterContainer}>
         <div className={Styles.headingContainer}>
-          <p>Why Become a CA ?</p>
+          <p>Why become Social Attaché?</p>
         </div>
         <div className={Styles.reasonsOuterContainer}>{caReasons}</div>
         <div className={Styles.headingContainer}>
-          <p>Roles as CA</p>
+          <p>Roles of Social Attaché</p>
         </div>
         <div className={Styles.reasonsOuterContainer}>{caRoles}</div>
       </div>

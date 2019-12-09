@@ -9,7 +9,11 @@ export class HeyCA extends Component {
           <div className={Styles.box}>
             <h1 className={Styles.heyca}>Social Attaché</h1>
 
-            <h1 className={Styles.heyca1}> </h1>
+            <h1 className={Styles.heyca1}>
+              Serve as a Campus Voice and become an active leader in your campus
+              community. Contribute your part to the environment while improving
+              your repertoire of skills.{" "}
+            </h1>
 
             <div className={Styles.buttons}>
               <button className={Styles.loginbutton}> LOGIN </button>
