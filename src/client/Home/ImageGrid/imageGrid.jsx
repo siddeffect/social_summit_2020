@@ -95,7 +95,7 @@ class Carousel extends Component {
                     src="/Images/previous_year_events/street_play.jpg"
                     className={Styles.img}
                     alt=""
-                    style={{ width: "500px", height: "450px" }}
+                    style={{ width: "500px", height: "454px" }}
                   />
                   <figcaption className={Styles.imgCaption}>
                     <label className={Styles.header}>Street Play</label>
@@ -117,7 +117,7 @@ class Carousel extends Component {
                     src="/Images/previous_year_events/action_plan.jpg"
                     className={Styles.img}
                     alt=""
-                    style={{ width: "500px", height: "450px" }}
+                    style={{ width: "500px", height: "455px" }}
                   />
                   <figcaption className={Styles.imgCaption}>
                     <label className={Styles.header}>

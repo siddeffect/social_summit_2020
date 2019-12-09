@@ -44,7 +44,7 @@ const useStyles = makeStyles(theme => ({
     color: "#4aa651",
     fontFamily: ["Roboto Condensed", "sans-serif"].join(","),
     "@media (max-width:780px)": {
-      fontSize: 32,
+      fontSize: 30,
       flexGrow: 0.6,
       marginTop: "30%"
     },
