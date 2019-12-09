@@ -9,9 +9,9 @@ import LocationOnIcon from "@material-ui/icons/LocationOn";
 const useStyles = makeStyles(theme => ({
   root: {
     background: "#111111",
-    height: 400,
+    minHeight: 600,
     display: "flex",
-    padding: "150px 200px 150px 200px",
+    padding: "100px 200px 150px 200px",
     "@media (max-width:780px)": {
       height: 500,
       padding: "20px 20px 15px 20px",
@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   fabs: {
-    marginTop: 100,
+    marginTop: 75,
     display: "flex",
     flexDirection: "row",
     "@media (max-width:780px)": {
@@ -156,8 +156,9 @@ export default function Footer() {
           <div>
             <LocationOnIcon className={classes.icon} />
             <span className={classes.text}>
-              NSS Office, 2nd floor, Multi Activity Centre (MAC), IIT Roorkee
-              ZIP - 247667
+              NSS Office, 2nd floor, Multi Activity Centre (MAC),
+              <br />
+              IIT Roorkee, ZIP - 247667
             </span>
           </div>
         </div>

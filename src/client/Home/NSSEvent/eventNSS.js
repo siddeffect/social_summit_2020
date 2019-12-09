@@ -35,7 +35,7 @@ function Carousel() {
     ]
   };
   return (
-    <div className="container">
+    <div className="outerContainer">
       <Slider {...Settings}>
         <div className="leftContainer">
           <div className="leftImg">
