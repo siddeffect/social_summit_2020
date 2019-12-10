@@ -17,7 +17,7 @@ export class RoleCASub extends Component {
 export default RoleCASub;
 
 RoleCASub.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   content: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired
