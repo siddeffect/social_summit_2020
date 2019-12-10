@@ -30,6 +30,6 @@ export default WhyCASub;
 WhyCASub.propTypes = {
   heading: PropTypes.string,
   src: PropTypes.string,
-  content: PropTypes.string,
+  content: PropTypes.array,
   style: PropTypes.string
 };
