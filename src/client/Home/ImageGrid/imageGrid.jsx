@@ -283,7 +283,7 @@ class Carousel extends Component {
               <div className={Styles.imgCard}>
                 <figure className={Styles.effectImgCard}>
                   <img
-                    src="/Images/previous_year_events/action_plan.jpg"
+                    src="/Images/previous_year_events/mun.jpg"
                     className={Styles.imMobileg}
                     alt=""
                     style={{ width: "160px", height: "180px" }}
@@ -344,7 +344,7 @@ class Carousel extends Component {
                   />
                   <figcaption
                     className={Styles.imgCaption}
-                    style={{ borderRadius: "0 12px 0 0" }}
+                    style={{ borderRadius: "0 0 12px 0" }}
                   >
                     <label className={Styles.header}>Hackathon</label>
                   </figcaption>

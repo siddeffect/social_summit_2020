@@ -37,11 +37,10 @@ function Carousel() {
           </div>
           <div className="leftContent">
             <label htmlFor="" className="leftPara">
-              Under this initiative, in collaboration with Nagar Nigam, a survey
-              was conducted regarding waste segregation and Swachhta App in
-              nearby market place. Also, a cleanliness drive was conducted near
-              Ganga ghats, Haridwar. Stage plays regarding the same were
-              organized.
+              Emphasizing on the holistic educational development of rural
+              underprivileged children of Roorkee, NSS IIT Roorkee strives to
+              provide quality education in a more interactive way along with
+              extracurricular activities.
             </label>
           </div>
           <div className="leftHeading">
