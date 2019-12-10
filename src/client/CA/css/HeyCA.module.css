@@ -16,7 +16,8 @@
 .box {
   width: 40vw;
   height: 40vh;
-  text-align: center;
+  text-align: right;
+  padding: 0 5vw 0 0;
 }
 .heyca {
   font-family: "Ubuntu";
@@ -29,15 +30,9 @@
 }
 .heyca1 {
   font-family: "Ubuntu";
-  font-style: normal;
-  /* font-weight: bold; */
+  font-style: italic;
   font-size: 20px;
   line-height: 34px;
-  /* identical to box height */
-
-  text-align: left;
-  /* text-transform: uppercase; */
-
   color: #000000;
 }
 .loginbutton {
@@ -48,33 +43,28 @@
   border: none;
   font-family: "Ubuntu";
   font-style: normal;
-  /* font-weight: bold; */
-  font-size: 20px;
+  font-size: 28px;
   line-height: 24px;
   text-transform: uppercase;
   color: #00a650;
   margin-right: 3%;
   cursor: pointer;
   outline: 0 none;
-
-  /* box-shadow: 0px 2px 18px rgba(0, 87, 218, 0.12); */
 }
 .registerbutton {
   width: 250px;
   height: 56px;
   background: #00a650;
-  border-radius: 2px;
+  border-radius: 4px;
   font-family: "Ubuntu";
   font-style: normal;
-  /* font-weight: bold; */
-  font-size: 20px;
+  font-size: 28px;
   line-height: 24px;
   text-transform: uppercase;
   color: #fff;
   cursor: pointer;
   outline: 0 none;
   margin-right: 1.5%;
-  /* box-shadow: 0px 4px 18px rgba(0, 87, 218, 0.12); */
   border: none;
 }
 .buttons {

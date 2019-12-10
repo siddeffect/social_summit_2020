@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Styles from "./css/HeyCA.module.css";
+import { Link } from "react-router-dom";
 
 export class HeyCA extends Component {
   render() {
@@ -16,8 +17,12 @@ export class HeyCA extends Component {
             </h1>
 
             <div className={Styles.buttons}>
-              <button className={Styles.loginbutton}> LOGIN </button>
-              <button className={Styles.registerbutton}>REGISTER</button>
+              <Link to="/campusambassador/signin">
+                <button className={Styles.loginbutton}> LOGIN </button>
+              </Link>
+              <Link to="/campusambassador/signup">
+                <button className={Styles.registerbutton}>REGISTER</button>
+              </Link>
             </div>
           </div>
         </div>

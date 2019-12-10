@@ -13,10 +13,15 @@ const Navbar = props => {
   );
   return (
     <div>
-      <nav className="nav-wraper grey darken-3">
+      <nav className="nav-wraper black darken-3">
         <div className="container">
-          <Link to="/" className="brand-logo">
-            Social Summit
+          <Link to="/" className="brand-logo valign-wrapper">
+            <img
+              src="/Images/Logo_Main.svg"
+              alt="logo"
+              style={{ width: "auto", height: "6vh" }}
+              className="hide-on-small-only"
+            />
           </Link>
           {links}
         </div>

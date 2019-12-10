@@ -114,15 +114,13 @@ class Carousel extends Component {
               <div className={Styles.imgCard}>
                 <figure className={Styles.effectImgCard}>
                   <img
-                    src="/Images/previous_year_events/action_plan.jpg"
+                    src="/Images/previous_year_events/mun.jpg"
                     className={Styles.img}
                     alt=""
                     style={{ width: "500px", height: "455px" }}
                   />
                   <figcaption className={Styles.imgCaption}>
-                    <label className={Styles.header}>
-                      Model United Nations Conference
-                    </label>
+                    <label className={Styles.header}>MUN</label>
                     <div className={Styles.description}>
                       An event to negotiate all the important agendas <br />
                       and bring the best of the delegates, attachés and <br />

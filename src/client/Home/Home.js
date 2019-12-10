@@ -13,8 +13,8 @@ function Home() {
     <div>
       <Navbar />
       <Hero />
-      <CounterComponent />
       <About />
+      <CounterComponent />
       <Grid />
       <PreviousSpeakers />
       <EventNSS />
