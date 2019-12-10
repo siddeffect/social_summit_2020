@@ -30,11 +30,6 @@ export const signOut = () => {
   };
 };
 
-function pad(n) {
-  var s = "000" + n;
-  return s.substr(s.length - 4);
-}
-
 export const signUp = newUser => {
   return (dispatch, getState, { getFirebase, getFirestore }) => {
     const firebase = getFirebase();
