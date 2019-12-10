@@ -16,7 +16,11 @@ const useStyles = makeStyles(theme => ({
     background: "#e0e0e0",
     display: "flex",
     flexDirection: "row",
-    borderRadius: "16px"
+    borderRadius: "16px",
+    "@media (max-width:600px)": {
+      display: "block",
+      width: "85vw"
+    }
   },
   navContainer: {
     flexGrow: 1,
@@ -24,7 +28,14 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "column",
     backgroundColor: "#000",
     borderRadius: "16px 0 0 16px",
-    maxWidth: "20vw"
+    maxWidth: "20vw",
+    "@media (max-width:600px)": {
+      display: "block",
+      maxWidth: "none",
+      borderRadius: "16px 16px 0 0",
+      flexDirection: "row",
+      flexGrow: "none"
+    }
   },
   mainDetail: {
     flexGrow: 3,
@@ -39,27 +50,62 @@ const useStyles = makeStyles(theme => ({
   nameHeader: {
     color: "#fff",
     fontSize: "3rem",
-    textTransform: "capitalize"
+    textTransform: "capitalize",
+    "@media (max-width:600px)": {
+      margin: "2vh auto auto auto"
+    },
+    "@media (min-width:350px) and (max-width:420px)": {
+      fontSize: "2.4rem"
+    },
+    "@media (max-width:320px)": {
+      fontSize: "2.2rem"
+    }
   },
   collegeHeader: {
     fontSize: "1.5rem",
-    marginBottom: "2vh"
+    marginBottom: "2vh",
+    "@media (max-width:600px)": {
+      margin: "1vh auto 1vh auto"
+    },
+    "@media (min-width:350px) and (max-width:420px)": {
+      fontSize: "1.35rem"
+    },
+    "@media (max-width:320px)": {
+      fontSize: "1.2rem"
+    }
   },
   divider: {
     backgroundColor: "#e0e0e0",
     height: "1px",
-    width: "15vw"
+    width: "15vw",
+    "@media (max-width:600px)": {
+      width: "45vw",
+      margin: "auto"
+    }
   },
   id: {
     fontSize: "2rem",
-    margin: "4vh 4vw auto 2vw"
+    margin: "4vh 4vw auto 2vw",
+    "@media (max-width:600px)": {
+      margin: "2vh auto auto auto"
+    },
+    "@media (min-width:350px) and (max-width:420px)": {
+      fontSize: "1.8rem"
+    },
+    "@media (max-width:320px)": {
+      fontSize: "1.6rem"
+    }
   },
   mainHeaders: {
     display: "flex",
     flexDirection: "column"
   },
   button: {
-    margin: "4vh 8vw 10vh 2vw"
+    margin: "4vh 8vw 10vh 2vw",
+    "@media (max-width:600px)": {
+      margin: "4vh auto 5vh auto",
+      width: "60vw"
+    }
   },
   mainDetails: {
     paddingTop: "4vh",
@@ -68,7 +114,27 @@ const useStyles = makeStyles(theme => ({
   fields: {
     margin: "auto auto auto 6vh",
     fontSize: "1.8rem",
-    color: "#000"
+    color: "#000",
+    "@media (max-width:600px)": {
+      margin: "1vh auto 1vh 14vh",
+      fontSize: "1.5rem"
+    },
+    "@media (min-width:400px) and (max-width:420px)": {
+      margin: "1vh auto 1vh 7vh",
+      fontSize: "1.4rem"
+    },
+    "@media (min-width:385px) and (max-width:400px)": {
+      margin: "1vh auto 1vh 6.5vh",
+      fontSize: "1.4rem"
+    },
+    "@media (min-width:350px) and (max-width:380px)": {
+      margin: "1vh auto 1vh 7vh",
+      fontSize: "1.4rem"
+    },
+    "@media (max-width:320px)": {
+      margin: "1vh auto 1vh 7vh",
+      fontSize: "1.25rem"
+    }
   }
 }));
 
@@ -113,21 +179,28 @@ const Dashboard = props => {
                 className={classes.button}
                 endIcon={<Icon>send</Icon>}
               >
+                {/* <a href="https://forms.gle/GEsJmjSox6Q4ngVo9" target="/"> */}
                 Summit Idea
               </Button>
             </ThemeProvider>
           </div>
         </div>
         <div className={classes.mainDetail}>
-          <label className={classes.fields}>
-            Name: {profile.firstName} {profile.lastName}
-          </label>
+          {window.innerWidth < 768 ? null : (
+            <label className={classes.fields}>
+              Name: {profile.firstName} {profile.lastName}
+            </label>
+          )}
+
           <label className={classes.fields}>Email: {profile.email}</label>
           <label className={classes.fields}>
             Ph. Number: {profile.phoneNumber}
           </label>
 
-          <label className={classes.fields}>College: {profile.college}</label>
+          {window.innerWidth < 768 ? null : (
+            <label className={classes.fields}>College: {profile.college}</label>
+          )}
+
           <label className={classes.fields}>
             Branch/Year: {profile.year_branch}
           </label>
