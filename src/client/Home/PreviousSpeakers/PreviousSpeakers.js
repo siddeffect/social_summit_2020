@@ -74,8 +74,14 @@ const useStyles = makeStyles(theme => ({
     width: "8rem",
     borderRadius: "50%",
     flexGrowth: "1",
-    "@media (max-width:420px)": {
-      marginLeft: "30% !important"
+    "@media (max-width:320px)": {
+      marginLeft: "20% !important"
+    },
+    "@media (min-width:350px) and (max-width:380px)": {
+      marginLeft: "17% !important"
+    },
+    "@media (min-width:380px) and (max-width:420px)": {
+      marginLeft: "20% !important"
     }
   },
   bio: {},

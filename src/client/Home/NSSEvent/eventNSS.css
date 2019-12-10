@@ -173,6 +173,38 @@
     font-size: 17.5px;
   }
 }
+
+@media screen and (min-width: 385px) and (max-width: 400px) {
+  .outerContainer {
+    padding-left: 60px;
+  }
+
+  .slick-slide img {
+    margin-left: 25%;
+    margin-top: 5%;
+    display: block;
+  }
+
+  .image {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+  }
+  .outerContainer {
+    margin: 0;
+  }
+  .leftContainer,
+  .rightContainer {
+    width: 270px !important;
+    min-height: 475px !important;
+    border-radius: 8px;
+  }
+  .leftHeading,
+  .rightHeading {
+    padding: 24px 36px 8px 24px;
+  }
+}
+
 @media screen and (min-width: 350px) and (max-width: 380px) {
   .outerContainer {
     padding-left: 42px;

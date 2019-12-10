@@ -65,7 +65,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: "1.3em",
     fontFamily: ["'Roboto'", "sans-serif"].join(","),
     "@media (max-width:780px)": {
-      fontSize: "1em"
+      fontSize: "16px"
     }
   },
   button: {
