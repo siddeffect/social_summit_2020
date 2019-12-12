@@ -42,27 +42,28 @@ const useStyles = makeStyles(theme => ({
     fontSize: 55,
     verticalAlign: "center",
     color: "#4aa651",
-    fontFamily: ["Roboto Condensed", "sans-serif"].join(","),
+    fontFamily: ["'ibm plex serif'", "serif"].join(","),
     "@media (max-width:780px)": {
       fontSize: 30,
       flexGrow: 0.6,
-      marginTop: "30%"
+      marginTop: "-20px"
     },
     "@media (min-width:350px) and (max-width:420px)": {
-      fontSize: 22
+      fontSize: 22,
+      marginTop: "-20px"
     },
     "@media (max-width:320px)": {
-      fontSize: 20
+      fontSize: 20,
+      marginTop: "-20px"
     }
   },
 
   data: {
     marginTop: "20px",
-
     flexGrow: 1,
     fontSize: 70,
     color: "#ffffff",
-    fontFamily: ["Roboto Condensed", "sans-serif"].join(","),
+    fontFamily: ["'ibm plex serif'", "serif"].join(","),
     textAlign: "center",
     "@media (max-width:780px)": {
       fontSize: 32,
@@ -99,7 +100,7 @@ export default function CounterComponent() {
         <div className={classes.data}>
           <CounterNumberUp endValue="1000" time="0" />
         </div>
-        <div className={classes.header}>FootFall</div>
+        <div className={classes.header}>Footfall</div>
       </div>
 
       <div className={classes.container}>
