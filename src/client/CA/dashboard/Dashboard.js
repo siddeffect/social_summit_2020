@@ -55,10 +55,12 @@ const useStyles = makeStyles(theme => ({
       margin: "2vh auto auto auto"
     },
     "@media (min-width:350px) and (max-width:420px)": {
-      fontSize: "2.4rem"
+      fontSize: "2.4rem",
+      textAlign: "center"
     },
     "@media (max-width:320px)": {
-      fontSize: "2.2rem"
+      fontSize: "2.2rem",
+      textAlign: "center"
     }
   },
   collegeHeader: {
@@ -68,10 +70,12 @@ const useStyles = makeStyles(theme => ({
       margin: "1vh auto 1vh auto"
     },
     "@media (min-width:350px) and (max-width:420px)": {
-      fontSize: "1.35rem"
+      fontSize: "1.35rem",
+      textAlign: "center"
     },
     "@media (max-width:320px)": {
-      fontSize: "1.2rem"
+      fontSize: "1.2rem",
+      textAlign: "center"
     }
   },
   divider: {
@@ -128,11 +132,11 @@ const useStyles = makeStyles(theme => ({
       fontSize: "1.4rem"
     },
     "@media (min-width:350px) and (max-width:380px)": {
-      margin: "1vh auto 1vh 7vh",
+      margin: "1vh auto 1vh 4vh",
       fontSize: "1.4rem"
     },
     "@media (max-width:320px)": {
-      margin: "1vh auto 1vh 7vh",
+      margin: "1vh auto 1vh 4vh",
       fontSize: "1.25rem"
     }
   }
