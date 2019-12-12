@@ -33,7 +33,11 @@ function Carousel() {
       <Slider {...Settings}>
         <div className="leftContainer">
           <div className="leftImg">
-            <img src="/Images/coming_soon.svg" alt="" className="image" />
+            <img
+              src="/Images/nss_events/udbhav-min.jpg"
+              alt=""
+              className="image"
+            />
           </div>
           <div className="leftContent">
             <label htmlFor="" className="leftPara">
@@ -53,7 +57,11 @@ function Carousel() {
 
         <div className="rightContainer">
           <div className="rightImg">
-            <img src="/Images/coming_soon.svg" alt="" className="image" />
+            <img
+              src="/Images/nss_events/bdc-min.jpg"
+              alt=""
+              className="image"
+            />
           </div>
           <div className="rightContent">
             <label htmlFor="" className="rightPara">
@@ -73,7 +81,11 @@ function Carousel() {
 
         <div className="leftContainer">
           <div className="leftImg">
-            <img src="/Images/coming_soon.svg" alt="" className="image" />
+            <img
+              src="/Images/nss_events/aasra-min.jpg"
+              alt=""
+              className="image"
+            />
           </div>
           <div className="leftContent">
             <label htmlFor="" className="leftPara">
@@ -94,7 +106,11 @@ function Carousel() {
 
         <div className="rightContainer">
           <div className="rightImg">
-            <img src="/Images/coming_soon.svg" alt="" className="image" />
+            <img
+              src="/Images/nss_events/free_edu-min.jpg"
+              alt=""
+              className="image"
+            />
           </div>
           <div className="rightContent">
             <label htmlFor="" className="rightPara">
@@ -114,7 +130,11 @@ function Carousel() {
 
         <div className="leftContainer">
           <div className="leftImg">
-            <img src="/Images/coming_soon.svg" alt="" className="image" />
+            <img
+              src="/Images/nss_events/swacchta-min.jpg"
+              alt=""
+              className="image"
+            />
           </div>
           <div className="leftContent">
             <label htmlFor="" className="leftPara">
@@ -135,7 +155,11 @@ function Carousel() {
 
         <div className="rightContainer">
           <div className="rightImg">
-            <img src="/Images/coming_soon.svg" alt="" className="image" />
+            <img
+              src="/Images/nss_events/plantation_drive-min.jpg"
+              alt=""
+              className="image"
+            />
           </div>
           <div className="rightContent">
             <label htmlFor="" className="rightPara">
