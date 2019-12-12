@@ -7,7 +7,7 @@ import CounterComponent from "./Counter/CounterComponent";
 import EventNSS from "./NSSEvent/eventNSS";
 import About from "./About/About";
 import PreviousSpeakers from "./PreviousSpeakers/PreviousSpeakers";
-
+import SponNgo from "./spon_ngo/SponNgo";
 function Home() {
   return (
     <div>
@@ -17,6 +17,7 @@ function Home() {
       <CounterComponent />
       <Grid />
       <PreviousSpeakers />
+      <SponNgo />
       <EventNSS />
       <Footer />
     </div>
