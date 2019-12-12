@@ -44,13 +44,13 @@
   box-shadow: 4px 8px 24px rgba(0, 0, 0, 0.15);
 
   justify-content: space-around;
-  border-radius: 2px;
+  border-radius: 8px;
 }
 .imgTextWrapper img {
-  width: 37px;
+  width: 6vw;
 }
 .imgTextWrapper > p {
-  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-style: normal;
   font-weight: normal;
   /* font-size: 16px; */
@@ -59,18 +59,19 @@
   color: rgba(0, 0, 0, 0.7);
   margin: 0;
 }
-/* .reasonsText {
-  display: none;
-} */
+.reasonsText {
+  padding: 0 2vw 2vh 2vw;
+}
+
 .reasonsHeading {
   font-family: "Roboto", sans-serif !important;
-  font-style: normal !important;
-  /* font-weight: 500 !important; */
-  font-size: 18px !important;
+  font-style: bold !important;
+  font-size: 24px !important;
   line-height: 15px;
   text-align: center !important;
   color: #000000 !important;
   margin: 0 !important;
+  padding: 4vh 2vw 2vh 2vw;
 }
 
 @media screen and (max-width: 600px) {
@@ -97,6 +98,7 @@
   }
 
   .headingContainer > p {
+    font-family: "Ubuntu";
     padding: 20px 0 0 0;
     font-size: 32px;
   }

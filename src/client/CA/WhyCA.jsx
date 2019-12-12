@@ -1,15 +1,12 @@
 import React, { Component } from "react";
 import Styles from "./css/WhyCA.module.css";
-import Certificate from "./Images/certificate.png";
-import Id from "./Images/id.png";
-import Networking from "./Images/networking.png";
 import WhyCASub from "./WhyCASub";
 import RoleCASub from "./RoleCASub";
 
 const reasonsArray = [
   {
     name: "certificate",
-    src: Certificate,
+    src: "/Images/ca_icons/certificate.svg",
     heading: "Certificate of Appreciation",
     content: [
       {
@@ -20,7 +17,7 @@ const reasonsArray = [
   },
   {
     name: "acknowledgement",
-    src: Networking,
+    src: "./Images/ca_icons/clap.svg",
     heading: "Acknowledgement",
     content: [
       {
@@ -31,7 +28,7 @@ const reasonsArray = [
   },
   {
     name: "free entry",
-    src: Id,
+    src: "./Images/ca_icons/tickets.svg",
     heading: "Free Entry Tickets",
     content: [
       {
@@ -45,21 +42,21 @@ const rolesArray = [
   {
     name: "personify",
     heading: "Personify Summit",
-    src: Id,
+    src: "./Images/ca_icons/teamwork.svg",
     content:
       " Be the face of Summit by encouraging and facilitating participation from your college"
   },
   {
     name: "re-create",
     heading: "Revolutionize and Re-create",
-    src: Certificate,
+    src: "./Images/ca_icons/cycle.svg",
     content:
       "Work out new events ideas and revitalize strategies to promote Summit"
   },
   {
     name: "elevate",
     heading: "Elevate our brand ",
-    src: Networking,
+    src: "./Images/ca_icons/user.svg",
     content:
       "Publicize and promote Summit through social media platforms to increase our reach"
   }

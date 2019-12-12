@@ -182,9 +182,10 @@ const Dashboard = props => {
                 color="primary"
                 className={classes.button}
                 endIcon={<Icon>send</Icon>}
+                href="https://forms.gle/GEsJmjSox6Q4ngVo9"
+                target="_blank"
               >
-                {/* <a href="https://forms.gle/GEsJmjSox6Q4ngVo9" target="/"> */}
-                Summit Idea
+                Submit Idea
               </Button>
             </ThemeProvider>
           </div>

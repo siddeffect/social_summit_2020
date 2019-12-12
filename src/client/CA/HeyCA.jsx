@@ -8,6 +8,13 @@ export class HeyCA extends Component {
       <div className={Styles.outercontainer}>
         <div className={Styles.outerbox}>
           <div className={Styles.box}>
+            <Link to="/">
+              <img
+                src="/Images/Logo_Main.svg"
+                alt="logo"
+                className={Styles.logo}
+              />
+            </Link>
             <h1 className={Styles.heyca}>Social Attaché</h1>
 
             <h1 className={Styles.heyca1}>
