@@ -53,7 +53,9 @@ export const signUp = newUser => {
             year_branch: newUser.year_branch,
             role: "CA",
             ca_count: null,
-            payment_done: false
+            payment_done: false,
+            tshirt: newUser.tshirt,
+            gender: newUser.gender
           })
           .then(
             firestore

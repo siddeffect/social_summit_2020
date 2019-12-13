@@ -3,6 +3,7 @@ import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { signUp } from "../../../store/actions/authAction";
 import Navbar from "../layout/Navbar";
+import M from "materialize-css";
 
 class SignUp extends Component {
   state = {
@@ -13,7 +14,9 @@ class SignUp extends Component {
     phoneNumber: "",
     college: "",
     state: "",
-    year_branch: ""
+    year_branch: "",
+    gender: "",
+    tshirt: ""
   };
 
   handleChange = e => {
@@ -26,6 +29,11 @@ class SignUp extends Component {
     e.preventDefault();
     this.props.signUp(this.state);
   };
+
+  componentDidMount() {
+    // Auto initialize all the things!
+    M.AutoInit();
+  }
 
   render() {
     const { auth, authError } = this.props;
@@ -60,15 +68,32 @@ class SignUp extends Component {
                     />
                   </div>
                 </div>
-                <div className="input-field">
-                  <label htmlFor="email">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    required=""
-                    aria-required="true"
-                    onChange={this.handleChange}
-                  />
+                <div className="row">
+                  <div className="input-field col s12 m4">
+                    <select
+                      onChange={this.handleChange}
+                      type="text"
+                      id="gender"
+                    >
+                      <option disabled value="" selected>
+                        Gender
+                      </option>
+                      <option value="M">Male</option>
+                      <option value="F">Female</option>
+                      <option value="N">Prefer not to say</option>
+                    </select>
+                    <label>Select Gender</label>
+                  </div>
+                  <div className="input-field col s12 m8">
+                    <label htmlFor="email">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      required=""
+                      aria-required="true"
+                      onChange={this.handleChange}
+                    />
+                  </div>
                 </div>
                 <div className="row">
                   <div className="input-field col s12 m6">
@@ -110,15 +135,35 @@ class SignUp extends Component {
                     onChange={this.handleChange}
                   />
                 </div>
-                <div className="input-field">
-                  <label htmlFor="year_branch">Year and Branch</label>
-                  <input
-                    type="text"
-                    id="year_branch"
-                    required=""
-                    aria-required="true"
-                    onChange={this.handleChange}
-                  />
+                <div className="row">
+                  <div className="input-field col s12 m8">
+                    <label htmlFor="year_branch">Year and Branch</label>
+                    <input
+                      type="text"
+                      id="year_branch"
+                      required=""
+                      aria-required="true"
+                      onChange={this.handleChange}
+                    />
+                  </div>
+                  <div className="input-field col s12 m4">
+                    <select
+                      onChange={this.handleChange}
+                      type="text"
+                      id="tshirt"
+                    >
+                      <option disabled value="" selected>
+                        T-Shirt Size
+                      </option>
+                      <option value="XS">XS</option>
+                      <option value="S">S</option>
+                      <option value="M">M</option>
+                      <option value="L">L</option>
+                      <option value="XL">XL</option>
+                      <option value="XXL">XXL</option>
+                    </select>
+                    <label>Select T-Shirt Size</label>
+                  </div>
                 </div>
                 <div className="input-field center-align">
                   <button
