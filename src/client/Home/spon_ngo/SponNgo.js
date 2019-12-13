@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import Fade from "react-reveal/Fade";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -89,11 +90,13 @@ export default function SponNgo() {
         container
       >
         <div className={classes.image_bucket}>
-          <img
-            src={`/Images/spons_compressed/${image}.jpg`}
-            alt=""
-            className={classes.image}
-          />
+          <Fade bottom>
+            <img
+              src={`/Images/spons_compressed/${image}.jpg`}
+              alt=""
+              className={classes.image}
+            />
+          </Fade>
         </div>
       </Grid>
     );
@@ -111,11 +114,13 @@ export default function SponNgo() {
         container
       >
         <div className={classes.image_bucket}>
-          <img
-            src={`/Images/ngo_compressed/${image}.jpg`}
-            alt=""
-            className={classes.image}
-          />
+          <Fade bottom>
+            <img
+              src={`/Images/ngo_compressed/${image}.jpg`}
+              alt=""
+              className={classes.image}
+            />
+          </Fade>
         </div>
       </Grid>
     );

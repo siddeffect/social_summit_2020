@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Styles from "./css/imageGrid.module.css";
+import Fade from "react-reveal/Fade";
 
 class Carousel extends Component {
   constructor() {
@@ -14,193 +15,208 @@ class Carousel extends Component {
         {this.state.width > 768 ? (
           <div className={Styles.desktopOnly}>
             <div className={Styles.wraper1}>
-              <div className={Styles.imgCard}>
-                <figure className={Styles.effectImgCard}>
-                  <img
-                    src="/Images/previous_year_events/case_study.jpg"
-                    className={Styles.img}
-                    alt=""
-                    style={{
-                      width: "500px",
-                      height: "300px",
-                      borderTopLeftRadius: "12px"
-                    }}
-                  />
-                  <figcaption className={Styles.imgCaption}>
-                    <label className={Styles.header}>Case Studies</label>
-                    <div className={Styles.description}>
-                      Channelize your thoughts to design better <br />
-                      lines of action to achieve a multi-dimensional <br />
-                      solution to the persisting social problems.
-                      <div className={Styles.greenLine}></div>
-                    </div>
-                  </figcaption>
-                </figure>
-              </div>
+              <Fade bottom>
+                <div className={Styles.imgCard}>
+                  <figure className={Styles.effectImgCard}>
+                    <img
+                      src="/Images/previous_year_events/case_study.jpg"
+                      className={Styles.img}
+                      alt=""
+                      style={{
+                        width: "500px",
+                        height: "300px",
+                        borderTopLeftRadius: "12px"
+                      }}
+                    />
+                    <figcaption className={Styles.imgCaption}>
+                      <label className={Styles.header}>Case Studies</label>
+                      <div className={Styles.description}>
+                        Channelize your thoughts to design better <br />
+                        lines of action to achieve a multi-dimensional <br />
+                        solution to the persisting social problems.
+                        <div className={Styles.greenLine}></div>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </Fade>
 
-              <div className={Styles.imgCard}>
-                <figure className={Styles.effectImgCard}>
-                  <img
-                    src="/Images/previous_year_events/workshop.jpg"
-                    className={Styles.img}
-                    alt=""
-                    style={{ width: "500px", height: "300px" }}
-                  />
-                  <figcaption className={Styles.imgCaption}>
-                    <label className={Styles.header}>B PLANS</label>
-                    <div className={Styles.description}>
-                      Prepare your business plans and get ready to
-                      <br />
-                      convince the inconvincible
-                      <div className={Styles.greenLine}></div>
-                    </div>
-                  </figcaption>
-                </figure>
-              </div>
+              <Fade bottom>
+                <div className={Styles.imgCard}>
+                  <figure className={Styles.effectImgCard}>
+                    <img
+                      src="/Images/previous_year_events/workshop.jpg"
+                      className={Styles.img}
+                      alt=""
+                      style={{ width: "500px", height: "300px" }}
+                    />
+                    <figcaption className={Styles.imgCaption}>
+                      <label className={Styles.header}>B PLANS</label>
+                      <div className={Styles.description}>
+                        Prepare your business plans and get ready to
+                        <br />
+                        convince the inconvincible
+                        <div className={Styles.greenLine}></div>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </Fade>
 
-              <div className={Styles.imgCard}>
-                <figure className={Styles.effectImgCard}>
-                  <img
-                    src="/Images/previous_year_events/guest_lecture.jpg"
-                    className={Styles.img}
-                    alt=""
-                    style={{
-                      width: "500px",
-                      height: "300px",
-                      borderBottomLeftRadius: "12px"
-                    }}
-                  />
-                  <figcaption
-                    className={Styles.imgCaption}
-                    style={{ borderBottomLeftRadius: "12px" }}
-                  >
-                    <label className={Styles.header}>
-                      Round Table Conference
-                    </label>
-                    <div className={Styles.description}>
-                      Best ideas are surfaced only through an immense <br />
-                      clash of wisdom. This event presents a broad <br />
-                      discussion forum to reach a practical solution for <br />
-                      societal ills.
-                      <div className={Styles.greenLine}></div>
-                    </div>
-                  </figcaption>
-                </figure>
-              </div>
+              <Fade bottom>
+                <div className={Styles.imgCard}>
+                  <figure className={Styles.effectImgCard}>
+                    <img
+                      src="/Images/previous_year_events/guest_lecture.jpg"
+                      className={Styles.img}
+                      alt=""
+                      style={{
+                        width: "500px",
+                        height: "300px",
+                        borderBottomLeftRadius: "12px"
+                      }}
+                    />
+                    <figcaption
+                      className={Styles.imgCaption}
+                      style={{ borderBottomLeftRadius: "12px" }}
+                    >
+                      <label className={Styles.header}>
+                        Round Table Conference
+                      </label>
+                      <div className={Styles.description}>
+                        Best ideas are surfaced only through an immense <br />
+                        clash of wisdom. This event presents a broad <br />
+                        discussion forum to reach a practical solution for{" "}
+                        <br />
+                        societal ills.
+                        <div className={Styles.greenLine}></div>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </Fade>
             </div>
             <div className={Styles.wraper2}>
-              <div className={Styles.imgCard}>
-                <figure className={Styles.effectImgCard}>
-                  <img
-                    src="/Images/previous_year_events/street_play.jpg"
-                    className={Styles.img}
-                    alt=""
-                    style={{ width: "500px", height: "454px" }}
-                  />
-                  <figcaption className={Styles.imgCaption}>
-                    <label className={Styles.header}>Street Play</label>
-                    <div className={Styles.description}>
-                      Just pick up your drums, tambourines and get ready to{" "}
-                      <br />
-                      scream,shout and bustle up the streets,intriguing your{" "}
-                      <br />
-                      audience against a social dogma
-                      <div className={Styles.greenLine}></div>
-                    </div>
-                  </figcaption>
-                </figure>
-              </div>
+              <Fade bottom>
+                <div className={Styles.imgCard}>
+                  <figure className={Styles.effectImgCard}>
+                    <img
+                      src="/Images/previous_year_events/street_play.jpg"
+                      className={Styles.img}
+                      alt=""
+                      style={{ width: "500px", height: "454px" }}
+                    />
+                    <figcaption className={Styles.imgCaption}>
+                      <label className={Styles.header}>Street Play</label>
+                      <div className={Styles.description}>
+                        Just pick up your drums, tambourines and get ready to{" "}
+                        <br />
+                        scream,shout and bustle up the streets,intriguing your{" "}
+                        <br />
+                        audience against a social dogma
+                        <div className={Styles.greenLine}></div>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </Fade>
 
-              <div className={Styles.imgCard}>
-                <figure className={Styles.effectImgCard}>
-                  <img
-                    src="/Images/previous_year_events/mun.jpg"
-                    className={Styles.img}
-                    alt=""
-                    style={{ width: "500px", height: "455px" }}
-                  />
-                  <figcaption className={Styles.imgCaption}>
-                    <label className={Styles.header}>MUN</label>
-                    <div className={Styles.description}>
-                      An event to negotiate all the important agendas <br />
-                      and bring the best of the delegates, attachés and <br />
-                      moderators in an explicit and diplomatic way.
-                      <div className={Styles.greenLine}></div>
-                    </div>
-                  </figcaption>
-                </figure>
-              </div>
+              <Fade bottom>
+                <div className={Styles.imgCard}>
+                  <figure className={Styles.effectImgCard}>
+                    <img
+                      src="/Images/previous_year_events/mun.jpg"
+                      className={Styles.img}
+                      alt=""
+                      style={{ width: "500px", height: "455px" }}
+                    />
+                    <figcaption className={Styles.imgCaption}>
+                      <label className={Styles.header}>MUN</label>
+                      <div className={Styles.description}>
+                        An event to negotiate all the important agendas <br />
+                        and bring the best of the delegates, attachés and <br />
+                        moderators in an explicit and diplomatic way.
+                        <div className={Styles.greenLine}></div>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </Fade>
             </div>
 
             <div className={Styles.wraper3}>
-              <div className={Styles.imgCard}>
-                <figure className={Styles.effectImgCard}>
-                  <img
-                    src="/Images/previous_year_events/work_presentation.jpg"
-                    className={Styles.img}
-                    alt=""
-                    style={{
-                      width: "500px",
-                      height: "300px",
-                      borderTopRightRadius: "12px"
-                    }}
-                  />
-                  <figcaption className={Styles.imgCaption}>
-                    <label className={Styles.header}>Work Presentation</label>
-                    <div className={Styles.description}>
-                      Grab a chance for the rightful acknowledgment
-                      <br /> of your unparalleled social work.
-                      <div className={Styles.greenLine}></div>
-                    </div>
-                  </figcaption>
-                </figure>
-              </div>
-
-              <div className={Styles.imgCard}>
-                <figure className={Styles.effectImgCard}>
-                  <img
-                    src="/Images/previous_year_events/cultural_night.jpg"
-                    className={Styles.img}
-                    alt=""
-                    style={{ width: "500px", height: "300px" }}
-                  />
-                  <figcaption className={Styles.imgCaption}>
-                    <label className={Styles.header}>Cultural Nights</label>
-                    <div className={Styles.description}>
-                      Have something different to stand out from the crowd? Then
-                      this is the moment to perform in front of an audience and
-                      steal the show.
-                      <div className={Styles.greenLine}></div>
-                    </div>
-                  </figcaption>
-                </figure>
-              </div>
-
-              <div className={Styles.imgCard}>
-                <figure className={Styles.effectImgCard}>
-                  <img
-                    src="/Images/previous_year_events/hackathon.jpg"
-                    className={Styles.img}
-                    alt=""
-                    style={{
-                      width: "500px",
-                      height: "300px",
-                      borderBottomRightRadius: "12px"
-                    }}
-                  />
-                  <figcaption
-                    className={Styles.imgCaption}
-                    style={{ borderBottomRightRadius: "12px " }}
-                  >
-                    <label className={Styles.header}>Hackathon</label>
-                    <div className={Styles.description}>
-                      Think ,refine,code and test your potential <br />
-                      to transfigure the current scenario of society.
-                      <div className={Styles.greenLine}></div>
-                    </div>
-                  </figcaption>
-                </figure>
-              </div>
+              <Fade bottom>
+                <div className={Styles.imgCard}>
+                  <figure className={Styles.effectImgCard}>
+                    <img
+                      src="/Images/previous_year_events/work_presentation.jpg"
+                      className={Styles.img}
+                      alt=""
+                      style={{
+                        width: "500px",
+                        height: "300px",
+                        borderTopRightRadius: "12px"
+                      }}
+                    />
+                    <figcaption className={Styles.imgCaption}>
+                      <label className={Styles.header}>Work Presentation</label>
+                      <div className={Styles.description}>
+                        Grab a chance for the rightful acknowledgment
+                        <br /> of your unparalleled social work.
+                        <div className={Styles.greenLine}></div>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </Fade>
+              <Fade bottom>
+                <div className={Styles.imgCard}>
+                  <figure className={Styles.effectImgCard}>
+                    <img
+                      src="/Images/previous_year_events/cultural_night.jpg"
+                      className={Styles.img}
+                      alt=""
+                      style={{ width: "500px", height: "300px" }}
+                    />
+                    <figcaption className={Styles.imgCaption}>
+                      <label className={Styles.header}>Cultural Nights</label>
+                      <div className={Styles.description}>
+                        Have something different to stand out from the crowd?
+                        Then this is the moment to perform in front of an
+                        audience and steal the show.
+                        <div className={Styles.greenLine}></div>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </Fade>
+              <Fade bottom>
+                <div className={Styles.imgCard}>
+                  <figure className={Styles.effectImgCard}>
+                    <img
+                      src="/Images/previous_year_events/hackathon.jpg"
+                      className={Styles.img}
+                      alt=""
+                      style={{
+                        width: "500px",
+                        height: "300px",
+                        borderBottomRightRadius: "12px"
+                      }}
+                    />
+                    <figcaption
+                      className={Styles.imgCaption}
+                      style={{ borderBottomRightRadius: "12px " }}
+                    >
+                      <label className={Styles.header}>Hackathon</label>
+                      <div className={Styles.description}>
+                        Think ,refine,code and test your potential <br />
+                        to transfigure the current scenario of society.
+                        <div className={Styles.greenLine}></div>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </Fade>
             </div>
           </div>
         ) : null}

@@ -6,6 +6,7 @@ import {
 } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
+import Fade from "react-reveal/Fade";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -108,36 +109,38 @@ export default function Hero() {
   const classes = useStyles();
   return (
     <footer className={classes.root}>
-      <div className={classes.contentBox}>
-        <h1 className={classes.header}>
-          Rebuilding Nature <br /> Through Innovation
-        </h1>
-        <div className={classes.line} />
+      <Fade>
+        <div className={classes.contentBox}>
+          <h1 className={classes.header}>
+            Rebuilding Nature <br /> Through Innovation
+          </h1>
+          <div className={classes.line} />
 
-        <div className={classes.themeContent}>
-          Environment, being an envelope of society, is susceptible to every
-          societal action foremost. Rapidly increasing ways of hampering
-          environment need innovations to mould these ways to rebuild nature,
-          holding hands with the needs of the present. Keeping the same in mind,
-          social summit-2020 invites delegates from all over India having an
-          ignition of ‘rebuilding nature through innovation’.
+          <div className={classes.themeContent}>
+            Environment, being an envelope of society, is susceptible to every
+            societal action foremost. Rapidly increasing ways of hampering
+            environment need innovations to mould these ways to rebuild nature,
+            holding hands with the needs of the present. Keeping the same in
+            mind, social summit-2020 invites delegates from all over India
+            having an ignition of ‘rebuilding nature through innovation’.
+          </div>
+          <div>
+            <ThemeProvider theme={theme}>
+              <Link to="/campusambassador">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="large"
+                  className={classes.button}
+                >
+                  CAMPUS AMBASSADOR
+                </Button>
+              </Link>
+            </ThemeProvider>
+          </div>
         </div>
-        <div>
-          <ThemeProvider theme={theme}>
-            <Link to="/campusambassador">
-              <Button
-                variant="contained"
-                color="primary"
-                size="large"
-                className={classes.button}
-              >
-                CAMPUS AMBASSADOR
-              </Button>
-            </Link>
-          </ThemeProvider>
-        </div>
-      </div>
-      <div className={classes.imageBox}></div>
+        <div className={classes.imageBox}></div>
+      </Fade>
     </footer>
   );
 }

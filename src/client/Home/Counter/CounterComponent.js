@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import CounterNumberUp from "./CounterNumberUp";
+import Fade from "react-reveal/Fade";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -81,34 +82,36 @@ const useStyles = makeStyles(theme => ({
 export default function CounterComponent() {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <div className={classes.container}>
-        <div className={classes.data}>
-          <CounterNumberUp endValue="20" time="100" />
+    <Fade bottom>
+      <div className={classes.root}>
+        <div className={classes.container}>
+          <div className={classes.data}>
+            <CounterNumberUp endValue="20" time="100" />
+          </div>
+          <div className={classes.header}>Events</div>
         </div>
-        <div className={classes.header}>Events</div>
-      </div>
 
-      <div className={classes.container}>
-        <div className={classes.data}>
-          <CounterNumberUp endValue="30" time="100" />
+        <div className={classes.container}>
+          <div className={classes.data}>
+            <CounterNumberUp endValue="30" time="100" />
+          </div>
+          <div className={classes.header}>Partners</div>
         </div>
-        <div className={classes.header}>Partners</div>
-      </div>
 
-      <div className={classes.container}>
-        <div className={classes.data}>
-          <CounterNumberUp endValue="1000" time="0" />
+        <div className={classes.container}>
+          <div className={classes.data}>
+            <CounterNumberUp endValue="1000" time="0" />
+          </div>
+          <div className={classes.header}>Footfall</div>
         </div>
-        <div className={classes.header}>Footfall</div>
-      </div>
 
-      <div className={classes.container}>
-        <div className={classes.data}>
-          <CounterNumberUp endValue="50" time="50" />
+        <div className={classes.container}>
+          <div className={classes.data}>
+            <CounterNumberUp endValue="50" time="50" />
+          </div>
+          <div className={classes.header}>Team</div>
         </div>
-        <div className={classes.header}>Team</div>
       </div>
-    </div>
+    </Fade>
   );
 }

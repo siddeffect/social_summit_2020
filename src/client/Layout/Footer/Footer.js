@@ -5,6 +5,7 @@ import { Facebook, Twitter, Instagram, LinkedIn } from "@material-ui/icons";
 import EmailIcon from "@material-ui/icons/Email";
 import PhoneIcon from "@material-ui/icons/Phone";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
+import Fade from "react-reveal/Fade";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -87,82 +88,86 @@ export default function Footer() {
   const classes = useStyles();
   return (
     <footer className={classes.root}>
-      <div className={classes.contentBox}>
-        <h1 className={classes.header}>Let's Innovate for the Nature</h1>
+      <Fade bottom>
+        <div className={classes.contentBox}>
+          <h1 className={classes.header}>Let's Innovate for the Nature</h1>
 
-        <div className={classes.themeContent}>
-          National social summit-2020, IIT Roorkee, aims for the upliftment of
-          the nation by identifying and working on problems on the ground level.
-          It is a two-day serving of collaborative workshops, networking, and an
-          insight from the industry’s thought leader!
-        </div>
-        <div className={classes.fabs}>
-          <Fab
-            href="https://www.facebook.com/iitrsocialsummit/"
-            target="_blank"
-            size="small"
-            color="primary"
-            aria-label="add"
-            className={classes.fab}
-          >
-            <Facebook />
-          </Fab>
+          <div className={classes.themeContent}>
+            National social summit-2020, IIT Roorkee, aims for the upliftment of
+            the nation by identifying and working on problems on the ground
+            level. It is a two-day serving of collaborative workshops,
+            networking, and an insight from the industry’s thought leader!
+          </div>
+          <div className={classes.fabs}>
+            <Fab
+              href="https://www.facebook.com/iitrsocialsummit/"
+              target="_blank"
+              size="small"
+              color="primary"
+              aria-label="add"
+              className={classes.fab}
+            >
+              <Facebook />
+            </Fab>
 
-          <Fab
-            href="https://www.instagram.com/iitrsocialsummit/"
-            target="_blank"
-            size="small"
-            color="primary"
-            aria-label="add"
-            className={classes.fab}
-          >
-            <Instagram />
-          </Fab>
-          <Fab
-            href="https://www.linkedin.com/company/national-social-summit/?originalSubdomain=in"
-            target="_blank"
-            size="small"
-            color="primary"
-            aria-label="add"
-            className={classes.fab}
-          >
-            <LinkedIn />
-          </Fab>
-          <Fab
-            href="https://twitter.com/natsocialsummit"
-            target="_blank"
-            size="small"
-            color="primary"
-            aria-label="add"
-            className={classes.fab}
-          >
-            <Twitter />
-          </Fab>
-        </div>
-      </div>
-      <div className={classes.emailLinkBox}>
-        <div className={classes.emailBox}>
-          <h2 className={classes.header}>Contact</h2>
-        </div>
-        <div className={classes.contactInfo}>
-          <div>
-            <PhoneIcon className={classes.icon} />
-            <span className={classes.text}>+91-9572851250</span>
-          </div>
-          <div>
-            <EmailIcon className={classes.icon} />
-            <span className={classes.text}>socialsummit.contact@gmail.com</span>
-          </div>
-          <div>
-            <LocationOnIcon className={classes.icon} />
-            <span className={classes.text}>
-              NSS Office, 2nd floor, Multi Activity Centre (MAC),
-              <br />
-              IIT Roorkee, ZIP - 247667
-            </span>
+            <Fab
+              href="https://www.instagram.com/iitrsocialsummit/"
+              target="_blank"
+              size="small"
+              color="primary"
+              aria-label="add"
+              className={classes.fab}
+            >
+              <Instagram />
+            </Fab>
+            <Fab
+              href="https://www.linkedin.com/company/national-social-summit/?originalSubdomain=in"
+              target="_blank"
+              size="small"
+              color="primary"
+              aria-label="add"
+              className={classes.fab}
+            >
+              <LinkedIn />
+            </Fab>
+            <Fab
+              href="https://twitter.com/natsocialsummit"
+              target="_blank"
+              size="small"
+              color="primary"
+              aria-label="add"
+              className={classes.fab}
+            >
+              <Twitter />
+            </Fab>
           </div>
         </div>
-      </div>
+        <div className={classes.emailLinkBox}>
+          <div className={classes.emailBox}>
+            <h2 className={classes.header}>Contact</h2>
+          </div>
+          <div className={classes.contactInfo}>
+            <div>
+              <PhoneIcon className={classes.icon} />
+              <span className={classes.text}>+91-9572851250</span>
+            </div>
+            <div>
+              <EmailIcon className={classes.icon} />
+              <span className={classes.text}>
+                socialsummit.contact@gmail.com
+              </span>
+            </div>
+            <div>
+              <LocationOnIcon className={classes.icon} />
+              <span className={classes.text}>
+                NSS Office, 2nd floor, Multi Activity Centre (MAC),
+                <br />
+                IIT Roorkee, ZIP - 247667
+              </span>
+            </div>
+          </div>
+        </div>
+      </Fade>
     </footer>
   );
 }

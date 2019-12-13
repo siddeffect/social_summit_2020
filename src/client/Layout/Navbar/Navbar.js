@@ -3,6 +3,7 @@ import { withStyles } from "@material-ui/styles";
 import { AppBar, Toolbar, Button, Fab } from "@material-ui/core";
 import { Facebook, Twitter, Instagram, LinkedIn } from "@material-ui/icons";
 import MenuDrawer from "./Drawer";
+import Fade from "react-reveal/Fade";
 
 const styles = theme => ({
   root: {
@@ -125,53 +126,65 @@ class Navbar extends Component {
             className={classes.appBar}
           >
             <Toolbar>
-              <img
-                className={classes.logo}
-                src="/Images/Logo_Main.svg"
-                alt="logo"
-              />
-              <Fab
-                href="https://www.facebook.com/iitrsocialsummit/"
-                target="_blank"
-                size="medium"
-                color="primary"
-                aria-label="add"
-                className={classes.fab}
-              >
-                <Facebook fontSize="large" />
-              </Fab>
+              <Fade>
+                <img
+                  className={classes.logo}
+                  src="/Images/Logo_Main.svg"
+                  alt="logo"
+                />
+              </Fade>
 
-              <Fab
-                href="https://www.instagram.com/iitrsocialsummit/"
-                target="_blank"
-                size="medium"
-                color="primary"
-                aria-label="add"
-                className={classes.fab}
-              >
-                <Instagram fontSize="large" />
-              </Fab>
-              <Fab
-                href="https://www.linkedin.com/company/national-social-summit/?originalSubdomain=in"
-                target="_blank"
-                size="medium"
-                color="primary"
-                aria-label="add"
-                className={classes.fab}
-              >
-                <LinkedIn fontSize="large" />
-              </Fab>
-              <Fab
-                href="https://twitter.com/natsocialsummit"
-                target="_blank"
-                size="medium"
-                color="primary"
-                aria-label="add"
-                className={classes.fab}
-              >
-                <Twitter fontSize="large" />
-              </Fab>
-              <MenuDrawer />
+              <Fade bottom>
+                <Fab
+                  href="https://www.facebook.com/iitrsocialsummit/"
+                  target="_blank"
+                  size="medium"
+                  color="primary"
+                  aria-label="add"
+                  className={classes.fab}
+                >
+                  <Facebook fontSize="large" />
+                </Fab>
+              </Fade>
+              <Fade bottom>
+                <Fab
+                  href="https://www.instagram.com/iitrsocialsummit/"
+                  target="_blank"
+                  size="medium"
+                  color="primary"
+                  aria-label="add"
+                  className={classes.fab}
+                >
+                  <Instagram fontSize="large" />
+                </Fab>
+              </Fade>
+              <Fade bottom>
+                <Fab
+                  href="https://www.linkedin.com/company/national-social-summit/?originalSubdomain=in"
+                  target="_blank"
+                  size="medium"
+                  color="primary"
+                  aria-label="add"
+                  className={classes.fab}
+                >
+                  <LinkedIn fontSize="large" />
+                </Fab>
+              </Fade>
+              <Fade bottom>
+                <Fab
+                  href="https://twitter.com/natsocialsummit"
+                  target="_blank"
+                  size="medium"
+                  color="primary"
+                  aria-label="add"
+                  className={classes.fab}
+                >
+                  <Twitter fontSize="large" />
+                </Fab>
+              </Fade>
+              <Fade bottom>
+                <MenuDrawer />
+              </Fade>
             </Toolbar>
           </AppBar>
         ) : (
