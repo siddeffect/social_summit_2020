@@ -17,11 +17,11 @@ export class HeyCA extends Component {
             </Link>
             <h1 className={Styles.heyca}>Social Attaché</h1>
 
-            <h1 className={Styles.heyca1}>
+            <p className={Styles.heyca1}>
               Serve as a Campus Voice and become an active leader in your campus
               community. Contribute your part to the environment while improving
               your repertoire of skills.{" "}
-            </h1>
+            </p>
 
             <div className={Styles.buttons}>
               <Link to="/campusambassador/signin">

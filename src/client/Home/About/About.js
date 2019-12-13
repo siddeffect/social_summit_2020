@@ -140,7 +140,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: "2rem",
     marginBottom: "2rem",
     color: "#fff",
-    marginLeft: "25%",
+    marginLeft: "35%",
     "@media(min-width:500px) and (max-width:605px)": {
       fontSize: "30px",
       marginBottom: "1rem",
@@ -162,10 +162,10 @@ const useStyles = makeStyles(theme => ({
     }
   },
   followContent: {
-    textAlign: "left",
+    textAlign: "center",
     color: "rgba(255,255,255,.7)",
     fontFamily: ["'ibm plex serif'", "serif"].join(","),
-    fontSize: "20px",
+    fontSize: "1.2rem",
     lineHeight: "1.5",
     "@media(min-width:500px) and (max-width:605px)": {
       fontSize: "20px",

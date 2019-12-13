@@ -36,7 +36,7 @@
   box-sizing: border-box;
   display: flex;
   width: 20vw;
-  height: 25vh;
+  height: 30vh;
   flex-flow: column;
   align-items: center;
   text-align: center;
@@ -47,7 +47,7 @@
   border-radius: 8px;
 }
 .imgTextWrapper img {
-  width: 6vw;
+  width: 4vw;
 }
 .imgTextWrapper > p {
   font-family: "Ubuntu", sans-serif;

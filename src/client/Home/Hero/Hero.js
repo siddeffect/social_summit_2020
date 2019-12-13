@@ -10,7 +10,7 @@ import Button from "@material-ui/core/Button";
 const useStyles = makeStyles(theme => ({
   root: {
     height: "100vh",
-    width: "99.2vw",
+    width: "auto",
     display: "flex",
     overflowX: "hidden",
     "@media (min-width:1360px) and (max-width:1440px)": {
@@ -69,16 +69,16 @@ const useStyles = makeStyles(theme => ({
     }
   },
   button: {
-    marginTop: "50px",
-    width: "300px",
-    height: "60px",
+    marginTop: "3em",
+    width: "20rem",
+    height: "4rem",
     color: "#fff",
-    fontSize: "22px",
+    fontSize: "1.4rem",
     "@media (max-width:780px)": {
-      width: "250px",
-      height: "50px",
-      fontSize: "17.5px",
-      marginTop: "20px"
+      width: "14rem",
+      height: "5rem",
+      fontSize: "1.3rem"
+      // marginTop: "1.4rem"
     }
   },
   imageBox: {
