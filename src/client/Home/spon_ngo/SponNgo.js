@@ -15,7 +15,10 @@ const useStyles = makeStyles(theme => ({
   },
   image: {
     width: "8vw",
-    verticalAlign: "middle"
+    verticalAlign: "middle",
+    "@media(min-width:350px) and (max-width:605px)": {
+      width: "25vw"
+    }
   },
   header: {
     textAlign: "center",
@@ -128,14 +131,18 @@ export default function SponNgo() {
 
   return (
     <div className={classes.root}>
-      <h2 className={classes.header}>Our Previous Sponsors</h2>
-      <Grid container spacing={3} justify="center">
-        {SponImages}
-      </Grid>
-      <h2 className={classes.header}>Our Previous NGO Partners</h2>
-      <Grid container spacing={3} justify="center">
-        {NgoImages}
-      </Grid>
+      <Fade bottom>
+        <h2 className={classes.header}>Our Previous Sponsors</h2>
+        <Grid container spacing={3} justify="center">
+          {SponImages}
+        </Grid>
+      </Fade>
+      <Fade bottom>
+        <h2 className={classes.header}>Our Previous NGO Partners</h2>
+        <Grid container spacing={3} justify="center">
+          {NgoImages}
+        </Grid>
+      </Fade>
     </div>
   );
 }

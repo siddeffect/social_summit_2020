@@ -116,6 +116,7 @@ a:focus {
     font-size: 16px;
     line-height: 19px;
     text-align: center;
+    margin-left: 10px;
   }
   .box {
     text-align: center;
@@ -143,3 +144,49 @@ a:focus {
     align-items: center;
   }
 }
+/* @media only screen and (max-width: 320px) {
+  .login {
+    margin-right: 0px;
+  }
+  .outerbox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .heyca {
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .heyca1 {
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    margin-left: 10px;
+  }
+  .box {
+    text-align: center;
+    width: 100%;
+  }
+  .loginbutton {
+    width: 241px;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    margin: 3%;
+    margin-top: 8%;
+  }
+  .registerbutton {
+    background: #00a650;
+    border-radius: 2px;
+    width: 241px;
+    height: 40px;
+    margin-left: 1.2%;
+  }
+  .buttons {
+    display: unset;
+    justify-content: center;
+    align-items: center;
+  }
+} */

@@ -7,7 +7,6 @@ import Fade from "react-reveal/Fade";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: "100vh",
     textAlign: "center",
     backgroundColor: "#00a650",
     padding: "10rem 0 12.5rem 0",
@@ -203,14 +202,11 @@ export default function About() {
   const classes = useStyles();
 
   const settings = {
-    // dots: true,
     infinite: true,
     speed: 700,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,
-    // autoplay: true,
-    // autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 780,
@@ -220,7 +216,6 @@ export default function About() {
           infinite: true,
           dots: true,
           autoplay: false
-          // fade: true
         }
       }
     ]

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Styles from "./css/WhyCA.module.css";
 import WhyCASub from "./WhyCASub";
 import RoleCASub from "./RoleCASub";
+import Fade from "react-reveal/Fade";
 
 const reasonsArray = [
   {
@@ -89,16 +90,18 @@ export class mainCA extends Component {
     });
 
     return (
-      <div className={Styles.whyCAOuterContainer}>
-        <div className={Styles.headingContainer}>
-          <p>Why become Social Attaché?</p>
+      <Fade bottom>
+        <div className={Styles.whyCAOuterContainer}>
+          <div className={Styles.headingContainer}>
+            <p>Why become Social Attaché?</p>
+          </div>
+          <div className={Styles.reasonsOuterContainer}>{caReasons}</div>
+          <div className={Styles.headingContainer}>
+            <p>Roles of Social Attaché</p>
+          </div>
+          <div className={Styles.reasonsOuterContainer}>{caRoles}</div>
         </div>
-        <div className={Styles.reasonsOuterContainer}>{caReasons}</div>
-        <div className={Styles.headingContainer}>
-          <p>Roles of Social Attaché</p>
-        </div>
-        <div className={Styles.reasonsOuterContainer}>{caRoles}</div>
-      </div>
+      </Fade>
     );
   }
 }

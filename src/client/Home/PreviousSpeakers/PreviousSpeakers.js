@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { makeStyles } from "@material-ui/core/styles";
+import Fade from "react-reveal/Fade";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -147,115 +148,117 @@ export default function About() {
   };
   return (
     <div className={classes.root}>
-      <label className={classes.header}>Our Previous Speakers</label>
-      {/* This is the carousel */}
-      <div>
-        <Slider {...settings} className={classes.mainSlider}>
-          <div className={classes.container}>
-            <div>
-              <img
-                src="/Images/PreviousSpeakers/deepak_ramola.jpg"
-                alt="speaker"
-                className={classes.image}
-              ></img>
+      <Fade bottom>
+        <label className={classes.header}>Our Previous Speakers</label>
+        {/* This is the carousel */}
+        <div>
+          <Slider {...settings} className={classes.mainSlider}>
+            <div className={classes.container}>
+              <div>
+                <img
+                  src="/Images/PreviousSpeakers/deepak_ramola.jpg"
+                  alt="speaker"
+                  className={classes.image}
+                ></img>
+              </div>
+              <div className={classes.bio}>
+                <h3 className={classes.followHeader}>Deepak Ramola</h3>
+                <p className={classes.followContent}>
+                  Ted speaker <br />
+                  Founder Project Fuel
+                </p>
+              </div>
             </div>
-            <div className={classes.bio}>
-              <h3 className={classes.followHeader}>Deepak Ramola</h3>
-              <p className={classes.followContent}>
-                Ted speaker <br />
-                Founder Project Fuel
-              </p>
+            <div className={classes.container}>
+              <div>
+                <img
+                  src="/Images/PreviousSpeakers/priyanka_raina.jpg"
+                  alt="speaker"
+                  className={classes.image}
+                ></img>
+              </div>
+              <div className={classes.bio}>
+                <h3 className={classes.followHeader}>Priyanka Raina</h3>
+                <p className={classes.followContent}>
+                  Founder <br /> Gracia Raina Foundation
+                </p>
+              </div>
             </div>
-          </div>
-          <div className={classes.container}>
-            <div>
-              <img
-                src="/Images/PreviousSpeakers/priyanka_raina.jpg"
-                alt="speaker"
-                className={classes.image}
-              ></img>
+            <div className={classes.container}>
+              <div>
+                <img
+                  src="/Images/PreviousSpeakers/kiran_bedi.jpg"
+                  alt="speaker"
+                  className={classes.image}
+                ></img>
+              </div>
+              <div className={classes.bio}>
+                <h3 className={classes.followHeader}>Kiran Bedi</h3>
+                <p className={classes.followContent}>Retired IPS Officer</p>
+              </div>
             </div>
-            <div className={classes.bio}>
-              <h3 className={classes.followHeader}>Priyanka Raina</h3>
-              <p className={classes.followContent}>
-                Founder <br /> Gracia Raina Foundation
-              </p>
+            <div className={classes.container}>
+              <div>
+                <img
+                  src="/Images/PreviousSpeakers/amarpreet_singh.jpg"
+                  alt="speaker"
+                  className={classes.image}
+                ></img>
+              </div>
+              <div className={classes.bio}>
+                <h3 className={classes.followHeader}>Amarpreet Singh</h3>
+                <p className={classes.followContent}>Director - Khalsa Aid</p>
+              </div>
             </div>
-          </div>
-          <div className={classes.container}>
-            <div>
-              <img
-                src="/Images/PreviousSpeakers/kiran_bedi.jpg"
-                alt="speaker"
-                className={classes.image}
-              ></img>
+            <div className={classes.container}>
+              <div>
+                <img
+                  src="/Images/PreviousSpeakers/vijay_pal_singh.jpg"
+                  alt="speaker"
+                  className={classes.image}
+                ></img>
+              </div>
+              <div className={classes.bio}>
+                <h3 className={classes.followHeader}>Vijay Pal Singh</h3>
+                <p className={classes.followContent}>
+                  Deputy Director <br /> <em>fssai</em>
+                </p>
+              </div>
             </div>
-            <div className={classes.bio}>
-              <h3 className={classes.followHeader}>Kiran Bedi</h3>
-              <p className={classes.followContent}>Retired IPS Officer</p>
+            <div className={classes.container}>
+              <div>
+                <img
+                  src="/Images/PreviousSpeakers/anil_swaroop.jpg"
+                  alt="speaker"
+                  className={classes.image}
+                ></img>
+              </div>
+              <div className={classes.bio}>
+                <h3 className={classes.followHeader}>Anil Swaroop</h3>
+                <p className={classes.followContent}>
+                  Secretary of school education
+                </p>
+              </div>
             </div>
-          </div>
-          <div className={classes.container}>
-            <div>
-              <img
-                src="/Images/PreviousSpeakers/amarpreet_singh.jpg"
-                alt="speaker"
-                className={classes.image}
-              ></img>
+            <div className={classes.container}>
+              <div>
+                <img
+                  src="/Images/PreviousSpeakers/madhukar_banuri.jpg"
+                  alt="speaker"
+                  className={classes.image}
+                ></img>
+              </div>
+              <div className={classes.bio}>
+                <h3 className={classes.followHeader}>Madhukar Banuri</h3>
+                <p className={classes.followContent}>
+                  Technical Advisor <br />
+                  Teach for india
+                </p>
+              </div>
             </div>
-            <div className={classes.bio}>
-              <h3 className={classes.followHeader}>Amarpreet Singh</h3>
-              <p className={classes.followContent}>Director - Khalsa Aid</p>
-            </div>
-          </div>
-          <div className={classes.container}>
-            <div>
-              <img
-                src="/Images/PreviousSpeakers/vijay_pal_singh.jpg"
-                alt="speaker"
-                className={classes.image}
-              ></img>
-            </div>
-            <div className={classes.bio}>
-              <h3 className={classes.followHeader}>Vijay Pal Singh</h3>
-              <p className={classes.followContent}>
-                Deputy Director <br /> <em>fssai</em>
-              </p>
-            </div>
-          </div>
-          <div className={classes.container}>
-            <div>
-              <img
-                src="/Images/PreviousSpeakers/anil_swaroop.jpg"
-                alt="speaker"
-                className={classes.image}
-              ></img>
-            </div>
-            <div className={classes.bio}>
-              <h3 className={classes.followHeader}>Anil Swaroop</h3>
-              <p className={classes.followContent}>
-                Secretary of school education
-              </p>
-            </div>
-          </div>
-          <div className={classes.container}>
-            <div>
-              <img
-                src="/Images/PreviousSpeakers/madhukar_banuri.jpg"
-                alt="speaker"
-                className={classes.image}
-              ></img>
-            </div>
-            <div className={classes.bio}>
-              <h3 className={classes.followHeader}>Madhukar Banuri</h3>
-              <p className={classes.followContent}>
-                Technical Advisor <br />
-                Teach for india
-              </p>
-            </div>
-          </div>
-        </Slider>
-      </div>
+          </Slider>
+        </div>
+      </Fade>
     </div>
   );
 }
