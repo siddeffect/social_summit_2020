@@ -1,20 +1,15 @@
 import React from "react";
 import Navbar from "../../Layout/Navbar/Navbar";
-import {
-  makeStyles,
-  createMuiTheme,
-  ThemeProvider
-} from "@material-ui/core/styles";
-
-import { Link } from "react-router-dom";
-import Button from "@material-ui/core/Button";
+import { makeStyles } from "@material-ui/core/styles";
+import RegisterDialog from "./../Register/MUNRegister";
 
 const useStyles = makeStyles(theme => ({
   background: {
     width: "100%",
     height: "100vh",
     position: "absolute",
-    zIndex: "-99"
+    zIndex: "-99",
+    objectFit: "cover"
   },
   mainContent: {
     paddingTop: "30vh",
@@ -41,26 +36,9 @@ const useStyles = makeStyles(theme => ({
     "@media (max-width:780px)": {
       fontSize: "16px"
     }
-  },
-  button: {
-    marginTop: "3em",
-    width: "20rem",
-    height: "4rem",
-    color: "#fff",
-    fontSize: "1.4rem",
-    "@media (max-width:780px)": {
-      width: "14rem",
-      height: "5rem",
-      fontSize: "1.3rem"
-    }
   }
 }));
 
-const theme = createMuiTheme({
-  palette: {
-    primary: { 500: "#00a650" }
-  }
-});
 function MUNHome() {
   const classes = useStyles();
 
@@ -73,7 +51,7 @@ function MUNHome() {
       />
       <Navbar />
       <div className={classes.mainContent}>
-        <div className={classes.header}>NSS MUN</div>
+        <div className={classes.header}>SS MUN</div>
         <div className={classes.content}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum placeat
           eum error laboriosam, tenetur eius natus voluptates quos. Labore
@@ -81,18 +59,7 @@ function MUNHome() {
           asperiores!
         </div>
         <div>
-          <ThemeProvider theme={theme}>
-            <Link to="/mun/register">
-              <Button
-                variant="contained"
-                color="primary"
-                size="large"
-                className={classes.button}
-              >
-                Register
-              </Button>
-            </Link>
-          </ThemeProvider>
+          <RegisterDialog />
         </div>
       </div>
     </div>
