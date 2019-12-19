@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/styles";
-import { AppBar, Toolbar, Button, Fab } from "@material-ui/core";
+import { AppBar, Toolbar, Fab } from "@material-ui/core";
 import { Facebook, Twitter, Instagram, LinkedIn } from "@material-ui/icons";
 import MenuDrawer from "./Drawer";
 import Fade from "react-reveal/Fade";
@@ -20,16 +20,6 @@ const styles = theme => ({
     "@media (max-width:780px)": {
       position: "absolute",
       background: "transparent"
-    }
-  },
-  button: {
-    background: "#000",
-    marginEnd: "20px",
-    ":hover&": {
-      background: "#00a650"
-    },
-    "@media (max-width:780px)": {
-      display: "none"
     }
   },
   fab: {
@@ -196,13 +186,6 @@ class Navbar extends Component {
                 src="/Images/Logo_Main.svg"
                 alt="logo"
               />
-              <Button color="inherit" className={classes.button}>
-                Register
-              </Button>
-              <Button color="inherit" className={classes.button}>
-                Login
-              </Button>
-
               <Fab
                 href="https://www.facebook.com/iitrsocialsummit/"
                 target="_blank"
