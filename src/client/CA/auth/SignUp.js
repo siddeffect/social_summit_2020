@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { signUp } from "../../../store/actions/authAction";
-import Navbar from "../layout/Navbar";
+import Navbar from "../NewLayout/Navbar";
 import M from "materialize-css";
 
 class SignUp extends Component {
