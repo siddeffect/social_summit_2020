@@ -38,7 +38,7 @@ const styles = theme => ({
   logo: {
     flexGrow: 1,
     height: "90px",
-    marginLeft: "-65%",
+    marginLeft: "-60%",
     "@media (min-width:1300px) and (max-width:1400px)": {
       marginLeft: "-52%"
     },
@@ -167,54 +167,21 @@ class Navbar extends Component {
           </AppBar>
         ) : (
           // for mobile version without scrolling effect
-          <AppBar className={classes.appBar}>
+          <AppBar
+            style={{
+              position: "relative",
+              background: "black",
+              transition: "0.5s ease-in"
+            }}
+            className={classes.appBar}
+          >
             <Toolbar>
               <img
                 className={classes.logo}
                 src="/Images/Logo_Main.svg"
                 alt="logo"
               />
-              <Fab
-                href="https://www.facebook.com/iitrsocialsummit/"
-                target="_blank"
-                size="small"
-                color="primary"
-                aria-label="add"
-                className={classes.fab}
-              >
-                <Facebook />
-              </Fab>
-
-              <Fab
-                href="https://www.instagram.com/iitrsocialsummit/"
-                target="_blank"
-                size="small"
-                color="primary"
-                aria-label="add"
-                className={classes.fab}
-              >
-                <Instagram />
-              </Fab>
-              <Fab
-                href="https://www.linkedin.com/company/national-social-summit/?originalSubdomain=in"
-                target="_blank"
-                size="small"
-                color="primary"
-                aria-label="add"
-                className={classes.fab}
-              >
-                <LinkedIn />
-              </Fab>
-              <Fab
-                href="https://twitter.com/natsocialsummit"
-                target="_blank"
-                size="small"
-                color="primary"
-                aria-label="add"
-                className={classes.fab}
-              >
-                <Twitter />
-              </Fab>
+              <Fade bottom>{links}</Fade>
               <MenuDrawer />
             </Toolbar>
           </AppBar>

@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
-import Navbar from "../NewLayout/Navbar";
+import Navbar from "../CALayout/Navbar";
 import {
   makeStyles,
   ThemeProvider,

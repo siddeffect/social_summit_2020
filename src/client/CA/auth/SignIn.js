@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { signIn } from "../../../store/actions/authAction";
 import { Redirect } from "react-router-dom";
-import Navbar from "../NewLayout/Navbar";
+import Navbar from "../CALayout/Navbar";
 
 class SignIn extends Component {
   state = {
