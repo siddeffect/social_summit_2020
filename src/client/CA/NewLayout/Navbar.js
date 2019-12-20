@@ -4,8 +4,8 @@ import { AppBar, Toolbar, Fab } from "@material-ui/core";
 import { Facebook, Twitter, Instagram, LinkedIn } from "@material-ui/icons";
 import MenuDrawer from "../../Layout/Navbar/Drawer";
 import Fade from "react-reveal/Fade";
-import SignedInLink from "../layout/SignedInLink";
-import SignedOutLink from "../layout/SignedOutLink";
+import SignedInLink from "./SignedInLink";
+import SignedOutLink from "./SignedOutLink";
 import { connect } from "react-redux";
 
 const styles = theme => ({
@@ -110,7 +110,7 @@ class Navbar extends Component {
                   alt="logo"
                 />
               </Fade>
-              <Fade>{links}</Fade>
+              <Fade bottom>{links}</Fade>
 
               <Fade bottom>
                 <Fab
