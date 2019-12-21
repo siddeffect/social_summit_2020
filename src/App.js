@@ -7,6 +7,7 @@ import CARegistration from "./client/CA/auth/SignUp";
 import CALogin from "./client/CA/auth/SignIn";
 import CADashboard from "./client/CA/dashboard/Dashboard";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import MUNHome from "./client/MUN/Main/MUNHome";
 
 const Page404 = ({ location }) => (
   <div style={{ textAlign: "center", color: "#319788", fontSize: "1em" }}>
@@ -39,6 +40,9 @@ function App() {
           </Route>
           <Route exact path="/campusambassador/dashboard">
             <CADashboard />
+          </Route>
+          <Route exact path="/mun">
+            <MUNHome />
           </Route>
           <Route exact path="/events">
             <ComingSoon />
