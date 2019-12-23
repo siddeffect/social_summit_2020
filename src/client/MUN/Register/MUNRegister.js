@@ -6,7 +6,6 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
-import M from "materialize-css";
 
 const useStyles = makeStyles(theme => ({
   button: {
@@ -39,7 +38,6 @@ export default function MUNRegister() {
     setOpen(false);
   };
 
-  M.AutoInit();
   const handleChange = e => {
     this.setState({
       [e.target.id]: e.target.value
