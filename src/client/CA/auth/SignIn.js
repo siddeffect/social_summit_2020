@@ -56,26 +56,28 @@ class SignIn extends Component {
             <Grid container justify="center">
               <label className={classes.formHeader}>Sign In</label>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={6} alignContent="center" container justify="center">
               <form
                 onSubmit={this.handleSubmit}
                 style={{ background: "#FFF6E3" }}
               >
-                <div className={classes.margin}>
-                  <Grid container justify="center">
+                <Grid container spacing={3}>
+                  <Grid item xs={12}>
                     <TextField
                       id="email"
                       label="Email"
                       type="email"
+                      fullWidth
                       className={classes.textField}
                       onChange={this.handleChange}
                     />
                   </Grid>
-                  <Grid container justify="center">
+                  <Grid item xs={12}>
                     <TextField
                       id="password"
                       label="Password"
                       type="password"
+                      fullWidth
                       className={classes.textField}
                       autoComplete="current-password"
                       onChange={this.handleChange}
@@ -92,11 +94,10 @@ class SignIn extends Component {
                       Login
                     </Button>
                   </Grid>
-                  <Grid container spacing={1}>
-                    {authError ? <p>{authError}</p> : null}
-                  </Grid>
-                </div>
+                  <Grid container>{authError ? <p>{authError}</p> : null}</Grid>
+                </Grid>
               </form>
+              {/* </Grid> */}
             </Grid>
             <Hidden mdDown>
               <Grid item xs={6}>

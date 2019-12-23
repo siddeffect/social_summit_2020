@@ -10,7 +10,7 @@ import Fade from "react-reveal/Fade";
 const useStyles = makeStyles(theme => ({
   root: {
     background: "#111111",
-    minHeight: 600,
+    minHeight: 400,
     display: "flex",
     padding: "100px 200px 150px 200px",
     "@media (max-width:780px)": {
