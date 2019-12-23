@@ -14,11 +14,10 @@ const styles = theme => ({
   formHeader: {
     color: "#212121",
     fontSize: "3rem",
-    marginTop: "10vh"
+    marginTop: "2rem"
   },
   textField: {
-    width: "25vw",
-    marginBottom: "4vh"
+    marginBottom: "1.5rem"
   }
 });
 
@@ -53,17 +52,17 @@ class SignIn extends Component {
       <div style={{ background: "#FFF6E3" }}>
         <ThemeProvider theme={theme}>
           <Navbar style={{ margin: "10vh 0 20vh 0" }} />
-          <Grid container spacing={3} justify="center">
-            <Grid container xs={12} justify="center">
+          <Grid container justify="center">
+            <Grid container justify="center">
               <label className={classes.formHeader}>Sign In</label>
             </Grid>
-            <Grid item xs={6} alignContent="center" container justify="center">
+            <Grid item xs={6}>
               <form
                 onSubmit={this.handleSubmit}
                 style={{ background: "#FFF6E3" }}
               >
                 <div className={classes.margin}>
-                  <Grid container spacing={1}>
+                  <Grid container justify="center">
                     <TextField
                       id="email"
                       label="Email"
@@ -72,7 +71,7 @@ class SignIn extends Component {
                       onChange={this.handleChange}
                     />
                   </Grid>
-                  <Grid container spacing={1}>
+                  <Grid container justify="center">
                     <TextField
                       id="password"
                       label="Password"
@@ -100,13 +99,7 @@ class SignIn extends Component {
               </form>
             </Grid>
             <Hidden mdDown>
-              <Grid
-                item
-                xs={6}
-                alignContent="center"
-                container
-                justify="center"
-              >
+              <Grid item xs={6}>
                 <div className="col hide-on-small-only l7 m7">
                   <img src="/Images/ca_hero_form.png" alt="ca_image" />
                 </div>
