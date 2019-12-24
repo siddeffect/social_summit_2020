@@ -52,7 +52,10 @@ const useStyles = makeStyles(theme => ({
     }
   },
   mainSlider: {
-    margin: "5vh 15vw 0 15vw"
+    margin: "5vh 15vw 0 15vw",
+    "@media (max-width:600px)": {
+      margin: "5vh 15vw 0 10vw"
+    }
   },
   container: {
     maxWidth: "25vw",
@@ -127,7 +130,7 @@ export default function About() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 700,
+    speed: 850,
     slidesToShow: 2,
     slidesToScroll: 1,
     arrows: false,

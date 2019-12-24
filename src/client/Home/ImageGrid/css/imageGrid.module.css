@@ -87,9 +87,9 @@
   margin: 20px 0 0 0;
 }
 .description {
-  text-align: left;
+  text-align: justify;
   position: absolute;
-  left: 3em;
+  left: 1em;
   bottom: 8em;
   color: #fff;
   text-transform: none;
@@ -173,7 +173,7 @@
   .imgCaption {
     padding: 6px;
     height: 35px;
-    bottom: 5px;
+    bottom: 4px;
   }
   .header {
     padding: 0;

@@ -16,8 +16,11 @@ const useStyles = makeStyles(theme => ({
   image: {
     width: "8vw",
     verticalAlign: "middle",
-    "@media(min-width:350px) and (max-width:605px)": {
+    "@media(min-width:350px) and (max-width:500px)": {
       width: "25vw"
+    },
+    "@media(min-width:500px) and (max-width:605px)": {
+      width: "11.5vw"
     }
   },
   header: {

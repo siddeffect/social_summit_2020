@@ -89,7 +89,7 @@
 
   .imgTextWrapper {
     height: 10vh;
-    width: 20vh;
+    width: 32vw;
   }
 
   .headingContainer {
@@ -116,7 +116,7 @@
 
   .imgTextWrapper {
     height: 11vh;
-    width: 22.5vh;
+    width: 40vw;
   }
   .headingContainer {
     height: 7vh;
@@ -136,7 +136,7 @@
   }
   .imgTextWrapper {
     height: 12vh;
-    width: 23.5vh;
+    width: 42vw;
   }
   .headingContainer {
     height: 7.5vh;
@@ -156,7 +156,7 @@
   }
   .imgTextWrapper {
     height: 12vh;
-    width: 23.5vh;
+    width: 45vw;
   }
   .headingContainer {
     height: 7.5vh;
@@ -170,7 +170,26 @@
     font-weight: 0 !important;
   }
 }
-
+@media screen and (max-width: 320px) {
+  .reasonsOuterContainer {
+    flex: 0.498;
+  }
+  .imgTextWrapper {
+    height: 12vh;
+    width: 52vw;
+  }
+  .headingContainer {
+    height: 7.5vh;
+  }
+  .headingContainer > p {
+    padding: 0;
+    font-size: 22px;
+  }
+  .reasonsHeading {
+    font-size: 12.5px !important;
+    font-weight: 0 !important;
+  }
+}
 @media (min-width: 755px) and (max-width: 1011px) {
   .reasonsOuterContainer {
     justify-content: space-between;

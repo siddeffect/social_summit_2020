@@ -109,11 +109,9 @@ class Carousel extends Component {
                     <figcaption className={Styles.imgCaption}>
                       <label className={Styles.header}>Street Play</label>
                       <div className={Styles.description}>
-                        Just pick up your drums, tambourines and get ready to{" "}
-                        <br />
-                        scream,shout and bustle up the streets,intriguing your{" "}
-                        <br />
-                        audience against a social dogma
+                        Just pick up your drums, tambourines and get <br />{" "}
+                        ready to scream,shout and bustle up the streets,
+                        <br /> intriguing your audience against a social dogma
                         <div className={Styles.greenLine}></div>
                       </div>
                     </figcaption>
@@ -181,9 +179,9 @@ class Carousel extends Component {
                     <figcaption className={Styles.imgCaption}>
                       <label className={Styles.header}>Cultural Nights</label>
                       <div className={Styles.description}>
-                        Have something different to stand out from the crowd?
-                        Then this is the moment to perform in front of an
-                        audience and steal the show.
+                        Have something different to stand out from <br /> the
+                        crowd? Then this is the moment to perform <br /> in
+                        front of an audience and steal the show.
                         <div className={Styles.greenLine}></div>
                       </div>
                     </figcaption>
