@@ -1,10 +1,41 @@
 import React, { Component } from "react";
+import {
+  withStyles,
+  ThemeProvider,
+  createMuiTheme
+} from "@material-ui/core/styles";
 import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { signUp } from "../../../store/actions/authAction";
-import Navbar from "../layout/Navbar";
-import M from "materialize-css";
+import Navbar from "../CALayout/Navbar";
+import {
+  Grid,
+  TextField,
+  Button,
+  Hidden,
+  Select,
+  MenuItem,
+  InputLabel,
+  FormControl,
+  InputAdornment
+} from "@material-ui/core";
 
+const styles = theme => ({
+  formHeader: {
+    color: "#212121",
+    fontSize: "3rem",
+    marginTop: "2rem"
+  },
+  textField: {
+    marginBottom: "1.5rem"
+  }
+});
+
+const theme = createMuiTheme({
+  palette: {
+    primary: { 500: "#00a650" }
+  }
+});
 class SignUp extends Component {
   state = {
     email: "",
@@ -25,162 +56,208 @@ class SignUp extends Component {
     });
   };
 
+  handleSelect(value) {
+    this.setState({ gender: value });
+  }
+
+  handleTshirtSelect(value) {
+    this.setState({ tshirt: value });
+  }
+
   handleSubmit = e => {
     e.preventDefault();
     this.props.signUp(this.state);
   };
 
-  componentDidMount() {
-    // Auto initialize all the things!
-    M.AutoInit();
-  }
-
   render() {
-    const { auth, authError } = this.props;
+    const { classes, auth, authError } = this.props;
+    const { gender, tshirt } = this.state;
     if (auth.uid) return <Redirect to="/campusambassador/dashboard" />;
 
     return (
       <div style={{ background: "#FFF6E3" }}>
-        <Navbar style={{ margin: "10vh 0 20vh 0" }} />
-        <div className="container">
-          <form onSubmit={this.handleSubmit} style={{ background: "#FFF6E3" }}>
-            <h3 className="grey-text text-darken-3 center-align">Sign Up</h3>
-            <div className="row">
-              <div className="col hide-on-small-only l7 m7">
-                <img src="/Images/ca_hero_form.png" alt="ca_image" />
-              </div>
-              <div className="col s12 l5 m5">
-                <div className="row">
-                  <div className="input-field col s12 m6">
-                    <label htmlFor="firstName">First Name</label>
-                    <input
-                      type="text"
+        <ThemeProvider theme={theme}>
+          <Navbar style={{ margin: "10vh 0 20vh 0" }} />
+          <Grid container justify="center">
+            <Grid container justify="center">
+              <label className={classes.formHeader}>Sign Up</label>
+            </Grid>
+            <Hidden mdDown>
+              <Grid
+                item
+                xs={6}
+                alignContent="center"
+                container
+                justify="center"
+              >
+                <div className="col hide-on-small-only l7 m7">
+                  <img src="/Images/ca_hero_form.png" alt="ca_image" />
+                </div>
+              </Grid>
+            </Hidden>
+            <Grid item xs={6} alignContent="center" container justify="center">
+              <form
+                onSubmit={this.handleSubmit}
+                style={{ background: "#FFF6E3", width: "80%" }}
+              >
+                <Grid container spacing={3}>
+                  <Grid item xs={6}>
+                    <TextField
+                      required
                       id="firstName"
+                      label="First Name"
+                      type="text"
+                      fullWidth
+                      className={classes.textField}
                       onChange={this.handleChange}
                     />
-                  </div>
-                  <div className="input-field col s12 m6">
-                    <label htmlFor="lastName">Last Name</label>
-                    <input
-                      type="text"
+                  </Grid>
+                  <Grid item xs={6}>
+                    <TextField
+                      required
                       id="lastName"
+                      label="Last Name"
+                      type="text"
+                      fullWidth
+                      className={classes.textField}
                       onChange={this.handleChange}
                     />
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="input-field col s12 m4">
-                    <select
-                      onChange={this.handleChange}
-                      type="text"
-                      id="gender"
-                    >
-                      <option disabled value="" selected>
-                        Gender
-                      </option>
-                      <option value="M">Male</option>
-                      <option value="F">Female</option>
-                      <option value="N">Prefer not to say</option>
-                    </select>
-                    <label>Select Gender</label>
-                  </div>
-                  <div className="input-field col s12 m8">
-                    <label htmlFor="email">Email</label>
-                    <input
-                      type="email"
+                  </Grid>
+                  <Grid item xs={4}>
+                    <FormControl fullWidth required>
+                      <InputLabel>Select Gender</InputLabel>
+                      <Select
+                        required
+                        id="gender"
+                        label="Gender"
+                        className={classes.textField}
+                        value={gender}
+                        onChange={event =>
+                          this.handleSelect(event.target.value)
+                        }
+                      >
+                        <MenuItem value="M">Male</MenuItem>
+                        <MenuItem value="F">Female</MenuItem>
+                        <MenuItem value="N">Prefer not to say</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </Grid>
+                  <Grid item xs={8}>
+                    <TextField
+                      required
                       id="email"
-                      required=""
-                      aria-required="true"
+                      label="Email Address"
+                      type="email"
+                      fullWidth
+                      className={classes.textField}
                       onChange={this.handleChange}
                     />
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="input-field col s12 m6">
-                    <label htmlFor="password">Password</label>
-                    <input
-                      type="password"
+                  </Grid>
+                  <Grid item xs={6}>
+                    <TextField
+                      required
                       id="password"
+                      label="Password"
+                      type="password"
+                      fullWidth
+                      className={classes.textField}
+                      autoComplete="current-password"
                       onChange={this.handleChange}
                     />
-                  </div>
-                  <div className="input-field col s12 m6">
-                    <label htmlFor="phoneNumber">Phone Number</label>
-                    <input
-                      type="number"
+                  </Grid>
+                  <Grid item xs={6}>
+                    <TextField
+                      required
+                      inputProps={{ maxLength: 10, minLength: 10 }}
+                      label="Enter Phone Number"
                       id="phoneNumber"
-                      min="1000000000"
-                      max="9999999999"
+                      fullWidth
+                      className={classes.textField}
+                      onChange={this.handleChange}
+                      InputProps={{
+                        startAdornment: (
+                          <InputAdornment position="start">+91</InputAdornment>
+                        )
+                      }}
+                    />
+                  </Grid>
+
+                  <Grid item xs={12}>
+                    <TextField
+                      required
+                      id="state"
+                      label="State"
+                      type="text"
+                      fullWidth
+                      className={classes.textField}
                       onChange={this.handleChange}
                     />
-                  </div>
-                </div>
-                <div className="input-field">
-                  <label htmlFor="college">College</label>
-                  <input
-                    type="text"
-                    id="college"
-                    required=""
-                    aria-required="true"
-                    onChange={this.handleChange}
-                  />
-                </div>
-                <div className="input-field">
-                  <label htmlFor="state">State</label>
-                  <input
-                    type="text"
-                    id="state"
-                    required=""
-                    aria-required="true"
-                    onChange={this.handleChange}
-                  />
-                </div>
-                <div className="row">
-                  <div className="input-field col s12 m8">
-                    <label htmlFor="year_branch">Year and Branch</label>
-                    <input
+                  </Grid>
+                  <Grid item xs={12}>
+                    <TextField
+                      required
+                      id="college"
+                      label="College"
                       type="text"
+                      fullWidth
+                      className={classes.textField}
+                      onChange={this.handleChange}
+                    />
+                  </Grid>
+                  <Grid item xs={8}>
+                    <TextField
+                      required
                       id="year_branch"
-                      required=""
-                      aria-required="true"
+                      label="Year and Branch"
+                      type="text"
+                      fullWidth
+                      className={classes.textField}
                       onChange={this.handleChange}
                     />
-                  </div>
-                  <div className="input-field col s12 m4">
-                    <select
-                      onChange={this.handleChange}
-                      type="text"
-                      id="tshirt"
+                  </Grid>
+                  <Grid item xs={4}>
+                    <FormControl fullWidth required>
+                      <InputLabel>Select T-shirt Size</InputLabel>
+                      <Select
+                        required
+                        id="tshirt"
+                        label="Tshirt"
+                        className={classes.textField}
+                        value={tshirt}
+                        onChange={event =>
+                          this.handleTshirtSelect(event.target.value)
+                        }
+                      >
+                        <MenuItem value="XS">XS</MenuItem>
+                        <MenuItem value="S">S</MenuItem>
+                        <MenuItem value="M">M</MenuItem>
+                        <MenuItem value="L">L</MenuItem>
+                        <MenuItem value="XL">XL</MenuItem>
+                        <MenuItem value="XXL">XXL</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </Grid>
+
+                  <Grid container spacing={1} justify="center">
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      type="submit"
+                      size="large"
+                      className={classes.button}
                     >
-                      <option disabled value="" selected>
-                        T-Shirt Size
-                      </option>
-                      <option value="XS">XS</option>
-                      <option value="S">S</option>
-                      <option value="M">M</option>
-                      <option value="L">L</option>
-                      <option value="XL">XL</option>
-                      <option value="XXL">XXL</option>
-                    </select>
-                    <label>Select T-Shirt Size</label>
-                  </div>
-                </div>
-                <div className="input-field center-align">
-                  <button
-                    className="btn-large #409A4B "
-                    type="submit"
-                    name="action"
-                  >
-                    Sign up
-                  </button>
-                  <div className="red-text center">
+                      Register
+                    </Button>
+                  </Grid>
+
+                  <Grid container spacing={1}>
                     {authError ? <p>{authError}</p> : null}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
+                  </Grid>
+                </Grid>
+              </form>
+            </Grid>
+          </Grid>
+        </ThemeProvider>
       </div>
     );
   }
@@ -199,4 +276,7 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProp, mapDispatchToProps)(SignUp);
+export default connect(
+  mapStateToProp,
+  mapDispatchToProps
+)(withStyles(styles)(SignUp));

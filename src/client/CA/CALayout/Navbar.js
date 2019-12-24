@@ -2,8 +2,11 @@ import React, { Component } from "react";
 import { withStyles } from "@material-ui/styles";
 import { AppBar, Toolbar, Fab } from "@material-ui/core";
 import { Facebook, Twitter, Instagram, LinkedIn } from "@material-ui/icons";
-import MenuDrawer from "./Drawer";
+import MenuDrawer from "../../Layout/Navbar/Drawer";
 import Fade from "react-reveal/Fade";
+import SignedInLink from "./SignedInLink";
+import SignedOutLink from "./SignedOutLink";
+import { connect } from "react-redux";
 
 const styles = theme => ({
   root: {
@@ -35,7 +38,7 @@ const styles = theme => ({
   logo: {
     flexGrow: 1,
     height: "90px",
-    marginLeft: "-65%",
+    marginLeft: "-60%",
     "@media (min-width:1300px) and (max-width:1400px)": {
       marginLeft: "-52%"
     },
@@ -67,7 +70,6 @@ const styles = theme => ({
       width: "auto"
     }
   },
-  // class of <AppBar/> comp.
   PositionFixed: {
     right: 550,
     left: "auto !important",
@@ -79,38 +81,23 @@ class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      scrolled: false,
       width: window.innerWidth
     };
-
-    this.handleScroll = this.handleScroll.bind(this);
   }
-
-  componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
-
-  handleScroll() {
-    if (window.scrollY > 100) {
-      this.setState({ scrolled: true });
-    } else {
-      this.setState({ scrolled: false });
-    }
-  }
-
   render() {
-    const { classes } = this.props;
+    const { classes, auth, profile } = this.props;
+    const links = auth.uid ? (
+      <SignedInLink profile={profile} />
+    ) : (
+      <SignedOutLink />
+    );
     return (
       <div className={classes.root}>
         {this.state.width > 768 ? (
           <AppBar
             style={{
-              position: this.state.scrolled ? "fixed" : "absolute",
-              background: this.state.scrolled ? "black" : "transparent",
+              position: "relative",
+              background: "black",
               transition: "0.5s ease-in"
             }}
             className={classes.appBar}
@@ -123,6 +110,7 @@ class Navbar extends Component {
                   alt="logo"
                 />
               </Fade>
+              <Fade bottom>{links}</Fade>
 
               <Fade bottom>
                 <Fab
@@ -179,54 +167,21 @@ class Navbar extends Component {
           </AppBar>
         ) : (
           // for mobile version without scrolling effect
-          <AppBar className={classes.appBar}>
+          <AppBar
+            style={{
+              position: "relative",
+              background: "black",
+              transition: "0.5s ease-in"
+            }}
+            className={classes.appBar}
+          >
             <Toolbar>
               <img
                 className={classes.logo}
                 src="/Images/Logo_Main.svg"
                 alt="logo"
               />
-              <Fab
-                href="https://www.facebook.com/iitrsocialsummit/"
-                target="_blank"
-                size="small"
-                color="primary"
-                aria-label="add"
-                className={classes.fab}
-              >
-                <Facebook />
-              </Fab>
-
-              <Fab
-                href="https://www.instagram.com/iitrsocialsummit/"
-                target="_blank"
-                size="small"
-                color="primary"
-                aria-label="add"
-                className={classes.fab}
-              >
-                <Instagram />
-              </Fab>
-              <Fab
-                href="https://www.linkedin.com/company/national-social-summit/?originalSubdomain=in"
-                target="_blank"
-                size="small"
-                color="primary"
-                aria-label="add"
-                className={classes.fab}
-              >
-                <LinkedIn />
-              </Fab>
-              <Fab
-                href="https://twitter.com/natsocialsummit"
-                target="_blank"
-                size="small"
-                color="primary"
-                aria-label="add"
-                className={classes.fab}
-              >
-                <Twitter />
-              </Fab>
+              <Fade bottom>{links}</Fade>
               <MenuDrawer />
             </Toolbar>
           </AppBar>
@@ -235,4 +190,12 @@ class Navbar extends Component {
     );
   }
 }
-export default withStyles(styles)(Navbar);
+
+const mapStateToProps = state => {
+  return {
+    auth: state.firebase.auth,
+    profile: state.firebase.profile
+  };
+};
+
+export default connect(mapStateToProps)(withStyles(styles)(Navbar));
