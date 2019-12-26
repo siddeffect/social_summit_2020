@@ -1,11 +1,25 @@
-import React from "react";
-import Button from "@material-ui/core/Button";
-import { makeStyles } from "@material-ui/core/styles";
-import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogTitle from "@material-ui/core/DialogTitle";
+import React, { useState } from "react";
+import {
+  makeStyles,
+  ThemeProvider,
+  createMuiTheme
+} from "@material-ui/core/styles";
+import {
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  TextField,
+  Grid,
+  Button,
+  InputAdornment
+} from "@material-ui/core";
+import DateFnsUtils from "@date-io/date-fns";
+import {
+  MuiPickersUtilsProvider,
+  KeyboardDatePicker
+} from "@material-ui/pickers";
+import Autocomplete from "@material-ui/lab/Autocomplete";
 
 const useStyles = makeStyles(theme => ({
   button: {
@@ -25,10 +39,46 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+const country = [
+  "Russia",
+  "USA",
+  "UK",
+  "China",
+  "India",
+  "Pakistan",
+  "Swaden",
+  "Denmark",
+  "Germany",
+  "Madagascar",
+  "Indonesia",
+  "Mexico",
+  "Brazil",
+  "Malaysia"
+];
+
 export default function MUNRegister() {
   const classes = useStyles();
 
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [selectedDate, handleDateChange] = useState(new Date());
+  const [firstCountry, setFirstCountry] = useState(null);
+  const [secondCountry, setSecondCountry] = useState(null);
+  const [thirdCountry, setThirdCountry] = useState(null);
+
+  const [values, setValues] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    college: "",
+    university: "",
+    city: "",
+    state: "",
+    course: "",
+    portfolioLink: "",
+    pastExp: "",
+    aboutSummit: ""
+  });
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -38,19 +88,25 @@ export default function MUNRegister() {
     setOpen(false);
   };
 
-  const handleChange = e => {
-    this.setState({
-      [e.target.id]: e.target.value
-    });
+  const handleChange = prop => event => {
+    setValues({ ...values, [prop]: event.target.value });
   };
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log("hello");
+    console.log(values);
+    console.log("dob:", selectedDate);
+    console.log("countries", firstCountry, secondCountry, thirdCountry);
   };
 
+  const theme = createMuiTheme({
+    palette: {
+      primary: { 500: "#00a650" }
+    }
+  });
+
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <Button
         variant="contained"
         color="primary"
@@ -58,212 +114,274 @@ export default function MUNRegister() {
         className={classes.button}
         onClick={handleClickOpen}
       >
-        Open form dialog
+        Register Here
       </Button>
       <Dialog
-        fullWidth="true"
+        fullWidth
         maxWidth="lg"
         open={open}
         scroll="paper"
         onClose={handleClose}
         aria-labelledby="form-dialog-title"
+        style={{ textAlign: "center" }}
       >
-        <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
+        <DialogTitle id="form-dialog-title">
+          Register for Social Summit MUN'20
+        </DialogTitle>
         <DialogContent>
-          <DialogContentText>
-            To subscribe to this website, please enter your email address here.
-            We will send updates occasionally.
-          </DialogContentText>
-          <div className="container">
-            <form onSubmit={handleSubmit}>
-              <div className="row">
-                <div className="col s12">
-                  <div className="row">
-                    <div className="input-field col s12 m6">
-                      <label htmlFor="firstName">First Name</label>
-                      <input
-                        type="text"
-                        id="firstName"
-                        onChange={handleChange}
+          <Grid container justify="center">
+            <Grid item xs={12} alignContent="center" container justify="center">
+              <form onSubmit={handleSubmit}>
+                <Grid container spacing={3} justify="center">
+                  <Grid item xs={12} md={6}>
+                    <TextField
+                      required
+                      variant="outlined"
+                      id="firstName"
+                      label="First Name"
+                      type="text"
+                      fullWidth
+                      value={values.firstName}
+                      onChange={handleChange("firstName")}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <TextField
+                      required
+                      variant="outlined"
+                      id="lasttName"
+                      label="Last Name"
+                      type="text"
+                      fullWidth
+                      value={values.lastName}
+                      onChange={handleChange("lastName")}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <TextField
+                      required
+                      variant="outlined"
+                      id="email"
+                      label="Email Address"
+                      type="email"
+                      fullWidth
+                      value={values.email}
+                      onChange={handleChange("email")}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <TextField
+                      required
+                      type="number"
+                      inputProps={{ maxLength: 10, minLength: 10 }}
+                      label="Enter Phone Number"
+                      id="phoneNumber"
+                      variant="outlined"
+                      fullWidth
+                      value={values.phoneNumber}
+                      onChange={handleChange("phoneNumber")}
+                      InputProps={{
+                        startAdornment: (
+                          <InputAdornment position="start">+91</InputAdornment>
+                        )
+                      }}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <TextField
+                      required
+                      variant="outlined"
+                      id="college"
+                      label="College"
+                      type="text"
+                      fullWidth
+                      value={values.college}
+                      onChange={handleChange("college")}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <TextField
+                      variant="outlined"
+                      id="university"
+                      label="University"
+                      type="text"
+                      fullWidth
+                      value={values.university}
+                      onChange={handleChange("university")}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <TextField
+                      required
+                      variant="outlined"
+                      id="city"
+                      label="City"
+                      type="text"
+                      fullWidth
+                      value={values.city}
+                      onChange={handleChange("city")}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <TextField
+                      required
+                      variant="outlined"
+                      id="state"
+                      label="State"
+                      type="text"
+                      fullWidth
+                      value={values.state}
+                      onChange={handleChange("state")}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <TextField
+                      required
+                      variant="outlined"
+                      id="course"
+                      label="Course"
+                      type="text"
+                      fullWidth
+                      value={values.course}
+                      onChange={handleChange("course")}
+                    />
+                  </Grid>
+                  <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                    <Grid item xs={12} md={6}>
+                      <KeyboardDatePicker
+                        autoOk
+                        required
+                        variant="outlined"
+                        inputVariant="outlined"
+                        fullWidth
+                        format="MM/dd/yyyy"
+                        id="dob"
+                        label="Date of Birth"
+                        value={selectedDate}
+                        onChange={date => handleDateChange(date)}
+                        KeyboardButtonProps={{
+                          "aria-label": "change date"
+                        }}
                       />
-                    </div>
-                    <div className="input-field col s12 m6">
-                      <label htmlFor="lastName">Last Name</label>
-                      <input
-                        type="text"
-                        id="lastName"
-                        onChange={handleChange}
-                      />
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="input-field col s12 m6">
-                      <label htmlFor="email">Email</label>
-                      <input
-                        type="email"
-                        id="email"
-                        required=""
-                        aria-required="true"
-                        onChange={handleChange}
-                      />
-                    </div>
-                    <div className="input-field col s12 m6">
-                      <label htmlFor="phoneNumber">Phone Number</label>
-                      <input
-                        type="number"
-                        id="phoneNumber"
-                        min="1000000000"
-                        max="9999999999"
-                        onChange={handleChange}
-                      />
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="input-field col s12 m6">
-                      <label htmlFor="college">College/Institute</label>
-                      <input
-                        type="text"
-                        id="college"
-                        required=""
-                        aria-required="true"
-                        onChange={handleChange}
-                      />
-                    </div>
-                    <div className="input-field col s12 m6">
-                      <label htmlFor="college">University</label>
-                      <input
-                        type="text"
-                        id="university"
-                        required=""
-                        aria-required="true"
-                        onChange={handleChange}
-                      />
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="input-field col s12 m3">
-                      <label htmlFor="text">City</label>
-                      <input
-                        type="text"
-                        id="city"
-                        required=""
-                        aria-required="true"
-                        onChange={handleChange}
-                      />
-                    </div>
-                    <div className="input-field col s12 m3">
-                      <label htmlFor="text">State</label>
-                      <input
-                        type="text"
-                        id="state"
-                        required=""
-                        aria-required="true"
-                        onChange={handleChange}
-                      />
-                    </div>
-                    <div className="input-field col s12 m3">
-                      <label htmlFor="text">Course</label>
-                      <input
-                        type="text"
-                        id="course"
-                        required=""
-                        aria-required="true"
-                        onChange={handleChange}
-                      />
-                    </div>
-                    <div className="input-field col s12 m3">
-                      <label htmlFor="text">Date of Birth</label>
-                      <input type="text" class="datepicker" />
-                    </div>
-                  </div>
-                  <div className="input-field col s12 m4">
-                    <select onChange={handleChange} type="text" id="tshirt">
-                      <option disabled value="" selected>
-                        T-Shirt Size
-                      </option>
-                      <option value="XS">XS</option>
-                      <option value="S">S</option>
-                      <option value="M">M</option>
-                      <option value="L">L</option>
-                      <option value="XL">XL</option>
-                      <option value="XXL">XXL</option>
-                    </select>
-                    <label>Select T-Shirt Size</label>
-                  </div>
-                  <div className="input-field col s12 m4">
-                    <select onChange={handleChange} type="text" id="tshirt">
-                      <option disabled value="" selected>
-                        T-Shirt Size
-                      </option>
-                      <option value="XS">XS</option>
-                      <option value="S">S</option>
-                      <option value="M">M</option>
-                      <option value="L">L</option>
-                      <option value="XL">XL</option>
-                      <option value="XXL">XXL</option>
-                    </select>
-                    <label>Select T-Shirt Size</label>
-                  </div>
-                  <div className="input-field col s12 m4">
-                    <select onChange={handleChange} type="text" id="tshirt">
-                      <option disabled value="" selected>
-                        T-Shirt Size
-                      </option>
-                      <option value="XS">XS</option>
-                      <option value="S">S</option>
-                      <option value="M">M</option>
-                      <option value="L">L</option>
-                      <option value="XL">XL</option>
-                      <option value="XXL">XXL</option>
-                    </select>
-                    <label>Select T-Shirt Size</label>
-                  </div>
-                  <div class="input-field col s12">
-                    <textarea
-                      id="textarea2"
-                      class="materialize-textarea"
-                      data-length="120"
-                    ></textarea>
-                    <label for="textarea2">Textarea</label>
-                  </div>
-                  <div class="input-field col s12">
-                    <textarea
-                      id="textarea2"
-                      class="materialize-textarea"
-                      data-length="120"
-                    ></textarea>
-                    <label for="textarea2">Textarea</label>
-                  </div>
-                  <div class="input-field col s12">
-                    <textarea
-                      id="textarea2"
-                      class="materialize-textarea"
-                      data-length="120"
-                    ></textarea>
-                    <label for="textarea2">Textarea</label>
-                  </div>
-                  <div class="input-field col s12">
-                    <textarea
-                      id="textarea2"
-                      class="materialize-textarea"
-                      data-length="120"
-                    ></textarea>
-                    <label for="textarea2">Textarea</label>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
+                    </Grid>
+                  </MuiPickersUtilsProvider>
+                  <Grid item xs={12} md={4}>
+                    <Autocomplete
+                      id="select-first"
+                      options={country}
+                      getOptionLabel={option => option}
+                      value={firstCountry}
+                      onChange={(event, newValue) => {
+                        setFirstCountry(newValue);
+                      }}
+                      renderInput={params => (
+                        <TextField
+                          {...params}
+                          label="Country Preference 1"
+                          variant="outlined"
+                          fullWidth
+                          required
+                        />
+                      )}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={4}>
+                    <Autocomplete
+                      id="select-second"
+                      options={country}
+                      getOptionLabel={option => option}
+                      value={secondCountry}
+                      onChange={(event, newValue) => {
+                        setSecondCountry(newValue);
+                      }}
+                      renderInput={params => (
+                        <TextField
+                          {...params}
+                          required
+                          label="Country Preference 2"
+                          variant="outlined"
+                          fullWidth
+                        />
+                      )}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={4}>
+                    <Autocomplete
+                      id="select-third"
+                      options={country}
+                      getOptionLabel={option => option}
+                      value={thirdCountry}
+                      onChange={(event, newValue) => {
+                        setThirdCountry(newValue);
+                      }}
+                      renderInput={params => (
+                        <TextField
+                          required
+                          {...params}
+                          label="Country Preference 3"
+                          variant="outlined"
+                          fullWidth
+                        />
+                      )}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={8}>
+                    <TextField
+                      required
+                      variant="outlined"
+                      id="portfolio-link"
+                      label="Portfolio Link"
+                      type="text"
+                      fullWidth
+                      value={values.portfolioLink}
+                      onChange={handleChange("portfolioLink")}
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <TextField
+                      required
+                      variant="outlined"
+                      id="past-exp"
+                      label="Previous MUN Conferences Experience(100 words)"
+                      type="text"
+                      multiline
+                      rows="2"
+                      fullWidth
+                      value={values.pastExp}
+                      onChange={handleChange("pastExp")}
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <TextField
+                      variant="outlined"
+                      id="about-summit"
+                      label="How did you get to know about Social Summit MUN?(250 words)"
+                      type="text"
+                      multiline
+                      rows="2"
+                      fullWidth
+                      value={values.aboutSummit}
+                      onChange={handleChange("aboutSummit")}
+                    />
+                  </Grid>
+
+                  <Grid container justify="center">
+                    <Button variant="contained" color="primary" type="submit">
+                      Submit
+                    </Button>
+                  </Grid>
+                </Grid>
+              </form>
+            </Grid>
+          </Grid>
         </DialogContent>
+
         <DialogActions>
           <Button onClick={handleClose} color="primary">
             Cancel
           </Button>
-          <Button onClick={handleClose} color="primary">
-            Subscribe
-          </Button>
         </DialogActions>
       </Dialog>
-    </div>
+    </ThemeProvider>
   );
 }

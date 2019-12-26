@@ -51,7 +51,7 @@ function MUNHome() {
       />
       <Navbar />
       <div className={classes.mainContent}>
-        <div className={classes.header}>SS MUN</div>
+        <div className={classes.header}>Summit-MUN</div>
         <div className={classes.content}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum placeat
           eum error laboriosam, tenetur eius natus voluptates quos. Labore
