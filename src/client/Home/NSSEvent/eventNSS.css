@@ -157,6 +157,7 @@
 
   .outerContainer {
     margin: 0;
+    padding: 46px;
   }
   .slick-list {
     margin-left: 2%;

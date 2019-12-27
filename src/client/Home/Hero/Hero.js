@@ -14,9 +14,9 @@ const useStyles = makeStyles(theme => ({
     width: "auto",
     display: "flex",
     overflowX: "hidden",
-    "@media (min-width:1360px) and (max-width:1440px)": {
-      width: "100vw"
-    },
+    // "@media (min-width:1360px) and (max-width:1440px)": {
+    //   width: "95vw"
+    // },
     "@media (max-width:780px)": {
       height: "750px",
       width: "auto"
@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "column",
     padding: "150px 0px 150px 120px",
     "@media (min-width:1300px) and (max-width:1380px)": {
-      flexGrow: 0.3,
+      flexGrow: 0.15,
       padding: "90px 0px 0px 50px"
     },
     "@media (min-width:1400px) and (max-width:1440px)": {
@@ -38,8 +38,11 @@ const useStyles = makeStyles(theme => ({
       flexGrow: 1
     },
 
-    "@media (max-width:780px)": {
+    "@media (max-width:500px)": {
       padding: "60px 30px 15px 30px"
+    },
+    "@media (min-width:505px) and (max-width:600px)": {
+      padding: "90px 20px 30px 60px"
     }
   },
   header: {
@@ -65,8 +68,11 @@ const useStyles = makeStyles(theme => ({
     color: "#545D5F",
     fontSize: "1.3em",
     fontFamily: ["'Roboto'", "sans-serif"].join(","),
-    "@media (max-width:780px)": {
+    "@media (max-width:500px)": {
       fontSize: "16px"
+    },
+    "@media (min-width:505px) and (max-width:600px)": {
+      fontSize: "20px"
     }
   },
   button: {
@@ -75,11 +81,15 @@ const useStyles = makeStyles(theme => ({
     height: "4rem",
     color: "#fff",
     fontSize: "1.4rem",
-    "@media (max-width:780px)": {
+    "@media (max-width:500px)": {
       width: "14rem",
       height: "5rem",
       fontSize: "1.3rem"
-      // marginTop: "1.4rem"
+    },
+    "@media (min-width:505px) and (max-width:600px)": {
+      width: "17.5rem",
+      height: "5.5rem",
+      fontSize: "1.3rem"
     }
   },
   imageBox: {
@@ -91,7 +101,7 @@ const useStyles = makeStyles(theme => ({
     padding: "150px 200px 150px 200px",
     "@media (min-width:1300px) and (max-width:1380px)": {
       padding: "0px 0px 0px 50px",
-      flexGrow: 0.7
+      flexGrow: 0.85
     },
     "@media (max-width:780px)": {
       display: "none"

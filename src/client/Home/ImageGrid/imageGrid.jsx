@@ -109,11 +109,9 @@ class Carousel extends Component {
                     <figcaption className={Styles.imgCaption}>
                       <label className={Styles.header}>Street Play</label>
                       <div className={Styles.description}>
-                        Just pick up your drums, tambourines and get ready to{" "}
-                        <br />
-                        scream,shout and bustle up the streets,intriguing your{" "}
-                        <br />
-                        audience against a social dogma
+                        Just pick up your drums, tambourines and get <br />{" "}
+                        ready to scream,shout and bustle up the streets,
+                        <br /> intriguing your audience against a social dogma
                         <div className={Styles.greenLine}></div>
                       </div>
                     </figcaption>
@@ -181,9 +179,9 @@ class Carousel extends Component {
                     <figcaption className={Styles.imgCaption}>
                       <label className={Styles.header}>Cultural Nights</label>
                       <div className={Styles.description}>
-                        Have something different to stand out from the crowd?
-                        Then this is the moment to perform in front of an
-                        audience and steal the show.
+                        Have something different to stand out from <br /> the
+                        crowd? Then this is the moment to perform <br /> in
+                        front of an audience and steal the show.
                         <div className={Styles.greenLine}></div>
                       </div>
                     </figcaption>
@@ -225,147 +223,160 @@ class Carousel extends Component {
         {this.state.width < 768 ? (
           <div className={Styles.mobileOnly}>
             <div className={Styles.wraper1}>
-              <div className={Styles.imgCard}>
-                <figure className={Styles.effectImgCard}>
-                  <img
-                    src="/Images/previous_year_events/case_study.jpg"
-                    className={Styles.imgMobile}
-                    alt=""
-                    style={{
-                      width: "160px",
-                      height: "180px",
-                      borderTopLeftRadius: "12px"
-                    }}
-                  />
-                  <figcaption className={Styles.imgCaption}>
-                    <label className={Styles.header}>Case Studies</label>
-                  </figcaption>
-                </figure>
-              </div>
+              <Fade bottom>
+                <div className={Styles.imgCard}>
+                  <figure className={Styles.effectImgCard}>
+                    <img
+                      src="/Images/previous_year_events/case_study.jpg"
+                      className={Styles.imgMobile}
+                      alt=""
+                      style={{
+                        width: "160px",
+                        height: "180px",
+                        borderTopLeftRadius: "12px"
+                      }}
+                    />
+                    <figcaption className={Styles.imgCaption}>
+                      <label className={Styles.header}>Case Studies</label>
+                    </figcaption>
+                  </figure>
+                </div>
+              </Fade>
 
-              <div className={Styles.imgCard}>
-                <figure className={Styles.effectImgCard}>
-                  <img
-                    src="/Images/previous_year_events/workshop.jpg"
-                    className={Styles.imMobileg}
-                    alt=""
-                    style={{
-                      width: "160px",
-                      height: "180px",
-                      borderTopRightRadius: "12px"
-                    }}
-                  />
-                  <figcaption className={Styles.imgCaption}>
-                    <label className={Styles.header}>B PLANS</label>
-                  </figcaption>
-                </figure>
-              </div>
+              <Fade bottom>
+                <div className={Styles.imgCard}>
+                  <figure className={Styles.effectImgCard}>
+                    <img
+                      src="/Images/previous_year_events/workshop.jpg"
+                      className={Styles.imMobileg}
+                      alt=""
+                      style={{
+                        width: "160px",
+                        height: "180px",
+                        borderTopRightRadius: "12px"
+                      }}
+                    />
+                    <figcaption className={Styles.imgCaption}>
+                      <label className={Styles.header}>B PLANS</label>
+                    </figcaption>
+                  </figure>
+                </div>
+              </Fade>
             </div>
-
             <div className={Styles.wraper2}>
-              <div className={Styles.imgCard}>
-                <figure className={Styles.effectImgCard}>
-                  <img
-                    src="/Images/previous_year_events/guest_lecture.jpg"
-                    className={Styles.imMobileg}
-                    alt=""
-                    style={{
-                      width: "160px",
-                      height: "180px"
-                    }}
-                  />
-                  <figcaption className={Styles.imgCaption}>
-                    <label className={Styles.header}>R.T.C</label>
-                  </figcaption>
-                </figure>
-              </div>
-
-              <div className={Styles.imgCard}>
-                <figure className={Styles.effectImgCard}>
-                  <img
-                    src="/Images/previous_year_events/street_play.jpg"
-                    className={Styles.imgMobile}
-                    alt=""
-                    style={{ width: "160px", height: "180px" }}
-                  />
-                  <figcaption className={Styles.imgCaption}>
-                    <label className={Styles.header}>Street Play</label>
-                  </figcaption>
-                </figure>
-              </div>
+              <Fade bottom>
+                <div className={Styles.imgCard}>
+                  <figure className={Styles.effectImgCard}>
+                    <img
+                      src="/Images/previous_year_events/guest_lecture.jpg"
+                      className={Styles.imMobileg}
+                      alt=""
+                      style={{
+                        width: "160px",
+                        height: "180px"
+                      }}
+                    />
+                    <figcaption className={Styles.imgCaption}>
+                      <label className={Styles.header}>R.T.C</label>
+                    </figcaption>
+                  </figure>
+                </div>
+              </Fade>
+              <Fade bottom>
+                <div className={Styles.imgCard}>
+                  <figure className={Styles.effectImgCard}>
+                    <img
+                      src="/Images/previous_year_events/street_play.jpg"
+                      className={Styles.imgMobile}
+                      alt=""
+                      style={{ width: "160px", height: "180px" }}
+                    />
+                    <figcaption className={Styles.imgCaption}>
+                      <label className={Styles.header}>Street Play</label>
+                    </figcaption>
+                  </figure>
+                </div>
+              </Fade>
             </div>
 
             <div className={Styles.wraper3}>
-              <div className={Styles.imgCard}>
-                <figure className={Styles.effectImgCard}>
-                  <img
-                    src="/Images/previous_year_events/mun.jpg"
-                    className={Styles.imMobileg}
-                    alt=""
-                    style={{ width: "160px", height: "180px" }}
-                  />
-                  <figcaption className={Styles.imgCaption}>
-                    <label className={Styles.header}>M.U.N</label>
-                  </figcaption>
-                </figure>
-              </div>
-              <div className={Styles.imgCard}>
-                <figure className={Styles.effectImgCard}>
-                  <img
-                    src="/Images/previous_year_events/work_presentation.jpg"
-                    className={Styles.imMobileg}
-                    alt=""
-                    style={{ width: "160px", height: "180px" }}
-                  />
-                  <figcaption className={Styles.imgCaption}>
-                    <label className={Styles.header}>Work Presentation</label>
-                  </figcaption>
-                </figure>
-              </div>
+              <Fade bottom>
+                <div className={Styles.imgCard}>
+                  <figure className={Styles.effectImgCard}>
+                    <img
+                      src="/Images/previous_year_events/mun.jpg"
+                      className={Styles.imMobileg}
+                      alt=""
+                      style={{ width: "160px", height: "180px" }}
+                    />
+                    <figcaption className={Styles.imgCaption}>
+                      <label className={Styles.header}>M.U.N</label>
+                    </figcaption>
+                  </figure>
+                </div>
+              </Fade>
+              <Fade bottom>
+                <div className={Styles.imgCard}>
+                  <figure className={Styles.effectImgCard}>
+                    <img
+                      src="/Images/previous_year_events/work_presentation.jpg"
+                      className={Styles.imMobileg}
+                      alt=""
+                      style={{ width: "160px", height: "180px" }}
+                    />
+                    <figcaption className={Styles.imgCaption}>
+                      <label className={Styles.header}>Work Presentation</label>
+                    </figcaption>
+                  </figure>
+                </div>
+              </Fade>
             </div>
 
             <div className={Styles.wraper4}>
-              <div className={Styles.imgCard}>
-                <figure className={Styles.effectImgCard}>
-                  <img
-                    src="/Images/previous_year_events/cultural_night.jpg"
-                    className={Styles.imMobileg}
-                    alt=""
-                    style={{
-                      width: "160px",
-                      height: "180px",
-                      borderBottomLeftRadius: "12px"
-                    }}
-                  />
-                  <figcaption
-                    className={Styles.imgCaption}
-                    style={{ borderBottomLeftRadius: "12px" }}
-                  >
-                    <label className={Styles.header}>Cultural Nights</label>
-                  </figcaption>
-                </figure>
-              </div>
-
-              <div className={Styles.imgCard}>
-                <figure className={Styles.effectImgCard}>
-                  <img
-                    src="/Images/previous_year_events/hackathon.jpg"
-                    className={Styles.imgMobile}
-                    alt=""
-                    style={{
-                      width: "160px",
-                      height: "180px",
-                      borderBottomRightRadius: "12px"
-                    }}
-                  />
-                  <figcaption
-                    className={Styles.imgCaption}
-                    style={{ borderRadius: "0 0 12px 0" }}
-                  >
-                    <label className={Styles.header}>Hackathon</label>
-                  </figcaption>
-                </figure>
-              </div>
+              <Fade bottom>
+                <div className={Styles.imgCard}>
+                  <figure className={Styles.effectImgCard}>
+                    <img
+                      src="/Images/previous_year_events/cultural_night.jpg"
+                      className={Styles.imMobileg}
+                      alt=""
+                      style={{
+                        width: "160px",
+                        height: "180px",
+                        borderBottomLeftRadius: "12px"
+                      }}
+                    />
+                    <figcaption
+                      className={Styles.imgCaption}
+                      style={{ borderBottomLeftRadius: "12px" }}
+                    >
+                      <label className={Styles.header}>Cultural Nights</label>
+                    </figcaption>
+                  </figure>
+                </div>
+              </Fade>
+              <Fade bottom>
+                <div className={Styles.imgCard}>
+                  <figure className={Styles.effectImgCard}>
+                    <img
+                      src="/Images/previous_year_events/hackathon.jpg"
+                      className={Styles.imgMobile}
+                      alt=""
+                      style={{
+                        width: "160px",
+                        height: "180px",
+                        borderBottomRightRadius: "12px"
+                      }}
+                    />
+                    <figcaption
+                      className={Styles.imgCaption}
+                      style={{ borderRadius: "0 0 12px 0" }}
+                    >
+                      <label className={Styles.header}>Hackathon</label>
+                    </figcaption>
+                  </figure>
+                </div>
+              </Fade>
             </div>
           </div>
         ) : null}
