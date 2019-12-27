@@ -77,6 +77,7 @@ export default function MUNRegister() {
     course: "",
     portfolioLink: "",
     pastExp: "",
+    themeQues: "",
     aboutSummit: ""
   });
 
@@ -354,8 +355,21 @@ export default function MUNRegister() {
                   <Grid item xs={12}>
                     <TextField
                       variant="outlined"
+                      id="theme-question"
+                      label="What are your views on the depletion of environment caused in the past few decades due to the revolutionary growth in technology?(250 words)"
+                      type="text"
+                      multiline
+                      rows="2"
+                      fullWidth
+                      value={values.themeQues}
+                      onChange={handleChange("themeQues")}
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <TextField
+                      variant="outlined"
                       id="about-summit"
-                      label="How did you get to know about Social Summit MUN?(250 words)"
+                      label="How did you get to know about Social Summit MUN?"
                       type="text"
                       multiline
                       rows="2"
