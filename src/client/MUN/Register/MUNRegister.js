@@ -22,6 +22,8 @@ import {
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import country from "./CountryList";
 import moment from "moment";
+import { munRegister } from "../../../store/actions/munAction";
+import { connect } from "react-redux";
 
 const useStyles = makeStyles(theme => ({
   button: {
@@ -41,7 +43,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function MUNRegister() {
+function MUNRegister(props) {
   const classes = useStyles();
 
   const [open, setOpen] = useState(false);
@@ -90,7 +92,8 @@ export default function MUNRegister() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log(data);
+    props.munRegister(data);
+    setOpen(false);
   };
 
   const theme = createMuiTheme({
@@ -392,3 +395,11 @@ export default function MUNRegister() {
     </ThemeProvider>
   );
 }
+
+const mapDispatchToProps = dispatch => {
+  return {
+    munRegister: newUser => dispatch(munRegister(newUser))
+  };
+};
+
+export default connect(null, mapDispatchToProps)(MUNRegister);
