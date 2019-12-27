@@ -20,6 +20,8 @@ import {
   KeyboardDatePicker
 } from "@material-ui/pickers";
 import Autocomplete from "@material-ui/lab/Autocomplete";
+import country from "./CountryList";
+import moment from "moment";
 
 const useStyles = makeStyles(theme => ({
   button: {
@@ -38,23 +40,6 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(1)
   }
 }));
-
-const country = [
-  "Russia",
-  "USA",
-  "UK",
-  "China",
-  "India",
-  "Pakistan",
-  "Swaden",
-  "Denmark",
-  "Germany",
-  "Madagascar",
-  "Indonesia",
-  "Mexico",
-  "Brazil",
-  "Malaysia"
-];
 
 export default function MUNRegister() {
   const classes = useStyles();
@@ -93,11 +78,19 @@ export default function MUNRegister() {
     setValues({ ...values, [prop]: event.target.value });
   };
 
+  const data = {
+    ...values,
+    selectedDate: moment(selectedDate).format("MMM Do YY"),
+    countryPreference: {
+      first: firstCountry,
+      second: secondCountry,
+      third: thirdCountry
+    }
+  };
+
   const handleSubmit = e => {
     e.preventDefault();
-    console.log(values);
-    console.log("dob:", selectedDate);
-    console.log("countries", firstCountry, secondCountry, thirdCountry);
+    console.log(data);
   };
 
   const theme = createMuiTheme({
