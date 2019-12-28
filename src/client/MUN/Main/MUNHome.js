@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     objectFit: "cover"
   },
   mainContent: {
-    paddingTop: "10vh",
+    paddingTop: "15vh",
     paddingLeft: "10vw"
   },
   header: {
@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
   },
   content: {
     margin: "10px 50px 0 0",
-    maxWidth: "750px",
+    maxWidth: "800px",
     color: "#eaeaea",
     fontSize: "1.3em",
     fontFamily: ["'Roboto'", "sans-serif"].join(","),
@@ -38,8 +38,8 @@ const useStyles = makeStyles(theme => ({
     }
   },
   logo: {
-    height: "20rem",
-    marginBottom: "-5vh"
+    height: "24rem",
+    marginBottom: "-10vh"
   }
 }));
 
@@ -47,16 +47,16 @@ function MUNHome() {
   const classes = useStyles();
 
   return (
-    <div>
+    <div className={classes.root}>
       <img
-        src="/Images/mun/map.jpg"
+        src="/Images/mun/mun_bg.jpg"
         alt="mun_image"
         className={classes.background}
       />
       <Navbar />
       <div className={classes.mainContent}>
         <img
-          src="/Images/mun/mun_logo.svg"
+          src="/Images/mun/logo_mun.svg"
           alt="mun_logo"
           className={classes.logo}
         />
