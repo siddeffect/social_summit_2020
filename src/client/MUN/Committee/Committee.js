@@ -54,7 +54,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   unepLogo: {
-    margin: "1rem auto auto auto",
+    margin: "4vh auto 4vh auto",
     height: "30vh"
   },
   leadContent: {
@@ -114,10 +114,10 @@ export default function About() {
   return (
     <div className={classes.root}>
       <Fade bottom>
-        <label className={classes.header}>Committee.</label>
+        <label className={classes.header}>Committee</label>
         <div>
           <img
-            src="/Images/mun/UNEP.svg"
+            src="/Images/mun/unep.png"
             alt="unep_logo"
             className={classes.unepLogo}
           />

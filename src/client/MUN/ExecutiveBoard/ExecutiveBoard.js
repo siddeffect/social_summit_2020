@@ -57,16 +57,23 @@ const useStyles = makeStyles(theme => ({
     margin: "1rem auto auto auto",
     height: "30vh",
     borderRadius: "12px",
-    marginBottom: "4vh"
+    marginBottom: "1vh"
   },
   board: {
-    padding: "4vh 10vw 0 10vw",
+    padding: "4vh 15vw 0 15vw",
     fontFamily: ["'ibm plex serif'", "serif"].join(",")
   },
   bio: {
+    marginTop: "4vh",
     color: "#fff",
     fontFamily: ["'ibm plex serif'", "serif"].join(","),
     fontSize: "1.5rem"
+  },
+  chairperson: {
+    fontFamily: ["'ibm plex serif'", "serif"].join(","),
+    fontSize: "2rem",
+    color: "#fff",
+    fontWeight: 600
   }
 }));
 
@@ -76,7 +83,7 @@ export default function About() {
   return (
     <div className={classes.root}>
       <Fade bottom>
-        <label className={classes.header}>Executive Board.</label>
+        <label className={classes.header}>Executive Board</label>
         <div className={classes.board}>
           <Grid container justify="center" spacing={10}>
             <Grid item xs={12} md={6}>
@@ -85,15 +92,19 @@ export default function About() {
                 alt="sample"
                 className={classes.memberImg}
               />
+              <div>
+                <label className={classes.chairperson}>Chairperson</label>
+              </div>
               <div className={classes.bio}>
-                Shivam Bhandari, is a Fashion Technology student currently in
-                his 3rd year from National Institute of Fashion Technology,
-                Kangra. He has participated in various MUNs in different
-                capacities. He is an active member of Delhi NCR MUN circuit
-                since 2014. Despite being from a non-political background, he
-                has a huge drift towards Indian and international politics.
-                Shivam has a great experience of conducting MUNs and has served
-                on boards of many such conferences.
+                Ananya bhardwaj , is a Law student student currently in her 1st
+                year from Amity law school,noida.She has participated in various
+                MUNs in different capacities. She is an active member of Delhi
+                NCR MUN circuit since 2015 She has a huge drift towards Indian
+                and international politics. Ananya has a great experience of
+                conducting MUNs and has served on boards of many such
+                conferences and was the director general and Vice President of
+                Debating society in her school, Delhi public school greater
+                Faridabad.
               </div>
             </Grid>
             <Grid item xs={12} md={6}>
@@ -102,6 +113,9 @@ export default function About() {
                 alt="sample"
                 className={classes.memberImg}
               />
+              <div>
+                <label className={classes.chairperson}>Chairperson</label>
+              </div>
               <div className={classes.bio}>
                 Shivam Bhandari, is a Fashion Technology student currently in
                 his 3rd year from National Institute of Fashion Technology,
