@@ -13,7 +13,8 @@ const useStyles = makeStyles(theme => ({
   },
   mainContent: {
     paddingTop: "15vh",
-    paddingLeft: "10vw"
+    paddingLeft: "10vw",
+    height: "85vh"
   },
   header: {
     color: "#ffffff",
@@ -48,12 +49,12 @@ function MUNHome() {
 
   return (
     <div className={classes.root}>
+      <Navbar />
       <img
         src="/Images/mun/mun_bg.jpg"
         alt="mun_image"
         className={classes.background}
       />
-      <Navbar />
       <div className={classes.mainContent}>
         <img
           src="/Images/mun/logo_mun.svg"
