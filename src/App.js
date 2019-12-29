@@ -7,7 +7,7 @@ import CARegistration from "./client/CA/auth/SignUp";
 import CALogin from "./client/CA/auth/SignIn";
 import CADashboard from "./client/CA/dashboard/Dashboard";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import MUNHome from "./client/MUN/Main/MUNHome";
+import MUN from "./client/MUN/MUN";
 
 const Page404 = ({ location }) => (
   <div style={{ textAlign: "center", color: "#319788", fontSize: "1em" }}>
@@ -42,7 +42,7 @@ function App() {
             <CADashboard />
           </Route>
           <Route exact path="/mun">
-            <MUNHome />
+            <MUN />
           </Route>
           <Route exact path="/events">
             <ComingSoon />
