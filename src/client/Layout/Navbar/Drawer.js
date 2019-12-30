@@ -37,7 +37,7 @@ const useStyles = makeStyles({
   },
   text: {
     color: "#fff",
-    paddingLeft: "5vw",
+    paddingLeft: "2vw",
     fontSize: "2rem"
   }
 });
@@ -69,32 +69,22 @@ function MenuDrawer() {
       <List>
         <ListItem>
           <Link to="/home">
-            <ListItemText primary="Home" className={classes.text} />
+            <ListItemText primary="HOME" className={classes.text} />
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link to="/campusambassador">
+            <ListItemText primary="SOCIAL ATTACHÉ" className={classes.text} />
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link to="/mun">
+            <ListItemText primary="MUN" className={classes.text} />
           </Link>
         </ListItem>
         <ListItem>
           <Link to="/events">
-            <ListItemText primary="Events" className={classes.text} />
-          </Link>
-        </ListItem>
-        <ListItem>
-          <Link to="/partners">
-            <ListItemText primary="Partners" className={classes.text} />
-          </Link>
-        </ListItem>
-        <ListItem>
-          <Link to="/team">
-            <ListItemText primary="Team" className={classes.text} />
-          </Link>
-        </ListItem>
-        <ListItem>
-          <Link to="/about">
-            <ListItemText primary="About" className={classes.text} />
-          </Link>
-        </ListItem>
-        <ListItem>
-          <Link to="/contact">
-            <ListItemText primary="Contact" className={classes.text} />
+            <ListItemText primary="EVENTS" className={classes.text} />
           </Link>
         </ListItem>
       </List>
