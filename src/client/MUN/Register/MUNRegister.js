@@ -32,10 +32,12 @@ const useStyles = makeStyles(theme => ({
     height: "4rem",
     color: "#fff",
     fontSize: "1.4rem",
-    "@media (max-width:780px)": {
-      width: "14rem",
-      height: "5rem",
-      fontSize: "1.3rem"
+    "@media (max-width:640px)": {
+      marginTop: "1rem",
+      width: "13rem",
+      height: "auto",
+      fontSize: "1rem",
+      fontWeight: "600"
     }
   },
   margin: {

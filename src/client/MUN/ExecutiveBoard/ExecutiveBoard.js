@@ -11,26 +11,9 @@ const useStyles = makeStyles(theme => ({
     padding: "5rem 0 0 0",
     alignItem: "center",
     justifyContent: "center",
-    "@media(min-width:1360px) and (max-width:1450px)": {
-      padding: "3.5rem 0 45px 0"
-    },
-    "@media(min-width:500px) and (max-width:605px)": {
-      padding: "7rem 0 5.5rem 0"
-    },
-    "@media(min-width:400px) and (max-width:420px)": {
-      padding: "5rem 0 9rem 0"
-    },
-    "@media(min-width:365px) and (max-width:380px)": {
-      padding: "4rem 0 4.5rem 0"
-    },
-    "@media(min-width:385px) and (max-width:400px)": {
-      padding: "4rem 0 4.5rem 0"
-    },
-    "@media(min-width:350px) and (max-width:360px)": {
-      padding: "2.5rem 0 3rem 0"
-    },
-    "@media (max-width:320px)": {
-      padding: "2.5rem 0 3rem 0"
+    "@media (max-width:640px)": {
+      padding: "1rem 0 0 0",
+      height: "130vh"
     }
   },
   header: {
@@ -57,23 +40,35 @@ const useStyles = makeStyles(theme => ({
     margin: "1rem auto auto auto",
     height: "30vh",
     borderRadius: "12px",
-    marginBottom: "1vh"
+    marginBottom: "1vh",
+    "@media (max-width:640px)": {
+      height: "20vh"
+    }
   },
   board: {
     padding: "4vh 15vw 0 15vw",
-    fontFamily: ["'ibm plex serif'", "serif"].join(",")
+    fontFamily: ["'ibm plex serif'", "serif"].join(","),
+    "@media (max-width:640px)": {
+      padding: "0 5vw 0 5vw"
+    }
   },
   bio: {
     marginTop: "4vh",
     color: "#fff",
     fontFamily: ["'ibm plex serif'", "serif"].join(","),
-    fontSize: "1.5rem"
+    fontSize: "1.5rem",
+    "@media (max-width:640px)": {
+      fontSize: "1rem"
+    }
   },
   chairperson: {
     fontFamily: ["'ibm plex serif'", "serif"].join(","),
     fontSize: "2rem",
     color: "#fff",
-    fontWeight: 600
+    fontWeight: 600,
+    "@media (max-width:640px)": {
+      fontSize: "1.5rem"
+    }
   }
 }));
 
@@ -85,7 +80,7 @@ export default function About() {
       <Fade bottom>
         <label className={classes.header}>Executive Board</label>
         <div className={classes.board}>
-          <Grid container justify="center" spacing={10}>
+          <Grid container justify="center" spacing={4}>
             <Grid item xs={12} md={6}>
               <img
                 src="/Images/mun/ananya.jpg"
@@ -96,14 +91,14 @@ export default function About() {
                 <label className={classes.chairperson}>Chairperson</label>
               </div>
               <div className={classes.bio}>
-                Ananya bhardwaj , is a Law student student currently in her 1st
-                year from Amity law school,noida.She has participated in various
-                MUNs in different capacities. She is an active member of Delhi
-                NCR MUN circuit since 2015 She has a huge drift towards Indian
-                and international politics. Ananya has a great experience of
+                Ananya Bhardwaj, is a Law student currently in her 1st year from
+                Amity Law School,Noida.She has participated in various MUNs in
+                different capacities. She is an active member of Delhi NCR MUN
+                Circuit since 2015. She has a huge drift towards Indian and
+                International politics. Ananya has a great experience of
                 conducting MUNs and has served on boards of many such
                 conferences and was the director general and Vice President of
-                Debating society in her school, Delhi public school greater
+                Debating Society in her school, Delhi Public School Greater
                 Faridabad.
               </div>
             </Grid>

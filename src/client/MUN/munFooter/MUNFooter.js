@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     padding: "100px 200px 150px 200px",
     "@media (max-width:780px)": {
-      height: 500,
+      height: 800,
       padding: "20px 20px 15px 20px",
       flexDirection: "column"
     }

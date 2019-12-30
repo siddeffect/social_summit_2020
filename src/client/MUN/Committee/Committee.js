@@ -55,7 +55,11 @@ const useStyles = makeStyles(theme => ({
   },
   unepLogo: {
     margin: "4vh auto 4vh auto",
-    height: "30vh"
+    height: "30vh",
+    "@media (max-width:640px)": {
+      height: "20vh",
+      margin: "4vh auto 2vh auto"
+    }
   },
   leadContent: {
     fontFamily: ["'ibm plex serif'", "serif"].join(","),

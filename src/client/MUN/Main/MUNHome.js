@@ -40,7 +40,11 @@ const useStyles = makeStyles(theme => ({
   },
   logo: {
     height: "24rem",
-    marginBottom: "-10vh"
+    marginBottom: "-10vh",
+    "@media (max-width:640px)": {
+      height: "8rem",
+      marginBottom: "-4vh"
+    }
   }
 }));
 
