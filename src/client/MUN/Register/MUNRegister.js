@@ -32,6 +32,13 @@ const useStyles = makeStyles(theme => ({
     height: "4rem",
     color: "#fff",
     fontSize: "1.4rem",
+    "@media(min-width:1360px) and (max-width:1450px)": {
+      marginTop: "1.2em",
+      width: "18rem",
+      height: "3.4rem",
+      color: "#fff",
+      fontSize: "1.3rem"
+    },
     "@media (max-width:640px)": {
       marginTop: "1rem",
       width: "13rem",

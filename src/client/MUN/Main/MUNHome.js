@@ -34,8 +34,12 @@ const useStyles = makeStyles(theme => ({
     color: "#eaeaea",
     fontSize: "1.3em",
     fontFamily: ["'Roboto'", "sans-serif"].join(","),
+    "@media (min-width:1360px) and (max-width:1440px)": {
+      fontSize: "1.2em"
+    },
     "@media (max-width:780px)": {
-      fontSize: "16px"
+      fontSize: "16px",
+      margin: "10px 50px 20px 0"
     }
   },
   logo: {
