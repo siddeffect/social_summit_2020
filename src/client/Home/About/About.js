@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     textAlign: "center",
     backgroundColor: "#00a650",
-    padding: "10rem 0 0 0",
+    padding: "10rem 0 10rem 0",
     alignItem: "center",
     justifyContent: "center",
     "@media(min-width:1360px) and (max-width:1450px)": {

@@ -5,7 +5,7 @@ import { Grid } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: "90vh",
+    height: "85vh",
     textAlign: "center",
     backgroundColor: "#00a650",
     padding: "5rem 0 0 0",
@@ -59,7 +59,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: "4vh",
     color: "#fff",
     fontFamily: ["'ibm plex serif'", "serif"].join(","),
-    fontSize: "1.7rem",
+    fontSize: "1.5rem",
     "@media (min-width:1460px) and (max-width:1600px)": {
       fontSize: "1.6rem"
     },

@@ -31,8 +31,8 @@ function Carousel() {
   };
   return (
     <div className="outerContainer">
-      <Slider {...Settings}>
-        <Fade bottom>
+      <Fade bottom>
+        <Slider {...Settings}>
           <div className="leftContainer">
             <div className="leftImg">
               <img
@@ -56,9 +56,6 @@ function Carousel() {
               </label>
             </div>
           </div>
-        </Fade>
-
-        <Fade bottom>
           <div className="rightContainer">
             <div className="rightImg">
               <img
@@ -85,9 +82,6 @@ function Carousel() {
               </label>
             </div>
           </div>
-        </Fade>
-
-        <Fade bottom>
           <div className="leftContainer">
             <div className="leftImg">
               <img
@@ -112,9 +106,6 @@ function Carousel() {
               </label>
             </div>
           </div>
-        </Fade>
-
-        <Fade bottom>
           <div className="rightContainer">
             <div className="rightImg">
               <img
@@ -138,8 +129,6 @@ function Carousel() {
               </label>
             </div>
           </div>
-        </Fade>
-        <Fade bottom>
           <div className="leftContainer">
             <div className="leftImg">
               <img
@@ -164,9 +153,6 @@ function Carousel() {
               </label>
             </div>
           </div>
-        </Fade>
-
-        <Fade bottom>
           <div className="rightContainer">
             <div className="rightImg">
               <img
@@ -191,8 +177,8 @@ function Carousel() {
               </label>
             </div>
           </div>
-        </Fade>
-      </Slider>
+        </Slider>
+      </Fade>
     </div>
   );
 }

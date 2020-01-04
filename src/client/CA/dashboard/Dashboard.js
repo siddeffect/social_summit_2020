@@ -64,6 +64,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   collegeHeader: {
+    color: "#e8e8e8",
     fontSize: "1.5rem",
     marginBottom: "2vh",
     "@media (max-width:600px)": {
@@ -88,6 +89,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   id: {
+    color: "#e8e8e8",
     fontSize: "2rem",
     margin: "4vh 4vw auto 2vw",
     "@media (max-width:600px)": {
