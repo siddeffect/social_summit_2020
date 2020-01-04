@@ -46,8 +46,33 @@ const useStyles = makeStyles(theme => ({
     height: "24rem",
     marginBottom: "-10vh",
     "@media (max-width:640px)": {
-      height: "8rem",
-      marginBottom: "-4vh"
+      height: "6rem",
+      marginBottom: "-2vh"
+    }
+  },
+  downloadRuleBook: {
+    marginTop: "2rem",
+    "@media (max-width:640px)": {
+      marginTop: '0.5rem'
+    }
+  },
+  downloadText: {
+    verticalAlign: "middle",
+    margin: "auto 1rem auto auto",
+    color: "#eaeaea",
+    fontSize: "1.4em",
+    fontFamily: ["'Roboto'", "sans-serif"].join(","),
+    "@media (max-width:640px)": {
+     fontSize: '1rem'
+    }
+  },
+  downloadIcon: {
+    verticalAlign: "middle",
+    width: "3rem",
+    marginTop: "10px",
+    "@media (max-width:640px)": {
+      width: "2rem",
+      marginTop: "0px",
     }
   }
 }));
@@ -83,6 +108,20 @@ function MUNHome() {
         </div>
         <div>
           <RegisterDialog />
+        </div>
+        <div className={classes.downloadRuleBook}>
+          <span className={classes.downloadText}>Download Rulebook</span>
+          <a
+            href="https://drive.google.com/file/d/1zb9Ieu2oWJTl8R6U54BWMhQBNCaqR7Uc/view"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/Images/icons/file.svg"
+              alt="download_icon"
+              className={classes.downloadIcon}
+            />
+          </a>
         </div>
       </div>
     </div>
