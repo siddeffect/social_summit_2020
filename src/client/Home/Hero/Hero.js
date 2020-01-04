@@ -58,8 +58,8 @@ const useStyles = makeStyles(theme => ({
     }
   },
   line: {
-    width: "80px",
-    height: "4px",
+    width: "5rem",
+    height: "0.25rem",
     backgroundColor: "#00a650"
   },
   themeContent: {
@@ -106,6 +106,22 @@ const useStyles = makeStyles(theme => ({
     "@media (max-width:780px)": {
       display: "none"
     }
+  },
+  eventDates: {
+    color: "#ffffff",
+    fontSize: "2.2em",
+    "@media (min-width:1360px) and (max-width:1440px)": {
+      fontSize: "1.5em"
+    },
+    fontWeight: 500,
+    "@media (max-width:780px)": {
+      fontSize: "1em"
+    }
+  },
+  calendarIcon: {
+    width: "2rem",
+    height: "2rem",
+    marginRight: "1rem"
   }
 }));
 
@@ -125,13 +141,23 @@ export default function Hero() {
             Rebuilding Nature <br /> Through Innovation
           </h1>
           <div className={classes.line} />
-
+          <label className={classes.eventDates}>
+            <p>
+              {" "}
+              <img
+                src="/Images/icons/calendar.svg"
+                alt="calendar"
+                className={classes.calendarIcon}
+              />
+              14ᵗʰ-16ᵗʰ February 2020
+            </p>
+          </label>
           <div className={classes.themeContent}>
             Environment, being an envelope of society, is susceptible to every
             societal action foremost. Rapidly increasing ways of hampering
             environment need innovations to mould these ways to rebuild nature,
             holding hands with the needs of the present. Keeping the same in
-            mind, social summit-2020 invites delegates from all over India
+            mind, Social Summit-2020 invites delegates from all over India
             having an ignition of ‘rebuilding nature through innovation’.
           </div>
           <div>
