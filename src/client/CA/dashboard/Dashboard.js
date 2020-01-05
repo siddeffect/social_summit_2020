@@ -8,6 +8,8 @@ import {
   createMuiTheme
 } from "@material-ui/core/styles";
 import { Icon, Button } from "@material-ui/core";
+import StorageIcon from "@material-ui/icons/Storage";
+import Guidlines from "./Guidlines";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -91,7 +93,7 @@ const useStyles = makeStyles(theme => ({
   id: {
     color: "#e8e8e8",
     fontSize: "2rem",
-    margin: "4vh 4vw auto 2vw",
+    margin: "4vh 4vw 2vh 2vw",
     "@media (max-width:600px)": {
       margin: "2vh auto auto auto"
     },
@@ -107,7 +109,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "column"
   },
   button: {
-    margin: "4vh 8vw 10vh 2vw",
+    margin: "1vh 8vw 2vh 2vw",
     "@media (max-width:600px)": {
       margin: "4vh auto 5vh auto",
       width: "60vw"
@@ -178,6 +180,22 @@ const Dashboard = props => {
               ID: CA20{pad(profile.ca_count)}
             </label>
             <ThemeProvider theme={theme}>
+              <Guidlines />
+              <Button
+                size="large"
+                variant="contained"
+                color="primary"
+                className={classes.button}
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfhwLJiEBGwDL8_76mdtnDqX0e2ths-iBQSDE-7uSCgDwdgTA/viewform"
+                target="_blank"
+                endIcon={
+                  <Icon>
+                    <StorageIcon />
+                  </Icon>
+                }
+              >
+                Submit Data
+              </Button>
               <Button
                 size="large"
                 variant="contained"
