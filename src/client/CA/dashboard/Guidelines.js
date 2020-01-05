@@ -47,7 +47,7 @@ function createData(task, signupAward, paymentAward) {
 
 const rows = [createData("1 Registration using your referral code", 10, 100)];
 
-function Guidlines(props) {
+function Guidelines(props) {
   const classes = useStyles();
 
   const [open, setOpen] = useState(false);
@@ -80,7 +80,7 @@ function Guidlines(props) {
         }
         onClick={handleClickOpen}
       >
-        Guidline
+        Guideline
       </Button>
       <Dialog
         fullWidth
@@ -91,7 +91,7 @@ function Guidlines(props) {
         aria-labelledby="form-dialog-title"
       >
         <DialogTitle id="form-dialog-title" style={{ textAlign: "center" }}>
-          Refer these Guidlines
+          Refer these Guidelines
         </DialogTitle>
         <DialogContent>
           <h3>Promotional Tasks to do:</h3>
@@ -272,4 +272,4 @@ function Guidlines(props) {
   );
 }
 
-export default Guidlines;
+export default Guidelines;

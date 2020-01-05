@@ -9,7 +9,7 @@ import {
 } from "@material-ui/core/styles";
 import { Icon, Button } from "@material-ui/core";
 import StorageIcon from "@material-ui/icons/Storage";
-import Guidlines from "./Guidlines";
+import Guidelines from "./Guidelines";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -180,7 +180,7 @@ const Dashboard = props => {
               ID: CA20{pad(profile.ca_count)}
             </label>
             <ThemeProvider theme={theme}>
-              <Guidlines />
+              <Guidelines />
               <Button
                 size="large"
                 variant="contained"
