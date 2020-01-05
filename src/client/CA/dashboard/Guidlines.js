@@ -10,7 +10,14 @@ import {
   DialogContent,
   DialogTitle,
   Button,
-  Icon
+  Icon,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper
 } from "@material-ui/core";
 import MenuBookIcon from "@material-ui/icons/MenuBook";
 
@@ -22,10 +29,23 @@ const useStyles = makeStyles(theme => ({
       width: "60vw"
     }
   },
+  table: {
+    minWidth: 600,
+    maxWidth: 1000
+  },
+  tableContainer: {
+    margin: "10px auto 10px auto"
+  },
   margin: {
     margin: theme.spacing(1)
   }
 }));
+
+function createData(task, signupAward, paymentAward) {
+  return { task, signupAward, paymentAward };
+}
+
+const rows = [createData("1 Registration using your referral code", 10, 100)];
 
 function Guidlines(props) {
   const classes = useStyles();
@@ -144,6 +164,35 @@ function Guidlines(props) {
               </li>
               <li>
                 The point structure of the above league will be as follows:
+                <TableContainer
+                  component={Paper}
+                  className={classes.tableContainer}
+                >
+                  <Table className={classes.table} aria-label="simple table">
+                    <TableHead>
+                      <TableRow>
+                        <TableCell>Tasks</TableCell>
+                        <TableCell align="right">Points Awarded</TableCell>
+                        <TableCell align="right">
+                          Final Points Awarded per payment made
+                        </TableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                      {rows.map(row => (
+                        <TableRow key={row.task}>
+                          <TableCell component="th" scope="row">
+                            {row.task}
+                          </TableCell>
+                          <TableCell align="right">{row.signupAward}</TableCell>
+                          <TableCell align="right">
+                            {row.paymentAward}
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </TableContainer>
               </li>
               <b>
                 Referral Code will be the ‘CA Id’ provided to you on your
