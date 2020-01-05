@@ -29,7 +29,20 @@ class Carousel extends Component {
                       }}
                     />
                     <figcaption className={Styles.imgCaption}>
-                      <label className={Styles.header}>Case Studies</label>
+                      <label className={Styles.header}>
+                        Case Studies
+                        <a
+                          href="https://drive.google.com/file/d/1k4XJ0eDfzQP0k8FB7LZAfT5ugNP_l-r1/view"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src="/Images/icons/documents.svg"
+                            alt="document"
+                            className={Styles.document}
+                          />
+                        </a>
+                      </label>
                       <div className={Styles.description}>
                         Channelize your thoughts to design better <br />
                         lines of action to achieve a multi-dimensional <br />
@@ -51,7 +64,20 @@ class Carousel extends Component {
                       style={{ width: "500px", height: "300px" }}
                     />
                     <figcaption className={Styles.imgCaption}>
-                      <label className={Styles.header}>B PLANS</label>
+                      <label className={Styles.header}>
+                        B PLANS
+                        <a
+                          href="https://drive.google.com/file/d/1AEiq9iw8bfIYOQoGjZcd536oj5rQriyb/view"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src="/Images/icons/documents.svg"
+                            alt="document"
+                            className={Styles.document}
+                          />
+                        </a>
+                      </label>
                       <div className={Styles.description}>
                         Prepare your business plans and get ready to
                         <br />
@@ -82,6 +108,17 @@ class Carousel extends Component {
                     >
                       <label className={Styles.header}>
                         Round Table Conference
+                        <a
+                          href="https://drive.google.com/file/d/1baxt9nB2LSq-qQgHFzu4CFNQuPK6AYwU/view"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src="/Images/icons/documents.svg"
+                            alt="document"
+                            className={Styles.document}
+                          />
+                        </a>
                       </label>
                       <div className={Styles.description}>
                         Best ideas are surfaced only through an immense <br />
@@ -107,7 +144,20 @@ class Carousel extends Component {
                       style={{ width: "500px", height: "454px" }}
                     />
                     <figcaption className={Styles.imgCaption}>
-                      <label className={Styles.header}>Street Play</label>
+                      <label className={Styles.header}>
+                        Street Play
+                        <a
+                          href="https://drive.google.com/file/d/1Adzbtkj27ahXa5x7rguwG7nadmCu6NHr/view"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src="/Images/icons/documents.svg"
+                            alt="document"
+                            className={Styles.document}
+                          />
+                        </a>
+                      </label>
                       <div className={Styles.description}>
                         Just pick up your drums, tambourines and get <br />{" "}
                         ready to scream,shout and bustle up the streets,
@@ -129,7 +179,20 @@ class Carousel extends Component {
                       style={{ width: "500px", height: "455px" }}
                     />
                     <figcaption className={Styles.imgCaption}>
-                      <label className={Styles.header}>MUN</label>
+                      <label className={Styles.header}>
+                        MUN
+                        <a
+                          href="https://drive.google.com/file/d/1zb9Ieu2oWJTl8R6U54BWMhQBNCaqR7Uc/view"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src="/Images/icons/documents.svg"
+                            alt="document"
+                            className={Styles.document}
+                          />
+                        </a>
+                      </label>
                       <div className={Styles.description}>
                         An event to negotiate all the important agendas <br />
                         and bring the best of the delegates, attachés and <br />
@@ -157,7 +220,20 @@ class Carousel extends Component {
                       }}
                     />
                     <figcaption className={Styles.imgCaption}>
-                      <label className={Styles.header}>Work Presentation</label>
+                      <label className={Styles.header}>
+                        Work Presentation
+                        <a
+                          href="https://drive.google.com/file/d/11E9YigZLRgPcQZ62fnTZesD4fLL-7eri/view"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src="/Images/icons/documents.svg"
+                            alt="document"
+                            className={Styles.document}
+                          />
+                        </a>
+                      </label>
                       <div className={Styles.description}>
                         Grab a chance for the rightful acknowledgment
                         <br /> of your unparalleled social work.
@@ -177,7 +253,20 @@ class Carousel extends Component {
                       style={{ width: "500px", height: "300px" }}
                     />
                     <figcaption className={Styles.imgCaption}>
-                      <label className={Styles.header}>Cultural Nights</label>
+                      <label className={Styles.header}>
+                        Cultural Nights
+                        <a
+                          href="https://drive.google.com/file/d/11jy7V3pKsCBwYg4nFPTi_M5LRHnmVcVr/view"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src="/Images/icons/documents.svg"
+                            alt="document"
+                            className={Styles.document}
+                          />
+                        </a>
+                      </label>
                       <div className={Styles.description}>
                         Have something different to stand out from <br /> the
                         crowd? Then this is the moment to perform <br /> in
@@ -205,7 +294,20 @@ class Carousel extends Component {
                       className={Styles.imgCaption}
                       style={{ borderBottomRightRadius: "12px " }}
                     >
-                      <label className={Styles.header}>Hackathon</label>
+                      <label className={Styles.header}>
+                        Hackathon
+                        <a
+                          href="https://drive.google.com/file/d/18XsAoTfBn1EkLo-5txDknV_BoLsUGNZO/view"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src="/Images/icons/documents.svg"
+                            alt="document"
+                            className={Styles.document}
+                          />
+                        </a>
+                      </label>
                       <div className={Styles.description}>
                         Think ,refine,code and test your potential <br />
                         to transfigure the current scenario of society.
@@ -237,7 +339,20 @@ class Carousel extends Component {
                       }}
                     />
                     <figcaption className={Styles.imgCaption}>
-                      <label className={Styles.header}>Case Studies</label>
+                      <label className={Styles.header}>
+                        Case Studies
+                        <a
+                          href="https://drive.google.com/file/d/1k4XJ0eDfzQP0k8FB7LZAfT5ugNP_l-r1/view"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src="/Images/icons/documents.svg"
+                            alt="document"
+                            className={Styles.document}
+                          />
+                        </a>
+                      </label>
                     </figcaption>
                   </figure>
                 </div>
@@ -257,7 +372,20 @@ class Carousel extends Component {
                       }}
                     />
                     <figcaption className={Styles.imgCaption}>
-                      <label className={Styles.header}>B PLANS</label>
+                      <label className={Styles.header}>
+                        B PLANS
+                        <a
+                          href="https://drive.google.com/file/d/1AEiq9iw8bfIYOQoGjZcd536oj5rQriyb/view"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src="/Images/icons/documents.svg"
+                            alt="document"
+                            className={Styles.document}
+                          />
+                        </a>
+                      </label>
                     </figcaption>
                   </figure>
                 </div>
@@ -277,7 +405,20 @@ class Carousel extends Component {
                       }}
                     />
                     <figcaption className={Styles.imgCaption}>
-                      <label className={Styles.header}>R.T.C</label>
+                      <label className={Styles.header}>
+                        R.T.C
+                        <a
+                          href="https://drive.google.com/file/d/1baxt9nB2LSq-qQgHFzu4CFNQuPK6AYwU/view"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src="/Images/icons/documents.svg"
+                            alt="document"
+                            className={Styles.document}
+                          />
+                        </a>
+                      </label>
                     </figcaption>
                   </figure>
                 </div>
@@ -292,7 +433,20 @@ class Carousel extends Component {
                       style={{ width: "160px", height: "180px" }}
                     />
                     <figcaption className={Styles.imgCaption}>
-                      <label className={Styles.header}>Street Play</label>
+                      <label className={Styles.header}>
+                        Street Play
+                        <a
+                          href="https://drive.google.com/file/d/1Adzbtkj27ahXa5x7rguwG7nadmCu6NHr/view"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src="/Images/icons/documents.svg"
+                            alt="document"
+                            className={Styles.document}
+                          />
+                        </a>
+                      </label>
                     </figcaption>
                   </figure>
                 </div>
@@ -310,7 +464,20 @@ class Carousel extends Component {
                       style={{ width: "160px", height: "180px" }}
                     />
                     <figcaption className={Styles.imgCaption}>
-                      <label className={Styles.header}>M.U.N</label>
+                      <label className={Styles.header}>
+                        M.U.N
+                        <a
+                          href="https://drive.google.com/file/d/1zb9Ieu2oWJTl8R6U54BWMhQBNCaqR7Uc/view"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src="/Images/icons/documents.svg"
+                            alt="document"
+                            className={Styles.document}
+                          />
+                        </a>
+                      </label>
                     </figcaption>
                   </figure>
                 </div>
@@ -325,7 +492,20 @@ class Carousel extends Component {
                       style={{ width: "160px", height: "180px" }}
                     />
                     <figcaption className={Styles.imgCaption}>
-                      <label className={Styles.header}>Work Presentation</label>
+                      <label className={Styles.header}>
+                        Work Presentation
+                        <a
+                          href="https://drive.google.com/file/d/11E9YigZLRgPcQZ62fnTZesD4fLL-7eri/view"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src="/Images/icons/documents.svg"
+                            alt="document"
+                            className={Styles.document}
+                          />
+                        </a>
+                      </label>
                     </figcaption>
                   </figure>
                 </div>
@@ -350,7 +530,20 @@ class Carousel extends Component {
                       className={Styles.imgCaption}
                       style={{ borderBottomLeftRadius: "12px" }}
                     >
-                      <label className={Styles.header}>Cultural Nights</label>
+                      <label className={Styles.header}>
+                        Cultural Nights
+                        <a
+                          href="https://drive.google.com/file/d/11jy7V3pKsCBwYg4nFPTi_M5LRHnmVcVr/view"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src="/Images/icons/documents.svg"
+                            alt="document"
+                            className={Styles.document}
+                          />
+                        </a>
+                      </label>
                     </figcaption>
                   </figure>
                 </div>
@@ -372,7 +565,20 @@ class Carousel extends Component {
                       className={Styles.imgCaption}
                       style={{ borderRadius: "0 0 12px 0" }}
                     >
-                      <label className={Styles.header}>Hackathon</label>
+                      <label className={Styles.header}>
+                        Hackathon
+                        <a
+                          href="https://drive.google.com/file/d/18XsAoTfBn1EkLo-5txDknV_BoLsUGNZO/view"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src="/Images/icons/documents.svg"
+                            alt="document"
+                            className={Styles.document}
+                          />
+                        </a>
+                      </label>
                     </figcaption>
                   </figure>
                 </div>
