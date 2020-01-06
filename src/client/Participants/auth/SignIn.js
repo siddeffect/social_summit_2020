@@ -4,7 +4,7 @@ import {
   ThemeProvider,
   createMuiTheme
 } from "@material-ui/core/styles";
-import Navbar from "../../Layout/Navbar/Navbar";
+import Navbar from "../ParticipantsLayout/Navbar";
 import { Grid, TextField, Button, Hidden } from "@material-ui/core";
 
 const styles = theme => ({
