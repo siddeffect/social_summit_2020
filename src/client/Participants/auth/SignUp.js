@@ -24,10 +24,21 @@ const useStyles = makeStyles(theme => ({
   formHeader: {
     color: "#212121",
     fontSize: "3rem",
-    marginTop: "2rem"
+    marginTop: "1rem",
+    marginBottom: "1rem",
+    fontFamily: ["'Roboto'", "sans-serif"].join(","),
+    "@media (max-width:640px)": {
+      fontSize: "2rem"
+    }
   },
-  textField: {
+  form: {
     marginBottom: "1.5rem"
+  },
+  image: {
+    "@media (min-width: 1030px) and (max-width: 1600px)": {
+      width: "50vw",
+      height: "auto"
+    }
   }
 }));
 function ParticipantSignUp(props) {
@@ -81,8 +92,19 @@ function ParticipantSignUp(props) {
             <label className={classes.formHeader}>Sign Up</label>
           </Grid>
 
-          <Grid item xs={6} alignContent="center" container justify="center">
-            <form style={{ width: "90%" }} onSubmit={handleSubmit}>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            alignContent="center"
+            container
+            justify="center"
+          >
+            <form
+              style={{ width: "90%" }}
+              onSubmit={handleSubmit}
+              className={classes.form}
+            >
               <Grid container spacing={3}>
                 <Grid item xs={12} md={6}>
                   <TextField
@@ -276,9 +298,20 @@ function ParticipantSignUp(props) {
             </form>
           </Grid>
           <Hidden mdDown>
-            <Grid item xs={6} alignContent="center" container justify="center">
+            <Grid
+              item
+              md={6}
+              xs={12}
+              alignContent="center"
+              container
+              justify="center"
+            >
               <div>
-                <img src="/Images/participant.svg" alt="ca_image" />
+                <img
+                  src="/Images/participant.svg"
+                  alt="ca_image"
+                  className={classes.image}
+                />
               </div>
             </Grid>
           </Hidden>

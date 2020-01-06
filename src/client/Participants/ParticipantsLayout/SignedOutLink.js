@@ -10,7 +10,7 @@ import { Button } from "@material-ui/core";
 const useStyles = makeStyles(theme => ({
   root: {
     "& > *": {
-      margin: theme.spacing(2)
+      margin: 2
     }
   }
 }));
@@ -27,12 +27,20 @@ function SignedOutLink() {
     <ThemeProvider theme={theme}>
       <div className={classes.root}>
         <Link to="/signup">
-          <Button variant="contained" color="primary">
+          <Button
+            variant="contained"
+            color="primary"
+            className={classes.button}
+          >
             SignUp
           </Button>
         </Link>
         <Link to="/signin">
-          <Button variant="contained" color="primary">
+          <Button
+            variant="contained"
+            color="primary"
+            className={classes.button}
+          >
             SignIn
           </Button>
         </Link>

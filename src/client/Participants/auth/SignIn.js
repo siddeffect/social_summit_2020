@@ -11,10 +11,23 @@ const styles = theme => ({
   formHeader: {
     color: "#212121",
     fontSize: "3rem",
-    marginTop: "2rem"
+    marginTop: "2rem",
+    fontFamily: ["'Roboto'", "sans-serif"].join(","),
+    "@media (max-width:640px)": {
+      fontSize: "2rem"
+    }
   },
   textField: {
     marginBottom: "1rem"
+  },
+  form: {
+    marginBottom: "1.5rem"
+  },
+  image: {
+    "@media (min-width: 1030px) and (max-width: 1600px)": {
+      width: "50vw",
+      height: "auto"
+    }
   }
 });
 
@@ -54,7 +67,7 @@ class ParticipantSignIn extends Component {
               <label className={classes.formHeader}>Sign In</label>
             </Grid>
             <Grid item xs={6} alignContent="center" container justify="center">
-              <form onSubmit={this.handleSubmit}>
+              <form onSubmit={this.handleSubmit} className={classes.form}>
                 <Grid container spacing={3}>
                   <Grid item xs={12}>
                     <TextField
