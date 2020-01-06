@@ -98,7 +98,7 @@ class ParticipantSignIn extends Component {
               <Grid item xs={6}>
                 <div>
                   <img
-                    src="/Images/participants.svg"
+                    src="/Images/participant.svg"
                     alt="participant_image"
                     className={classes.image}
                   />

@@ -1,11 +1,24 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import {
   makeStyles,
   ThemeProvider,
   createMuiTheme
 } from "@material-ui/core/styles";
 import Navbar from "../../Layout/Navbar/Navbar";
-import { Grid, Hidden } from "@material-ui/core";
+import {
+  Grid,
+  Hidden,
+  TextField,
+  InputAdornment,
+  Button,
+  FormControl,
+  Select,
+  MenuItem,
+  InputLabel,
+  Chip
+} from "@material-ui/core";
+import Autocomplete from "@material-ui/lab/Autocomplete";
+import eventList from "./eventList";
 
 const useStyles = makeStyles(theme => ({
   formHeader: {
@@ -24,6 +37,40 @@ function ParticipantSignUp(props) {
       primary: { 500: "#00a650" }
     }
   });
+  const inputLabel = React.useRef(null);
+
+  const [labelWidth, setLabelWidth] = React.useState(0);
+  React.useEffect(() => {
+    setLabelWidth(inputLabel.current.offsetWidth);
+  }, []);
+
+  const [primaryEvent, setPrimaryEvent] = useState(null);
+  const [secondaryEvent, setSecondaryEvent] = useState([]);
+
+  const [values, setValues] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    phoneNumber: "",
+    college: "",
+    city: "",
+    state: "",
+    gender: "",
+    referralCode: ""
+  });
+
+  const handleChange = prop => event => {
+    setValues({ ...values, [prop]: event.target.value });
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    // props.munRegister(data);
+    // setOpen(false);
+
+    console.log(values, primaryEvent, secondaryEvent);
+  };
 
   return (
     <div>
@@ -35,14 +82,203 @@ function ParticipantSignUp(props) {
           </Grid>
 
           <Grid item xs={6} alignContent="center" container justify="center">
-            <form style={{ width: "80%" }}>
-              <Grid container spacing={3}></Grid>
+            <form style={{ width: "90%" }} onSubmit={handleSubmit}>
+              <Grid container spacing={3}>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    required
+                    variant="outlined"
+                    id="firstName"
+                    label="First Name"
+                    type="text"
+                    fullWidth
+                    value={values.firstName}
+                    onChange={handleChange("firstName")}
+                  />
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    required
+                    variant="outlined"
+                    id="lasttName"
+                    label="Last Name"
+                    type="text"
+                    fullWidth
+                    value={values.lastName}
+                    onChange={handleChange("lastName")}
+                  />
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    required
+                    variant="outlined"
+                    id="email"
+                    label="Email Address"
+                    type="email"
+                    fullWidth
+                    value={values.email}
+                    onChange={handleChange("email")}
+                  />
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    required
+                    variant="outlined"
+                    id="password"
+                    label="Password"
+                    type="password"
+                    fullWidth
+                    autoComplete="current-password"
+                    value={values.password}
+                    onChange={handleChange("password")}
+                  />
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    required
+                    type="number"
+                    inputProps={{ maxLength: 10, minLength: 10 }}
+                    label="Enter Phone Number"
+                    id="phoneNumber"
+                    variant="outlined"
+                    fullWidth
+                    value={values.phoneNumber}
+                    onChange={handleChange("phoneNumber")}
+                    InputProps={{
+                      startAdornment: (
+                        <InputAdornment position="start">+91</InputAdornment>
+                      )
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    required
+                    variant="outlined"
+                    id="college"
+                    label="College"
+                    type="text"
+                    fullWidth
+                    value={values.college}
+                    onChange={handleChange("college")}
+                  />
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    required
+                    variant="outlined"
+                    id="city"
+                    label="City"
+                    type="text"
+                    fullWidth
+                    value={values.city}
+                    onChange={handleChange("city")}
+                  />
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    required
+                    variant="outlined"
+                    id="state"
+                    label="State"
+                    type="text"
+                    fullWidth
+                    value={values.state}
+                    onChange={handleChange("state")}
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <Autocomplete
+                    id="select-primary-event"
+                    options={eventList}
+                    getOptionLabel={option => option}
+                    value={primaryEvent}
+                    onChange={(event, newValue) => {
+                      setPrimaryEvent(newValue);
+                    }}
+                    renderInput={params => (
+                      <TextField
+                        {...params}
+                        label="Primary Event"
+                        variant="outlined"
+                        fullWidth
+                        required
+                      />
+                    )}
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <Autocomplete
+                    multiple
+                    id="tags-filled"
+                    options={eventList}
+                    freeSolo
+                    renderTags={(value, getTagProps) =>
+                      value.map((option, index) => (
+                        <Chip
+                          variant="outlined"
+                          label={option}
+                          {...getTagProps({ index })}
+                        />
+                      ))
+                    }
+                    onChange={(event, newValue) => {
+                      setSecondaryEvent(newValue);
+                    }}
+                    value={secondaryEvent}
+                    renderInput={params => (
+                      <TextField
+                        {...params}
+                        variant="outlined"
+                        label="Seconary Events"
+                        fullWidth
+                      />
+                    )}
+                  />
+                </Grid>
+
+                <Grid item xs={12} md={6}>
+                  <FormControl variant="outlined" required fullWidth>
+                    <InputLabel ref={inputLabel}>Gender</InputLabel>
+
+                    <Select
+                      id="gender-select"
+                      value={values.gender}
+                      variant="outlined"
+                      onChange={handleChange("gender")}
+                      labelWidth={labelWidth}
+                    >
+                      <MenuItem value="M">Male</MenuItem>
+                      <MenuItem value="F">Female</MenuItem>
+                      <MenuItem value="N">Prefer Not to Say</MenuItem>
+                    </Select>
+                  </FormControl>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    type="text"
+                    fullWidth
+                    value={values.referralCode}
+                    onChange={handleChange("referralCode")}
+                    id="referral-code"
+                    label="Referral Code"
+                    placeholder="CA20XXXX"
+                    variant="outlined"
+                  />
+                </Grid>
+
+                <Grid container justify="center">
+                  <Button variant="contained" color="primary" type="submit">
+                    Submit
+                  </Button>
+                </Grid>
+              </Grid>
             </form>
           </Grid>
           <Hidden mdDown>
             <Grid item xs={6} alignContent="center" container justify="center">
               <div>
-                <img src="/Images/participants.svg" alt="ca_image" />
+                <img src="/Images/participant.svg" alt="ca_image" />
               </div>
             </Grid>
           </Hidden>
