@@ -8,6 +8,7 @@ import CALogin from "./client/CA/auth/SignIn";
 import CADashboard from "./client/CA/dashboard/Dashboard";
 import ParticipantSignIn from "./client/Participants/auth/SignIn";
 import ParticipantSignUp from "./client/Participants/auth/SignUp";
+import ParticipantDashboard from "./client/Participants/ParticipantsDashboard/Dashboard";
 
 import {
   BrowserRouter as Router,
@@ -49,6 +50,9 @@ function App() {
         </Route>
         <Route exact path="/signup">
           <ParticipantSignUp />
+        </Route>
+        <Route exact path="/dashboard">
+          <ParticipantDashboard />
         </Route>
         <Route exact path="/">
           <Home />
