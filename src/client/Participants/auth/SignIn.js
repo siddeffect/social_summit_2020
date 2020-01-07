@@ -6,6 +6,9 @@ import {
 } from "@material-ui/core/styles";
 import Navbar from "../ParticipantsLayout/Navbar";
 import { Grid, TextField, Button, Hidden } from "@material-ui/core";
+import { connect } from "react-redux";
+import { participantSignIn } from "../../../store/actions/participantAction";
+import { Redirect } from "react-router-dom";
 
 const styles = theme => ({
   formHeader: {
@@ -51,12 +54,12 @@ class ParticipantSignIn extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.signIn(this.state);
+    this.props.participantSignIn(this.state);
   };
 
   render() {
-    const { classes, authError /* auth */ } = this.props;
-    // if (auth.uid) return <Redirect to="/campusambassador/dashboard" />;
+    const { classes, authError, participantAuth } = this.props;
+    if (participantAuth.uid) return <Redirect to="/dashboard" />;
 
     return (
       <div>
@@ -71,6 +74,7 @@ class ParticipantSignIn extends Component {
                 <Grid container spacing={3}>
                   <Grid item xs={12}>
                     <TextField
+                      required
                       variant="outlined"
                       id="email"
                       label="Email"
@@ -82,6 +86,7 @@ class ParticipantSignIn extends Component {
                   </Grid>
                   <Grid item xs={12}>
                     <TextField
+                      required
                       variant="outlined"
                       id="password"
                       label="Password"
@@ -103,10 +108,13 @@ class ParticipantSignIn extends Component {
                       Login
                     </Button>
                   </Grid>
-                  <Grid container>{authError ? <p>{authError}</p> : null}</Grid>
+                  <Grid container justify="center">
+                    {authError ? <p>{authError}</p> : null}
+                  </Grid>
                 </Grid>
               </form>
             </Grid>
+
             <Hidden mdDown>
               <Grid item xs={6}>
                 <div>
@@ -125,4 +133,20 @@ class ParticipantSignIn extends Component {
   }
 }
 
-export default withStyles(styles)(ParticipantSignIn);
+const mapStateToProp = state => {
+  return {
+    authError: state.participant.authError,
+    participantAuth: state.firebase.auth
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    participantSignIn: creds => dispatch(participantSignIn(creds))
+  };
+};
+
+export default connect(
+  mapStateToProp,
+  mapDispatchToProps
+)(withStyles(styles)(ParticipantSignIn));

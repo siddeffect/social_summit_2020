@@ -17,6 +17,9 @@ import {
   InputLabel,
   Chip
 } from "@material-ui/core";
+import { Redirect } from "react-router-dom";
+import { connect } from "react-redux";
+import { participantSignUp } from "../../../store/actions/participantAction";
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import eventList from "./eventList";
 
@@ -75,13 +78,19 @@ function ParticipantSignUp(props) {
     setValues({ ...values, [prop]: event.target.value });
   };
 
+  const data = {
+    ...values,
+    primaryEvent: primaryEvent,
+    secondaryEvent: secondaryEvent
+  };
+
   const handleSubmit = e => {
     e.preventDefault();
-    // props.munRegister(data);
-    // setOpen(false);
-
-    console.log(values, primaryEvent, secondaryEvent);
+    props.participantSignUp(data);
   };
+
+  const { participantAuth, authError } = props;
+  if (participantAuth.uid) return <Redirect to="/dashboard" />;
 
   return (
     <div>
@@ -294,6 +303,9 @@ function ParticipantSignUp(props) {
                     Submit
                   </Button>
                 </Grid>
+                <Grid container spacing={1}>
+                  {authError ? <p>{authError}</p> : null}
+                </Grid>
               </Grid>
             </form>
           </Grid>
@@ -321,4 +333,17 @@ function ParticipantSignUp(props) {
   );
 }
 
-export default ParticipantSignUp;
+const mapStateToProp = state => {
+  return {
+    participantAuth: state.firebase.auth,
+    authError: state.participant.authError
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    participantSignUp: newUser => dispatch(participantSignUp(newUser))
+  };
+};
+
+export default connect(mapStateToProp, mapDispatchToProps)(ParticipantSignUp);

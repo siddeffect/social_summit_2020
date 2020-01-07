@@ -7,7 +7,7 @@ const participantReducer = (state = initState, action) => {
     case "PARTICIPANT_LOGIN_ERROR":
       return {
         ...state,
-        authError: "Login failed"
+        authError: "Login failed! Please check Eamil and Passward"
       };
 
     case "PARTICIPANT_LOGIN_SUCCESS":

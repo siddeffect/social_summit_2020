@@ -5,6 +5,8 @@ import { Facebook, Twitter, Instagram, LinkedIn } from "@material-ui/icons";
 import MenuDrawer from "../../Layout/Navbar/Drawer";
 import Fade from "react-reveal/Fade";
 import SignedOutLink from "./SignedOutLink";
+import SignedInLink from "./SignedInLink";
+import { connect } from "react-redux";
 
 const styles = theme => ({
   root: {
@@ -54,8 +56,12 @@ class Navbar extends Component {
     };
   }
   render() {
-    const { classes } = this.props;
-    const links = <SignedOutLink />;
+    const { classes, participantAuth, profile } = this.props;
+    const links = participantAuth.uid ? (
+      <SignedInLink profile={profile} />
+    ) : (
+      <SignedOutLink />
+    );
 
     return (
       <div className={classes.root}>
@@ -157,4 +163,11 @@ class Navbar extends Component {
   }
 }
 
-export default withStyles(styles)(Navbar);
+const mapStateToProps = state => {
+  return {
+    participantAuth: state.firebase.auth,
+    profile: state.firebase.profile
+  };
+};
+
+export default connect(mapStateToProps)(withStyles(styles)(Navbar));

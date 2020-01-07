@@ -25,8 +25,9 @@ export const participantSignOut = () => {
       .auth()
       .signOut()
       .then(() => {
-        dispatch({ type: "PARTICIPANT_SIGNOUT_SUCCESS" });
+        dispatch({ type: "SIGNOUT_SUCCESS" });
       });
+    window.location.reload();
   };
 };
 
@@ -40,7 +41,7 @@ export const participantSignUp = newUser => {
       .createUserWithEmailAndPassword(newUser.email, newUser.password)
       .then(resp => {
         return firestore
-          .collection("participantData")
+          .collection("caData")
           .doc(resp.user.uid)
           .set({
             firstName: newUser.firstName,
@@ -50,12 +51,13 @@ export const participantSignUp = newUser => {
             phoneNumber: newUser.phoneNumber,
             college: newUser.college,
             state: newUser.state,
-            year_branch: newUser.year_branch,
             role: "PARTICIPANT",
             participant_count: null,
             payment_done: false,
             gender: newUser.gender,
-            referralCode: newUser.referralCode
+            referralCode: newUser.referralCode,
+            primaryEvent: newUser.primaryEvent,
+            secondaryEvent: newUser.secondaryEvent
           })
           .then(
             firestore
@@ -65,7 +67,7 @@ export const participantSignUp = newUser => {
               .then(function(doc) {
                 if (doc.exists) {
                   firestore
-                    .collection("participantData")
+                    .collection("caData")
                     .doc(resp.user.uid)
                     .update({
                       participant_count: doc.data().participant_count

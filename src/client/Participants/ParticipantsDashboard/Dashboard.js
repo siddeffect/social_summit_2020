@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+import { Redirect } from "react-router-dom";
 import Navbar from "../ParticipantsLayout/Navbar";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -150,8 +152,8 @@ const useStyles = makeStyles(theme => ({
 
 const Dashboard = props => {
   const classes = useStyles();
-  // const { profile , auth  } = props;
-  // if (!auth.uid) return <Redirect to="/campusambassador/signin" />;
+  const { profile, participantAuth } = props;
+  if (!participantAuth.uid) return <Redirect to="/signin" />;
 
   return (
     <div>
@@ -194,4 +196,11 @@ const Dashboard = props => {
   );
 };
 
-export default Dashboard;
+const mapStateToProps = state => {
+  return {
+    participantAuth: state.firebase.auth,
+    profile: state.firebase.profile
+  };
+};
+
+export default connect(mapStateToProps)(Dashboard);
