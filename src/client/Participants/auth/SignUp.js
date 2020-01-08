@@ -55,7 +55,8 @@ function ParticipantSignUp(props) {
 
   const [labelWidth, setLabelWidth] = React.useState(0);
   React.useEffect(() => {
-    setLabelWidth(inputLabel.current.offsetWidth);
+    if (inputLabel.current != null)
+      setLabelWidth(inputLabel.current.offsetWidth);
   }, []);
 
   const [primaryEvent, setPrimaryEvent] = useState(null);

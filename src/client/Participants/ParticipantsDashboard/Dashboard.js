@@ -2,7 +2,12 @@ import React from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import Navbar from "../ParticipantsLayout/Navbar";
-import { makeStyles } from "@material-ui/core/styles";
+import { Chip } from "@material-ui/core";
+import {
+  makeStyles,
+  ThemeProvider,
+  createMuiTheme
+} from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -139,20 +144,30 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-// function pad(n) {
-//   var s = "000" + n;
-//   return s.substr(s.length - 4);
-// }
+function pad(n) {
+  var s = "000" + n;
+  return s.substr(s.length - 4);
+}
 
-// const theme = createMuiTheme({
-//   palette: {
-//     primary: { 500: "#00a650" }
-//   }
-// });
+const theme = createMuiTheme({
+  palette: {
+    primary: { 500: "#00a650" }
+  }
+});
 
 const Dashboard = props => {
   const classes = useStyles();
   const { profile, participantAuth } = props;
+  const secondaryEventArray = profile.secondaryEvent;
+  let secondaryEventList = null;
+  if (secondaryEventArray) {
+    secondaryEventList = secondaryEventArray.map(values => (
+      <ThemeProvider theme={theme}>
+        <Chip label={values} key={values} color="primary" size="large" />{" "}
+      </ThemeProvider>
+    ));
+  }
+
   if (!participantAuth.uid) return <Redirect to="/signin" />;
 
   return (
@@ -162,34 +177,41 @@ const Dashboard = props => {
         <div className={classes.navContainer}>
           <div className={classes.nameCollegeContainer}>
             <label className={classes.nameHeader}>
-              <strong>First Name</strong> lastName
+              <strong>{profile.firstName}</strong> {profile.lastName}
             </label>
-            <label className={classes.collegeHeader}>college</label>
+            <label className={classes.collegeHeader}>{profile.college}</label>
             <div className={classes.divider}></div>
           </div>
 
           <div className={classes.mainHeaders}>
-            <label className={classes.id}>ID: SS20</label>
+            <label className={classes.id}>
+              ID: SS20{pad(profile.participant_count)}
+            </label>
           </div>
         </div>
         <div className={classes.mainDetail}>
           {window.innerWidth < 768 ? null : (
-            <label className={classes.fields}>Name: first</label>
-          )}
-
-          <label className={classes.fields}>Email: siddharth@gmail.com</label>
-          <label className={classes.fields}>Ph. Number:</label>
-
-          {window.innerWidth < 768 ? null : (
             <label className={classes.fields}>
-              College: Indian Institute of Technology
+              Name: {profile.firstName} {profile.lastName}{" "}
             </label>
           )}
 
-          <label className={classes.fields}>Branch/Year: Civil 3rd Year</label>
-          <label className={classes.fields}>State: Punjab</label>
-          <label className={classes.fields}>City: Patiala</label>
-          <label className={classes.fields}>Role: Participant</label>
+          <label className={classes.fields}>Email: {profile.email}</label>
+          <label className={classes.fields}>
+            Ph. Number:{profile.phoneNumber}
+          </label>
+
+          {window.innerWidth < 768 ? null : (
+            <label className={classes.fields}>College: {profile.college}</label>
+          )}
+          <label className={classes.fields}>State: {profile.state}</label>
+          <label className={classes.fields}>Role: {profile.role}</label>
+          <label className={classes.fields}>
+            Primary Event: {profile.primaryEvent}
+          </label>
+          <label className={classes.fields}>
+            Secondary Event: {secondaryEventList}
+          </label>
         </div>
       </div>
     </div>
