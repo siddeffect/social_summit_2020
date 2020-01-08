@@ -77,6 +77,7 @@ const useStyles = makeStyles(theme => ({
   },
   button: {
     marginTop: "3em",
+    marginRight: "2rem",
     width: "20rem",
     height: "4rem",
     color: "#fff",
@@ -170,6 +171,16 @@ export default function Hero() {
                   className={classes.button}
                 >
                   CAMPUS AMBASSADOR
+                </Button>
+              </Link>
+              <Link to="/signup">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="large"
+                  className={classes.button}
+                >
+                  REGISTER/LOGIN
                 </Button>
               </Link>
             </ThemeProvider>

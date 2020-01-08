@@ -5,7 +5,7 @@ const country = [
   "China",
   "India",
   "Pakistan",
-  "Swaden",
+  "Sweden",
   "Denmark",
   "Germany",
   "Madagascar",
