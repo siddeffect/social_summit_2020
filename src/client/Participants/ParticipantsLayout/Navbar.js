@@ -55,6 +55,11 @@ class Navbar extends Component {
       width: window.innerWidth
     };
   }
+
+  imageClick = () => {
+    window.location.href = "https://nationalsocialsummit.org";
+  };
+
   render() {
     const { classes, participantAuth, profile } = this.props;
     const links = participantAuth.uid ? (
@@ -80,6 +85,7 @@ class Navbar extends Component {
                   className={classes.logo}
                   src="/Images/Logo_Main.svg"
                   alt="logo"
+                  onClick={this.imageClick}
                 />
               </Fade>
               <Fade bottom>{links}</Fade>

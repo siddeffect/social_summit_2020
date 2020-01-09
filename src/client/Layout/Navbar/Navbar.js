@@ -33,38 +33,11 @@ const styles = theme => ({
     }
   },
   logo: {
-    flexGrow: 1,
     height: "90px",
-    marginLeft: "-65%",
-    "@media (min-width:1300px) and (max-width:1400px)": {
-      marginLeft: "-52%"
-    },
-    "@media (min-width:1405px) and (max-width:1450px)": {
-      marginLeft: "-55%"
-    },
-    "@media (min-width:700px) and (max-width:800px)": {
-      height: "45px",
-      width: "auto",
-      paddingRight: "75vw"
-    },
-    "@media (min-width:500px) and (max-width:600px)": {
-      height: "45px",
-      width: "auto",
-      marginLeft: "-80%"
-    },
-    "@media (min-width:365px) and (max-width:420px)": {
-      height: "45px",
-      width: "auto",
-      marginLeft: "-64%"
-    },
-    "@media (min-width:320px) and (max-width:360px)": {
-      height: "45px",
-      width: "auto",
-      marginLeft: "-63%"
-    },
-    "@media (max-width:320px)": {
-      height: "45px",
-      width: "auto"
+    marginLeft: "0",
+    marginRight: "auto",
+    "@media (max-width:640px)": {
+      height: "50px"
     }
   },
   // class of <AppBar/> comp.
@@ -102,6 +75,10 @@ class Navbar extends Component {
     }
   }
 
+  imageClick = () => {
+    window.location.href = "https://nationalsocialsummit.org";
+  };
+
   render() {
     const { classes } = this.props;
     return (
@@ -121,6 +98,7 @@ class Navbar extends Component {
                   className={classes.logo}
                   src="/Images/Logo_Main.svg"
                   alt="logo"
+                  onClick={this.imageClick}
                 />
               </Fade>
 
