@@ -14,9 +14,6 @@ const useStyles = makeStyles(theme => ({
     width: "auto",
     display: "flex",
     overflowX: "hidden",
-    // "@media (min-width:1360px) and (max-width:1440px)": {
-    //   width: "95vw"
-    // },
     "@media (max-width:780px)": {
       height: "750px",
       width: "auto"
@@ -29,15 +26,10 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 0.5,
     flexDirection: "column",
     padding: "150px 0px 150px 120px",
-    "@media (min-width:1300px) and (max-width:1380px)": {
-      flexGrow: 0.15,
+    "@media (min-width:1030px) and (max-width:1600px)": {
+      flexGrow: 0.1,
       padding: "90px 0px 0px 50px"
     },
-    "@media (min-width:1400px) and (max-width:1440px)": {
-      padding: "90px 0px 0px 50px",
-      flexGrow: 1
-    },
-
     "@media (max-width:500px)": {
       padding: "60px 30px 15px 30px"
     },
@@ -48,7 +40,7 @@ const useStyles = makeStyles(theme => ({
   header: {
     color: "#ffffff",
     fontSize: "5.5em",
-    "@media (min-width:1360px) and (max-width:1440px)": {
+    "@media (min-width:1030px) and (max-width:1600px)": {
       fontSize: "4em"
     },
     fontFamily: ["'ibm plex serif'", "serif"].join(","),
@@ -82,15 +74,16 @@ const useStyles = makeStyles(theme => ({
     height: "4rem",
     color: "#fff",
     fontSize: "1.4rem",
-    "@media (max-width:500px)": {
-      width: "14rem",
-      height: "5rem",
-      fontSize: "1.3rem"
+    "@media (min-width: 1030px) and (max-width: 1600px)": {
+      width: "16rem",
+      height: "3.5rem",
+      fontSize: "1rem"
     },
-    "@media (min-width:505px) and (max-width:600px)": {
-      width: "17.5rem",
-      height: "5.5rem",
-      fontSize: "1.3rem"
+    "@media (max-width:640px)": {
+      width: "15rem",
+      height: "3rem",
+      fontSize: "1rem",
+      marginTop: "0.5em"
     }
   },
   imageBox: {
@@ -100,9 +93,9 @@ const useStyles = makeStyles(theme => ({
     textAlign: "center",
     flexGrow: 1,
     padding: "150px 200px 150px 200px",
-    "@media (min-width:1300px) and (max-width:1380px)": {
-      padding: "0px 0px 0px 50px",
-      flexGrow: 0.85
+    "@media (min-width:1030px) and (max-width:1600px)": {
+      padding: "0px 0px 0px 0px",
+      flexGrow: 1
     },
     "@media (max-width:780px)": {
       display: "none"
@@ -122,7 +115,12 @@ const useStyles = makeStyles(theme => ({
   calendarIcon: {
     width: "2rem",
     height: "2rem",
-    marginRight: "1rem"
+    marginRight: "1rem",
+    "@media (max-width:640px)": {
+      width: "1rem",
+      height: "1rem",
+      marginTop: "0.5rem"
+    }
   }
 }));
 
