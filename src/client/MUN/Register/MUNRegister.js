@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     height: "4rem",
     color: "#fff",
     fontSize: "1.4rem",
-    "@media(min-width:1360px) and (max-width:1450px)": {
+    "@media(min-width:1030px) and (max-width:1600px)": {
       marginTop: "1.2em",
       width: "18rem",
       height: "3.4rem",
@@ -333,7 +333,6 @@ function MUNRegister(props) {
                   </Grid>
                   <Grid item xs={12} md={8}>
                     <TextField
-                      required
                       variant="outlined"
                       id="portfolio-link"
                       label="Portfolio Link"

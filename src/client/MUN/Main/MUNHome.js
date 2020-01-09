@@ -37,9 +37,9 @@ const useStyles = makeStyles(theme => ({
     "@media (min-width:1360px) and (max-width:1440px)": {
       fontSize: "1.2em"
     },
-    "@media (max-width:780px)": {
+    "@media (max-width:640px)": {
       fontSize: "16px",
-      margin: "10px 50px 20px 0"
+      margin: "10px 50px 0 0"
     }
   },
   logo: {
@@ -47,13 +47,16 @@ const useStyles = makeStyles(theme => ({
     marginBottom: "-10vh",
     "@media (max-width:640px)": {
       height: "6rem",
-      marginBottom: "-2vh"
+      marginBottom: "-4vh"
+    },
+    "@media (min-width:1030px) and (max-width: 1600px)": {
+      height: "16rem"
     }
   },
   downloadRuleBook: {
     marginTop: "2rem",
     "@media (max-width:640px)": {
-      marginTop: '0.5rem'
+      marginTop: "0.5rem"
     }
   },
   downloadText: {
@@ -63,7 +66,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: "1.4em",
     fontFamily: ["'Roboto'", "sans-serif"].join(","),
     "@media (max-width:640px)": {
-     fontSize: '1rem'
+      fontSize: "1rem"
     }
   },
   downloadIcon: {
@@ -72,7 +75,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: "10px",
     "@media (max-width:640px)": {
       width: "2rem",
-      marginTop: "0px",
+      marginTop: "0px"
     }
   }
 }));

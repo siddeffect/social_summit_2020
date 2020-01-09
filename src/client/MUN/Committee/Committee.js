@@ -10,26 +10,11 @@ const useStyles = makeStyles(theme => ({
     padding: "10rem 0 0 0",
     alignItem: "center",
     justifyContent: "center",
-    "@media(min-width:1360px) and (max-width:1450px)": {
-      padding: "3.5rem 0 45px 0"
+    "@media(min-width:1030px) and (max-width:1600px)": {
+      padding: "2rem 0 2rem 0"
     },
-    "@media(min-width:500px) and (max-width:605px)": {
-      padding: "7rem 0 5.5rem 0"
-    },
-    "@media(min-width:400px) and (max-width:420px)": {
-      padding: "5rem 0 9rem 0"
-    },
-    "@media(min-width:365px) and (max-width:380px)": {
-      padding: "4rem 0 4.5rem 0"
-    },
-    "@media(min-width:385px) and (max-width:400px)": {
-      padding: "4rem 0 4.5rem 0"
-    },
-    "@media(min-width:350px) and (max-width:360px)": {
-      padding: "2.5rem 0 3rem 0"
-    },
-    "@media (max-width:320px)": {
-      padding: "2.5rem 0 3rem 0"
+    "@media (max-width:640px)": {
+      padding: "5rem 0 5rem 0"
     }
   },
   header: {
@@ -51,7 +36,8 @@ const useStyles = makeStyles(theme => ({
     },
     "@media (max-width:320px)": {
       fontSize: "32px"
-    }
+    },
+    "@media (min-width: 1030px) and (max-width: 1600px)": {}
   },
   unepLogo: {
     margin: "4vh auto 4vh auto",
@@ -59,6 +45,9 @@ const useStyles = makeStyles(theme => ({
     "@media (max-width:640px)": {
       height: "20vh",
       margin: "4vh auto 2vh auto"
+    },
+    "@media (min-width:1030px) and (max-width:1600px)": {
+      height: "25vh"
     }
   },
   leadContent: {
@@ -70,11 +59,9 @@ const useStyles = makeStyles(theme => ({
     maxWidth: "70vw",
     color: "#000",
     margin: "1rem auto auto auto",
-    "@media(min-width:1360px) and (max-width:1400px)": {
-      marginBottom: "1.6rem"
-    },
-    "@media(min-width:1400px) and (max-width:1460px)": {
-      marginBottom: "3rem"
+    "@media(min-width:1030px) and (max-width:1600px)": {
+      marginBottom: "1.6rem",
+      fontSize: "1.4rem"
     },
     "@media(min-width:500px) and (max-width:605px)": {
       fontSize: "22px",

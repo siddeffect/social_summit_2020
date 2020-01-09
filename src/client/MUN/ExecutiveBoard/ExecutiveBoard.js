@@ -11,11 +11,11 @@ const useStyles = makeStyles(theme => ({
     padding: "5rem 0 0 0",
     alignItem: "center",
     justifyContent: "center",
-    "@media (min-width:1360px) and (max-width:1600px)": {
+    "@media (min-width:1030px) and (max-width:1600px)": {
       height: "100vh"
     },
     "@media (max-width:640px)": {
-      padding: "1rem 0 0 0",
+      padding: "4vh 0 0 0 ",
       height: "130vh"
     }
   },
@@ -26,17 +26,8 @@ const useStyles = makeStyles(theme => ({
     letterSpacing: "-.03rem",
     fontWeight: "600",
     lineHeight: "1.2",
-    "@media(min-width:500px) and (max-width:605px)": {
-      fontSize: "44px",
-      fontWeight: 550,
-      letterSpacing: 0,
-      marginBottom: 0
-    },
-    "@media(min-width:350px) and (max-width:420px)": {
-      fontSize: "32px"
-    },
-    "@media (max-width:320px)": {
-      fontSize: "32px"
+    "@media (max-width:640px)": {
+      fontSize: "2rem"
     }
   },
   memberImg: {
@@ -45,7 +36,11 @@ const useStyles = makeStyles(theme => ({
     borderRadius: "12px",
     marginBottom: "1vh",
     "@media (max-width:640px)": {
-      height: "20vh"
+      height: "15vh"
+    },
+    "@media (min-width:1030px) and (max-width:1600px)": {
+      height: "20vh",
+      borderRadius: "8px"
     }
   },
   board: {
@@ -60,14 +55,12 @@ const useStyles = makeStyles(theme => ({
     color: "#fff",
     fontFamily: ["'ibm plex serif'", "serif"].join(","),
     fontSize: "1.5rem",
-    "@media (min-width:1460px) and (max-width:1600px)": {
-      fontSize: "1.6rem"
-    },
-    "@media (min-width:1360px) and (max-width:1460px)": {
-      fontSize: "1.4rem"
+    "@media (min-width:1030px) and (max-width:1600px)": {
+      fontSize: "1.3rem"
     },
     "@media (max-width:640px)": {
-      fontSize: "1rem"
+      fontSize: "1rem",
+      marginTop: "2vh"
     }
   },
   chairperson: {
