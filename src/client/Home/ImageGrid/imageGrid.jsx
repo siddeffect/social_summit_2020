@@ -12,6 +12,9 @@ class Carousel extends Component {
   render() {
     return (
       <div className={Styles.container}>
+        <Fade>
+          <label className={Styles.mainHeader}>Events</label>
+        </Fade>
         {this.state.width > 768 ? (
           <div className={Styles.desktopOnly}>
             <div className={Styles.wraper1}>
