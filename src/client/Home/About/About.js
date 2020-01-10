@@ -109,92 +109,43 @@ const useStyles = makeStyles(theme => ({
     }
   },
   mainSlider: {
-    margin: "0 15vw 0 7.5vw",
-    "@media(min-width:1300px) and (max-width:1450px)": {
-      margin: "0 10vw 0 7vw"
+    margin: "0 8vw 0 auto",
+    "@media(min-width:1030px) and (max-width:1300px)": {
+      margin: "0 auto 0 auto"
     },
-    "@media(min-width:500px) and (max-width:600px)": {
-      margin: "0 15vw 0 3.5vw;"
+    "@media(min-width:1300px) and (max-width:1600px)": {
+      margin: "0 4vw 0 auto"
     }
   },
   container: {
     maxWidth: "20vw",
-    "@media(min-width:1300px) and (max-width:1450px)": {
+    textAlign: "center",
+    "@media(min-width:1030px) and (max-width:1600px)": {
       maxWidth: "21vw"
     },
-    "@media(min-width:500px) and (max-width:605px)": {
-      maxWidth: "85vw"
-    },
-    "@media(min-width:350px) and (max-width:420px)": {
-      maxWidth: "100vw"
-    },
-    "@media (max-width:320px)": {
-      maxWidth: "100vw"
+    "@media (max-width:780px)": {
+      maxWidth: "90vw"
     }
   },
   followHeader: {
-    textAlign: "justify",
+    textAlign: "center",
     fontFamily: ["'ibm plex serif'", "serif"].join(","),
     fontWeight: 600,
     letterSpacing: "2px",
     fontSize: "2rem",
     marginBottom: "2rem",
-    color: "#fff",
-    marginLeft: "35%",
-    "@media(min-width:500px) and (max-width:605px)": {
-      fontSize: "30px",
-      marginBottom: "1rem",
-      marginLeft: "34%"
-    },
-    "@media(min-width:350px) and (max-width:420px)": {
-      fontSize: "28px",
-      marginBottom: "0.5%",
-      textAlign: "center",
-      fontWeight: 550,
-      marginLeft: 0
-    },
-    "@media (max-width:320px)": {
-      fontSize: "28px",
-      marginBottom: "0.5%",
-      textAlign: "center",
-      fontWeight: 550,
-      marginLeft: 0
-    }
+    color: "#fff"
   },
   followContent: {
-    textAlign: "center",
     color: "rgba(255,255,255,.7)",
     fontFamily: ["'ibm plex serif'", "serif"].join(","),
     fontSize: "1.2rem",
     lineHeight: "1.5",
-    "@media(min-width:500px) and (max-width:605px)": {
-      fontSize: "20px",
+    "@media (max-width:640px)": {
+      fontSize: "1.2rem",
       textAlign: "center"
     },
-    "@media(min-width:400px) and (max-width:420px)": {
-      fontSize: "20px",
-      textAlign: "center",
-      marginBottom: 0,
-      lineHeight: "1.3"
-    },
-    "@media(min-width:350px) and (max-width:380px)": {
-      fontSize: "18.5px",
-      textAlign: "center",
-      marginBottom: 0,
-      lineHeight: "1"
-    },
-    "@media(min-width:385px) and (max-width:400px)": {
-      fontSize: "20px",
-      textAlign: "center",
-      marginBottom: 0,
-      lineHeight: "1.2"
-    },
-    "@media (max-width:320px)": {
-      fontSize: "17px",
-      textAlign: "center",
-      marginBottom: 0,
-      lineHeight: "1"
-    }
+    "@media(min-width:1030px) and (max-width:1600px)": {}
   }
 }));
 
@@ -225,13 +176,13 @@ export default function About() {
       <Fade bottom>
         <label className={classes.header}>Our Story</label>
         <p className={classes.leadContent}>
-          Social summit, started in 2016, by the inspired youths who believed in
+          Social Summit, started in 2016, by the inspired youths who believed in
           crystallizing their vision for a better society. Identifying the most
           pressing social problems and thus evolving actionable insights for
           contemporary challenges, Social Summit has constantly grown, evolved
           and pushed the boundaries of what a social fest can be, by pioneering
-          in past themes such as “Empowerment through education” and “Women and
-          child welfare”.
+          in past themes such as “Empowerment through Education” and “Women and
+          Child Welfare”.
         </p>
       </Fade>
       <Fade bottom>
