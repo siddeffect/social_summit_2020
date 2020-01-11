@@ -9,6 +9,7 @@ import CADashboard from "./client/CA/dashboard/Dashboard";
 import ParticipantSignIn from "./client/Participants/auth/SignIn";
 import ParticipantSignUp from "./client/Participants/auth/SignUp";
 import ParticipantDashboard from "./client/Participants/ParticipantsDashboard/Dashboard";
+import Events from "./client/Events/Event";
 
 import {
   BrowserRouter as Router,
@@ -73,7 +74,7 @@ function App() {
           <MUN />
         </Route>
         <Route exact path="/events">
-          <ComingSoon />
+          <Events />
         </Route>
         <Route exact path="/about">
           <ComingSoon />
