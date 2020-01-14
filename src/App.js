@@ -10,6 +10,7 @@ import ParticipantSignIn from "./client/Participants/auth/SignIn";
 import ParticipantSignUp from "./client/Participants/auth/SignUp";
 import ParticipantDashboard from "./client/Participants/ParticipantsDashboard/Dashboard";
 import Events from "./client/Events/Event";
+import EventDetails from "./client/Events/EventDetails";
 
 import {
   BrowserRouter as Router,
@@ -73,8 +74,11 @@ function App() {
         <Route exact path="/mun">
           <MUN />
         </Route>
-        <Route exact path="/events">
+        <Route exact path="/event">
           <Events />
+        </Route>
+        <Route exact path="/event/details">
+          <EventDetails />
         </Route>
         <Route exact path="/about">
           <ComingSoon />
