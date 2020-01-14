@@ -7,6 +7,7 @@ import {
   ThemeProvider
 } from "@material-ui/core/styles";
 import { Grid, Button } from "@material-ui/core";
+import eventData from "./events_data";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -54,41 +55,47 @@ const theme = createMuiTheme({
 
 function EventDetails(props) {
   const classes = useStyles();
+  const { eventType } = props;
+
+  const perks = eventData[eventType].perks.map((item, i) => {
+    return <li key={i}>{item}</li>;
+  });
+
+  const coordinators = eventData[eventType].coordinator.map((item, i) => {
+    return (
+      <span key={i}>
+        {item.name}
+        <br />
+        {item.contact}
+        <br />
+        {item.email}
+      </span>
+    );
+  });
+
   return (
     <div className={classes.root}>
       <Navbar />
-      {/* <img
-        src="/Images/event/case_study_edit.jpg"
-        alt="case_study_image"
-        className={classes.background}
-      /> */}
       <div className={classes.eventDetails}>
         <Grid container>
           <Grid item xs={12}>
-            <h1 className={classes.header}>Case Study</h1>
+            <h1 className={classes.header}>{eventData[eventType].name}</h1>
           </Grid>
           <Grid item xs={12}>
             <h1 className={classes.header}>Prize Worth:{"  "}</h1>
-            <p className={classes.prizeValue}>₹ 20,000</p>
-          </Grid>
-          <Grid item xs={12}>
-            <p className={classes.description}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-              dignissimos rerum debitis numquam officiis, illum dolorum omnis
-              culpa explicabo? Error, culpa natus! Tenetur architecto laborum
-              dolores totam dolorem beatae consequuntur nobis voluptatibus quo
-              ab aspernatur eius, ratione itaque nostrum placeat ad. Ex, quo
-              ducimus. Suscipit soluta neque amet ipsam nulla ex delectus saepe
-              assumenda commodi numquam, cumque fugiat accusantium repudiandae.
-              Debitis unde a ipsum dolorum cupiditate animi nemo voluptate
-              aspernatur labore reiciendis sint eius quibusdam provident quo
-              temporibus accusantium officia dolore, alias nulla. Atque et
-              corrupti incidunt quod corporis nisi dignissimos, dolores magni
-              alias ipsam, fugiat repudiandae veniam tenetur numquam.
+            <p className={classes.prizeValue}>
+              {eventData[eventType].prizeWorth}
             </p>
           </Grid>
           <Grid item xs={12}>
-            <h1 className={classes.header}>Sponsored By:</h1>
+            <p className={classes.description}>
+              {eventData[eventType].description}
+            </p>
+          </Grid>
+          <Grid item xs={12}>
+            <h1 className={classes.header}>
+              Sponsored By:{eventData[eventType].sponsoredBy}
+            </h1>
           </Grid>
           <Grid item xs={12}>
             <ThemeProvider theme={theme}>
@@ -104,38 +111,12 @@ function EventDetails(props) {
           </Grid>
           <Grid item xs={12}>
             <h1 className={classes.header}>Perks:</h1>
-          </Grid>
-
-          <Grid item xs={12}>
-            <ul className={classes.description}>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Architecto quia nulla saepe nostrum at soluta atque quisquam
-                autem fugit debitis.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Architecto quia nulla saepe nostrum at soluta atque quisquam
-                autem fugit debitis.
-              </li>
-            </ul>
+            <ul className={classes.description}>{perks}</ul>
           </Grid>
           <Grid item xs={12}>
             <h1 className={classes.header}>Co-ordinator:</h1>
 
-            <p className={classes.description}>
-              Siddharth
-              <br />
-              +91-8145596657
-              <br />
-              sid.socialsummit@gmail.com
-              <br />
-              Siddharth
-              <br />
-              +91-8145596657
-              <br />
-              sid.socialsummit@gmail.com
-            </p>
+            <p className={classes.description}>{coordinators}</p>
           </Grid>
         </Grid>
       </div>

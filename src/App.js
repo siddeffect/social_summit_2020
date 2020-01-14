@@ -77,8 +77,13 @@ function App() {
         <Route exact path="/event">
           <Events />
         </Route>
-        <Route exact path="/event/details">
-          <EventDetails />
+
+        {/* events routs */}
+        <Route exact path="/event/modelunitedNation">
+          <EventDetails eventType="modelUnitedNation" />
+        </Route>
+        <Route exact path="/event/caseStudy">
+          <EventDetails eventType="caseStudy" />
         </Route>
         <Route exact path="/about">
           <ComingSoon />
