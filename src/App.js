@@ -11,6 +11,7 @@ import ParticipantSignUp from "./client/Participants/auth/SignUp";
 import ParticipantDashboard from "./client/Participants/ParticipantsDashboard/Dashboard";
 import Events from "./client/Events/Event";
 import EventDetails from "./client/Events/EventDetails";
+import Partners from './client/Partners/Partners'
 
 import {
   BrowserRouter as Router,
@@ -77,6 +78,9 @@ function App() {
         <Route exact path="/event">
           <Events />
         </Route>
+        <Route exact path="/partners">
+          <Partners />
+        </Route>
 
         {/* events routs */}
 
@@ -103,9 +107,7 @@ function App() {
         <Route exact path="/contact">
           <ComingSoon />
         </Route>
-        <Route exact path="/partners">
-          <ComingSoon />
-        </Route>
+  
         <Route component={Page404} />
       </Switch>
     </Router>

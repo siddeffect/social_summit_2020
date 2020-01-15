@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import moment from 'moment';
 import './Countdown.css'
+import Fade from "react-reveal/Fade";
 
 class Countdown extends Component {
         state = {
@@ -46,8 +47,9 @@ class Countdown extends Component {
             return null;
         }
 
-        return (
+        return (   
             <div className="countdownContainer">
+             <Fade bottom>
                 <div className="countdown-wrapper">
                     {days && (
                         <div className="countdown-item">
@@ -79,7 +81,9 @@ class Countdown extends Component {
                         </div>
                     )}
                 </div>
+                </Fade>
             </div>
+      
         );
     }
 }
