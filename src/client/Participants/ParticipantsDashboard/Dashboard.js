@@ -169,7 +169,9 @@ const Dashboard = props => {
   }
 
   if (!participantAuth.uid) return <Redirect to="/signin" />;
-
+  console.log(profile.role);
+  if (profile.role === "CA")
+    return <Redirect to="/campusambassador/dashboard" />;
   return (
     <div>
       <Navbar style={{ margin: "10vh 0 20vh 0" }} />

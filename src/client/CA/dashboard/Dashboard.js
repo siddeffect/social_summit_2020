@@ -161,6 +161,7 @@ const Dashboard = props => {
   const classes = useStyles();
   const { profile, auth } = props;
   if (!auth.uid) return <Redirect to="/campusambassador/signin" />;
+  if (profile.role === "PARTICIPANT") return <Redirect to="/dashboard" />;
 
   return (
     <div>
