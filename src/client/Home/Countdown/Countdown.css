@@ -26,7 +26,7 @@ body {
 
 .countdown-item {
     color: #00a650;
-    font-size: 40px;
+    font-size: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,22 +35,42 @@ body {
     margin: 10px;
     padding-top: 10px;
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 295px;
+    height: 295px;
 }
 
-.countdown-item span {
-    /* color: #00a650; */
-    font-size: 15px;
+.countdown-span {
+    font-size: 24px;
     font-weight: 500;
     text-transform: uppercase;
+    line-height: 50px;
 }
 
 .countdown-svg {
-    /* color: #00a650; */
     position: absolute;
     top: 0;
     left: 0;
-    width: 120px;
-    height: 120px;
+    width: 295px;
+    height: 295px;
+    
+}
+
+@media screen and (max-width:768px){
+    .countdown-svg{
+    width: 100px;
+    height: 100px;
+    }
+
+    .countdown-item {
+     width: 100px;
+    height: 100px;
+    }
+
+    .countdown-span {
+        font-size: 14px;
+    }
+
+    .countdown-item{
+        font-size: 36px;
+    }
 }

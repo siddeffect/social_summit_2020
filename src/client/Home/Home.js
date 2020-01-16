@@ -14,7 +14,7 @@ function Home() {
     <div>
       <Navbar />
       <Hero />
-      <Countdown timeTillDate="02 14 2020, 12:00 am" timeFormat="MM DD YYYY, h:mm a"/>
+      <Countdown timeTillDate="02 14 2020,12:00:00 am" timeFormat="MM DD YYYY, h:mm a"/>
       <About />
       <CounterComponent />
       <Grid />

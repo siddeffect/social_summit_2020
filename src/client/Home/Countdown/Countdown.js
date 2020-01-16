@@ -8,10 +8,9 @@ class Countdown extends Component {
             days: undefined,
             hours: undefined,
             minutes: undefined,
-            seconds: undefined
+            seconds: undefined,
+            width:window.innerWidth
         };
-
-    
 
     componentDidMount() {
         this.interval = setInterval(() => {
@@ -25,7 +24,7 @@ class Countdown extends Component {
             const seconds = countdown.format('ss');
 
             this.setState({ days, hours, minutes, seconds });
-        }, 1000);
+        },1000);
     }
 
     componentWillUnmount() {
@@ -53,31 +52,32 @@ class Countdown extends Component {
                 <div className="countdown-wrapper">
                     {days && (
                         <div className="countdown-item">
-                            <SVGCircle radius={daysRadius} />
+                          {this.state.width < 768? <SVGCircle1 radius={daysRadius} /> :<SVGCircle2 radius={daysRadius} />}  
                             {days}
-                            <span>days</span>
+                            <span className="countdown-span">days</span>
                         </div>
                     )}
                     {hours && (
                         <div className="countdown-item">
-                            <SVGCircle radius={hoursRadius} />
+                          {this.state.width < 768 ? <SVGCircle1 radius={hoursRadius} />:<SVGCircle2 radius={hoursRadius} /> }  
                             {hours}
-                            <span>hours</span>
+                            <span className="countdown-span">hours</span>
                         </div>
-                    )}</div>
+                    )}
+                    </div>
                      <div className="countdown-wrapper">
                     {minutes && (
                         <div className="countdown-item">
-                            <SVGCircle radius={minutesRadius} />
+                         {this.state.width < 768 ?<SVGCircle1 radius={minutesRadius} />:<SVGCircle2 radius={minutesRadius} />}   
                             {minutes}
-                            <span>minutes</span>
+                            <span className="countdown-span">minutes</span>
                         </div>
                     )}
                     {seconds && (
                         <div className="countdown-item">
-                            <SVGCircle radius={secondsRadius} />
+                          {this.state.width < 768 ?<SVGCircle1 radius={secondsRadius} />:<SVGCircle2 radius={secondsRadius} />}  
                             {seconds}
-                            <span>seconds</span>
+                            <span className="countdown-span">seconds</span>
                         </div>
                     )}
                 </div>
@@ -88,7 +88,7 @@ class Countdown extends Component {
     }
 }
 
-const SVGCircle = ({ radius }) => (
+const SVGCircle1 = ({ radius }) => (
     <svg className="countdown-svg">
         <path
             fill="none"
@@ -99,7 +99,19 @@ const SVGCircle = ({ radius }) => (
     </svg>
 );
 
-// From StackOverflow: https://stackoverflow.com/questions/5736398/how-to-calculate-the-svg-path-for-an-arc-of-a-circle
+const SVGCircle2 = ({ radius }) => (
+    <svg className="countdown-svg">
+        <path
+            fill="none"
+            stroke="#333"
+            stroke-width="4"
+            d={describeArc(145, 145, 75, 0, radius)}   
+        />
+    </svg>
+);
+
+        
+
 function polarToCartesian(centerX, centerY, radius, angleInDegrees) {
     var angleInRadians = ((angleInDegrees - 90) * Math.PI) / 180.0;
 
@@ -132,7 +144,6 @@ function describeArc(x, y, radius, startAngle, endAngle) {
     return d;
 }
 
-// From StackOverflow: https://stackoverflow.com/questions/10756313/javascript-jquery-map-a-range-of-numbers-to-another-range-of-numbers
 function mapNumber(number, in_min, in_max, out_min, out_max) {
     return (
         ((number - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
