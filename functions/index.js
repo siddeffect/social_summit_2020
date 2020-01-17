@@ -7,3 +7,8 @@ exports.getLatestPosts = functions.https.onRequest(async (req, res) => {
   const snapshot = await firestore.collection("caData").get();
   res.send(snapshot.docs.map(doc => doc.data()));
 });
+
+exports.getTotalMunData = functions.https.onRequest(async (req, res) => {
+  const snapshot = await firestore.collection("munData").get();
+  res.send(snapshot.docs.map(doc => doc.data()));
+});
