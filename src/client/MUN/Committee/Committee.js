@@ -4,7 +4,7 @@ import Fade from "react-reveal/Fade";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: "80vh",
+    height: "100vh",
     textAlign: "center",
     backgroundColor: "#e5e5e5",
     padding: "10rem 0 0 0",

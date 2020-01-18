@@ -12,6 +12,9 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "center",
     "@media (max-width:640px)": {
       height: "12vh"
+    },
+    "@media (min-width:1030px) and (max-width:1600px)": {
+      height: "24vh"
     }
   },
   header: {
@@ -22,17 +25,14 @@ const useStyles = makeStyles(theme => ({
     marginBottom: "4rem",
     fontWeight: "600",
     lineHeight: "1.2",
-    "@media(min-width:500px) and (max-width:605px)": {
-      fontSize: "44px",
+    "@media (max-width:605px)": {
+      fontSize: "32px",
       fontWeight: 550,
       letterSpacing: 0,
       marginBottom: 0
     },
-    "@media(min-width:350px) and (max-width:420px)": {
-      fontSize: "32px"
-    },
-    "@media (max-width:320px)": {
-      fontSize: "32px"
+    "@media (min-width:1030px) and (max-width:1600px)": {
+      fontSize: "3rem"
     }
   },
   downloadRuleBook: {
@@ -41,13 +41,16 @@ const useStyles = makeStyles(theme => ({
       marginTop: "0.5rem"
     }
   },
-  downloadText: {
+  prizeText: {
     verticalAlign: "middle",
     color: "#eaeaea",
     fontSize: "4em",
     fontFamily: ["'Roboto'", "sans-serif"].join(","),
     "@media (max-width:640px)": {
       fontSize: "1rem"
+    },
+    "@media (min-width:1030px) and (max-width:1600px)": {
+      fontSize: "3rem"
     }
   },
   downloadIcon: {
@@ -73,7 +76,7 @@ export default function Prize() {
             alt="download_icon"
             className={classes.downloadIcon}
           />
-          <span className={classes.downloadText}>30,000 ₹</span>
+          <span className={classes.prizeText}>30,000 ₹</span>
         </div>
       </div>
     </Fade>

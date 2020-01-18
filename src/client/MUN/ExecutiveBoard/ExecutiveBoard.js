@@ -5,7 +5,7 @@ import { Grid } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: "85vh",
+    height: "100vh",
     textAlign: "center",
     backgroundColor: "#00a650",
     padding: "5rem 0 0 0",

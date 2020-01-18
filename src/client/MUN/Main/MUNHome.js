@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
   mainContent: {
     paddingTop: "15vh",
     paddingLeft: "10vw",
-    height: "85vh"
+    height: "100vh"
   },
   header: {
     color: "#ffffff",
