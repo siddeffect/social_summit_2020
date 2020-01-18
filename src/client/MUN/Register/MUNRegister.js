@@ -12,8 +12,10 @@ import {
   TextField,
   Grid,
   Button,
-  InputAdornment
+  InputAdornment,
+  Snackbar
 } from "@material-ui/core";
+import { Alert } from "@material-ui/lab";
 import DateFnsUtils from "@date-io/date-fns";
 import {
   MuiPickersUtilsProvider,
@@ -56,6 +58,7 @@ function MUNRegister(props) {
   const classes = useStyles();
 
   const [open, setOpen] = useState(false);
+  const [snackOpen, setSnackOpen] = React.useState(false);
   const [selectedDate, handleDateChange] = useState(new Date());
   const [firstCountry, setFirstCountry] = useState(null);
   const [secondCountry, setSecondCountry] = useState(null);
@@ -89,6 +92,13 @@ function MUNRegister(props) {
     setValues({ ...values, [prop]: event.target.value });
   };
 
+  const handleSnackClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setSnackOpen(false);
+  };
+
   const data = {
     ...values,
     selectedDate: moment(selectedDate).format("MMM Do YY"),
@@ -103,6 +113,7 @@ function MUNRegister(props) {
     e.preventDefault();
     props.munRegister(data);
     setOpen(false);
+    setSnackOpen(true);
   };
 
   const theme = createMuiTheme({
@@ -122,6 +133,15 @@ function MUNRegister(props) {
       >
         Register Here
       </Button>
+      <Snackbar
+        open={snackOpen}
+        autoHideDuration={6000}
+        onClose={handleSnackClose}
+      >
+        <Alert onClose={handleSnackClose} severity="success">
+          Registered Successfully
+        </Alert>
+      </Snackbar>
       <Dialog
         fullWidth
         maxWidth="lg"
