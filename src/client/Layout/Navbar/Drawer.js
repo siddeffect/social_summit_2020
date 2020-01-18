@@ -83,7 +83,7 @@ function MenuDrawer() {
           </Link>
         </ListItem>
         <ListItem>
-          <Link to="/events">
+          <Link to="/event">
             <ListItemText primary="EVENTS" className={classes.text} />
           </Link>
         </ListItem>

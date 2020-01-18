@@ -78,19 +78,11 @@ function App() {
         <Route exact path="/event">
           <Events />
         </Route>
-        <Route exact path="/partners">
+        {/* <Route exact path="/partners">
           <Partners />
-        </Route>
+        </Route> */}
 
         {/* events routs */}
-
-        {/* <Router>
-          {["modelUnitedNation", "caseStudy"].map((path, index) => (
-            <Route exact path={`/event/${path}`} key={index}>
-              <EventDetails eventType={path} />
-            </Route>
-          ))}
-        </Router> */}
         <Route exact path="/event/modelunitedNation">
           <EventDetails eventType="modelUnitedNation" />
         </Route>
