@@ -83,63 +83,63 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function EventGrid() {
+function EventGrid(props) {
   const classes = useStyles();
 
   const images = [
     {
-      url:
-        "https://images.unsplash.com/photo-1534081333815-ae5019106622?auto=format&fit=crop&w=400&q=80",
+      url: "/Images/events_images/case_study-min.jpg",
       title: "Case Study",
-      width: "40%"
+      width: "40%",
+      link: "/caseStudy"
     },
     {
-      url:
-        "https://images.unsplash.com/photo-1531299204812-e6d44d9a185c?auto=format&fit=crop&w=400&q=80",
-      title: "Street Play",
-      width: "20%"
+      url: "/Images/events_images/street_play-min.jpg",
+      title: "Nukkad Natak",
+      width: "20%",
+      link: "/nukkadNatak"
     },
     {
-      url:
-        "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=400&q=80",
-      title: "Work Presentation",
-      width: "40%"
+      url: "/Images/events_images/work_presentation-min.jpg",
+      title: "Innovision",
+      width: "40%",
+      link: "/innovision"
     },
     {
-      url:
-        "https://images.unsplash.com/photo-1453747063559-36695c8771bd?auto=format&fit=crop&w=400&q=80",
-      title: "B Plan",
-      width: "38%"
+      url: "/Images/events_images/b_plan-min.jpg",
+      title: "Action Plan",
+      width: "33%",
+      link: "/actionPlan"
     },
     {
-      url:
-        "https://images.unsplash.com/photo-1523309996740-d5315f9cc28b?auto=format&fit=crop&w=400&q=80",
+      url: "/Images/events_images/cultural_night-min.jpg",
       title: "Cultural Night",
-      width: "38%"
+      width: "34%",
+      link: ""
     },
     {
-      url:
-        "https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=400&q=80",
+      url: "/Images/events_images/rtc-min.jpg",
       title: "Round Table Conference",
-      width: "24%"
+      width: "33%",
+      link: "/roundTableConference"
     },
     {
-      url:
-        "https://images.unsplash.com/photo-1506941433945-99a2aa4bd50a?auto=format&fit=crop&w=400&q=80",
+      url: "/Images/events_images/mun-min.jpg",
       title: "MUN",
-      width: "40%"
+      width: "40%",
+      link: "/modelUnitedNation"
     },
     {
-      url:
-        "https://images.unsplash.com/photo-1533727937480-da3a97967e95?auto=format&fit=crop&w=400&q=80",
+      url: "/Images/events_images/hackathon-min.jpg",
       title: "Hackathon",
-      width: "20%"
+      width: "30%",
+      link: ""
     },
     {
-      url:
-        "https://images.unsplash.com/photo-1518136247453-74e7b5265980?auto=format&fit=crop&w=400&q=80",
-      title: "Impact Series",
-      width: "40%"
+      url: "/Images/events_images/online_events-min.jpg",
+      title: "Online Events",
+      width: "30%",
+      link: ""
     }
   ];
 
@@ -156,6 +156,7 @@ function EventGrid() {
             style={{
               width: image.width
             }}
+            href={window.location.href + image.link}
           >
             <div
               className={classes.imageSrc}

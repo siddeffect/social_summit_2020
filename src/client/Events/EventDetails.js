@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
   },
   eventDetails: {
     // eslint-disable-next-line
-    backgroundImage: "url(" + "/Images/Subtle-Prism.svg" + ")",
+    background: "url(" + "/Images/Subtle-Prism.svg" + ")",
     padding: "15vh 10vw 15vh 10vw"
   },
   paper: {
