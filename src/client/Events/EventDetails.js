@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme => ({
     fontFamily: ["'ibm plex serif'", "serif"].join(",")
   },
   button: {
-    margin: "4vh auto 4vh auto",
+    margin: "2vh auto 2vh auto",
     fontSize: "1.4rem",
     fontWeight: 600
   }
@@ -66,7 +66,7 @@ function EventDetails(props) {
       <span key={i}>
         {item.name}
         <br />
-        {item.contact}
+        +91-{item.contact}
         <br />
         {item.email}
       </span>
@@ -82,9 +82,15 @@ function EventDetails(props) {
             <h1 className={classes.header}>{eventData[eventType].name}</h1>
           </Grid>
           <Grid item xs={12}>
-            <h1 className={classes.header}>Prize Worth:{"  "}</h1>
+            <h1 className={classes.header}>Prize Worth:</h1>
             <p className={classes.prizeValue}>
               {eventData[eventType].prizeWorth}
+            </p>
+          </Grid>
+          <Grid item xs={12}>
+            <h1 className={classes.header}>Date:</h1>
+            <p className={classes.prizeValue}>
+              {eventData[eventType].heldDate}
             </p>
           </Grid>
           <Grid item xs={12}>
@@ -92,26 +98,58 @@ function EventDetails(props) {
               {eventData[eventType].description}
             </p>
           </Grid>
-          <Grid item xs={12}>
-            <h1 className={classes.header}>
-              Sponsored By:{eventData[eventType].sponsoredBy}
-            </h1>
-          </Grid>
-          <Grid item xs={12}>
-            <ThemeProvider theme={theme}>
-              <Button
-                size="large"
-                variant="outlined"
-                color="primary"
-                className={classes.button}
-              >
-                Register
-              </Button>
-            </ThemeProvider>
-          </Grid>
+          {!eventData[eventType].sponsoredBy ? null : (
+            <Grid item xs={12}>
+              <h1 className={classes.header}>
+                Sponsored By:
+                <br />
+                {eventData[eventType].sponsoredBy}
+              </h1>
+            </Grid>
+          )}
+
+          <ThemeProvider theme={theme}>
+            <Grid
+              container
+              direction="row"
+              justify="flex-start"
+              alignItems="flex-start"
+            >
+              <Grid item xs={12}>
+                <Button
+                  size="large"
+                  variant="outlined"
+                  color="primary"
+                  className={classes.button}
+                  href={eventData[eventType].registrationLink}
+                  target="_blank"
+                >
+                  Register
+                </Button>
+              </Grid>
+              <Grid item xs={12}>
+                <Button
+                  size="large"
+                  variant="outlined"
+                  color="primary"
+                  className={classes.button}
+                  href={eventData[eventType].ruleBook}
+                  target="_blank"
+                >
+                  RuleBook
+                </Button>
+              </Grid>
+            </Grid>
+          </ThemeProvider>
           <Grid item xs={12}>
             <h1 className={classes.header}>Perks:</h1>
             <ul className={classes.description}>{perks}</ul>
+          </Grid>
+          <Grid item xs={12}>
+            <h1 className={classes.header}>Dead Line:</h1>
+            <p className={classes.prizeValue}>
+              {eventData[eventType].registrationDeadLine}
+            </p>
           </Grid>
           <Grid item xs={12}>
             <h1 className={classes.header}>Co-ordinator:</h1>

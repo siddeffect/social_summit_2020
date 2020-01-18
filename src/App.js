@@ -80,19 +80,34 @@ function App() {
 
         {/* events routs */}
 
-        <Router>
+        {/* <Router>
           {["modelUnitedNation", "caseStudy"].map((path, index) => (
             <Route exact path={`/event/${path}`} key={index}>
               <EventDetails eventType={path} />
             </Route>
           ))}
-        </Router>
-        {/* <Route exact path="/event/modelunitedNation">
+        </Router> */}
+        <Route exact path="/event/modelunitedNation">
           <EventDetails eventType="modelUnitedNation" />
         </Route>
         <Route exact path="/event/caseStudy">
           <EventDetails eventType="caseStudy" />
-        </Route> */}
+        </Route>
+        <Route exact path="/event/nukkadNatak">
+          <EventDetails eventType="nukkadNatak" />
+        </Route>
+        <Route exact path="/event/innovision">
+          <EventDetails eventType="innovision" />
+        </Route>
+        <Route exact path="/event/policyCaseCompetition">
+          <EventDetails eventType="policyCaseCompetition" />
+        </Route>
+        <Route exact path="/event/actionPlan">
+          <EventDetails eventType="actionPlan" />
+        </Route>
+        <Route exact path="/event/roundTableConference">
+          <EventDetails eventType="roundTableConference" />
+        </Route>
 
         <Route exact path="/about">
           <ComingSoon />
@@ -101,9 +116,6 @@ function App() {
           <ComingSoon />
         </Route>
         <Route exact path="/contact">
-          <ComingSoon />
-        </Route>
-        <Route exact path="/partners">
           <ComingSoon />
         </Route>
         <Route component={Page404} />
