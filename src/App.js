@@ -11,7 +11,7 @@ import ParticipantSignUp from "./client/Participants/auth/SignUp";
 import ParticipantDashboard from "./client/Participants/ParticipantsDashboard/Dashboard";
 import Events from "./client/Events/Event";
 import EventDetails from "./client/Events/EventDetails";
-import Partners from "./client/Partners/Partners";
+// import Partners from "./client/Partners/Partners";
 
 import {
   BrowserRouter as Router,
@@ -103,6 +103,27 @@ function App() {
         </Route>
         <Route exact path="/event/roundTableConference">
           <EventDetails eventType="roundTableConference" />
+        </Route>
+        <Route exact path="/event/1080p">
+          <EventDetails eventType="videoMaking" />
+        </Route>
+        <Route exact path="/event/workshop">
+          <EventDetails eventType="workshop" />
+        </Route>
+        <Route exact path="/event/innovision">
+          <EventDetails eventType="innovision" />
+        </Route>
+        <Route exact path="/event/pixel">
+          <EventDetails eventType="pixel" />
+        </Route>
+        <Route exact path="/event/inquizition">
+          <EventDetails eventType="inquizition" />
+        </Route>
+        <Route exact path="/event/microfiction">
+          <EventDetails eventType="microfiction" />
+        </Route>
+        <Route exact path="/event/caricature">
+          <EventDetails eventType="caricature" />
         </Route>
 
         <Route exact path="/about">

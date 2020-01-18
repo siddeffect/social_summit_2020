@@ -111,11 +111,17 @@ function EventGrid(props) {
       width: "33%",
       link: "/actionPlan"
     },
+    // {
+    //   url: "/Images/events_images/cultural_night-min.jpg",
+    //   title: "Cultural Night",
+    //   width: "34%",
+    //   link: ""
+    // },
     {
-      url: "/Images/events_images/cultural_night-min.jpg",
-      title: "Cultural Night",
+      url: "/Images/events_images/workshop-min.jpg",
+      title: "Workshops",
       width: "34%",
-      link: ""
+      link: "/workshop"
     },
     {
       url: "/Images/events_images/rtc-min.jpg",
@@ -129,17 +135,42 @@ function EventGrid(props) {
       width: "40%",
       link: "/modelUnitedNation"
     },
+    // {
+    //   url: "/Images/events_images/hackathon-min.jpg",
+    //   title: "Hackathon",
+    //   width: "30%",
+    //   link: ""
+    // },
     {
-      url: "/Images/events_images/hackathon-min.jpg",
-      title: "Hackathon",
-      width: "30%",
-      link: ""
+      url: "/Images/events_images/pixel-min.jpg",
+      title: "Pixel",
+      width: "20%",
+      link: "/pixel"
+    },
+
+    {
+      url: "/Images/events_images/quiz-min.jpg",
+      title: "Inquizition",
+      width: "40%",
+      link: "/inquizition"
     },
     {
-      url: "/Images/events_images/online_events-min.jpg",
-      title: "Online Events",
+      url: "/Images/events_images/microfiction-min.jpg",
+      title: "Microfiction",
       width: "30%",
-      link: ""
+      link: "/microfiction"
+    },
+    {
+      url: "/Images/events_images/caricature-min.jpg",
+      title: "Caricature",
+      width: "40%",
+      link: "/caricature"
+    },
+    {
+      url: "/Images/events_images/1080p-min.jpg",
+      title: "1080p",
+      width: "30%",
+      link: "/1080p"
     }
   ];
 
