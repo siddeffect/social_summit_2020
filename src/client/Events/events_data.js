@@ -106,7 +106,7 @@ const eventData = {
   },
   actionPlan: {
     name: "Action Plan",
-    prizeWorth: "₹ 15,000",
+    prizeWorth: "₹ 25,000",
     description:
       'National Social Summit presents "Action-Plan", its flagship Social Entrepreneurship competition, specifically for the social entrepreneurs out there. The competition will provide a robust and efficacious platform for the delegates to showcase their budding ventures to the top mentors and investors of India and win exciting prizes worth 25K & incubation opportunities worth 200K.',
     heldDate: "16th Feb 9:00-11:00",

@@ -108,7 +108,7 @@ function EventGrid(props) {
     },
     {
       url: "/Images/events_images/b_plan-min.jpg",
-      title: "Action Plan",
+      title: "Action Plan(B-Plan)",
       width: "33%",
       link: "/actionPlan"
     },
@@ -133,8 +133,8 @@ function EventGrid(props) {
     {
       url: "/Images/events_images/mun-min.jpg",
       title: "MUN",
-      width: "40%",
-      link: "/modelUnitedNation"
+      width: "35%",
+      link: "/"
     },
     // {
     //   url: "/Images/events_images/hackathon-min.jpg",
@@ -142,35 +142,41 @@ function EventGrid(props) {
     //   width: "30%",
     //   link: ""
     // },
+
+    {
+      url: "/Images/events_images/policy_case-min.jpg",
+      title: "Policy Case Competition",
+      width: "30%",
+      link: "/policyCaseCompetition"
+    },
+    {
+      url: "/Images/events_images/quiz-min.jpg",
+      title: "Inquizition",
+      width: "35%",
+      link: "/inquizition"
+    },
+    {
+      url: "/Images/events_images/microfiction-min.jpg",
+      title: "Microfiction",
+      width: "25%",
+      link: "/microfiction"
+    },
     {
       url: "/Images/events_images/pixel-min.jpg",
       title: "Pixels",
       width: "20%",
       link: "/pixels"
     },
-
-    {
-      url: "/Images/events_images/quiz-min.jpg",
-      title: "Inquizition",
-      width: "40%",
-      link: "/inquizition"
-    },
-    {
-      url: "/Images/events_images/microfiction-min.jpg",
-      title: "Microfiction",
-      width: "30%",
-      link: "/microfiction"
-    },
     {
       url: "/Images/events_images/caricature-min.jpg",
       title: "Caricature",
-      width: "40%",
+      width: "30%",
       link: "/caricature"
     },
     {
       url: "/Images/events_images/1080p-min.jpg",
       title: "1080p",
-      width: "30%",
+      width: "25%",
       link: "/1080p"
     }
   ];
@@ -189,7 +195,11 @@ function EventGrid(props) {
               style={{
                 width: image.width
               }}
-              href={window.location.href + image.link}
+              href={
+                image.title === "MUN"
+                  ? window.location.origin + "/mun"
+                  : window.location.href + image.link
+              }
             >
               <div
                 className={classes.imageSrc}
