@@ -8,6 +8,7 @@ import {
 } from "@material-ui/core/styles";
 import { Grid, Button } from "@material-ui/core";
 import eventData from "./events_data";
+import Fade from "react-reveal/Fade";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -27,16 +28,15 @@ const useStyles = makeStyles(theme => ({
     color: "#eee",
     width: "fit-content",
     textTransform: "uppercase",
-    borderBottom: "3px solid #00a650"
+    borderBottom: "3px solid #00a650",
+    fontSize: "3rem"
   },
-  prizeValue: {
-    color: "#e2e2e2",
-    fontSize: "2rem",
-    fontFamily: ["'ibm plex serif'", "serif"].join(","),
-    fontWeight: 600
+  subHeader: {
+    color: "#eee",
+    width: "fit-content"
   },
   description: {
-    color: "#e2e2e2",
+    color: "#a8a8a8",
     fontSize: "1.6rem",
     fontFamily: ["'ibm plex serif'", "serif"].join(",")
   },
@@ -79,32 +79,41 @@ function EventDetails(props) {
       <div className={classes.eventDetails}>
         <Grid container>
           <Grid item xs={12}>
-            <h1 className={classes.header}>{eventData[eventType].name}</h1>
+            <Fade bottom>
+              <h1 className={classes.header}>{eventData[eventType].name}</h1>
+            </Fade>
           </Grid>
           <Grid item xs={12}>
-            <h1 className={classes.header}>Prize Worth:</h1>
-            <p className={classes.prizeValue}>
-              {eventData[eventType].prizeWorth}
-            </p>
+            <Fade bottom>
+              <h1 className={classes.subHeader}>
+                Prize Worth: {eventData[eventType].prizeWorth}
+              </h1>
+            </Fade>
           </Grid>
           <Grid item xs={12}>
-            <h1 className={classes.header}>Date:</h1>
-            <p className={classes.prizeValue}>
-              {eventData[eventType].heldDate}
-            </p>
+            <Fade bottom>
+              <h1 className={classes.subHeader}>Date:</h1>
+              <p className={classes.description}>
+                {eventData[eventType].heldDate}
+              </p>
+            </Fade>
           </Grid>
           <Grid item xs={12}>
-            <p className={classes.description}>
-              {eventData[eventType].description}
-            </p>
+            <Fade bottom>
+              <p className={classes.description}>
+                {eventData[eventType].description}
+              </p>
+            </Fade>
           </Grid>
           {!eventData[eventType].sponsoredBy ? null : (
             <Grid item xs={12}>
-              <h1 className={classes.header}>
-                Sponsored By:
-                <br />
-                {eventData[eventType].sponsoredBy}
-              </h1>
+              <Fade bottom>
+                <h1 className={classes.subHeader}>
+                  Sponsored By:
+                  <br />
+                  {eventData[eventType].sponsoredBy}
+                </h1>
+              </Fade>
             </Grid>
           )}
 
@@ -115,46 +124,55 @@ function EventDetails(props) {
               justify="flex-start"
               alignItems="flex-start"
             >
-              <Grid item xs={12}>
-                <Button
-                  size="large"
-                  variant="outlined"
-                  color="primary"
-                  className={classes.button}
-                  href={eventData[eventType].registrationLink}
-                  target="_blank"
-                >
-                  Register
-                </Button>
+              <Grid item xs={12} md={2}>
+                <Fade bottom>
+                  <Button
+                    size="large"
+                    variant="outlined"
+                    color="primary"
+                    className={classes.button}
+                    href={eventData[eventType].registrationLink}
+                    target="_blank"
+                  >
+                    Register
+                  </Button>
+                </Fade>
               </Grid>
-              <Grid item xs={12}>
-                <Button
-                  size="large"
-                  variant="outlined"
-                  color="primary"
-                  className={classes.button}
-                  href={eventData[eventType].ruleBook}
-                  target="_blank"
-                >
-                  RuleBook
-                </Button>
+              <Grid item xs={12} md={2}>
+                <Fade bottom>
+                  <Button
+                    size="large"
+                    variant="outlined"
+                    color="primary"
+                    className={classes.button}
+                    href={eventData[eventType].ruleBook}
+                    target="_blank"
+                  >
+                    RuleBook
+                  </Button>
+                </Fade>
               </Grid>
             </Grid>
           </ThemeProvider>
           <Grid item xs={12}>
-            <h1 className={classes.header}>Perks:</h1>
-            <ul className={classes.description}>{perks}</ul>
+            <Fade bottom>
+              <h1 className={classes.subHeader}>Perks:</h1>
+              <ul className={classes.description}>{perks}</ul>
+            </Fade>
           </Grid>
           <Grid item xs={12}>
-            <h1 className={classes.header}>Dead Line:</h1>
-            <p className={classes.prizeValue}>
-              {eventData[eventType].registrationDeadLine}
-            </p>
+            <Fade bottom>
+              <h1 className={classes.subHeader}>Dead Line:</h1>
+              <p className={classes.description}>
+                {eventData[eventType].registrationDeadLine}
+              </p>
+            </Fade>
           </Grid>
           <Grid item xs={12}>
-            <h1 className={classes.header}>Co-ordinator:</h1>
-
-            <p className={classes.description}>{coordinators}</p>
+            <Fade bottom>
+              <h1 className={classes.subHeader}>Co-ordinator:</h1>
+              <p className={classes.description}>{coordinators}</p>
+            </Fade>
           </Grid>
         </Grid>
       </div>

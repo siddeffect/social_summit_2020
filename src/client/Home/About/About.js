@@ -172,55 +172,58 @@ export default function About() {
     ]
   };
   return (
-    <div className={classes.root}>
-      <Fade bottom>
-        <label className={classes.header}>Our Story</label>
-        <p className={classes.leadContent}>
-          Social Summit, started in 2016, by the inspired youths who believed in
-          crystallizing their vision for a better society. Identifying the most
-          pressing social problems and thus evolving actionable insights for
-          contemporary challenges, Social Summit has constantly grown, evolved
-          and pushed the boundaries of what a social fest can be, by pioneering
-          in past themes such as “Empowerment through Education” and “Women and
-          Child Welfare”.
-        </p>
-      </Fade>
-      <Fade bottom>
-        {/* This is the carousel */}
-        <div>
-          <Slider {...settings} className={classes.mainSlider}>
-            <div className={classes.container}>
-              <h3 className={classes.followHeader}> Mission </h3>
-              <p className={classes.followContent}>
-                Social integration is indispensable to create an inclusive
-                society. We devise ‘sustainable solution model’ to the social
-                problems engaging with the community and stakeholders, creating
-                a sense of responsibility and awareness in the society.
-              </p>
-            </div>
-            <div className={classes.container}>
-              <h3 className={classes.followHeader}>Vision</h3>
-              <p className={classes.followContent}>
-                Eradication of disparity in different sections of society,
-                propagating the propaganda of curing indifferences, Summit aims
-                to clear the path of its inspired manifestation by uplifting the
-                burdened sections of society to bridge the existing communal
-                chasm.
-              </p>
-            </div>
-            <div className={classes.container}>
-              <h3 className={classes.followHeader}>Dynamics</h3>
-              <p className={classes.followContent}>
-                Collaboration with 30+ NGO’s and various stakeholders to sketch
-                the inspired imagination of ‘curving indifferences’ on paper.
-                Entrenched connections with social activists at ground level
-                encompassing contemporary social problems and their excavation
-                from roots.
-              </p>
-            </div>
-          </Slider>
-        </div>
-      </Fade>
-    </div>
+    <Fade>
+      <div className={classes.root}>
+        <Fade bottom>
+          <label className={classes.header}>Our Story</label>
+          <p className={classes.leadContent}>
+            Social Summit, started in 2016, by the inspired youths who believed
+            in crystallizing their vision for a better society. Identifying the
+            most pressing social problems and thus evolving actionable insights
+            for contemporary challenges, Social Summit has constantly grown,
+            evolved and pushed the boundaries of what a social fest can be, by
+            pioneering in past themes such as “Empowerment through Education”
+            and “Women and Child Welfare”.
+          </p>
+        </Fade>
+        <Fade bottom>
+          {/* This is the carousel */}
+          <div>
+            <Slider {...settings} className={classes.mainSlider}>
+              <div className={classes.container}>
+                <h3 className={classes.followHeader}> Mission </h3>
+                <p className={classes.followContent}>
+                  Social integration is indispensable to create an inclusive
+                  society. We devise ‘sustainable solution model’ to the social
+                  problems engaging with the community and stakeholders,
+                  creating a sense of responsibility and awareness in the
+                  society.
+                </p>
+              </div>
+              <div className={classes.container}>
+                <h3 className={classes.followHeader}>Vision</h3>
+                <p className={classes.followContent}>
+                  Eradication of disparity in different sections of society,
+                  propagating the propaganda of curing indifferences, Summit
+                  aims to clear the path of its inspired manifestation by
+                  uplifting the burdened sections of society to bridge the
+                  existing communal chasm.
+                </p>
+              </div>
+              <div className={classes.container}>
+                <h3 className={classes.followHeader}>Dynamics</h3>
+                <p className={classes.followContent}>
+                  Collaboration with 30+ NGO’s and various stakeholders to
+                  sketch the inspired imagination of ‘curving indifferences’ on
+                  paper. Entrenched connections with social activists at ground
+                  level encompassing contemporary social problems and their
+                  excavation from roots.
+                </p>
+              </div>
+            </Slider>
+          </div>
+        </Fade>
+      </div>
+    </Fade>
   );
 }

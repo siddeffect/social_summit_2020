@@ -87,8 +87,8 @@ const useStyles = makeStyles(theme => ({
 export default function Footer() {
   const classes = useStyles();
   return (
-    <footer className={classes.root}>
-      <Fade bottom>
+    <Fade bottom>
+      <footer className={classes.root}>
         <div className={classes.contentBox}>
           <h1 className={classes.header}>Let's Innovate for the Nature</h1>
 
@@ -167,7 +167,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-      </Fade>
-    </footer>
+      </footer>
+    </Fade>
   );
 }

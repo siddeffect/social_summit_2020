@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import Container from "@material-ui/core/Container";
 import Typography from "./Typography";
+import Fade from "react-reveal/Fade";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -143,9 +144,9 @@ function EventGrid(props) {
     // },
     {
       url: "/Images/events_images/pixel-min.jpg",
-      title: "Pixel",
+      title: "Pixels",
       width: "20%",
-      link: "/pixel"
+      link: "/pixels"
     },
 
     {
@@ -179,37 +180,39 @@ function EventGrid(props) {
       <Typography variant="h2" marked="center" align="center" component="h1">
         Events
       </Typography>
-      <div className={classes.images}>
-        {images.map(image => (
-          <ButtonBase
-            key={image.title}
-            className={classes.imageWrapper}
-            style={{
-              width: image.width
-            }}
-            href={window.location.href + image.link}
-          >
-            <div
-              className={classes.imageSrc}
+      <Fade bottom>
+        <div className={classes.images}>
+          {images.map(image => (
+            <ButtonBase
+              key={image.title}
+              className={classes.imageWrapper}
               style={{
-                backgroundImage: `url(${image.url})`
+                width: image.width
               }}
-            />
-            <div className={classes.imageBackdrop} />
-            <div className={classes.imageButton}>
-              <Typography
-                component="h3"
-                variant="h5"
-                color="inherit"
-                className={classes.imageTitle}
-              >
-                {image.title}
-                <div className={classes.imageMarked} />
-              </Typography>
-            </div>
-          </ButtonBase>
-        ))}
-      </div>
+              href={window.location.href + image.link}
+            >
+              <div
+                className={classes.imageSrc}
+                style={{
+                  backgroundImage: `url(${image.url})`
+                }}
+              />
+              <div className={classes.imageBackdrop} />
+              <div className={classes.imageButton}>
+                <Typography
+                  component="h3"
+                  variant="h5"
+                  color="inherit"
+                  className={classes.imageTitle}
+                >
+                  {image.title}
+                  <div className={classes.imageMarked} />
+                </Typography>
+              </div>
+            </ButtonBase>
+          ))}
+        </div>
+      </Fade>
     </Container>
   );
 }

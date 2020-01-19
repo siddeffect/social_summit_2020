@@ -236,6 +236,7 @@ const eventData = {
     description:
       "An online photography competition where the participants need to capture on aspect of the changing world in an image. The picture should depict evolution of the society, be it better or worse.",
     sponsoredBy: null,
+    heldDate: "till 15th Feb, 8 PM",
     ruleBook:
       "https://drive.google.com/open?id=1tTIA9KCwC8z5RMgD-AbnIWVDARDS3iz4",
     perks: ["Certificate for winners"],
@@ -256,6 +257,7 @@ const eventData = {
     description:
       "Social Summit provides you an ideal platform to showcase your ideas in the form of 1080p, the online video making competition.The subject matter of the video can be raising awareness regarding social or environmental issues.",
     sponsoredBy: null,
+    heldDate: "till 15th Feb, 8 PM",
     ruleBook:
       "https://drive.google.com/open?id=1rY58EbN8ly_32f26NA_CMevzNpPzj9kC",
     perks: ["Certificate for winners"],

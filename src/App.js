@@ -113,8 +113,8 @@ function App() {
         <Route exact path="/event/innovision">
           <EventDetails eventType="innovision" />
         </Route>
-        <Route exact path="/event/pixel">
-          <EventDetails eventType="pixel" />
+        <Route exact path="/event/pixels">
+          <EventDetails eventType="pixels" />
         </Route>
         <Route exact path="/event/inquizition">
           <EventDetails eventType="inquizition" />
