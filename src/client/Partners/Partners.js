@@ -138,7 +138,6 @@ export default function SponNgo() {
   });
 
   return (
-    
     <div className={classes.root}>
       <Navbar />
       <Fade bottom>
@@ -148,12 +147,6 @@ export default function SponNgo() {
           {NgoImages}
         </Grid>
       </Fade>
-      {/* <Fade bottom>
-        <h2 className={classes.header}></h2>
-        <Grid container spacing={3} justify="center">
-          {NgoImages}
-        </Grid>
-      </Fade> */}
     </div>
   );
 }
