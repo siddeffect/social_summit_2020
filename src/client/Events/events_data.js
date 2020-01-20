@@ -172,7 +172,7 @@ const eventData = {
     prizeWorth: "₹ 1000/- each",
     description:
       'Quizzing gives direction to all this amassed knowledge and purges the urge to test one’s mettle against another through the competitive spirit. Social Summit brings to you a series of quizzes to not just sate this innate desire but also to add to this ever-growing pool of facts in your head. Three independent online quizzes will be held on "The Diversity of Life", "Environmental rule of Law", & "Clean Energy Technology".',
-    heldDate: "26th Feb 9:00, 2nd Feb 9:00, 9th Feb 9:00",
+    heldDate: "26th Jan 9:00, 2nd Feb 9:00, 9th Feb 9:00",
     sponsoredBy: null,
     ruleBook:
       "https://drive.google.com/open?id=1GdkIVoacdHQqBLvCNcDFMgUUk_8eY7XI",
