@@ -120,7 +120,7 @@ const useStyles = makeStyles(theme => ({
     margin: "1vh 0.5rem 2vh 6vh",
     width: "10rem",
     "@media (max-width:600px)": {
-      margin: "4vh auto 5vh auto",
+      margin: "4vh auto 5vh 6vh",
       width: "60vw"
     }
   },
