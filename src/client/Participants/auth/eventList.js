@@ -6,7 +6,8 @@ const eventList = [
   "Business Plan",
   "Work Presentation",
   "Hackathon",
-  "Cultural Night"
+  "Cultural Night",
+  "Policy Case Competition"
 ];
 
 export default eventList;

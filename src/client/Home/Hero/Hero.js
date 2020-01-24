@@ -68,7 +68,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   button: {
-    marginTop: "3em",
+    marginTop: "1em",
     marginRight: "2rem",
     width: "20rem",
     height: "4rem",
@@ -81,8 +81,8 @@ const useStyles = makeStyles(theme => ({
     },
     "@media (max-width:640px)": {
       width: "15rem",
-      height: "3rem",
-      fontSize: "1rem",
+      height: "2.1rem",
+      fontSize: "0.8rem",
       marginTop: "0.5em"
     }
   },
@@ -119,7 +119,7 @@ const useStyles = makeStyles(theme => ({
     "@media (max-width:640px)": {
       width: "1rem",
       height: "1rem",
-      marginTop: "0.5rem"
+      marginTop: "0"
     }
   }
 }));
@@ -159,11 +159,23 @@ export default function Hero() {
             mind, Social Summit-2020 invites delegates from all over India
             having an ignition of ‘rebuilding nature through innovation’.
           </div>
-          <div>
-            <ThemeProvider theme={theme}>
+          <ThemeProvider theme={theme}>
+            <div>
+              <Button
+                href="https://www.thecollegefever.com/events/national-social-summit-djEwvrGaRC"
+                target="_blank"
+                variant="contained"
+                color="primary"
+                size="large"
+                className={classes.button}
+              >
+                Pay Now
+              </Button>
+            </div>
+            <div>
               <Link to="/campusambassador">
                 <Button
-                  variant="contained"
+                  variant="outlined"
                   color="primary"
                   size="large"
                   className={classes.button}
@@ -173,7 +185,7 @@ export default function Hero() {
               </Link>
               <Link to="/signup">
                 <Button
-                  variant="contained"
+                  variant="outlined"
                   color="primary"
                   size="large"
                   className={classes.button}
@@ -181,8 +193,8 @@ export default function Hero() {
                   REGISTER/LOGIN
                 </Button>
               </Link>
-            </ThemeProvider>
-          </div>
+            </div>
+          </ThemeProvider>
         </div>
         <div className={classes.imageBox}></div>
       </Fade>
