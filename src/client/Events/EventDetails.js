@@ -61,6 +61,13 @@ function EventDetails(props) {
     return <li key={i}>{item}</li>;
   });
 
+  let points = null;
+  if (eventData[eventType].sponsoredBy != null) {
+    points = eventData[eventType].sponsoredBy.points.map((item, i) => {
+      return <li key={i}>{item}</li>;
+    });
+  }
+
   const coordinators = eventData[eventType].coordinator.map((item, i) => {
     return (
       <span key={i}>
@@ -109,10 +116,9 @@ function EventDetails(props) {
             <Grid item xs={12}>
               <Fade bottom>
                 <h1 className={classes.subHeader}>
-                  Sponsored By:
-                  <br />
-                  {eventData[eventType].sponsoredBy}
+                  {eventData[eventType].sponsoredBy.header}
                 </h1>
+                <p className={classes.description}>{points}</p>
               </Fade>
             </Grid>
           )}

@@ -148,14 +148,25 @@ const eventData = {
   },
   workshop: {
     name: "Workshop",
-    prize: "---",
+    prizeWorth: "---",
     description:
-      'National Social Summit brings to you, a series of enthralling workshops, which will enrich your pool of knowledge and provide you a deeper insight to the various social and environmental issues. In collaboration with Design Innovation Centre, IIT Roorkee, workshops on "Design Thinking and Innovation", "Challenges in Himalayan Region", & "Innovations for Clean India", will be organized, inspiring the delegates to think and create solutions.',
+      "The National Social Summit brings to you, a series of enthralling workshops, which will enrich your pool of knowledge and provide you with a deeper insight into the various social and environmental issues. In collaboration with Design Innovation Centre, IIT Roorkee, workshops are conducted by skilled professionals providing you with a deeper insight into various problems and teach you, how you as an individual can play your part in solving those problems and issues Workshops consist of a series of lectures followed by its implementation of skills learned in real-world problems.",
     heldDate: "To be anounced",
-    sponsoredBy: null,
+    sponsoredBy: {
+      header: "Workshops to be organised by DIC (Design innovation Centre)",
+      image: null,
+      points: [
+        "Design thinking",
+        "Clean Water for Himalayan Region",
+        "Sustainable materials from Himalayan forest waste"
+      ]
+    },
     ruleBook:
       "https://drive.google.com/open?id=1OQNJiAaCCQGtCIHE4IHFbGRAaEoU_ejb",
-    perks: ["Certificate", "Kits", "Refreshments"],
+    perks: [
+      "Workshops to be taken by IIT Roorkee Professors.",
+      "Certificate and Startup Kits will be provided to the delegates."
+    ],
     coordinator: [
       {
         name: "Shrey Shukla",
