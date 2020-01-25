@@ -91,7 +91,7 @@ const eventData = {
     heldDate: "16th Feb 09:00-1:00",
     sponsoredBy: null,
     ruleBook:
-      "https://drive.google.com/open?id=1OadFGFMaNEGxc0rGd1OmRKSolJuqGeeW",
+      "https://drive.google.com/file/d/1v6zMHFAFoEecBmlbk7eaisC6YqoKFasp/view?usp=sharing",
     perks: ["Certificate"],
     coordinator: [
       {
