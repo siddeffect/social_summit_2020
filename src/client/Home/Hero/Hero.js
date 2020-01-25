@@ -104,6 +104,7 @@ const useStyles = makeStyles(theme => ({
   eventDates: {
     color: "#ffffff",
     fontSize: "2.2em",
+    marginTop: "1rem",
     "@media (min-width:1360px) and (max-width:1440px)": {
       fontSize: "1.5em"
     },
@@ -141,15 +142,12 @@ export default function Hero() {
           </h1>
           <div className={classes.line} />
           <label className={classes.eventDates}>
-            <p>
-              {" "}
-              <img
-                src="/Images/icons/calendar.svg"
-                alt="calendar"
-                className={classes.calendarIcon}
-              />
-              14ᵗʰ-16ᵗʰ February 2020
-            </p>
+            <img
+              src="/Images/icons/calendar.svg"
+              alt="calendar"
+              className={classes.calendarIcon}
+            />
+            14ᵗʰ-16ᵗʰ February 2020
           </label>
           <div className={classes.themeContent}>
             Environment, being an envelope of society, is susceptible to every
@@ -157,20 +155,20 @@ export default function Hero() {
             environment need innovations to mould these ways to rebuild nature,
             holding hands with the needs of the present. Keeping the same in
             mind, Social Summit-2020 invites delegates from all over India
-            having an ignition of ‘rebuilding nature through innovation’.
+            having an ignition of ‘Rebuilding Nature through Innovation’.
           </div>
           <ThemeProvider theme={theme}>
             <div>
-              <Button
-                href="https://www.thecollegefever.com/events/national-social-summit-djEwvrGaRC"
-                target="_blank"
-                variant="contained"
-                color="primary"
-                size="large"
-                className={classes.button}
-              >
-                Pay Now
-              </Button>
+              <Link to="/dashboard">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="large"
+                  className={classes.button}
+                >
+                  Pay Now
+                </Button>
+              </Link>
             </div>
             <div>
               <Link to="/campusambassador">
