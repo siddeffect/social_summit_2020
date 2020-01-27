@@ -10,6 +10,7 @@ import ParticipantSignIn from "./client/Participants/auth/SignIn";
 import ParticipantSignUp from "./client/Participants/auth/SignUp";
 import ParticipantDashboard from "./client/Participants/ParticipantsDashboard/Dashboard";
 import Events from "./client/Events/Event";
+import SocialConclave from "./client/SocialConclave/SocialConclave";
 import EventDetails from "./client/Events/EventDetails";
 // import Partners from "./client/Partners/Partners";
 
@@ -77,6 +78,9 @@ function App() {
         </Route>
         <Route exact path="/event">
           <Events />
+        </Route>
+        <Route exact path="/socialConclave">
+          <SocialConclave />
         </Route>
         {/* <Route exact path="/partners">
           <Partners />
