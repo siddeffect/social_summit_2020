@@ -99,6 +99,9 @@ function App() {
         <Route exact path="/event/innovision">
           <EventDetails eventType="innovision" />
         </Route>
+        <Route exct path="/event/sociothon">
+          <EventDetails eventType="sociothon" />
+        </Route>
         <Route exact path="/event/policyCaseCompetition">
           <EventDetails eventType="policyCaseCompetition" />
         </Route>

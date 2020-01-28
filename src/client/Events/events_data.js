@@ -283,9 +283,25 @@ const eventData = {
       "https://dare2compete.com/o/1080p-video-making-national-social-summit-20-indian-institute-of-technology-iit-roorkee-98195",
     registrationDeadLine: "26th Feb., 2nd Feb., 9th Feb. 2020"
   },
-  hackathon: {
+  sociothon: {
     name: "Sociothon",
-    prizeWorth: "₹ 20,000"
+    prizeWorth: "₹ 20,000",
+    description:
+      "SocioThon brings you the opportunity to showcase your innovative skills. Gear up your toolkit of innovations to identify and devise a solution of the most pressing environmental problems. In context to our theme of ‘rebuilding nature through innovation’, we will release a problem statement, testing your skills as a social innovator. It is going to be an adrenaline-pumped event, full of new opportunities and hopefully, ground-breaking solutions.",
+    sponsoredBy: null,
+    heldDate: "15th February, 9 AM onwards",
+    ruleBook: null,
+    perks: ["Certificate"],
+    coordinator: [
+      {
+        name: "Arpit Srivatsava",
+        contact: "9694658089",
+        email: "arpit.socialsummit@gmail.com"
+      }
+    ],
+    registrationDeadLine: "7th February 2020",
+    registrationLink:
+      "https://docs.google.com/forms/d/1RN9SCAjroCEnafkhyqsxMh1bxb55-tQDFqBE1j-6VxI/edit?usp=sharing"
   }
 };
 

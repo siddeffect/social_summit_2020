@@ -101,15 +101,16 @@ function EventGrid(props) {
       link: "/nukkadNatak"
     },
     {
-      url: "/Images/events_images/work_presentation-min.jpg",
-      title: "Innovision",
+      url: "/Images/events_images/rtc-min.jpg",
+      title: "Round Table Conference",
       width: "40%",
-      link: "/innovision"
+      link: "/roundTableConference"
     },
+
     {
       url: "/Images/events_images/b_plan-min.jpg",
       title: "Action Plan(B-Plan)",
-      width: "33%",
+      width: "25%",
       link: "/actionPlan"
     },
     // {
@@ -121,27 +122,27 @@ function EventGrid(props) {
     {
       url: "/Images/events_images/workshop-min.jpg",
       title: "Workshops",
-      width: "34%",
+      width: "25%",
       link: "/workshop"
     },
     {
-      url: "/Images/events_images/rtc-min.jpg",
-      title: "Round Table Conference",
-      width: "33%",
-      link: "/roundTableConference"
+      url: "/Images/events_images/work_presentation-min.jpg",
+      title: "Innovision",
+      width: "25%",
+      link: "/innovision"
     },
     {
       url: "/Images/events_images/mun-min.jpg",
       title: "MUN",
-      width: "35%",
+      width: "25%",
       link: "/"
     },
-    // {
-    //   url: "/Images/events_images/hackathon-min.jpg",
-    //   title: "Hackathon",
-    //   width: "30%",
-    //   link: ""
-    // },
+    {
+      url: "/Images/events_images/hackathon-min.jpg",
+      title: "Sociothon",
+      width: "35%",
+      link: "/sociothon"
+    },
 
     {
       url: "/Images/events_images/policy_case-min.jpg",
