@@ -4,6 +4,7 @@ import Navbar from "../Layout/Navbar/Navbar";
 import SCHome from "./SCHome";
 import About from "./About";
 import Vision from "./Vision";
+import Benefits from "./Benefits";
 
 function MUN() {
   return (
@@ -12,6 +13,7 @@ function MUN() {
       <SCHome />
       <About />
       <Vision />
+      <Benefits />
       <Footer />
     </div>
   );

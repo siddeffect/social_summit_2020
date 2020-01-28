@@ -1,6 +1,4 @@
 import React from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { makeStyles } from "@material-ui/core/styles";
 import Fade from "react-reveal/Fade";
 
@@ -126,23 +124,12 @@ export default function About() {
             </div>
           </div>
           <p className={classes.leadContent}>
-            Social work combines a variety of topics in practice aiming to help
-            people develop their skills and their ability to use their resources
-            and those of the community to resolve problems. In all of these
-            capacities, there is a need for social workers to collaborate as
-            part of multidisciplinary teams understanding there are common
-            threads between their partnerships.
-            <br />
-            Social Conclave, the flagship event of National Social Summit 2020,
-            is a pioneering platform for various Non-Governmental Organizations
-            (NGOs) working in the social sectors for pitching their ideas and
-            grab potential investment from different companies. Students will
-            get an opportunity to know about the social work done by the NGOs
-            and may also attract an internship opportunity, as per their
-            interactive skills. We target the organizations with the potential
-            to work on their promising ideas & also; also provide an exposure to
-            the young minds who wish to work with these organizations and
-            contribute towards society.
+            Social Conclave, the flagship event of national Social Summit 2020
+            is a pioneering platform to help people develop their skills and
+            their ability to use their resources and those of community to
+            resolve problems. Social workers, investors and innovators
+            collaborate as a part of multi disciplinary teams understanding
+            there are common threads between their partnerships.
           </p>
         </Fade>
         <Fade bottom></Fade>
