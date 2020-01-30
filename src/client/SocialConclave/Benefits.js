@@ -1,10 +1,11 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import { Grid } from "@material-ui/core";
+import {
+  makeStyles,
+  createMuiTheme,
+  ThemeProvider
+} from "@material-ui/core/styles";
+import { Grid, Button } from "@material-ui/core";
 import Fade from "react-reveal/Fade";
-import ForCSR from "./Registrations/ForCSR";
-import ForStudent from "./Registrations/ForStudent";
-import ForNGO from "./Registrations/ForNGO";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -53,6 +54,12 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+const theme = createMuiTheme({
+  palette: {
+    primary: { 500: "#00a650" }
+  }
+});
+
 function Benefits() {
   const classes = useStyles();
   return (
@@ -79,7 +86,16 @@ function Benefits() {
             </ul>
           </Grid>
           <Grid item xs={12} md={6} className={classes.buttonGrid}>
-            <ForCSR />
+            <ThemeProvider theme={theme}>
+              <Button
+                variant="contained"
+                color="primary"
+                size="large"
+                className={classes.button}
+              >
+                Register
+              </Button>
+            </ThemeProvider>
           </Grid>
         </Grid>
       </Fade>
@@ -91,7 +107,16 @@ function Benefits() {
           className={classes.section}
         >
           <Grid item xs={12} md={6} className={classes.buttonGrid}>
-            <ForStudent />
+            <ThemeProvider theme={theme}>
+              <Button
+                variant="contained"
+                color="primary"
+                size="large"
+                className={classes.button}
+              >
+                Register
+              </Button>
+            </ThemeProvider>
           </Grid>
           <Grid item xs={12} md={6}>
             <h1 className={classes.header}>For Organisations (NGOs):</h1>
@@ -132,7 +157,16 @@ function Benefits() {
             </ul>
           </Grid>
           <Grid item xs={12} md={6} className={classes.buttonGrid}>
-            <ForNGO />
+            <ThemeProvider theme={theme}>
+              <Button
+                variant="contained"
+                color="primary"
+                size="large"
+                className={classes.button}
+              >
+                Register
+              </Button>
+            </ThemeProvider>
           </Grid>
         </Grid>
       </Fade>
