@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  makeStyles,
-  createMuiTheme,
-  ThemeProvider
-} from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
 import Fade from "react-reveal/Fade";
 import ForCSR from "./Registrations/ForCSR";
@@ -57,11 +53,6 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const theme = createMuiTheme({
-  palette: {
-    primary: { 500: "#00a650" }
-  }
-});
 function Benefits() {
   const classes = useStyles();
   return (
