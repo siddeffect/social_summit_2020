@@ -163,6 +163,8 @@ function Benefits() {
                 color="primary"
                 size="large"
                 className={classes.button}
+                href="https://forms.gle/FE6QFAAwyLhXUsn56"
+                target="_blank"
               >
                 Register
               </Button>
