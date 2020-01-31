@@ -11,8 +11,8 @@ import ParticipantSignUp from "./client/Participants/auth/SignUp";
 import ParticipantDashboard from "./client/Participants/ParticipantsDashboard/Dashboard";
 import Events from "./client/Events/Event";
 import EventDetails from "./client/Events/EventDetails";
-// import Partners from "./client/Partners/Partners";
-import Team from './client/Team/Index'
+import Partners from "./client/Partners/Partners";
+import Team from "./client/Team/Index";
 
 import {
   BrowserRouter as Router,
@@ -81,11 +81,11 @@ function App() {
         </Route>
 
         {/* to be commented after ward */}
-        {/* <Route exact path="/partners">
+        <Route exact path="/partners">
           <Partners />
-        </Route> */}
+        </Route>
         <Route exact path="/team">
-          <Team/>
+          <Team />
         </Route>
 
         {/* events routs */}
