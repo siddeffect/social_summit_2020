@@ -6,7 +6,7 @@ import {
   createMuiTheme,
   ThemeProvider
 } from "@material-ui/core/styles";
-import { Grid, Button } from "@material-ui/core";
+import { Grid, Button, Link } from "@material-ui/core";
 import eventData from "./events_data";
 import Fade from "react-reveal/Fade";
 
@@ -80,6 +80,32 @@ function EventDetails(props) {
     );
   });
 
+  let caseStudyProblemStatements = null;
+  if (eventData[eventType].problemStatements) {
+    caseStudyProblemStatements = eventData[eventType].problemStatements.map(
+      (item, i) => {
+        return (
+          <Grid item xs={12} key={i}>
+            <Fade bottom>
+              <p className={classes.description}>{item.type}</p>
+              <ThemeProvider theme={theme}>
+                <Link
+                  href={item.problemStatement}
+                  target="_blank"
+                  color="primary"
+                  underline="hover"
+                >
+                  Click Here
+                </Link>
+              </ThemeProvider>
+              <br />
+            </Fade>
+          </Grid>
+        );
+      }
+    );
+  }
+
   return (
     <div className={classes.root}>
       <Navbar />
@@ -93,7 +119,7 @@ function EventDetails(props) {
           <Grid item xs={12}>
             <Fade bottom>
               <h1 className={classes.subHeader}>
-                Prize Worth: {eventData[eventType].prizeWorth}
+                Prizes Worth: {eventData[eventType].prizeWorth}
               </h1>
             </Fade>
           </Grid>
@@ -112,6 +138,7 @@ function EventDetails(props) {
               </p>
             </Fade>
           </Grid>
+          {caseStudyProblemStatements}
           {!eventData[eventType].sponsoredBy ? null : (
             <Grid item xs={12}>
               <Fade bottom>

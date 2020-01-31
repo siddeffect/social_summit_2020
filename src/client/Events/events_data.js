@@ -24,9 +24,26 @@ const eventData = {
     name: "Case Study",
     prizeWorth: "₹ 30,000",
     description:
-      "Case studies pose as the best walkthrough for the people to channelize their thoughts and ideologies from the point of view of the concerned lever puller. The event will provide an opportunity for the participants to relate to the various situations, through cases of MNREGA-Opportunities & Challenges, Organic Farming - demand for concurrent push and pull, & Forest Fire-Pain in Earth's lungs. So, Put your thinking caps on and come up with sustainable solutions.",
+      "Case studies pose as the best walkthrough for the people to channelize their thoughts and ideologies from the point of view of the concerned lever puller. The event will provide an opportunity for the participants to relate to the various situations, through cases of MNREGA-Opportunities & Challenges, Organic Farming - demand for concurrent push and pull, & Particulate Matter - Spare the Air. So, put your thinking caps on and come up with sustainable solutions.",
     sponsoredBy: null,
     perks: ["Certificate"],
+    problemStatements: [
+      {
+        type: "MGNREGA: Opportunities  & Challenges ",
+        problemStatememt:
+          "https://drive.google.com/file/d/1SV3GfvlJZxZAwNRqskafMvfP9H3v8tOh/view?usp=drivesdk"
+      },
+      {
+        type: "Organic Farming: Demand for Concurrent Push and Pull",
+        problemStatememt:
+          "https://drive.google.com/file/d/10H8mcHK_c9jW0wShV_zyLUuWj0UxilT7/view?usp=drivesdk"
+      },
+      {
+        type: "Particulate Matter: Spare the Air",
+        problemStatememt:
+          "https://drive.google.com/file/d/19lNqiQ64US0_ycOYBJq_W-3nJHyCkqnC/view?usp=drivesdk"
+      }
+    ],
     coordinator: [
       {
         name: "Parag Mittal",
@@ -90,6 +107,23 @@ const eventData = {
       "Real-world problems are embedded in complex systems, in specific institutions, and are viewed differently by different policy actors. This Policy Making competition encourages you to think critically, and analytically to present your solutions within a specific time frame. Come up with world-changing solutions on top of undertaking extensive research and cultivate a cognitive mind, and showcase people your unique approach of tackling a problem.",
     heldDate: "16th Feb 09:00-1:00",
     sponsoredBy: null,
+    problemStatements: [
+      {
+        type: "Paris Agreement",
+        problemStatememt:
+          "https://drive.google.com/file/d/14x6UQkzPXBhXcRwgBQ4s_wtARxgxnMeE/view?usp=drivesdk"
+      },
+      {
+        type: "Agricultural Productivity",
+        problemStatememt:
+          "https://drive.google.com/file/d/1MfF4ypHkxFxHuV9bYT4H5ARyWdABNOAg/view?usp=drivesdk"
+      },
+      {
+        type: "Renewable Energy",
+        problemStatememt:
+          "https://drive.google.com/file/d/1y1YIkaD_BDxrCxD6MCGpCZM0M1ZpPiBp/view?usp=drivesdk"
+      }
+    ],
     ruleBook:
       "https://drive.google.com/file/d/1v6zMHFAFoEecBmlbk7eaisC6YqoKFasp/view?usp=sharing",
     perks: ["Certificate"],
@@ -291,6 +325,18 @@ const eventData = {
     sponsoredBy: null,
     heldDate: "15th February, 9 AM onwards",
     ruleBook: null,
+    problemStatements: [
+      {
+        type: "SocioThon (Hardware)",
+        problemStatememt:
+          "https://drive.google.com/file/d/1UlV_XYRRlAylRvRon4rcdioTtoMZdRXZ/view?usp=drivesdk"
+      },
+      {
+        type: "SocioThon (Software)",
+        problemStatememt:
+          "https://drive.google.com/file/d/10H8mcHK_c9jW0wShV_zyLUuWj0UxilT7/view?usp=drivesdk"
+      }
+    ],
     perks: ["Certificate"],
     coordinator: [
       {
