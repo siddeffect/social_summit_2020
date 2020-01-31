@@ -1,6 +1,4 @@
 export const munRegister = newUser => {
-  console.log("i am called", newUser);
-  console.log("called again", newUser);
   return (dispatch, getState, { getFirebase, getFirestore }) => {
     const firestore = getFirestore();
     firestore

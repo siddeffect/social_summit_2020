@@ -24,6 +24,3 @@ yarn-error.log*
 .firebaserc
 firebase.json
 .firebase/hosting.YnVpbGQ.cache
-
-
-package-lock.json

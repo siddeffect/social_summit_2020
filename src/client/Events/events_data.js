@@ -24,9 +24,26 @@ const eventData = {
     name: "Case Study",
     prizeWorth: "₹ 30,000",
     description:
-      "Case studies pose as the best walkthrough for the people to channelize their thoughts and ideologies from the point of view of the concerned lever puller. The event will provide an opportunity for the participants to relate to the various situations, through cases of MNREGA-Opportunities & Challenges, Organic Farming - demand for concurrent push and pull, & Forest Fire-Pain in Earth's lungs. So, Put your thinking caps on and come up with sustainable solutions.",
+      "Case studies pose as the best walkthrough for the people to channelize their thoughts and ideologies from the point of view of the concerned lever puller. The event will provide an opportunity for the participants to relate to the various situations, through cases of MNREGA-Opportunities & Challenges, Organic Farming - demand for concurrent push and pull, & Particulate Matter - Spare the Air. So, put your thinking caps on and come up with sustainable solutions.",
     sponsoredBy: null,
     perks: ["Certificate"],
+    problemStatements: [
+      {
+        type: "MGNREGA: Opportunities  & Challenges ",
+        problemStatememt:
+          "https://drive.google.com/file/d/1SV3GfvlJZxZAwNRqskafMvfP9H3v8tOh/view?usp=drivesdk"
+      },
+      {
+        type: "Organic Farming: Demand for Concurrent Push and Pull",
+        problemStatememt:
+          "https://drive.google.com/file/d/10H8mcHK_c9jW0wShV_zyLUuWj0UxilT7/view?usp=drivesdk"
+      },
+      {
+        type: "Particulate Matter: Spare the Air",
+        problemStatememt:
+          "https://drive.google.com/file/d/19lNqiQ64US0_ycOYBJq_W-3nJHyCkqnC/view?usp=drivesdk"
+      }
+    ],
     coordinator: [
       {
         name: "Parag Mittal",
@@ -90,8 +107,25 @@ const eventData = {
       "Real-world problems are embedded in complex systems, in specific institutions, and are viewed differently by different policy actors. This Policy Making competition encourages you to think critically, and analytically to present your solutions within a specific time frame. Come up with world-changing solutions on top of undertaking extensive research and cultivate a cognitive mind, and showcase people your unique approach of tackling a problem.",
     heldDate: "16th Feb 09:00-1:00",
     sponsoredBy: null,
+    problemStatements: [
+      {
+        type: "Paris Agreement",
+        problemStatememt:
+          "https://drive.google.com/file/d/14x6UQkzPXBhXcRwgBQ4s_wtARxgxnMeE/view?usp=drivesdk"
+      },
+      {
+        type: "Agricultural Productivity",
+        problemStatememt:
+          "https://drive.google.com/file/d/1MfF4ypHkxFxHuV9bYT4H5ARyWdABNOAg/view?usp=drivesdk"
+      },
+      {
+        type: "Renewable Energy",
+        problemStatememt:
+          "https://drive.google.com/file/d/1y1YIkaD_BDxrCxD6MCGpCZM0M1ZpPiBp/view?usp=drivesdk"
+      }
+    ],
     ruleBook:
-      "https://drive.google.com/open?id=1OadFGFMaNEGxc0rGd1OmRKSolJuqGeeW",
+      "https://drive.google.com/file/d/1v6zMHFAFoEecBmlbk7eaisC6YqoKFasp/view?usp=sharing",
     perks: ["Certificate"],
     coordinator: [
       {
@@ -106,7 +140,7 @@ const eventData = {
   },
   actionPlan: {
     name: "Action Plan",
-    prizeWorth: "₹ 15,000",
+    prizeWorth: "₹ 25,000",
     description:
       'National Social Summit presents "Action-Plan", its flagship Social Entrepreneurship competition, specifically for the social entrepreneurs out there. The competition will provide a robust and efficacious platform for the delegates to showcase their budding ventures to the top mentors and investors of India and win exciting prizes worth 25K & incubation opportunities worth 200K.',
     heldDate: "16th Feb 9:00-11:00",
@@ -148,14 +182,25 @@ const eventData = {
   },
   workshop: {
     name: "Workshop",
-    prize: "---",
+    prizeWorth: "---",
     description:
-      'National Social Summit brings to you, a series of enthralling workshops, which will enrich your pool of knowledge and provide you a deeper insight to the various social and environmental issues. In collaboration with Design Innovation Centre, IIT Roorkee, workshops on "Design Thinking and Innovation", "Challenges in Himalayan Region", & "Innovations for Clean India", will be organized, inspiring the delegates to think and create solutions.',
+      "The National Social Summit brings to you, a series of enthralling workshops, which will enrich your pool of knowledge and provide you with a deeper insight into the various social and environmental issues. In collaboration with Design Innovation Centre, IIT Roorkee, workshops are conducted by skilled professionals providing you with a deeper insight into various problems and teach you, how you as an individual can play your part in solving those problems and issues Workshops consist of a series of lectures followed by its implementation of skills learned in real-world problems.",
     heldDate: "To be anounced",
-    sponsoredBy: null,
+    sponsoredBy: {
+      header: "Workshops to be organised by DIC (Design innovation Centre)",
+      image: null,
+      points: [
+        "Design thinking",
+        "Clean Water for Himalayan Region",
+        "Sustainable materials from Himalayan forest waste"
+      ]
+    },
     ruleBook:
       "https://drive.google.com/open?id=1OQNJiAaCCQGtCIHE4IHFbGRAaEoU_ejb",
-    perks: ["Certificate", "Kits", "Refreshments"],
+    perks: [
+      "Workshops to be taken by IIT Roorkee Professors.",
+      "Certificate and Startup Kits will be provided to the delegates."
+    ],
     coordinator: [
       {
         name: "Shrey Shukla",
@@ -172,7 +217,7 @@ const eventData = {
     prizeWorth: "₹ 1000/- each",
     description:
       'Quizzing gives direction to all this amassed knowledge and purges the urge to test one’s mettle against another through the competitive spirit. Social Summit brings to you a series of quizzes to not just sate this innate desire but also to add to this ever-growing pool of facts in your head. Three independent online quizzes will be held on "The Diversity of Life", "Environmental rule of Law", & "Clean Energy Technology".',
-    heldDate: "26th Feb 9:00, 2nd Feb 9:00, 9th Feb 9:00",
+    heldDate: "26th Jan 9:00, 2nd Feb 9:00, 9th Feb 9:00",
     sponsoredBy: null,
     ruleBook:
       "https://drive.google.com/open?id=1GdkIVoacdHQqBLvCNcDFMgUUk_8eY7XI",
@@ -272,9 +317,37 @@ const eventData = {
       "https://dare2compete.com/o/1080p-video-making-national-social-summit-20-indian-institute-of-technology-iit-roorkee-98195",
     registrationDeadLine: "26th Feb., 2nd Feb., 9th Feb. 2020"
   },
-  hackathon: {
+  sociothon: {
     name: "Sociothon",
-    prizeWorth: "₹ 20,000"
+    prizeWorth: "₹ 20,000",
+    description:
+      "SocioThon brings you the opportunity to showcase your innovative skills. Gear up your toolkit of innovations to identify and devise a solution of the most pressing environmental problems. In context to our theme of ‘rebuilding nature through innovation’, we will release a problem statement, testing your skills as a social innovator. It is going to be an adrenaline-pumped event, full of new opportunities and hopefully, ground-breaking solutions.",
+    sponsoredBy: null,
+    heldDate: "15th February, 9 AM onwards",
+    ruleBook: null,
+    problemStatements: [
+      {
+        type: "SocioThon (Hardware)",
+        problemStatememt:
+          "https://drive.google.com/file/d/1UlV_XYRRlAylRvRon4rcdioTtoMZdRXZ/view?usp=drivesdk"
+      },
+      {
+        type: "SocioThon (Software)",
+        problemStatememt:
+          "https://drive.google.com/file/d/10H8mcHK_c9jW0wShV_zyLUuWj0UxilT7/view?usp=drivesdk"
+      }
+    ],
+    perks: ["Certificate"],
+    coordinator: [
+      {
+        name: "Arpit Srivatsava",
+        contact: "9694658089",
+        email: "arpit.socialsummit@gmail.com"
+      }
+    ],
+    registrationDeadLine: "7th February 2020",
+    registrationLink:
+      "https://docs.google.com/forms/d/1RN9SCAjroCEnafkhyqsxMh1bxb55-tQDFqBE1j-6VxI/edit?usp=sharing"
   }
 };
 
