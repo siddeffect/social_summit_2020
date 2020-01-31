@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../Layout/Footer/Footer";
+import SCFooter from "./SCFooter";
 import Navbar from "../Layout/Navbar/Navbar";
 import SCHome from "./SCHome";
 import About from "./About";
@@ -14,7 +14,7 @@ function MUN() {
       <About />
       <Vision />
       <Benefits />
-      <Footer />
+      <SCFooter />
     </div>
   );
 }
