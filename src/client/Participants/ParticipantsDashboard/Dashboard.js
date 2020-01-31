@@ -2,12 +2,13 @@ import React from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import Navbar from "../ParticipantsLayout/Navbar";
-import { Chip } from "@material-ui/core";
+import { Chip, Icon, Button, Tooltip, Zoom } from "@material-ui/core";
 import {
   makeStyles,
   ThemeProvider,
   createMuiTheme
 } from "@material-ui/core/styles";
+import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -113,6 +114,13 @@ const useStyles = makeStyles(theme => ({
       width: "60vw"
     }
   },
+  paymentButton: {
+    margin: "1vh 0.5rem 2vh 6vh",
+    width: "10rem",
+    "@media (max-width:600px)": {
+      margin: "4vh auto 5vh 6vh"
+    }
+  },
   mainDetails: {
     paddingTop: "4vh",
     paddingBottom: "4vh"
@@ -169,54 +177,81 @@ const Dashboard = props => {
   }
 
   if (!participantAuth.uid) return <Redirect to="/signin" />;
-  console.log(profile.role);
   if (profile.role === "CA")
     return <Redirect to="/campusambassador/dashboard" />;
   return (
-    <div>
-      <Navbar style={{ margin: "10vh 0 20vh 0" }} />
-      <div className={classes.root}>
-        <div className={classes.navContainer}>
-          <div className={classes.nameCollegeContainer}>
-            <label className={classes.nameHeader}>
-              <strong>{profile.firstName}</strong> {profile.lastName}
-            </label>
-            <label className={classes.collegeHeader}>{profile.college}</label>
-            <div className={classes.divider}></div>
-          </div>
+    <ThemeProvider theme={theme}>
+      <div>
+        <Navbar style={{ margin: "10vh 0 20vh 0" }} />
+        <div className={classes.root}>
+          <div className={classes.navContainer}>
+            <div className={classes.nameCollegeContainer}>
+              <label className={classes.nameHeader}>
+                <strong>{profile.firstName}</strong> {profile.lastName}
+              </label>
+              <label className={classes.collegeHeader}>{profile.college}</label>
+              <div className={classes.divider}></div>
+            </div>
 
-          <div className={classes.mainHeaders}>
-            <label className={classes.id}>
-              ID: SS20{pad(profile.participant_count)}
-            </label>
+            <div className={classes.mainHeaders}>
+              <label className={classes.id}>
+                ID: SS20{pad(profile.participant_count)}
+              </label>
+            </div>
           </div>
-        </div>
-        <div className={classes.mainDetail}>
-          {window.innerWidth < 768 ? null : (
+          <div className={classes.mainDetail}>
+            {window.innerWidth < 768 ? null : (
+              <label className={classes.fields}>
+                Name: {profile.firstName} {profile.lastName}{" "}
+              </label>
+            )}
+
+            <label className={classes.fields}>Email: {profile.email}</label>
             <label className={classes.fields}>
-              Name: {profile.firstName} {profile.lastName}{" "}
+              Ph. Number:{profile.phoneNumber}
             </label>
-          )}
 
-          <label className={classes.fields}>Email: {profile.email}</label>
-          <label className={classes.fields}>
-            Ph. Number:{profile.phoneNumber}
-          </label>
-
-          {window.innerWidth < 768 ? null : (
-            <label className={classes.fields}>College: {profile.college}</label>
-          )}
-          <label className={classes.fields}>State: {profile.state}</label>
-          <label className={classes.fields}>Role: {profile.role}</label>
-          <label className={classes.fields}>
-            Primary Event: {profile.primaryEvent}
-          </label>
-          <label className={classes.fields}>
-            Secondary Event: {secondaryEventList}
-          </label>
+            {window.innerWidth < 768 ? null : (
+              <label className={classes.fields}>
+                College: {profile.college}
+              </label>
+            )}
+            <label className={classes.fields}>State: {profile.state}</label>
+            <label className={classes.fields}>Role: {profile.role}</label>
+            <label className={classes.fields}>
+              Primary Event: {profile.primaryEvent}
+            </label>
+            <label className={classes.fields}>
+              Secondary Event: {secondaryEventList}
+            </label>
+            {profile.payment_done === false ? (
+              <div>
+                <Button
+                  size="large"
+                  variant="contained"
+                  color="primary"
+                  className={classes.paymentButton}
+                  endIcon={<Icon>send</Icon>}
+                  href="https://www.thecollegefever.com/events/national-social-summit-djEwvrGaRC"
+                  target="_blank"
+                >
+                  Pay Now
+                </Button>
+                <Tooltip
+                  TransitionComponent={Zoom}
+                  title="Payment status might take 1-2 days to reflect on Dashboard"
+                  placement="right"
+                >
+                  <HelpOutlineIcon />
+                </Tooltip>
+              </div>
+            ) : (
+              <label className={classes.fields}>Payment: Done</label>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </ThemeProvider>
   );
 };
 

@@ -6,7 +6,7 @@ import {
   createMuiTheme,
   ThemeProvider
 } from "@material-ui/core/styles";
-import { Grid, Button } from "@material-ui/core";
+import { Grid, Button, Link } from "@material-ui/core";
 import eventData from "./events_data";
 import Fade from "react-reveal/Fade";
 
@@ -61,6 +61,13 @@ function EventDetails(props) {
     return <li key={i}>{item}</li>;
   });
 
+  let points = null;
+  if (eventData[eventType].sponsoredBy != null) {
+    points = eventData[eventType].sponsoredBy.points.map((item, i) => {
+      return <li key={i}>{item}</li>;
+    });
+  }
+
   const coordinators = eventData[eventType].coordinator.map((item, i) => {
     return (
       <span key={i}>
@@ -72,6 +79,32 @@ function EventDetails(props) {
       </span>
     );
   });
+
+  let caseStudyProblemStatements = null;
+  if (eventData[eventType].problemStatements) {
+    caseStudyProblemStatements = eventData[eventType].problemStatements.map(
+      (item, i) => {
+        return (
+          <Grid item xs={12} key={i}>
+            <Fade bottom>
+              <p className={classes.description}>{item.type}</p>
+              <ThemeProvider theme={theme}>
+                <Link
+                  href={item.problemStatement}
+                  target="_blank"
+                  color="primary"
+                  underline="hover"
+                >
+                  Click Here
+                </Link>
+              </ThemeProvider>
+              <br />
+            </Fade>
+          </Grid>
+        );
+      }
+    );
+  }
 
   return (
     <div className={classes.root}>
@@ -86,7 +119,7 @@ function EventDetails(props) {
           <Grid item xs={12}>
             <Fade bottom>
               <h1 className={classes.subHeader}>
-                Prize Worth: {eventData[eventType].prizeWorth}
+                Prizes Worth: {eventData[eventType].prizeWorth}
               </h1>
             </Fade>
           </Grid>
@@ -105,14 +138,14 @@ function EventDetails(props) {
               </p>
             </Fade>
           </Grid>
+          {caseStudyProblemStatements}
           {!eventData[eventType].sponsoredBy ? null : (
             <Grid item xs={12}>
               <Fade bottom>
                 <h1 className={classes.subHeader}>
-                  Sponsored By:
-                  <br />
-                  {eventData[eventType].sponsoredBy}
+                  {eventData[eventType].sponsoredBy.header}
                 </h1>
+                <p className={classes.description}>{points}</p>
               </Fade>
             </Grid>
           )}
