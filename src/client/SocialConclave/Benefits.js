@@ -21,7 +21,10 @@ const useStyles = makeStyles(theme => ({
     textAlign: "center",
     fontFamily: ['"ibm plex serif"', "sarif"].join(","),
     fontWeight: 600,
-    fontSize: "2.4rem"
+    fontSize: "2.5rem",
+    "@media (max-width:600px)": {
+      fontSize: "1.5rem"
+    }
   },
   list: {
     display: "flex",

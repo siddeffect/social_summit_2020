@@ -43,7 +43,11 @@ const useStyles = makeStyles(theme => ({
     fontFamily: ["'Barlow Condensed'", "sans-serif"].join(","),
     maxWidth: "620px",
     margin: "80px auto",
-    alignSelf: "center"
+    alignSelf: "center",
+    "@media(max-width:600px)": {
+      maxWidth: "320px",
+      margin: "50px auto"
+    }
   },
   blockquoteHeader: {
     fontFamily: ["'Abril Fatface'", " cursive"].join(","),
@@ -56,11 +60,10 @@ const useStyles = makeStyles(theme => ({
     border: "solid 2px",
     borderRadius: "20px",
     padding: "25px",
-    "@media all and (min-width: 640px)": {
-      blockquoteHeader: {
-        fontSize: "3rem",
-        lineHeight: 1.2
-      }
+    "@media (max-width: 600px)": {
+      fontSize: "1.5rem",
+      lineHeight: 1,
+      borderRadius: "12px"
     },
     ":after": {
       content: "",
@@ -99,6 +102,9 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: "12px",
     ":first-letter": {
       marginLeft: "-12px"
+    },
+    "@media(max-width:600px)": {
+      marginLeft: "100px"
     }
   }
 }));

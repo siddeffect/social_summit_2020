@@ -6,7 +6,7 @@ import About from "./About";
 import Vision from "./Vision";
 import Benefits from "./Benefits";
 
-function MUN() {
+function Conclave() {
   return (
     <div>
       <Navbar />
@@ -19,4 +19,4 @@ function MUN() {
   );
 }
 
-export default MUN;
+export default Conclave;

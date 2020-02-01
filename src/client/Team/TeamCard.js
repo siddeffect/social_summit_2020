@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-// import PropTypes from "prop-types";
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -92,10 +91,3 @@ const TeamCard = props => {
 };
 
 export default TeamCard;
-
-// TeamCard.propTypes = {
-//   name: PropTypes.string,
-//   content: PropTypes.string.isRequired,
-//   heading: PropTypes.string.isRequired,
-//   src: PropTypes.string.isRequired
-// };
