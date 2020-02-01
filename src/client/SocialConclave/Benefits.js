@@ -26,8 +26,6 @@ const useStyles = makeStyles(theme => ({
   list: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
-    listStyleType: "none",
     fontSize: "1.2rem",
     color: "#99999",
     fontFamily: ['"ibm plex sarif"', "sarif"].join(",")
