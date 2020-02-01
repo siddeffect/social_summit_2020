@@ -6,7 +6,7 @@ import {
   createMuiTheme,
   ThemeProvider
 } from "@material-ui/core/styles";
-import { Grid, Button, Link } from "@material-ui/core";
+import { Grid, Button } from "@material-ui/core";
 import eventData from "./events_data";
 import Fade from "react-reveal/Fade";
 
@@ -89,14 +89,13 @@ function EventDetails(props) {
             <Fade bottom>
               <p className={classes.description}>{item.type}</p>
               <ThemeProvider theme={theme}>
-                <Link
-                  href={item.problemStatement}
+                <Button
+                  href={item.problemStatememt}
                   target="_blank"
                   color="primary"
-                  underline="hover"
                 >
                   Click Here
-                </Link>
+                </Button>
               </ThemeProvider>
               <br />
             </Fade>

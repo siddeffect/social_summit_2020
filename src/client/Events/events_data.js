@@ -329,12 +329,12 @@ const eventData = {
       {
         type: "SocioThon (Hardware)",
         problemStatememt:
-          "https://drive.google.com/file/d/1UlV_XYRRlAylRvRon4rcdioTtoMZdRXZ/view?usp=drivesdk"
+          "https://drive.google.com/file/d/13O2BcloQf_7-8u0VQHiSq8v-iwcGpXeD/view?usp=sharing"
       },
       {
         type: "SocioThon (Software)",
         problemStatememt:
-          "https://drive.google.com/file/d/10H8mcHK_c9jW0wShV_zyLUuWj0UxilT7/view?usp=drivesdk"
+          "https://drive.google.com/file/d/1zM0vIVpVKlhOCCnHElUtGM1dfyRxUPEq/view?usp=sharing"
       }
     ],
     perks: ["Certificate"],

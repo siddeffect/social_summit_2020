@@ -93,7 +93,7 @@ function Benefits() {
                 color="primary"
                 size="large"
                 className={classes.button}
-                href="https://forms.gle/3DxwS2odUxdkUks16"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdAhrH_-lAXXfHfVA2zD2tBO0ADWojw3-20wHer-fnwRyvbUQ/viewform?usp=sf_link"
                 target="_blank"
               >
                 Register
@@ -116,7 +116,7 @@ function Benefits() {
                 color="primary"
                 size="large"
                 className={classes.button}
-                href=" https://forms.gle/5XjRqPaiK5N9mMJ9A"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSf2NcbmvW2K_6UTNO40UFX1psdL_Y_3ZPJKxLSIGK7yztI4Pg/viewform?usp=sf_link"
                 target="_blank"
               >
                 Register
@@ -168,7 +168,7 @@ function Benefits() {
                 color="primary"
                 size="large"
                 className={classes.button}
-                href="https://forms.gle/FE6QFAAwyLhXUsn56"
+                href="https://drive.google.com/open?id=1k1rPQbJt_5cW1PCtKWbGPzZeSydFm6OrJlK9Gobsgdc"
                 target="_blank"
               >
                 Register
