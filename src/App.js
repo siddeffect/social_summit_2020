@@ -13,7 +13,7 @@ import Events from "./client/Events/Event";
 import SocialConclave from "./client/SocialConclave/SocialConclave";
 import EventDetails from "./client/Events/EventDetails";
 import Partners from "./client/Partners/Partners";
-import Team from "./client/Team/Index";
+// import Team from "./client/Team/Index";
 
 import {
   BrowserRouter as Router,
@@ -140,9 +140,9 @@ function App() {
         <Route exact path="/about">
           <ComingSoon />
         </Route>
-        <Route exact path="/team">
-          <ComingSoon />
-        </Route>
+//         <Route exact path="/team">
+//           <ComingSoon />
+//         </Route>
         <Route exact path="/contact">
           <ComingSoon />
         </Route>
