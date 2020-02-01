@@ -86,9 +86,9 @@ function App() {
         <Route exact path="/partners">
           <Partners />
         </Route>
-        <Route exact path="/team">
+        {/* <Route exact path="/team">
           <Team />
-        </Route>
+        </Route> */}
 
         {/* events routs */}
         <Route exact path="/event/modelunitedNation">
@@ -140,9 +140,6 @@ function App() {
         <Route exact path="/about">
           <ComingSoon />
         </Route>
-//         <Route exact path="/team">
-//           <ComingSoon />
-//         </Route>
         <Route exact path="/contact">
           <ComingSoon />
         </Route>
