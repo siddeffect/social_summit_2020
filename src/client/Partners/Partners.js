@@ -57,7 +57,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: "center",
     fontFamily: ["'ibm plex serif'", "serif"].join(","),
     fontSize: "2.5rem",
-    color: "#ffffff",
+    color: "#111",
     letterSpacing: "-.03rem",
     fontWeight: "400",
     lineHeight: "0.5",
