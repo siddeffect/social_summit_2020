@@ -113,8 +113,8 @@ export default function About() {
         <Fade bottom>
           <label className={classes.header}>Our Vision</label>
           <p className={classes.leadContent}>
-            We aspire to develop an ecosystem of organizations (NGOs), Companies
-            (Investors) and college students, in order to achieve a common goal.
+            We aspire to develop an ecosystem of Organizations (NGOs), Companies
+            (Investors) and College Students, in order to achieve a common goal.
             The agenda includes making students acquainted with the
             methodologies adopted by the NGOs for social work followed by
             understanding their aim and work process and succouring them with

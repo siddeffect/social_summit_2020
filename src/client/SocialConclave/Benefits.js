@@ -92,6 +92,8 @@ function Benefits() {
                 color="primary"
                 size="large"
                 className={classes.button}
+                href="https://forms.gle/3DxwS2odUxdkUks16"
+                target="_blank"
               >
                 Register
               </Button>
@@ -113,6 +115,8 @@ function Benefits() {
                 color="primary"
                 size="large"
                 className={classes.button}
+                href=" https://forms.gle/5XjRqPaiK5N9mMJ9A"
+                target="_blank"
               >
                 Register
               </Button>

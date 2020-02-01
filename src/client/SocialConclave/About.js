@@ -124,7 +124,7 @@ export default function About() {
             </div>
           </div>
           <p className={classes.leadContent}>
-            Social Conclave, the flagship event of national Social Summit 2020
+            Social Conclave, the flagship event of National Social Summit 2020
             is a pioneering platform to help people develop their skills and
             their ability to use their resources and those of community to
             resolve problems. Social workers, investors and innovators
