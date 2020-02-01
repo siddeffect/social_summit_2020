@@ -12,8 +12,8 @@ import ParticipantDashboard from "./client/Participants/ParticipantsDashboard/Da
 import Events from "./client/Events/Event";
 import SocialConclave from "./client/SocialConclave/SocialConclave";
 import EventDetails from "./client/Events/EventDetails";
-// import Partners from "./client/Partners/Partners";
-import Team from './client/Team/Index'
+import Partners from "./client/Partners/Partners";
+import Team from "./client/Team/Index";
 
 import {
   BrowserRouter as Router,
@@ -83,12 +83,12 @@ function App() {
         <Route exact path="/socialConclave">
           <SocialConclave />
         </Route>
-        {/* <Route exact path="/partners">
+        <Route exact path="/partners">
           <Partners />
-        </Route> */}
-        <Route exact path="/team">
-          <Team/>
         </Route>
+        {/* <Route exact path="/team">
+          <Team />
+        </Route> */}
 
         {/* events routs */}
         <Route exact path="/event/modelunitedNation">

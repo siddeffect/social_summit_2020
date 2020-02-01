@@ -2,12 +2,13 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Fade from "react-reveal/Fade";
-import Navbar from '../Layout/Navbar/Navbar'
-
+import Navbar from "../Layout/Navbar/Navbar";
+import Footer from "../Layout/Footer/Footer";
+import Aux from "../../hoc/Aux";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor:"aliceblue",
+    backgroundColor: "#fff",
     flexGrow: 1,
     padding: "0 10vw 10vh 10vw"
   },
@@ -29,13 +30,13 @@ const useStyles = makeStyles(theme => ({
   header: {
     textAlign: "center",
     fontFamily: ["'ibm plex serif'", "serif"].join(","),
-    fontSize: "5rem",
-    color: "#000",
+    fontSize: "3.75rem",
+    color: "#111",
     letterSpacing: "-.03rem",
     fontWeight: "600",
     lineHeight: "1.2",
     margin: "0 0 5vh 0",
-    paddingTop:"15vh",
+    paddingTop: "15vh",
     "@media(min-width:350px) and (max-width:605px)": {
       fontSize: "44px",
       fontWeight: 525,
@@ -51,69 +52,58 @@ const useStyles = makeStyles(theme => ({
       fontWeight: 450,
       letterSpacing: 0
     }
+  },
+  subHeader: {
+    textAlign: "center",
+    fontFamily: ["'ibm plex serif'", "serif"].join(","),
+    fontSize: "2.5rem",
+    color: "#ffffff",
+    letterSpacing: "-.03rem",
+    fontWeight: "400",
+    lineHeight: "0.5",
+    margin: "0 0 5vh 0",
+    paddingTop: "2.5vh",
+    "@media(min-width:350px) and (max-width:605px)": {
+      fontSize: "30px",
+      fontWeight: 400,
+      letterSpacing: 0
+    },
+    "@media(min-width:350px) and (max-width:420px)": {
+      fontSize: "32px",
+      fontWeight: 400,
+      letterSpacing: 0
+    },
+    "@media (max-width:320px)": {
+      fontSize: "24px",
+      fontWeight: 375,
+      letterSpacing: 0
+    }
   }
 }));
 
-export default function SponNgo() {
+export default function NgoPartner() {
   const classes = useStyles();
 
-  const SponArray = [
-    "arrow-min",
-    "cn-min",
-    "eduxlabs-min",
-    "foodwalas-min",
-    "gmrgroups-min",
-    "hackerearth-min",
-    "pizzahut-min",
-    "pnb-min",
-    "townscript-min",
-    "vanheusen-min",
-    "zulip-min"
+  const NGOArray = [
+    { src: "/Images/Partners/Ngo/SAFE.jpg", link: "https://safegreen.in" },
+    { src: "/Images/Partners/Ngo/chintan.jpg", link: "" },
+    { src: "/Images/Partners/Ngo/DALogo.jpg", link: "https://www.devalt.org" },
+    {
+      src: "/Images/Partners/Ngo/SED_india.JPG",
+      link: "http://www.sedindia.org"
+    },
+    {
+      src: "/Images/Partners/Ngo/seva_nidhi.jpg",
+      link: "http://www.sevanidhi.org"
+    },
+    { src: "/Images/Partners/Ngo/udyama.jpg", link: "" }
   ];
 
-  const NgoArray = [
-    "akshayapatra-min",
-    "barefoot-min",
-    "cure-min",
-    "grf-min",
-    "Karma Konnect-min",
-    "katha-min",
-    "khalsa aid-01-min",
-    "lakshyam-min",
-    "pjf-m-min",
-    "savethechildren-min",
-    "shakshigo-min",
-    "teachforindia-min",
-    "vision_india_found-min",
-    "womenite-min"
+  const CompanyArray = [
+    { src: "/Images/Partners/Company/training/FinlandLabs.jpg", link: "" }
   ];
 
-  const SponImages = SponArray.map(image => {
-    return (
-     
-      <Grid
-        alignItems="center"
-        justify="center"
-        item
-        xs={6}
-        sm={2}
-        key={image}
-        container
-      >
-        <div className={classes.image_bucket}>
-          <Fade bottom>
-            <img
-              src={`/Images/spons_compressed/${image}.jpg`}
-              alt=""
-              className={classes.image}
-            />
-          </Fade>
-        </div>
-      </Grid>
-    );
-  });
-
-  const NgoImages = NgoArray.map(image => {
+  const NGOImages = NGOArray.map(item => {
     return (
       <Grid
         alignItems="center"
@@ -121,32 +111,60 @@ export default function SponNgo() {
         item
         xs={6}
         sm={2}
-        key={image}
+        key={item}
         container
       >
         <div className={classes.image_bucket}>
           <Fade bottom>
-            <img
-              src={`/Images/ngo_compressed/${image}.jpg`}
-              alt=""
-              className={classes.image}
-            />
+            <a href={item.link} target="blank">
+              <img src={item.src} alt="" className={classes.image} />
+            </a>
           </Fade>
         </div>
       </Grid>
     );
   });
 
+  const CompanyImages = CompanyArray.map(item => {
+    return (
+      <Grid
+        alignItems="center"
+        justify="center"
+        item
+        xs={6}
+        sm={2}
+        key={item}
+        container
+      >
+        <div className={classes.image_bucket}>
+          <Fade bottom>
+            <a href={item.link} target="blank">
+              <img src={item.src} alt="" className={classes.image} />
+            </a>
+          </Fade>
+        </div>
+      </Grid>
+    );
+  });
   return (
-    <div className={classes.root}>
+    <Aux>
       <Navbar />
-      <Fade bottom>
-        <h2 className={classes.header}>Our Sponsors and NGO Partners</h2>
-        <Grid container spacing={3} justify="center">
-          {SponImages}
-          {NgoImages}
-        </Grid>
-      </Fade>
-    </div>
+      <div className={classes.root}>
+        <Fade bottom>
+          <h2 className={classes.header}> NGO Partners</h2>
+          <Grid container spacing={3} justify="center">
+            {NGOImages}
+          </Grid>
+        </Fade>
+        <Fade bottom>
+          <h2 className={classes.header}> Company Partners</h2>
+          <h3 className={classes.subHeader}> Traning Partner</h3>
+          <Grid container spacing={3} justify="center">
+            {CompanyImages}
+          </Grid>
+        </Fade>
+      </div>
+      <Footer />
+    </Aux>
   );
 }

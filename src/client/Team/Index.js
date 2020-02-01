@@ -1,14 +1,17 @@
 import React, { Component } from "react";
 import Team from "./Team";
 import Navbar from "./../Layout/Navbar/Navbar";
+import Footer from "./../Layout/Footer/Footer";
+import Aux from "../../hoc/Aux";
 
 class Index extends Component {
   render() {
     return (
-      <div>
+      <Aux>
         <Navbar />
         <Team> </Team>
-      </div>
+        <Footer />
+      </Aux>
     );
   }
 }
