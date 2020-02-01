@@ -68,7 +68,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   button: {
-    marginTop: "3em",
+    marginTop: "1em",
     marginRight: "2rem",
     width: "20rem",
     height: "4rem",
@@ -81,8 +81,8 @@ const useStyles = makeStyles(theme => ({
     },
     "@media (max-width:640px)": {
       width: "15rem",
-      height: "3rem",
-      fontSize: "1rem",
+      height: "2.1rem",
+      fontSize: "0.8rem",
       marginTop: "0.5em"
     }
   },
@@ -104,6 +104,7 @@ const useStyles = makeStyles(theme => ({
   eventDates: {
     color: "#ffffff",
     fontSize: "2.2em",
+    marginTop: "1rem",
     "@media (min-width:1360px) and (max-width:1440px)": {
       fontSize: "1.5em"
     },
@@ -119,7 +120,7 @@ const useStyles = makeStyles(theme => ({
     "@media (max-width:640px)": {
       width: "1rem",
       height: "1rem",
-      marginTop: "0.5rem"
+      marginTop: "0"
     }
   }
 }));
@@ -141,15 +142,12 @@ export default function Hero() {
           </h1>
           <div className={classes.line} />
           <label className={classes.eventDates}>
-            <p>
-              {" "}
-              <img
-                src="/Images/icons/calendar.svg"
-                alt="calendar"
-                className={classes.calendarIcon}
-              />
-              14ᵗʰ-16ᵗʰ February 2020
-            </p>
+            <img
+              src="/Images/icons/calendar.svg"
+              alt="calendar"
+              className={classes.calendarIcon}
+            />
+            14ᵗʰ-16ᵗʰ February 2020
           </label>
           <div className={classes.themeContent}>
             Environment, being an envelope of society, is susceptible to every
@@ -157,13 +155,25 @@ export default function Hero() {
             environment need innovations to mould these ways to rebuild nature,
             holding hands with the needs of the present. Keeping the same in
             mind, Social Summit-2020 invites delegates from all over India
-            having an ignition of ‘rebuilding nature through innovation’.
+            having an ignition of ‘Rebuilding Nature through Innovation’.
           </div>
-          <div>
-            <ThemeProvider theme={theme}>
-              <Link to="/campusambassador">
+          <ThemeProvider theme={theme}>
+            <div>
+              <Link to="/dashboard">
                 <Button
                   variant="contained"
+                  color="primary"
+                  size="large"
+                  className={classes.button}
+                >
+                  Pay Now
+                </Button>
+              </Link>
+            </div>
+            <div>
+              <Link to="/campusambassador">
+                <Button
+                  variant="outlined"
                   color="primary"
                   size="large"
                   className={classes.button}
@@ -173,7 +183,7 @@ export default function Hero() {
               </Link>
               <Link to="/signup">
                 <Button
-                  variant="contained"
+                  variant="outlined"
                   color="primary"
                   size="large"
                   className={classes.button}
@@ -181,8 +191,8 @@ export default function Hero() {
                   REGISTER/LOGIN
                 </Button>
               </Link>
-            </ThemeProvider>
-          </div>
+            </div>
+          </ThemeProvider>
         </div>
         <div className={classes.imageBox}></div>
       </Fade>
