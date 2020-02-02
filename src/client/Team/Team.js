@@ -75,12 +75,6 @@ function Team() {
       post: "Co-Convenor",
       src: "./Images/team/sample1.jpeg"
     }
-    //   {
-    //     name: "Siddharth Varshney",
-    //     post: "Technical Head",
-    //     src: "./Images/team/sample4.jpeg"
-    //   }
-    //
   ];
 
   const Convenors = ConvenorsArray.map((item, index) => {

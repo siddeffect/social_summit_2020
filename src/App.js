@@ -13,7 +13,7 @@ import Events from "./client/Events/Event";
 import SocialConclave from "./client/SocialConclave/SocialConclave";
 import EventDetails from "./client/Events/EventDetails";
 import Partners from "./client/Partners/Partners";
-import Team from "./client/Team/Index";
+// import Team from "./client/Team/Index";
 import Contact from "./client/Contact/ContactMain";
 
 import {
@@ -87,9 +87,11 @@ function App() {
         <Route exact path="/partners">
           <Partners />
         </Route>
-        <Route exact path="/team">
+        {/* <Route exact path="/team">
           <Team />
         </Route>
+        */}
+
         <Route exact path="/contact">
           <Contact />
         </Route>
@@ -142,9 +144,6 @@ function App() {
         </Route>
 
         <Route exact path="/about">
-          <ComingSoon />
-        </Route>
-        <Route exact path="/team">
           <ComingSoon />
         </Route>
         <Route exact path="/contact">

@@ -86,7 +86,7 @@ export default function NgoPartner() {
 
   const NGOArray = [
     { src: "/Images/Partners/Ngo/SAFE.jpg", link: "https://safegreen.in" },
-    { src: "/Images/Partners/Ngo/chintan.jpg", link: "" },
+    { src: "/Images/Partners/Ngo/chintan.jpg", link: null },
     { src: "/Images/Partners/Ngo/DALogo.jpg", link: "https://www.devalt.org" },
     {
       src: "/Images/Partners/Ngo/SED_india.JPG",
@@ -96,11 +96,11 @@ export default function NgoPartner() {
       src: "/Images/Partners/Ngo/seva_nidhi.jpg",
       link: "http://www.sevanidhi.org"
     },
-    { src: "/Images/Partners/Ngo/udyama.jpg", link: "" }
+    { src: "/Images/Partners/Ngo/udyama.jpg", link: null }
   ];
 
   const CompanyArray = [
-    { src: "/Images/Partners/Company/training/FinlandLabs.jpg", link: "" }
+    { src: "/Images/Partners/Company/training/FinlandLabs.jpg", link: null }
   ];
 
   const NGOImages = NGOArray.map(item => {
@@ -138,7 +138,7 @@ export default function NgoPartner() {
       >
         <div className={classes.image_bucket}>
           <Fade bottom>
-            <a href={item.link} target="blank">
+            <a href={item.link} target="_blank">
               <img src={item.src} alt="" className={classes.image} />
             </a>
           </Fade>
@@ -158,7 +158,7 @@ export default function NgoPartner() {
         </Fade>
         <Fade bottom>
           <h2 className={classes.header}> Company Partners</h2>
-          <h3 className={classes.subHeader}> Traning Partner</h3>
+          <h3 className={classes.subHeader}> Training Partner</h3>
           <Grid container spacing={3} justify="center">
             {CompanyImages}
           </Grid>
