@@ -1,9 +1,8 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-// import { TextField } from "@material-ui/core";
+import React, { Component } from "react";
+import { withStyles } from "@material-ui/core/styles";
 import Fade from "react-reveal/Fade";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = theme => ({
   root: {
     width: "100%",
     paddingRight: "12.5vw",
@@ -122,69 +121,159 @@ const useStyles = makeStyles(theme => ({
     ":hover&": {
       // opacity: "1"
     }
+  },
+  error: {
+    color: "red",
+    fontSize: "20px",
+    fontFamily: "Rubik, sans-serif",
+    margin: "0 ",
+    transform: "translateY(-20px)",
+    transition: "transform ease-in 5s"
   }
-}));
+});
 
-function ContactHome() {
-  const classes = useStyles();
+class ContactHome extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      fields: {},
+      errors: {}
+    };
+  }
 
-  return (
-    <Fade bottom>
-      <div className={classes.root}>
-        <h1 className={classes.header}> Get in touch</h1>
-        <hr className={classes.line} />
-        <div className={classes.box}>
-          <div className={classes.info}>
-            <div className={classes.row}>
-              <div className={classes.col}>
-                <input
-                  name="name"
-                  id="name"
-                  type="text"
-                  placeholder="Your Name"
-                  className={classes.input}
-                  required
-                ></input>
-              </div>
-              <div className={classes.col}>
-                <input
-                  name="name"
-                  id="name"
-                  type="text"
-                  placeholder="Your Email"
-                  className={classes.input}
-                  required
-                ></input>
-              </div>
-              <div className={classes.col}>
-                <input
-                  name="name"
-                  id="name"
-                  type="text"
-                  placeholder="Subject"
-                  className={classes.input}
-                ></input>
-              </div>
-            </div>
-            <textarea
-              name="comment"
-              id="comment"
-              placeholder="Message"
-              className={classes.textArea}
-            ></textarea>
-            <div>
-              <input
-                type="submit"
-                value="send"
-                id=""
-                className={classes.submit}
-              />
+  handleValidation() {
+    let fields = this.state.fields;
+    let errors = {};
+    let formIsValid = true;
+
+    if (!fields["name"]) {
+      formIsValid = false;
+      errors["name"] = "Cannot be empty";
+    }
+
+    if (typeof fields["name"] !== "undefined") {
+      if (!fields["name"].match(/^[a-zA-Z]+$/)) {
+        formIsValid = false;
+        errors["name"] = "Only letters";
+      }
+    }
+
+    if (!fields["email"]) {
+      formIsValid = false;
+      errors["email"] = "Cannot be empty";
+    }
+
+    if (typeof fields["email"] !== "undefined") {
+      let lastAtPos = fields["email"].lastIndexOf("@");
+      let lastDotPos = fields["email"].lastIndexOf(".");
+
+      if (
+        !(
+          lastAtPos < lastDotPos &&
+          lastAtPos > 0 &&
+          fields["email"].indexOf("@@") === -1 &&
+          lastDotPos > 2 &&
+          fields["email"].length - lastDotPos > 2
+        )
+      ) {
+        formIsValid = false;
+        errors["email"] = " Invalid Email id";
+      }
+    }
+
+    this.setState({ errors: errors });
+    return formIsValid;
+  }
+
+  contactSubmit(e) {
+    e.preventDefault();
+    if (this.handleValidation()) {
+      console.log("Form submitted");
+    } else {
+      console.log("Form has errors.");
+    }
+  }
+
+  handleChange(field, e) {
+    let fields = this.state.fields;
+    fields[field] = e.target.value;
+    this.setState({ fields });
+  }
+  render() {
+    const { classes } = this.props;
+    return (
+      <Fade bottom>
+        <div className={classes.root}>
+          <h1 className={classes.header}> Get in touch</h1>
+          <hr className={classes.line} />
+          <div className={classes.box}>
+            <div className={classes.info}>
+              <form
+                className={classes.row}
+                onSubmit={this.contactSubmit.bind(this)}
+              >
+                <div className={classes.col}>
+                  <input
+                    name="name"
+                    id="name"
+                    type="text"
+                    placeholder="Your Name"
+                    className={classes.input}
+                    required
+                    onChange={this.handleChange.bind(this, "name")}
+                    value={this.state.fields["name"]}
+                  ></input>
+                  <i>
+                    <p className={classes.error}>{this.state.errors["name"]}</p>{" "}
+                  </i>
+                </div>
+                <div className={classes.col}>
+                  <input
+                    name="name"
+                    id="name"
+                    type="text"
+                    placeholder="Your Email"
+                    className={classes.input}
+                    required
+                    onChange={this.handleChange.bind(this, "email")}
+                    value={this.state.fields["email"]}
+                  ></input>
+                  <i>
+                    <p className={classes.error}>
+                      {this.state.errors["email"]}
+                    </p>
+                  </i>
+                </div>
+                <div className={classes.col}>
+                  <input
+                    name="name"
+                    id="name"
+                    type="text"
+                    placeholder="Subject"
+                    className={classes.input}
+                  ></input>
+                </div>
+                <textarea
+                  name="comment"
+                  id="comment"
+                  placeholder="Message"
+                  className={classes.textArea}
+                ></textarea>
+                <div>
+                  <input
+                    type="submit"
+                    value="send"
+                    id=""
+                    className={classes.submit}
+                  />
+                </div>
+              </form>
             </div>
           </div>
         </div>
-      </div>
-    </Fade>
-  );
+      </Fade>
+    );
+  }
 }
 
-export default ContactHome;
+export default withStyles(useStyles)(ContactHome);
