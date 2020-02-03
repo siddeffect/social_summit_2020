@@ -31,12 +31,12 @@ const eventData = {
       {
         type: "MGNREGA: Opportunities  & Challenges ",
         problemStatememt:
-          "https://drive.google.com/file/d/1SV3GfvlJZxZAwNRqskafMvfP9H3v8tOh/view?usp=drivesdk"
+          "https://drive.google.com/file/d/1XkmIc5-QgOqUdhVGyY4nFye0KNen893T/view?usp=drivesdk"
       },
       {
         type: "Organic Farming: Demand for Concurrent Push and Pull",
         problemStatememt:
-          "https://drive.google.com/file/d/10H8mcHK_c9jW0wShV_zyLUuWj0UxilT7/view?usp=drivesdk"
+          "https://drive.google.com/file/d/1SV3GfvlJZxZAwNRqskafMvfP9H3v8tOh/view?usp=drivesdk"
       },
       {
         type: "Particulate Matter: Spare the Air",
