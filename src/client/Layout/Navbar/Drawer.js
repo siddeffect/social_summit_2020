@@ -5,9 +5,9 @@ import MenuIcon from "@material-ui/icons/Menu";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
+  root: {},
   list: {
     width: 300,
-    marginTop: "300px",
     "@media (max-width:340px)": {
       width: 220,
       marginTop: "80px"
@@ -26,7 +26,9 @@ const useStyles = makeStyles({
   },
   paper: {
     background: "black",
-    color: "white"
+    color: "white",
+    display: "flex",
+    justifyContent: "center"
   },
   menuButton: {
     background: "#000",

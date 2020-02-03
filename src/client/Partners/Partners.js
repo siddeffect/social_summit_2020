@@ -111,7 +111,7 @@ export default function NgoPartner() {
         item
         xs={6}
         sm={2}
-        key={item}
+        key={item.src}
         container
       >
         <div className={classes.image_bucket}>
