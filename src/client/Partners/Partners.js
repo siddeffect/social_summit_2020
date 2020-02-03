@@ -138,8 +138,8 @@ export default function NgoPartner() {
       >
         <div className={classes.image_bucket}>
           <Fade bottom>
-            <a href={item.link} target="_blank">
-              <img src={item.src} alt="" className={classes.image} />
+            <a href={item.link} target="_blank" rel="noopener noreferrer">
+              <img src={item.src} alt={item.link} className={classes.image} />
             </a>
           </Fade>
         </div>
