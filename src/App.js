@@ -14,6 +14,7 @@ import SocialConclave from "./client/SocialConclave/SocialConclave";
 import EventDetails from "./client/Events/EventDetails";
 import Partners from "./client/Partners/Partners";
 // import Team from "./client/Team/Index";
+import Contact from "./client/Contact/ContactMain";
 
 import {
   BrowserRouter as Router,
@@ -88,7 +89,12 @@ function App() {
         </Route>
         {/* <Route exact path="/team">
           <Team />
-        </Route> */}
+        </Route>
+        */}
+
+        <Route exact path="/contact">
+          <Contact />
+        </Route>
 
         {/* events routs */}
         <Route exact path="/event/modelunitedNation">
