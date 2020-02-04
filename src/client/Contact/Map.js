@@ -31,16 +31,16 @@ export default function Map() {
       <Fade bottom>
         <div className={classes.root}>
           <div className={classes.mapouter}>
-            <div class={classes.gmapCanvas}>
+            <div className={classes.gmapCanvas}>
               <iframe
                 width="100%"
                 height="450"
                 id="gmap_canvas"
                 src="https://maps.google.com/maps?q=mac%20iit%20roorke%20&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                frameborder="0"
+                frameBorder="0"
                 scrolling="no"
-                marginheight="0"
-                marginwidth="0"
+                marginHeight="0"
+                marginWidth="0"
                 title="gmap"
               ></iframe>
             </div>
