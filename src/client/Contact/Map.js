@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
   gmapCanvas: {
     overflow: "hidden",
     background: "none!important",
-    height: "600px",
+    height: "450px",
     width: "100w"
   }
 }));

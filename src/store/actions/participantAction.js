@@ -96,3 +96,25 @@ export const participantSignUp = newUser => {
       });
   };
 };
+
+export const submitQuery = newUser => {
+  return (dispatch, getState, { getFirebase, getFirestore }) => {
+    const firestore = getFirestore();
+    firestore
+      .collection("query")
+      .add({
+        name: newUser.name,
+        subject: newUser.subject,
+        email: newUser.email,
+        text: newUser.text
+      })
+      .then(() => {
+        dispatch({
+          type: "MUN_REGISTER_SUCCESS"
+        });
+      })
+      .catch(err => {
+        dispatch({ type: "MUN_REGISTER_ERROR", err });
+      });
+  };
+};
