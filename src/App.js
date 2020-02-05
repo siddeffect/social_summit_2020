@@ -13,6 +13,7 @@ import Events from "./client/Events/Event";
 import SocialConclave from "./client/SocialConclave/SocialConclave";
 import EventDetails from "./client/Events/EventDetails";
 import Partners from "./client/Partners/Partners";
+import Speakers from "./client/Speakers/Speakers";
 import ContactUs from "./client/Contact/ContactUs";
 
 import {
@@ -90,6 +91,9 @@ function App() {
           <Team />
         </Route>
         */}
+        <Route exact path="/speakers">
+          <Speakers />
+        </Route>
         <Route exact path="/contactus">
           <ContactUs />
         </Route>
