@@ -15,6 +15,9 @@ const useStyles = makeStyles(theme => ({
     },
     "@media (max-width:640px)": {
       padding: "5rem 0 5rem 0"
+    },
+    "@media (max-width:320px)": {
+      padding: "2rem 0 2rem 0"
     }
   },
   header: {

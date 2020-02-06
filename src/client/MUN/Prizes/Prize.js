@@ -10,11 +10,14 @@ const useStyles = makeStyles(theme => ({
     padding: "1rem 0 1rem 0",
     alignItem: "center",
     justifyContent: "center",
-    "@media (max-width:640px)": {
-      height: "12vh"
+    "@media (min-width:390px) and (max-width:600px)": {
+      height: "15vh"
+    },
+    "@media (min-width:320px) and (max-width:365px)": {
+      height: "17.5vh"
     },
     "@media (min-width:1030px) and (max-width:1600px)": {
-      height: "24vh"
+      height: "28vh"
     }
   },
   header: {

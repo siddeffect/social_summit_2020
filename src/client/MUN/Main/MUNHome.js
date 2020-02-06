@@ -24,8 +24,14 @@ const useStyles = makeStyles(theme => ({
     },
     fontFamily: ["'ibm plex serif'", "serif"].join(","),
     fontWeight: 600,
-    "@media (max-width:780px)": {
+    "@media (max-width:500px)": {
       fontSize: "2.4em"
+    },
+    "@media (min-width:500px) and (max-width:605px)": {
+      fontSize: "2.75em"
+    },
+    "@media (max-width:320px)": {
+      fontSize: "2em"
     }
   },
   content: {
@@ -37,20 +43,40 @@ const useStyles = makeStyles(theme => ({
     "@media (min-width:1360px) and (max-width:1440px)": {
       fontSize: "1.2em"
     },
-    "@media (max-width:640px)": {
+    "@media (max-width:500px)": {
       fontSize: "16px",
+      margin: "10px 50px 0 0"
+    },
+    "@media (min-width:500px) and (max-width:605px)": {
+      fontSize: "22px",
+      margin: "10px 50px 0 0"
+    },
+    "@media (max-width:320px)": {
+      fontSize: "13.5px",
       margin: "10px 50px 0 0"
     }
   },
   logo: {
     height: "24rem",
     marginBottom: "-10vh",
-    "@media (max-width:640px)": {
+    "@media (min-width:500px) and (max-width:605px)": {
+      height: "5rem",
+      marginBottom: "0vh"
+    },
+    "@media (min-width:370px) and (max-width:500px)": {
+      height: "6rem",
+      marginBottom: "-2vh"
+    },
+    "@media (min-width:350px) and (max-width:360px)": {
       height: "6rem",
       marginBottom: "-4vh"
     },
     "@media (min-width:1030px) and (max-width: 1600px)": {
       height: "16rem"
+    },
+    "@media (max-width:320px)": {
+      height: "5rem",
+      marginBottom: "-2vh"
     }
   },
   downloadRuleBook: {

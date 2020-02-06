@@ -65,7 +65,10 @@ const useStyles = makeStyles(theme => ({
     lineHeight: 1.6,
     backgroundColor: "#2a2a2a",
     padding: "2rem",
-    borderRadius: "12px"
+    borderRadius: "12px",
+    "@media (maxn-width:320px)": {
+      padding: "1.5rem"
+    }
   },
   name: {
     color: "#fff",
