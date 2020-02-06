@@ -13,6 +13,9 @@ const useStyles = makeStyles(theme => ({
     minHeight: 400,
     display: "flex",
     padding: "100px 200px 150px 200px",
+    "@media (min-width:1360px) and (max-width:1450px)": {
+      padding: "100px 60px 150px 100px"
+    },
     "@media (max-width:780px)": {
       height: 500,
       padding: "20px 20px 15px 20px",
@@ -33,13 +36,17 @@ const useStyles = makeStyles(theme => ({
     }
   },
   themeContent: {
-    margin: "40px 100px 0 0",
+    margin: "20px 100px 0 0",
     maxWidth: "600px",
     color: "#545D5F",
     fontSize: "1.1em",
     "@media (max-width:780px)": {
       fontSize: "0.9em",
       margin: "10px 40px 0 0"
+    },
+    "@media (min-width:1920px)": {
+      margin: "40px 100px 0 0",
+      fontSize: "1.4em"
     }
   },
   fabs: {
@@ -77,7 +84,7 @@ const useStyles = makeStyles(theme => ({
   },
   text: {
     color: "#fff",
-    verticalAlign: "middle",
+    verticalAlign: "top",
     "@media (max-width:780px)": {
       fontSize: "12px"
     }
@@ -161,8 +168,7 @@ export default function Footer() {
               <LocationOnIcon className={classes.icon} />
               <span className={classes.text}>
                 NSS Office, 2nd floor, Multi Activity Centre (MAC),
-                <br />
-                IIT Roorkee, ZIP - 247667
+                {/* <br />  */} IIT Roorkee, ZIP - 247667
               </span>
             </div>
           </div>
