@@ -80,9 +80,9 @@ function MUNRegister(props) {
     aboutSummit: ""
   });
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
+  // const handleClickOpen = () => {
+  //   setOpen(true);
+  // };
 
   const handleClose = () => {
     setOpen(false);
@@ -125,13 +125,12 @@ function MUNRegister(props) {
   return (
     <ThemeProvider theme={theme}>
       <Button
-        variant="contained"
+        variant="outlined"
         color="primary"
         size="large"
         className={classes.button}
-        onClick={handleClickOpen}
       >
-        Register Here
+        Registration Closed
       </Button>
       <Snackbar
         open={snackOpen}
