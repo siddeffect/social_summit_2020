@@ -58,17 +58,28 @@ const useStyles = makeStyles(theme => ({
     ".MuiTab-wrapper": {
       fontFamily: "Rubik,sans serif",
       fontSize: "18px",
+      color: "#fff",
       "@media (max-width:768px)": {
         fontSize: "12px"
       }
     },
     ".MuiPaper-elevation4": {
       boxShadow: "none"
+    },
+    ".MuiTab-fullWidth": {
+      maxWidth: "300px",
+      flexGrow: "1"
+    },
+    ".MuiAppBar-colorPrimary ": {
+      backgroundColor: "#00a650",
+      color: "#111"
+    },
+    ".PrivateTabIndicator-colorSecondary-127": {
+      backgroundColor: "#FDD638"
+    },
+    ".PrivateTabIndicator-root-124": {
+      height: "3.25px"
     }
-    // ".MuiAppBar-colorPrimary ": {
-    //   backgroundColor: "#ffffff",
-    //   color: "#111"
-    // }
   },
   root: {
     flexGrow: 1,
@@ -86,6 +97,9 @@ const useStyles = makeStyles(theme => ({
       paddingRight: "5vw",
       paddingLeft: "5vw"
     }
+  },
+  appBar: {
+    margin: "0 17.5vw 0 17.5vw"
   },
   header: {
     textAlign: "center",
@@ -182,7 +196,7 @@ const useStyles = makeStyles(theme => ({
   },
   time: {
     display: "block",
-    color: "#2ecc71",
+    color: "#00A650",
     fontSize: "18px",
     fontWeight: "300",
     fontFamily: "Rubik,sans-serif",
@@ -254,19 +268,20 @@ function Timeline() {
               lobortis velit. Aenean consequat et mi id efficitur. Donec nec sem
               quis metus vestibulum blandit. Aliquam vitae blandit tortor.
             </p>
-
-            <AppBar position="static">
-              <Tabs
-                variant="fullWidth"
-                value={value}
-                onChange={handleChange}
-                centered
-              >
-                <LinkTab label="Day 1 / Friday, 14" {...allyProps(0)} />
-                <LinkTab label="Day 2 / Saturday, 15" {...allyProps(1)} />
-                <LinkTab label="Day 3 / Sunday, 16" {...allyProps(2)} />
-              </Tabs>
-            </AppBar>
+            <div className={classes.appBar}>
+              <AppBar position="static">
+                <Tabs
+                  variant="fullWidth"
+                  value={value}
+                  onChange={handleChange}
+                  centered
+                >
+                  <LinkTab label="Day 1 " {...allyProps(0)} />
+                  <LinkTab label="Day 2 " {...allyProps(1)} />
+                  <LinkTab label="Day 3 " {...allyProps(2)} />
+                </Tabs>
+              </AppBar>
+            </div>
             {/* schedule content below */}
             <div className={classes.tabContent}>
               <TabPanel value={value} index={0}>
