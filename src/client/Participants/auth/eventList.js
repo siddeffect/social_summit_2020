@@ -1,5 +1,5 @@
 const eventList = [
-  "Model United Nation",
+  // "Model United Nation",
   "Round Table Conference",
   "Nukkad Natak",
   "Case Studies",
