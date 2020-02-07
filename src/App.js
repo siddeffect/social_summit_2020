@@ -14,6 +14,7 @@ import SocialConclave from "./client/SocialConclave/SocialConclave";
 import EventDetails from "./client/Events/EventDetails";
 import Partners from "./client/Partners/Partners";
 import ContactUs from "./client/Contact/ContactUs";
+import Timeline from "./client/Timeline/Timline";
 
 import {
   BrowserRouter as Router,
@@ -92,6 +93,10 @@ function App() {
         */}
         <Route exact path="/contactus">
           <ContactUs />
+        </Route>
+
+        <Route exact path="/timeline">
+          <Timeline />
         </Route>
 
         {/* events routs */}
