@@ -5,8 +5,13 @@ import {
   ThemeProvider
 } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
-import Button from "@material-ui/core/Button";
+import { Button, Snackbar } from "@material-ui/core";
+import MuiAlert from "@material-ui/lab/Alert";
 import Fade from "react-reveal/Fade";
+
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -122,6 +127,9 @@ const useStyles = makeStyles(theme => ({
       height: "1rem",
       marginTop: "0"
     }
+  },
+  snackbar: {
+    zIndex: "+99"
   }
 }));
 
@@ -133,8 +141,28 @@ const theme = createMuiTheme({
 
 export default function Hero() {
   const classes = useStyles();
+  const [open, setOpen] = React.useState(true);
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
+  };
   return (
     <footer className={classes.root}>
+      <Snackbar
+        className={classes.snackbar}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+        open={open}
+        autoHideDuration={10000}
+        onClose={handleClose}
+      >
+        <Alert onClose={handleClose} severity="success">
+          The deadline for abstract submission has been extended until 10th of
+          Feb
+        </Alert>
+      </Snackbar>
       <Fade>
         <div className={classes.contentBox}>
           <h1 className={classes.header}>
