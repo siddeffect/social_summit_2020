@@ -1,33 +1,57 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import {
+  makeStyles,
+  createMuiTheme,
+  ThemeProvider
+} from "@material-ui/core/styles";
 import {
   Card,
   CardActions,
   CardActionArea,
   CardMedia,
   CardContent,
-  Fab,
-  Typography
+  Typography,
+  IconButton
 } from "@material-ui/core";
-import { Facebook, Twitter, Instagram, LinkedIn } from "@material-ui/icons";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  LinkedIn,
+  Language
+} from "@material-ui/icons";
 
 const useStyles = makeStyles(theme => ({
   root: {
     maxWidth: 345
   },
   media: {
-    height: 300
+    height: 275
   },
-  fab: {
+  content: {
+    minHeight: 150
+  },
+  iconList: {
+    display: "block",
+    textAlign: "center"
+  },
+  icon: {
     margin: theme.spacing(1),
-    background: "#1A1E21",
+    color: "#545454",
+    fontSize: "2rem",
     ":hover&": {
-      background: "#00a650"
+      color: "#00a650"
     }
   }
 }));
 
-export default function SpeakerCard() {
+const theme = createMuiTheme({
+  palette: {
+    primary: { 500: "#00a650" }
+  }
+});
+
+export default function SpeakerCard(props) {
   const classes = useStyles();
 
   return (
@@ -35,61 +59,71 @@ export default function SpeakerCard() {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="Images/PreviousSpeakers/amarpreet_singh.jpg"
+          image={props.photoRoute}
           title="Contemplative Reptile"
         />
-        <CardContent>
+        <CardContent className={classes.content}>
           <Typography gutterBottom variant="h5" component="h2">
-            Speaker Name
+            {props.name}
           </Typography>
+          <ThemeProvider theme={theme}>
+            <Typography variant="body2" color="primary" component="p">
+              {props.shortDesignation}
+            </Typography>
+          </ThemeProvider>
+          <br />
           <Typography variant="body2" color="textSecondary" component="p">
-            CEO, Founder at GBC
+            {props.designation}
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <div className={classes.fabs}>
-          <Fab
-            href="https://www.facebook.com/iitrsocialsummit/"
-            target="_blank"
-            size="small"
-            color="primary"
-            aria-label="add"
-            className={classes.fab}
-          >
-            <Facebook />
-          </Fab>
-
-          <Fab
-            href="https://www.instagram.com/iitrsocialsummit/"
-            target="_blank"
-            size="small"
-            color="primary"
-            aria-label="add"
-            className={classes.fab}
-          >
-            <Instagram />
-          </Fab>
-          <Fab
-            href="https://www.linkedin.com/company/national-social-summit/?originalSubdomain=in"
-            target="_blank"
-            size="small"
-            color="primary"
-            aria-label="add"
-            className={classes.fab}
-          >
-            <LinkedIn />
-          </Fab>
-          <Fab
-            href="https://twitter.com/natsocialsummit"
-            target="_blank"
-            size="small"
-            color="primary"
-            aria-label="add"
-            className={classes.fab}
-          >
-            <Twitter />
-          </Fab>
+      <CardActions className={classes.iconList}>
+        <div>
+          {props.socialHandleLink.facebook ? (
+            <IconButton
+              href={props.socialHandleLink.facebook}
+              target="_blank"
+              size="small"
+            >
+              <Facebook className={classes.icon} />
+            </IconButton>
+          ) : null}
+          {props.socialHandleLink.instagram ? (
+            <IconButton
+              href={props.socialHandleLink.instagram}
+              target="_blank"
+              size="small"
+            >
+              <Instagram className={classes.icon} />
+            </IconButton>
+          ) : null}
+          {props.socialHandleLink.linkedin ? (
+            <IconButton
+              href={props.socialHandleLink.linkedin}
+              target="_blank"
+              size="small"
+            >
+              <LinkedIn className={classes.icon} />
+            </IconButton>
+          ) : null}
+          {props.socialHandleLink.twitter ? (
+            <IconButton
+              href={props.socialHandleLink.twitter}
+              target="_blank"
+              size="small"
+            >
+              <Twitter className={classes.icon} />
+            </IconButton>
+          ) : null}
+          {props.socialHandleLink.wikipedia ? (
+            <IconButton
+              href={props.socialHandleLink.wikipedia}
+              target="_blank"
+              size="small"
+            >
+              <Language className={classes.icon} />
+            </IconButton>
+          ) : null}
         </div>
       </CardActions>
     </Card>
