@@ -1,7 +1,11 @@
 import React from "react";
 import Navbar from "../../Layout/Navbar/Navbar";
-import { makeStyles } from "@material-ui/core/styles";
-import RegisterDialog from "./../Register/MUNRegister";
+import {
+  makeStyles,
+  createMuiTheme,
+  ThemeProvider
+} from "@material-ui/core/styles";
+import { Button } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   background: {
@@ -10,6 +14,24 @@ const useStyles = makeStyles(theme => ({
     position: "absolute",
     zIndex: "-99",
     objectFit: "cover"
+  },
+  button: {
+    marginTop: "1rem",
+    marginRight: "2rem",
+    width: "20rem",
+    height: "4rem",
+    fontSize: "1.4rem",
+    "@media (min-width: 1030px) and (max-width: 1600px)": {
+      width: "16rem",
+      height: "3.5rem",
+      fontSize: "1rem"
+    },
+    "@media (max-width:640px)": {
+      width: "15rem",
+      height: "2.1rem",
+      fontSize: "0.8rem",
+      marginTop: "0.5em"
+    }
   },
   mainContent: {
     paddingTop: "15vh",
@@ -38,12 +60,12 @@ const useStyles = makeStyles(theme => ({
       fontSize: "1.2em"
     },
     "@media (max-width:640px)": {
-      fontSize: "16px",
+      fontSize: "0.9rem",
       margin: "10px 50px 0 0"
     }
   },
   logo: {
-    height: "24rem",
+    height: "20rem",
     marginBottom: "-10vh",
     "@media (max-width:640px)": {
       height: "6rem",
@@ -80,6 +102,12 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+const theme = createMuiTheme({
+  palette: {
+    primary: { 500: "#00a650" }
+  }
+});
+
 function MUNHome() {
   const classes = useStyles();
 
@@ -109,9 +137,31 @@ function MUNHome() {
           and drafting resolutions, one can enhance their critical thinking,
           public speaking and leadership skills.
         </div>
-        <div>
-          <RegisterDialog />
-        </div>
+        <ThemeProvider theme={theme}>
+          <div>
+            <Button
+              href="https://drive.google.com/file/d/1kp2xSTxR4ibGSjbMT7iXLL5a-VWYVHHQ/view"
+              target="_blank"
+              variant="outlined"
+              color="primary"
+              size="large"
+              className={classes.button}
+            >
+              Allotted Countries
+            </Button>
+            <Button
+              href="https://drive.google.com/file/d/1mEwYw3W0vwJIr8qGrcAFVCdXopr9iGUD/view"
+              target="_blank"
+              variant="outlined"
+              color="primary"
+              size="large"
+              className={classes.button}
+            >
+              MUN Agenda
+            </Button>
+          </div>
+        </ThemeProvider>
+
         <div className={classes.downloadRuleBook}>
           <span className={classes.downloadText}>Download Rulebook</span>
           <a
