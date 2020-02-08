@@ -95,6 +95,11 @@ function MenuDrawer() {
           </Link>
         </ListItem>
         <ListItem>
+          <Link to="/speakers">
+            <ListItemText primary="SPEAKERS" className={classes.text} />
+          </Link>
+        </ListItem>
+        <ListItem>
           <Link to="/partners">
             <ListItemText primary="PARTNERS" className={classes.text} />
           </Link>
