@@ -15,6 +15,7 @@ import EventDetails from "./client/Events/EventDetails";
 import Partners from "./client/Partners/Partners";
 import Speakers from "./client/Speakers/Speakers";
 import ContactUs from "./client/Contact/ContactUs";
+import Timeline from "./client/Timeline/Timline";
 
 import {
   BrowserRouter as Router,
@@ -96,6 +97,10 @@ function App() {
         </Route>
         <Route exact path="/contactus">
           <ContactUs />
+        </Route>
+
+        <Route exact path="/timeline">
+          <Timeline />
         </Route>
 
         {/* events routs */}

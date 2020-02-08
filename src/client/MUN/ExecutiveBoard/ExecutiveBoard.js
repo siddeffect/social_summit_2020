@@ -16,7 +16,15 @@ const useStyles = makeStyles(theme => ({
     },
     "@media (max-width:640px)": {
       padding: "4vh 0 0 0 ",
+      height: "120vh"
+    },
+    "@media (max-width:380px)": {
+      padding: "4vh 0 0 0 ",
       height: "130vh"
+    },
+    "@media (max-width:320px)": {
+      padding: "4vh 0 0 0 ",
+      height: "155vh"
     }
   },
   header: {
@@ -28,6 +36,10 @@ const useStyles = makeStyles(theme => ({
     lineHeight: "1.2",
     "@media (max-width:640px)": {
       fontSize: "2rem"
+    },
+    "@media (min-width:500px) and (max-width:605px)": {
+      fontSize: "3rem",
+      lineHeight: "1.5"
     }
   },
   memberImg: {
@@ -58,9 +70,12 @@ const useStyles = makeStyles(theme => ({
     "@media (min-width:1030px) and (max-width:1600px)": {
       fontSize: "1.3rem"
     },
-    "@media (max-width:640px)": {
+    "@media (max-width:500px)": {
       fontSize: "1rem",
       marginTop: "2vh"
+    },
+    "@media (min-width:500px) and (max-width:605px)": {
+      fontSize: "1.5rem"
     }
   },
   chairperson: {
@@ -68,8 +83,11 @@ const useStyles = makeStyles(theme => ({
     fontSize: "2rem",
     color: "#fff",
     fontWeight: 600,
-    "@media (max-width:640px)": {
+    "@media (max-width:5000px)": {
       fontSize: "1.5rem"
+    },
+    "@media (min-width:500px) and (max-width:605px)": {
+      fontSize: "2rem"
     }
   }
 }));
