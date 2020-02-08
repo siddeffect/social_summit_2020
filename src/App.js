@@ -15,7 +15,7 @@ import EventDetails from "./client/Events/EventDetails";
 import Partners from "./client/Partners/Partners";
 import Speakers from "./client/Speakers/Speakers";
 import ContactUs from "./client/Contact/ContactUs";
-import Timeline from "./client/Timeline/Timline";
+import Timeline from "./client/Timeline/Timeline";
 
 import {
   BrowserRouter as Router,
