@@ -55,6 +55,9 @@ function LinkTab(props) {
 
 const useStyles = makeStyles(theme => ({
   "@global": {
+    ".MuiTab-root": {
+      minHeight: "60px"
+    },
     ".MuiTab-wrapper": {
       fontFamily: "Rubik,sans serif",
       fontSize: "18px",
@@ -107,7 +110,19 @@ const useStyles = makeStyles(theme => ({
     }
   },
   appBar: {
-    margin: "0 17.5vw 0 17.5vw"
+    margin: "0 18.5vw 0 18.5vw",
+    "@media (max-width:768px)": {
+      margin: "0 !important"
+    },
+    "@media (min-width:1024px) and (max-width:1300px)": {
+      margin: "0 13.5vw 0 13.5vw"
+    },
+    "@media (min-width:1600px)": {
+      margin: "0 22.5vw 0 22.5vw"
+    },
+    "@media (min-width:1900px)": {
+      margin: "0 20vw 0 20vw"
+    }
   },
   header: {
     textAlign: "center",
