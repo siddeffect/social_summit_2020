@@ -58,10 +58,13 @@ const useStyles = makeStyles(theme => ({
     ".MuiTab-wrapper": {
       fontFamily: "Rubik,sans serif",
       fontSize: "18px",
-      color: "#fff",
+      color: "#fdd638",
       "@media (max-width:768px)": {
         fontSize: "12px"
       }
+      // "&:active": {
+      //   color: "#00a650"
+      // }
     },
     ".MuiPaper-elevation4": {
       boxShadow: "none"
@@ -79,8 +82,13 @@ const useStyles = makeStyles(theme => ({
     },
     ".PrivateTabIndicator-root-124": {
       height: "3.25px"
+    },
+    ".Mui-selected": {
+      backgroundColor: "#fff"
+      // color: "#00a650"
     }
   },
+
   root: {
     flexGrow: 1,
     paddingTop: "15vh",
@@ -443,7 +451,7 @@ function Timeline() {
                   <div className={classes.col}>
                     <div className={classes.event}>
                       <img
-                        src="/Images/PreviousSpeakers/priyanka_raina.jpg"
+                        src="/Images/team/sample3.jpeg"
                         alt=""
                         className={classes.img}
                       />
@@ -468,7 +476,7 @@ function Timeline() {
                   <div className={classes.col}>
                     <div className={classes.event}>
                       <img
-                        src="/Images/PreviousSpeakers/priyanka_raina.jpg"
+                        src="/Images/team/sample3.jpeg"
                         alt=""
                         className={classes.img}
                       />
@@ -493,7 +501,7 @@ function Timeline() {
                   <div className={classes.col}>
                     <div className={classes.event}>
                       <img
-                        src="/Images/PreviousSpeakers/priyanka_raina.jpg"
+                        src="/Images/team/sample3.jpeg"
                         alt=""
                         className={classes.img}
                       />
@@ -518,7 +526,7 @@ function Timeline() {
                   <div className={classes.col}>
                     <div className={classes.event}>
                       <img
-                        src="/Images/PreviousSpeakers/priyanka_raina.jpg"
+                        src="/Images/team/sample5.jpeg"
                         alt=""
                         className={classes.img}
                       />
@@ -543,7 +551,7 @@ function Timeline() {
                   <div className={classes.col}>
                     <div className={classes.event}>
                       <img
-                        src="/Images/PreviousSpeakers/priyanka_raina.jpg"
+                        src="/Images/team/sample5.jpeg"
                         alt=""
                         className={classes.img}
                       />
@@ -568,7 +576,7 @@ function Timeline() {
                   <div className={classes.col}>
                     <div className={classes.event}>
                       <img
-                        src="/Images/PreviousSpeakers/priyanka_raina.jpg"
+                        src="/Images/team/sample5.jpeg"
                         alt=""
                         className={classes.img}
                       />
@@ -597,7 +605,7 @@ function Timeline() {
                   <div className={classes.col}>
                     <div className={classes.event}>
                       <img
-                        src="/Images/PreviousSpeakers/priyanka_raina.jpg"
+                        src="/Images/team/sample1.jpeg"
                         alt=""
                         className={classes.img}
                       />
@@ -622,7 +630,7 @@ function Timeline() {
                   <div className={classes.col}>
                     <div className={classes.event}>
                       <img
-                        src="/Images/PreviousSpeakers/priyanka_raina.jpg"
+                        src="/Images/team/sample1.jpeg"
                         alt=""
                         className={classes.img}
                       />
@@ -647,7 +655,7 @@ function Timeline() {
                   <div className={classes.col}>
                     <div className={classes.event}>
                       <img
-                        src="/Images/PreviousSpeakers/priyanka_raina.jpg"
+                        src="/Images/team/sample1.jpeg"
                         alt=""
                         className={classes.img}
                       />
@@ -672,7 +680,7 @@ function Timeline() {
                   <div className={classes.col}>
                     <div className={classes.event}>
                       <img
-                        src="/Images/PreviousSpeakers/priyanka_raina.jpg"
+                        src="/Images/team/sample1.jpeg"
                         alt=""
                         className={classes.img}
                       />
@@ -697,7 +705,7 @@ function Timeline() {
                   <div className={classes.col}>
                     <div className={classes.event}>
                       <img
-                        src="/Images/PreviousSpeakers/priyanka_raina.jpg"
+                        src="/Images/team/sample1.jpeg"
                         alt=""
                         className={classes.img}
                       />
@@ -722,7 +730,7 @@ function Timeline() {
                   <div className={classes.col}>
                     <div className={classes.event}>
                       <img
-                        src="/Images/PreviousSpeakers/priyanka_raina.jpg"
+                        src="/Images/team/sample1.jpeg"
                         alt=""
                         className={classes.img}
                       />
