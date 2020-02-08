@@ -15,6 +15,7 @@ import EventDetails from "./client/Events/EventDetails";
 import Partners from "./client/Partners/Partners";
 import Speakers from "./client/Speakers/Speakers";
 import ContactUs from "./client/Contact/ContactUs";
+// import Team from "./client/Team/Index";
 import Timeline from "./client/Timeline/Timline";
 
 import {
@@ -90,8 +91,8 @@ function App() {
         </Route>
         {/* <Route exact path="/team">
           <Team />
-        </Route>
-        */}
+        </Route> */}
+
         <Route exact path="/speakers">
           <Speakers />
         </Route>
