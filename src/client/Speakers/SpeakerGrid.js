@@ -56,6 +56,7 @@ export default function Speakers() {
         shortDesignation={data.shortDesignation}
         photoRoute={data.photoRoute}
         socialHandleLink={data.socialHandleLink}
+        route={data.route}
       />
     </Grid>
   ));

@@ -12,10 +12,12 @@ import ParticipantDashboard from "./client/Participants/ParticipantsDashboard/Da
 import Events from "./client/Events/Event";
 import SocialConclave from "./client/SocialConclave/SocialConclave";
 import EventDetails from "./client/Events/EventDetails";
+import SpeakerData from "./client/Speakers/SpeakerData";
 import Partners from "./client/Partners/Partners";
 import Speakers from "./client/Speakers/Speakers";
 import ContactUs from "./client/Contact/ContactUs";
 import Timeline from "./client/Timeline/Timeline";
+import SpeakerDetail from "./client/Speakers/SpeakerDetail";
 
 import {
   BrowserRouter as Router,
@@ -95,10 +97,12 @@ function App() {
         <Route exact path="/speakers">
           <Speakers />
         </Route>
+        <Route exact path="/speakers/details">
+          <SpeakerDetail />
+        </Route>
         <Route exact path="/contactus">
           <ContactUs />
         </Route>
-
         <Route exact path="/timeline">
           <Timeline />
         </Route>
@@ -148,6 +152,23 @@ function App() {
         </Route>
         <Route exact path="/event/caricature">
           <EventDetails eventType="caricature" />
+        </Route>
+
+        {/* Speaker Routes */}
+        <Route exact path="/speakers/sonamWangchuk">
+          <SpeakerDetail details={SpeakerData[0]} />
+        </Route>
+        <Route exact path="/speakers/shwetaKothari">
+          <SpeakerDetail details={SpeakerData[1]} />
+        </Route>
+        <Route exact path="/speakers/lalitPande">
+          <SpeakerDetail details={SpeakerData[2]} />
+        </Route>
+        <Route exact path="/speakers/sanjivChaturvedi">
+          <SpeakerDetail details={SpeakerData[3]} />
+        </Route>
+        <Route exact path="/speakers/abhishekJain">
+          <SpeakerDetail details={SpeakerData[4]} />
         </Route>
 
         <Route exact path="/about">

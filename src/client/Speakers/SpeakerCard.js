@@ -20,6 +20,7 @@ import {
   LinkedIn,
   Language
 } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -53,30 +54,27 @@ const theme = createMuiTheme({
 
 export default function SpeakerCard(props) {
   const classes = useStyles();
-
   return (
     <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={props.photoRoute}
-          title="Contemplative Reptile"
-        />
-        <CardContent className={classes.content}>
-          <Typography gutterBottom variant="h5" component="h2">
-            {props.name}
-          </Typography>
-          <ThemeProvider theme={theme}>
-            <Typography variant="body2" color="primary" component="p">
-              {props.shortDesignation}
+      <Link to={props.route}>
+        <CardActionArea>
+          <CardMedia className={classes.media} image={props.photoRoute} />
+          <CardContent className={classes.content}>
+            <Typography gutterBottom variant="h5" component="h2">
+              {props.name}
             </Typography>
-          </ThemeProvider>
-          <br />
-          <Typography variant="body2" color="textSecondary" component="p">
-            {props.designation}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
+            <ThemeProvider theme={theme}>
+              <Typography variant="body2" color="primary" component="p">
+                {props.shortDesignation}
+              </Typography>
+            </ThemeProvider>
+            <br />
+            <Typography variant="body2" color="textSecondary" component="p">
+              {props.designation}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Link>
       <CardActions className={classes.iconList}>
         <div>
           {props.socialHandleLink.facebook ? (
