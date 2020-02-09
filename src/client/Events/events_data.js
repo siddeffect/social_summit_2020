@@ -185,7 +185,7 @@ const eventData = {
     prizeWorth: "---",
     description:
       "The National Social Summit brings to you, a series of enthralling workshops, which will enrich your pool of knowledge and provide you with a deeper insight into the various social and environmental issues. In collaboration with Design Innovation Centre, IIT Roorkee, workshops are conducted by skilled professionals providing you with a deeper insight into various problems and teach you, how you as an individual can play your part in solving those problems and issues Workshops consist of a series of lectures followed by its implementation of skills learned in real-world problems.",
-    heldDate: "To be anounced",
+    heldDate: "15th Feb - 16th Feb",
     sponsoredBy: {
       header: "Workshops to be organised by DIC (Design innovation Centre)",
       image: null,
@@ -200,6 +200,24 @@ const eventData = {
     perks: [
       "Workshops to be taken by IIT Roorkee Professors.",
       "Certificate and Startup Kits will be provided to the delegates."
+    ],
+    problemStatements: [
+      {
+        type:
+          "15th Feb, 10:00AM - 1:00PM : Sustainable material from Himalayan Region",
+        problemStatememt:
+          "https://drive.google.com/file/d/1Fp7esA15AHYEp2oIwZn9tizJ-VgI5QAx/view"
+      },
+      {
+        type: "15th Feb, 10:00AM - 1:00PM : Clean Water for Himalayan Region",
+        problemStatememt:
+          "https://drive.google.com/file/d/1Zi7wsfyrG8ofVgqg-8g-8gsvweFh-D3v/view"
+      },
+      {
+        type: "16th Feb, 9:30AM - 11:30AM : Design Thinking and Innovation",
+        problemStatememt:
+          "https://drive.google.com/file/d/1zaTMScP0-ElsRlAZsE-npH4GZphBhyWo/view"
+      }
     ],
     coordinator: [
       {
