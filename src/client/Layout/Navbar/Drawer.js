@@ -9,16 +9,13 @@ const useStyles = makeStyles({
   list: {
     width: 300,
     "@media (max-width:340px)": {
-      width: 220,
-      marginTop: "80px"
+      width: 220
     },
     "@media (min-width:350px) and (max-width:380px)": {
-      width: 250,
-      marginTop: "120px"
+      width: 250
     },
     "@media (min-width:400px) and (max-width:420px)": {
-      width: 275,
-      marginTop: "150px"
+      width: 275
     }
   },
   drawer: {
@@ -97,6 +94,11 @@ function MenuDrawer() {
         <ListItem>
           <Link to="/speakers">
             <ListItemText primary="SPEAKERS" className={classes.text} />
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link to="/timeline">
+            <ListItemText primary="TIMELINE" className={classes.text} />
           </Link>
         </ListItem>
         <ListItem>

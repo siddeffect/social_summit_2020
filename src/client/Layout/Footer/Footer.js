@@ -36,17 +36,13 @@ const useStyles = makeStyles(theme => ({
     }
   },
   themeContent: {
-    margin: "20px 100px 0 0",
+    margin: "40px 100px 0 0",
     maxWidth: "600px",
     color: "#545D5F",
     fontSize: "1.1em",
     "@media (max-width:780px)": {
       fontSize: "0.9em",
       margin: "10px 40px 0 0"
-    },
-    "@media (min-width:1920px)": {
-      margin: "40px 100px 0 0",
-      fontSize: "1.4em"
     }
   },
   fabs: {
