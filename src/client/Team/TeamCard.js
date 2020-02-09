@@ -15,10 +15,10 @@ const useStyles = makeStyles(theme => ({
   },
   image: {
     width: "280px",
-    height: "420px",
+    height: "380px",
     "@media (min-width:1260px) and (max-width:1450px)": {
       width: "250px",
-      height: "360px"
+      height: "340px"
     },
     "@media (min-width:600px) and (max-width:768px)": {
       width: "160px",

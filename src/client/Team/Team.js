@@ -75,7 +75,7 @@ function Team() {
     {
       name: "Yash Agarwal",
       post: "Convenor",
-      src: "./Images/team/sample1.jpeg",
+      src: "./Images/Speakers/abhishek_jain-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -85,7 +85,7 @@ function Team() {
     {
       name: "Parag Mittal",
       post: "Convenor",
-      src: "./Images/team/sample2.jpeg",
+      src: "./Images//Speakers/chaturvedi-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -97,7 +97,7 @@ function Team() {
     {
       name: "Akshay Meena",
       post: "Co-Convenor",
-      src: "./Images/team/sample3.jpeg",
+      src: "./Images//Speakers/sonam_wangchu-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -107,7 +107,7 @@ function Team() {
     {
       name: "Ankit",
       post: "Co-Convenor",
-      src: "./Images/team/sample4.jpeg",
+      src: "./Images//Speakers/sonam_wangchu-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -117,7 +117,7 @@ function Team() {
     {
       name: "Sanskar ",
       post: "Co-Convenor",
-      src: "./Images/team/sample1.jpeg",
+      src: "./Images/Speakers/abhishek_jain-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -130,7 +130,7 @@ function Team() {
     {
       name: "Siddharth Varshney",
       post: "Technical Head",
-      src: "./Images/team/sample2.jpeg",
+      src: "./Images//Speakers/chaturvedi-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -143,7 +143,7 @@ function Team() {
     {
       name: "Subhendu Biswas",
       post: "Manager",
-      src: "./Images/team/sample1.jpeg",
+      src: "./Images/Speakers/abhishek_jain-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -153,7 +153,7 @@ function Team() {
     {
       name: "Ayush Shrivastava",
       post: "Manager",
-      src: "./Images/team/sample2.jpeg",
+      src: "./Images//Speakers/chaturvedi-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -163,7 +163,7 @@ function Team() {
     {
       name: "Heeralal Yadav",
       post: "Manager",
-      src: "./Images/team/sample3.jpeg",
+      src: "./Images//Speakers/sonam_wangchu-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -175,7 +175,7 @@ function Team() {
     {
       name: "Jitendra Kumar",
       post: "Manager",
-      src: "./Images/team/sample4.jpeg",
+      src: "./Images//Speakers/sonam_wangchu-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -185,7 +185,7 @@ function Team() {
     {
       name: "Dixit Panwar",
       post: "Manager",
-      src: "./Images/team/sample3.jpeg",
+      src: "./Images//Speakers/sonam_wangchu-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -195,7 +195,7 @@ function Team() {
     {
       name: "Shyam Tiwari",
       post: "Manager",
-      src: "./Images/team/sample1.jpeg",
+      src: "./Images/Speakers/abhishek_jain-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -208,7 +208,7 @@ function Team() {
     {
       name: "Yash Aggarwal",
       post: "Manager",
-      src: "./Images/team/sample1.jpeg",
+      src: "./Images/Speakers/abhishek_jain-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -218,7 +218,7 @@ function Team() {
     {
       name: "Aditi Singhal",
       post: "Manager",
-      src: "./Images/team/sample5.jpeg",
+      src: "./Images/Speakers/shweta-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -228,7 +228,7 @@ function Team() {
     {
       name: "Shrey Shukla",
       post: "Manager",
-      src: "./Images/team/sample3.jpeg",
+      src: "./Images//Speakers/sonam_wangchu-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -240,7 +240,7 @@ function Team() {
     {
       name: "Ujjval Singh",
       post: "Manager",
-      src: "./Images/team/sample4.jpeg",
+      src: "./Images//Speakers/sonam_wangchu-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -250,7 +250,7 @@ function Team() {
     {
       name: "Arpit Shrivastava",
       post: "Manager",
-      src: "./Images/team/sample3.jpeg",
+      src: "./Images//Speakers/sonam_wangchu-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -263,7 +263,7 @@ function Team() {
     {
       name: "Vibhu Chhawchharia",
       post: "Manager",
-      src: "./Images/team/sample1.jpeg",
+      src: "./Images/Speakers/abhishek_jain-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -273,7 +273,7 @@ function Team() {
     {
       name: "Ankit Ranjan",
       post: "Manager",
-      src: "./Images/team/sample2.jpeg",
+      src: "./Images//Speakers/chaturvedi-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -283,7 +283,7 @@ function Team() {
     {
       name: "Gaurav Kasat",
       post: "Manager",
-      src: "./Images/team/sample3.jpeg",
+      src: "./Images//Speakers/sonam_wangchu-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -295,7 +295,7 @@ function Team() {
     {
       name: "Adarsh Dubey",
       post: "Manager",
-      src: "./Images/team/sample4.jpeg",
+      src: "./Images//Speakers/sonam_wangchu-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -305,7 +305,7 @@ function Team() {
     {
       name: "Rakshit Raj",
       post: "Manager",
-      src: "./Images/team/sample3.jpeg",
+      src: "./Images//Speakers/sonam_wangchu-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -315,7 +315,7 @@ function Team() {
     {
       name: "Deepak Chauhan",
       post: "Manager",
-      src: "./Images/team/sample1.jpeg",
+      src: "./Images/Speakers/abhishek_jain-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -328,7 +328,7 @@ function Team() {
     {
       name: "Jaskaran Sethi",
       post: "Manager",
-      src: "./Images/team/sample1.jpeg",
+      src: "./Images/Speakers/abhishek_jain-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -338,17 +338,18 @@ function Team() {
     {
       name: "Enagandula Sindhu",
       post: "Manager",
-      src: "./Images/team/sample5.jpeg",
+      src: "./Images/Speakers/shweta-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
         instagram: ""
       }
     },
+
     {
       name: "Mohammad Zaryab",
       post: "Manager",
-      src: "./Images/team/sample3.jpeg",
+      src: "./Images/Speakers/sonam_wangchu-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -360,7 +361,7 @@ function Team() {
     {
       name: "Arjun Aryan",
       post: "Manager",
-      src: "./Images/team/sample4.jpeg",
+      src: "./Images/Speakers/sonam_wangchu-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -370,7 +371,7 @@ function Team() {
     {
       name: "Priyansh Garg",
       post: "Manager ",
-      src: "./Images/team/sample3.jpeg",
+      src: "./Images/Speakers/sonam_wangchu-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -383,7 +384,7 @@ function Team() {
     {
       name: "Sankalp Jha",
       post: "Manager",
-      src: "./Images/team/sample4.jpeg",
+      src: "./Images/Speakers/sonam_wangchu-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -393,7 +394,7 @@ function Team() {
     {
       name: "Mayank Parnami",
       post: "Manager ",
-      src: "./Images/team/sample3.jpeg",
+      src: "./Images/Speakers/sonam_wangchu-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
@@ -406,7 +407,7 @@ function Team() {
     {
       name: "Arnab Das",
       post: "Manager",
-      src: "./Images/team/sample1.jpeg",
+      src: "./Images/Speakers/abhishek_jain-min.jpg",
       socialHandleLink: {
         facebook: "",
         linkedin: "",
