@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     width: "60%",
-    margin: "10vh auto",
+    margin: "15vh auto",
     textAlign: "center"
   },
   paper: {
@@ -20,9 +20,19 @@ const useStyles = makeStyles(theme => ({
     width: "auto",
     backgroundSize: "cover"
   },
+  line: {
+    position: "relative",
+    background: "#46A651",
+    width: "100px",
+    height: "4px",
+    marginTop: "8px",
+    marginBottom: "20px",
+    display: "block"
+  },
   header: {
     fontFamily: ["'ibm plex serif'", "serif"].join(","),
-    fontSize: "4rem",
+    fontSize: "3rem",
+    textTransform: "uppercase",
     color: "#000",
     letterSpacing: "-.03rem",
     fontWeight: "600",
@@ -63,6 +73,7 @@ export default function Speakers() {
   return (
     <div className={classes.root}>
       <h1 className={classes.header}>Speakers</h1>
+      <hr className={classes.line} />
       <Grid container justify="center" spacing={3}>
         {SpeakerGridList}
       </Grid>

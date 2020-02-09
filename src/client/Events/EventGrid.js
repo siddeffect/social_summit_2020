@@ -7,7 +7,7 @@ import Fade from "react-reveal/Fade";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    marginTop: theme.spacing(8),
+    paddingTop: "15vh",
     marginBottom: theme.spacing(4)
   },
   images: {
@@ -15,6 +15,35 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     flexWrap: "wrap",
     borderRadius: "2rem"
+  },
+  header: {
+    textAlign: "center",
+    position: "relative",
+    fontSize: "3rem",
+    lineHeight: "40px",
+    fontFamily: ["'ibm plex serif'", "sarif"].join(","),
+    letterSpacing: "-0.03rem",
+    fontWeight: "600",
+    color: "#2d3034",
+    textTransform: "uppercase",
+    "@media(max-width:600px)": {
+      fontSize: "36px"
+    },
+    "@media(max-width:320px)": {
+      fontSize: "30px"
+    }
+  },
+  line: {
+    position: "absolute",
+    background: "#46A651",
+    width: "80px",
+    height: "4px",
+    bottom: "-1",
+    left: "50%",
+    marginLeft: "-47px",
+    marginTop: "0",
+    marginBottom: "20px",
+    boxSizing: "border-box"
   },
   imageWrapper: {
     position: "relative",
@@ -184,9 +213,8 @@ function EventGrid(props) {
 
   return (
     <Container className={classes.root} component="section">
-      <Typography variant="h2" marked="center" align="center" component="h1">
-        Events
-      </Typography>
+      <h1 className={classes.header}>Events</h1>
+      <hr className={classes.line} />
       <Fade bottom>
         <div className={classes.images}>
           {images.map(image => (

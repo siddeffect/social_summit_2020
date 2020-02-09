@@ -130,7 +130,7 @@ const useStyles = makeStyles(theme => ({
     lineHeight: "40px",
     fontFamily: ["'ibm plex serif'", "sarif"].join(","),
     letterSpacing: "-0.03rem",
-    fontWeight: "400",
+    fontWeight: "600",
     color: "#2d3034",
     textTransform: "uppercase",
     "@media(max-width:600px)": {
@@ -508,7 +508,7 @@ function Timeline() {
                       />
                       <div className={classes.eventContent}>
                         <span className={classes.time}>
-                          109:30 AM - 12:30 PM
+                          09:30 AM - 12:30 PM
                         </span>
                         <p className={classes.title}>Policy Case Competition</p>
                         <p className={classes.content}>Venue: LHC</p>

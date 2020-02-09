@@ -29,6 +29,10 @@ const useStyles = makeStyles(theme => ({
   media: {
     height: 275
   },
+  name: {
+    color: "#494949",
+    textTransform: "uppercase"
+  },
   content: {
     minHeight: 150
   },
@@ -60,7 +64,12 @@ export default function SpeakerCard(props) {
         <CardActionArea>
           <CardMedia className={classes.media} image={props.photoRoute} />
           <CardContent className={classes.content}>
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="h2"
+              className={classes.name}
+            >
               {props.name}
             </Typography>
             <ThemeProvider theme={theme}>
