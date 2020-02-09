@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import TeamCard from "./TeamCard";
 import Fade from "react-reveal/Fade";
+
 import Aux from "../../hoc/Aux";
 
 const useStyles = makeStyles(theme => ({
@@ -74,29 +75,54 @@ function Team() {
     {
       name: "Yash Agarwal",
       post: "Convenor",
-      src: "./Images/team/sample1.jpeg"
+      src: "./Images/team/sample1.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     },
     {
       name: "Parag Mittal",
       post: "Convenor",
-      src: "./Images/team/sample2.jpeg"
+      src: "./Images/team/sample2.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     }
   ];
   const CoConvenorsArray = [
     {
       name: "Akshay Meena",
       post: "Co-Convenor",
-      src: "./Images/team/sample3.jpeg"
+      src: "./Images/team/sample3.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     },
     {
       name: "Ankit",
       post: "Co-Convenor",
-      src: "./Images/team/sample4.jpeg"
+      src: "./Images/team/sample4.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     },
     {
       name: "Sanskar ",
       post: "Co-Convenor",
-      src: "./Images/team/sample1.jpeg"
+      src: "./Images/team/sample1.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     }
   ];
 
@@ -104,7 +130,12 @@ function Team() {
     {
       name: "Siddharth Varshney",
       post: "Technical Head",
-      src: "./Images/team/sample2.jpeg"
+      src: "./Images/team/sample2.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     }
   ];
 
@@ -112,34 +143,64 @@ function Team() {
     {
       name: "Subhendu Biswas",
       post: "Manager",
-      src: "./Images/team/sample1.jpeg"
+      src: "./Images/team/sample1.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     },
     {
       name: "Ayush Shrivastava",
       post: "Manager",
-      src: "./Images/team/sample2.jpeg"
+      src: "./Images/team/sample2.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     },
     {
       name: "Heeralal Yadav",
       post: "Manager",
-      src: "./Images/team/sample3.jpeg"
+      src: "./Images/team/sample3.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     }
   ];
   const OperationsArray2 = [
     {
       name: "Jitendra Kumar",
       post: "Manager",
-      src: "./Images/team/sample4.jpeg"
+      src: "./Images/team/sample4.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     },
     {
       name: "Dixit Panwar",
       post: "Manager",
-      src: "./Images/team/sample3.jpeg"
+      src: "./Images/team/sample3.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     },
     {
-      name: " Shyam Tiwari",
+      name: "Shyam Tiwari",
       post: "Manager",
-      src: "./Images/team/sample1.jpeg"
+      src: "./Images/team/sample1.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     }
   ];
 
@@ -147,29 +208,54 @@ function Team() {
     {
       name: "Yash Aggarwal",
       post: "Manager",
-      src: "./Images/team/sample1.jpeg"
+      src: "./Images/team/sample1.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     },
     {
       name: "Aditi Singhal",
       post: "Manager",
-      src: "./Images/team/sample5.jpeg"
+      src: "./Images/team/sample5.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     },
     {
       name: "Shrey Shukla",
       post: "Manager",
-      src: "./Images/team/sample3.jpeg"
+      src: "./Images/team/sample3.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     }
   ];
   const EventsArray2 = [
     {
       name: "Ujjval Singh",
       post: "Manager",
-      src: "./Images/team/sample4.jpeg"
+      src: "./Images/team/sample4.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     },
     {
       name: "Arpit Shrivastava",
       post: "Manager",
-      src: "./Images/team/sample3.jpeg"
+      src: "./Images/team/sample3.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     }
   ];
 
@@ -177,34 +263,64 @@ function Team() {
     {
       name: "Vibhu Chhawchharia",
       post: "Manager",
-      src: "./Images/team/sample1.jpeg"
+      src: "./Images/team/sample1.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     },
     {
       name: "Ankit Ranjan",
       post: "Manager",
-      src: "./Images/team/sample2.jpeg"
+      src: "./Images/team/sample2.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     },
     {
       name: "Gaurav Kasat",
       post: "Manager",
-      src: "./Images/team/sample3.jpeg"
+      src: "./Images/team/sample3.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     }
   ];
   const PromotionsArray2 = [
     {
       name: "Adarsh Dubey",
       post: "Manager",
-      src: "./Images/team/sample4.jpeg"
+      src: "./Images/team/sample4.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     },
     {
       name: "Rakshit Raj",
       post: "Manager",
-      src: "./Images/team/sample3.jpeg"
+      src: "./Images/team/sample3.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     },
     {
       name: "Deepak Chauhan",
       post: "Manager",
-      src: "./Images/team/sample1.jpeg"
+      src: "./Images/team/sample1.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     }
   ];
 
@@ -212,29 +328,54 @@ function Team() {
     {
       name: "Jaskaran Sethi",
       post: "Manager",
-      src: "./Images/team/sample1.jpeg"
+      src: "./Images/team/sample1.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     },
     {
       name: "Enagandula Sindhu",
       post: "Manager",
-      src: "./Images/team/sample5.jpeg"
+      src: "./Images/team/sample5.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     },
     {
       name: "Mohammad Zaryab",
       post: "Manager",
-      src: "./Images/team/sample3.jpeg"
+      src: "./Images/team/sample3.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     }
   ];
   const SponsersArray2 = [
     {
       name: "Arjun Aryan",
       post: "Manager",
-      src: "./Images/team/sample4.jpeg"
+      src: "./Images/team/sample4.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     },
     {
       name: "Priyansh Garg",
       post: "Manager ",
-      src: "./Images/team/sample3.jpeg"
+      src: "./Images/team/sample3.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     }
   ];
 
@@ -242,12 +383,22 @@ function Team() {
     {
       name: "Sankalp Jha",
       post: "Manager",
-      src: "./Images/team/sample4.jpeg"
+      src: "./Images/team/sample4.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     },
     {
       name: "Mayank Parnami",
       post: "Manager ",
-      src: "./Images/team/sample3.jpeg"
+      src: "./Images/team/sample3.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     }
   ];
 
@@ -255,60 +406,156 @@ function Team() {
     {
       name: "Arnab Das",
       post: "Manager",
-      src: "./Images/team/sample1.jpeg"
+      src: "./Images/team/sample1.jpeg",
+      socialHandleLink: {
+        facebook: "",
+        linkedin: "",
+        instagram: ""
+      }
     }
   ];
 
   const Convenors = ConvenorsArray.map((item, index) => {
-    return <TeamCard src={item.src} name={item.name} post={item.post} />;
+    return (
+      <TeamCard
+        src={item.src}
+        name={item.name}
+        post={item.post}
+        socialHandleLink={item.socialHandleLink}
+      />
+    );
   });
 
   const CoConvenors = CoConvenorsArray.map((item, index) => {
-    return <TeamCard src={item.src} name={item.name} post={item.post} />;
+    return (
+      <TeamCard
+        src={item.src}
+        name={item.name}
+        post={item.post}
+        socialHandleLink={item.socialHandleLink}
+      />
+    );
   });
 
   const TechHead = TechHeadArray.map((item, index) => {
-    return <TeamCard src={item.src} name={item.name} post={item.post} />;
+    return (
+      <TeamCard
+        src={item.src}
+        name={item.name}
+        post={item.post}
+        socialHandleLink={item.socialHandleLink}
+      />
+    );
   });
 
   const Operations1 = OperationsArray1.map((item, index) => {
-    return <TeamCard src={item.src} name={item.name} post={item.post} />;
+    return (
+      <TeamCard
+        src={item.src}
+        name={item.name}
+        post={item.post}
+        socialHandleLink={item.socialHandleLink}
+      />
+    );
   });
 
   const Operations2 = OperationsArray2.map((item, index) => {
-    return <TeamCard src={item.src} name={item.name} post={item.post} />;
+    return (
+      <TeamCard
+        src={item.src}
+        name={item.name}
+        post={item.post}
+        socialHandleLink={item.socialHandleLink}
+      />
+    );
   });
 
   const Events1 = EventsArray1.map((item, index) => {
-    return <TeamCard src={item.src} name={item.name} post={item.post} />;
+    return (
+      <TeamCard
+        src={item.src}
+        name={item.name}
+        post={item.post}
+        socialHandleLink={item.socialHandleLink}
+      />
+    );
   });
 
   const Events2 = EventsArray2.map((item, index) => {
-    return <TeamCard src={item.src} name={item.name} post={item.post} />;
+    return (
+      <TeamCard
+        src={item.src}
+        name={item.name}
+        post={item.post}
+        socialHandleLink={item.socialHandleLink}
+      />
+    );
   });
 
   const Promotions1 = PromotionsArray1.map((item, index) => {
-    return <TeamCard src={item.src} name={item.name} post={item.post} />;
+    return (
+      <TeamCard
+        src={item.src}
+        name={item.name}
+        post={item.post}
+        socialHandleLink={item.socialHandleLink}
+      />
+    );
   });
 
   const Promotions2 = PromotionsArray2.map((item, index) => {
-    return <TeamCard src={item.src} name={item.name} post={item.post} />;
+    return (
+      <TeamCard
+        src={item.src}
+        name={item.name}
+        post={item.post}
+        socialHandleLink={item.socialHandleLink}
+      />
+    );
   });
 
   const Sponsers1 = SponsersArray1.map((item, index) => {
-    return <TeamCard src={item.src} name={item.name} post={item.post} />;
+    return (
+      <TeamCard
+        src={item.src}
+        name={item.name}
+        post={item.post}
+        socialHandleLink={item.socialHandleLink}
+      />
+    );
   });
 
   const Sponsers2 = SponsersArray2.map((item, index) => {
-    return <TeamCard src={item.src} name={item.name} post={item.post} />;
+    return (
+      <TeamCard
+        src={item.src}
+        name={item.name}
+        post={item.post}
+        socialHandleLink={item.socialHandleLink}
+      />
+    );
   });
 
   const Designers = DesignersArray.map((item, index) => {
-    return <TeamCard src={item.src} name={item.name} post={item.post} />;
+    return (
+      <TeamCard
+        src={item.src}
+        name={item.name}
+        post={item.post}
+        socialHandleLink={item.socialHandleLink}
+      />
+    );
   });
 
   const Developer = DeveloperArray.map((item, index) => {
-    return <TeamCard src={item.src} name={item.name} post={item.post} />;
+    return (
+      <TeamCard
+        src={item.src}
+        name={item.name}
+        post={item.post}
+        socialHandleLink={item.socialHandleLink}
+      />
+    );
   });
 
   return (

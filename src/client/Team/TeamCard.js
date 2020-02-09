@@ -1,5 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import { IconButton } from "@material-ui/core";
+import { Facebook, Instagram, LinkedIn } from "@material-ui/icons";
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -47,10 +49,10 @@ const useStyles = makeStyles(theme => ({
       fontSize: "20px !important"
     },
     "@media (max-width:500px)": {
-      fontSize: "16px !important"
+      fontSize: "14px !important"
     },
     "@media (max-width:320px)": {
-      fontSize: "14px !important"
+      fontSize: "12.5px !important"
     }
   },
 
@@ -69,25 +71,69 @@ const useStyles = makeStyles(theme => ({
       fontSize: "20px !important"
     },
     "@media (max-width:500px)": {
-      fontSize: "16px !important"
+      fontSize: "15px !important"
     },
     "@media (max-width:320px)": {
-      fontSize: "14px !important"
+      fontSize: "13px !important"
+    }
+  },
+  iconList: {
+    display: "block",
+    textAlign: "center"
+  },
+  icon: {
+    margin: theme.spacing(1),
+    color: "#545454",
+    fontSize: "2rem",
+    ":hover&": {
+      color: "#00a650"
+    },
+    "@media (min-width:1600px) and (max-width:1920px)": {
+      fontSize: "2.5rem"
+    },
+    "@media (max-width:500px)": {
+      fontSize: "1.5rem",
+      margin: "0"
+    },
+    "@media (max-width:320px)": {
+      fontSize: "1.25rem",
+      margin: "0"
     }
   }
 }));
 
 const TeamCard = props => {
   const classes = useStyles();
-  {
-    return (
-      <div className={classes.card}>
-        <img alt="" src={props.src} className={classes.image}></img>
-        <p className={classes.name}>{props.name}</p>
-        <p className={classes.post}>{props.post}</p>
+  return (
+    <div className={classes.card}>
+      <img alt="" src={props.src} className={classes.image}></img>
+      <p className={classes.name}>{props.name}</p>
+      <p className={classes.post}>{props.post}</p>
+      <div className={classes.iconList}>
+        <IconButton
+          href={props.socialHandleLink.facebook}
+          target="_blank"
+          size="small"
+        >
+          <Facebook className={classes.icon} />
+        </IconButton>
+        <IconButton
+          href={props.socialHandleLink.instagram}
+          target="_blank"
+          size="small"
+        >
+          <Instagram className={classes.icon} />
+        </IconButton>
+        <IconButton
+          href={props.socialHandleLink.linkedin}
+          target="_blank"
+          size="small"
+        >
+          <LinkedIn className={classes.icon} />
+        </IconButton>
       </div>
-    );
-  }
+    </div>
+  );
 };
 
 export default TeamCard;
