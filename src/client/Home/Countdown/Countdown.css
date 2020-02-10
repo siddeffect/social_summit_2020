@@ -9,7 +9,7 @@ body {
 }
 
 .countdownContainer {
-  height: 300px;
+  height: 40vh;
   background-color: #111;
   display: flex;
   align-items: center;
@@ -53,6 +53,10 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .countdownContainer {
+    height: 60vh;
+  }
+
   .countdown-svg {
     width: 140px;
     height: 140px;

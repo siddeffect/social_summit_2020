@@ -14,11 +14,11 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: "3vh"
   },
   image: {
-    width: "280px",
-    height: "380px",
+    width: "260px",
+    height: "340px",
     "@media (min-width:1260px) and (max-width:1450px)": {
-      width: "250px",
-      height: "340px"
+      width: "240px",
+      height: "300px"
     },
     "@media (min-width:600px) and (max-width:768px)": {
       width: "160px",

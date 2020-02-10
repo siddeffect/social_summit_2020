@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     flexFlow: "column",
     textAlign: "center",
-    backgroundImage: "url(/Images/Subtle-Prism.svg)"
+    backgroundColor: "#111"
   },
   container: {
     display: "flex",
@@ -561,62 +561,69 @@ function Team() {
 
   return (
     <Aux>
-      <Fade bottom>
-        <div className={classes.outerContainer}>
+      <div className={classes.outerContainer}>
+        <Fade bottom>
           <p className={classes.header}> Meet The Team</p>
           <div className={classes.container}>{Convenors}</div>
           <div className={classes.container}>{CoConvenors}</div>
           <div className={classes.container}>{TechHead}</div>
-        </div>
-      </Fade>
-      <Fade bottom>
-        <div className={classes.outerContainer}>
+        </Fade>
+      </div>
+
+      <div className={classes.outerContainer}>
+        <Fade bottom>
           <p className={classes.headerManager}> Team Operations </p>
           <div className={classes.container}>{Operations1}</div>
           <div className={classes.container}>{Operations2}</div>
-        </div>
-      </Fade>
-      <Fade bottom>
-        <div className={classes.outerContainer}>
+        </Fade>
+      </div>
+
+      <div className={classes.outerContainer}>
+        <Fade bottom>
           <p className={classes.headerManager}> Team Events </p>
           <div className={classes.container}>{Events1}</div>
           <div className={classes.container}>{Events2}</div>
-        </div>
-      </Fade>
-      <Fade bottom>
-        <div className={classes.outerContainer}>
+        </Fade>
+      </div>
+
+      <div className={classes.outerContainer}>
+        <Fade bottom>
           <p className={classes.headerManager}> Team Promotions </p>
           <div className={classes.container}>{Promotions1}</div>
           <div className={classes.container}>{Promotions2}</div>
-        </div>
-      </Fade>
-      <Fade bottom>
-        <div className={classes.outerContainer}>
+        </Fade>
+      </div>
+
+      <div className={classes.outerContainer}>
+        <Fade bottom>
           <p className={classes.headerManager}> Team Sponsers </p>
           <div className={classes.container}>{Sponsers1}</div>
           <div className={classes.container}>{Sponsers2}</div>
-        </div>
-      </Fade>
-      <Fade bottom>
-        <div className={classes.outerContainer}>
+        </Fade>
+      </div>
+
+      <div className={classes.outerContainer}>
+        <Fade bottom>
           <p className={classes.headerManager}> Web Designers </p>
           <div className={classes.container}>{Designers}</div>
-        </div>
-      </Fade>
-      <Fade bottom>
-        <div className={classes.outerContainer}>
+        </Fade>
+      </div>
+
+      <div className={classes.outerContainer}>
+        <Fade bottom>
           <p className={classes.headerManager}> Web Developer </p>
           <div className={classes.container}>{Developer}</div>
-        </div>
-      </Fade>
-      <Fade bottom>
-        <div className={classes.outerContainer}>
+        </Fade>
+      </div>
+
+      <div className={classes.outerContainer}>
+        <Fade bottom>
           <p className={classes.headerManager}> Executive Members </p>
           <div className={classes.container}>
             {/* Group Image to be displayed */}
           </div>
-        </div>
-      </Fade>
+        </Fade>
+      </div>
     </Aux>
   );
 }
