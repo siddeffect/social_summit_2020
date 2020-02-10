@@ -199,7 +199,7 @@ const eventData = {
       "https://drive.google.com/open?id=1OQNJiAaCCQGtCIHE4IHFbGRAaEoU_ejb",
     perks: [
       "Workshops to be taken by IIT Roorkee Professors.",
-      "Certificate and Startup Kits will be provided to the delegates."
+      "Certificate and Starter Kits will be provided to the delegates."
     ],
     problemStatements: [
       {
