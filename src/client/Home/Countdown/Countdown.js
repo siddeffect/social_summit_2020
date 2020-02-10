@@ -111,7 +111,7 @@ const SVGCircle1 = ({ radius }) => (
       fill="none"
       stroke="#333"
       strokeWidth="8"
-      d={describeArc(70, 70, 50, 0, radius)}
+      d={describeArc(70, 70, 60, 0, radius)}
     />
   </svg>
 );

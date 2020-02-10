@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: "#fff",
     flexGrow: 1,
-    padding: "0 10vw 10vh 10vw"
+    padding: "10vh 10vw 10vh 10vw"
   },
   image_bucket: {
     padding: theme.spacing(2),
@@ -18,72 +18,79 @@ const useStyles = makeStyles(theme => ({
     verticalAlign: "middle"
   },
   image: {
-    width: "8vw",
+    width: "12vw",
     verticalAlign: "middle",
-    "@media(min-width:350px) and (max-width:500px)": {
+    "@media(max-width:320px)": {
       width: "25vw"
     },
+    "@media(min-width:350px) and (max-width:500px)": {
+      width: "30vw"
+    },
     "@media(min-width:500px) and (max-width:605px)": {
-      width: "11.5vw"
+      width: "15vw"
+    }
+  },
+  image2: {
+    width: "6.5vw",
+    height: "11vh",
+    verticalAlign: "middle",
+    "@media(max-width:320px)": {
+      width: "25vw",
+      height: "10vh"
+    },
+    "@media(min-width:350px) and (max-width:500px)": {
+      width: "30vw"
+    },
+    "@media(min-width:500px) and (max-width:605px)": {
+      width: "20vw",
+      height: "10vh"
+    }
+  },
+  image3: {
+    width: "40vw",
+    height: "35vh",
+    verticalAlign: "middle",
+    "@media(max-width:320px)": {
+      width: "80vw",
+      height: "20vh"
+    },
+    "@media(min-width:350px) and (max-width:500px)": {
+      width: "80vw",
+      height: "20vh"
+    },
+    "@media(min-width:500px) and (max-width:605px)": {
+      width: "70vw",
+      height: "20vh"
     }
   },
   header: {
     textAlign: "center",
     fontFamily: ["'ibm plex serif'", "serif"].join(","),
-    fontSize: "3.5rem",
-    color: "#111",
-    letterSpacing: "-.03rem",
-    fontWeight: "600",
-    lineHeight: "1.2",
-    margin: "0 0 5vh 0",
-    paddingTop: "15vh",
-    "@media(min-width:350px) and (max-width:605px)": {
-      fontSize: "44px",
-      fontWeight: 525,
-      letterSpacing: 0
-    },
-    "@media(min-width:350px) and (max-width:420px)": {
-      fontSize: "46px",
-      fontWeight: 500,
-      letterSpacing: 0
-    },
-    "@media (max-width:320px)": {
-      fontSize: "30px",
-      fontWeight: 450,
-      letterSpacing: 0
-    }
-  },
-  header2: {
-    textAlign: "center",
-    fontFamily: ["'ibm plex serif'", "serif"].join(","),
     fontSize: "3.25rem",
     color: "#111",
     letterSpacing: "-.03rem",
-    fontWeight: "600",
+    fontWeight: "500",
     lineHeight: "1.2",
-    margin: "0 0 2.5vh 0",
-    paddingTop: "2.5vh",
+    textTransform: "uppercase",
+    margin: "0 0 5vh 0",
+    paddingTop: "6vh",
     "@media(min-width:350px) and (max-width:605px)": {
-      fontSize: "44px",
+      fontSize: "40px",
       fontWeight: 525,
-      letterSpacing: 0
+      letterSpacing: "1.25px"
     },
-    "@media(min-width:350px) and (max-width:420px)": {
-      fontSize: "46px",
-      fontWeight: 500,
-      letterSpacing: 0
-    },
+
     "@media (max-width:320px)": {
-      fontSize: "30px",
+      fontSize: "28px",
       fontWeight: 450,
-      letterSpacing: 0
+      letterSpacing: "1.25px"
     }
   },
   subHeader: {
     textAlign: "center",
     fontFamily: ["'ibm plex serif'", "serif"].join(","),
-    fontSize: "2rem",
-    color: "#111",
+    fontSize: "1.6rem",
+    color: "#003B00",
     letterSpacing: "-.03rem",
     fontWeight: "400",
     lineHeight: "0.25",
@@ -105,13 +112,27 @@ const useStyles = makeStyles(theme => ({
       letterSpacing: 0
     }
   },
+
   container: {
     display: "flex",
-    justifyContent: "space-around"
+    justifyContent: "space-around",
+    flexWrap: "wrap"
   },
   wraper: {
     boxSizing: "border-box",
     minHeight: "170px"
+  },
+  line: {
+    position: "absolute",
+    background: "#46A651",
+    width: "80px",
+    height: "4px",
+    bottom: "-1",
+    left: "50%",
+    marginLeft: "-47px",
+    marginTop: "-2.5vh",
+    marginBottom: "20px",
+    boxSizing: "border-box"
   }
 }));
 
@@ -133,20 +154,30 @@ export default function NgoPartner() {
     { src: "/Images/Partners/Ngo/udyama.jpg", link: null }
   ];
 
-  const TrainingPartner = [
-    { src: "/Images/Partners/Company/training/FinlandLabs.jpg", link: null }
+  const EnergyPartner = [
+    {
+      src: "/Images/Partners/Company/main_teri_energy.png",
+      link: "https://www.teriin.org/"
+    }
   ];
 
-  const GoodnessPartner = [
+  const TrainingPartner = [
     {
-      src: "/Images/Partners/Company/Logical Indian_Goodness Partner.png",
-      link: null
+      src: "/Images/Partners/Company/training/FinlandLabs.jpg",
+      link: "http://www.finlandlabs.com/"
     }
   ];
 
   const EcoPartner = [
     {
       src: "/Images/Partners/Company/Make Room_Ecosystem PArtner.jpeg",
+      link: "http://makeroomindia.com/changemakersroom/"
+    }
+  ];
+
+  const SustainabilityPartner = [
+    {
+      src: "/Images/Partners/Company/ceew.png",
       link: null
     }
   ];
@@ -159,13 +190,32 @@ export default function NgoPartner() {
     }
   ];
 
-  const RestruantPartner = [
+  const RestaurantPartner = [
     {
-      src: "/Images/Partners/Restruant/Olive.jpeg",
+      src: "/Images/Partners/Restaurant/Olive.jpeg",
       link: null
     },
     {
-      src: "/Images/Partners/Restruant/Village-1.jpg",
+      src: "/Images/Partners/Restaurant/Village-1.jpg",
+      link: null
+    },
+    {
+      src: "/Images/Partners/Restaurant/SVL.jpeg",
+      link: null
+    },
+    {
+      src: "/Images/Partners/Restaurant/Restro Cafe.jpeg",
+      link: null
+    },
+    {
+      src: "/Images/Partners/Restaurant/Desi Tadka Logo.jpg",
+      link: null
+    }
+  ];
+
+  const UnescoArray = [
+    {
+      src: "/Images/Partners/Company/Unesco.jpg",
       link: null
     }
   ];
@@ -192,7 +242,7 @@ export default function NgoPartner() {
     );
   });
 
-  const Training = TrainingPartner.map(item => {
+  const Energy = EnergyPartner.map(item => {
     return (
       <Grid
         alignItems="center"
@@ -214,7 +264,7 @@ export default function NgoPartner() {
     );
   });
 
-  const GoodNess = GoodnessPartner.map(item => {
+  const Training = TrainingPartner.map(item => {
     return (
       <Grid
         alignItems="center"
@@ -258,7 +308,7 @@ export default function NgoPartner() {
     );
   });
 
-  const CSR = CSRPartner.map(item => {
+  const Sustainability = SustainabilityPartner.map(item => {
     return (
       <Grid
         alignItems="center"
@@ -280,7 +330,29 @@ export default function NgoPartner() {
     );
   });
 
-  const Restruant = RestruantPartner.map(item => {
+  const CSR = CSRPartner.map(item => {
+    return (
+      <Grid
+        alignItems="center"
+        justify="center"
+        item
+        xs={6}
+        sm={2}
+        key={item}
+        container
+      >
+        <div className={classes.image_bucket}>
+          <Fade bottom>
+            <a href={item.link} target="_blank" rel="noopener noreferrer">
+              <img src={item.src} alt={item.link} className={classes.image2} />
+            </a>
+          </Fade>
+        </div>
+      </Grid>
+    );
+  });
+
+  const Restaurant = RestaurantPartner.map(item => {
     return (
       <Grid
         alignItems="center"
@@ -301,37 +373,72 @@ export default function NgoPartner() {
       </Grid>
     );
   });
+
+  const Unesco = UnescoArray.map(item => {
+    return (
+      <Grid
+        alignItems="center"
+        justify="center"
+        item
+        xs={6}
+        sm={2}
+        key={item}
+        container
+      >
+        <div className={classes.image_bucket}>
+          <Fade bottom>
+            <a href={item.link} target="_blank" rel="noopener noreferrer">
+              <img src={item.src} alt={item.link} className={classes.image3} />
+            </a>
+          </Fade>
+        </div>
+      </Grid>
+    );
+  });
+
   return (
     <Aux>
       <Navbar />
       <div className={classes.root}>
         <Fade bottom>
           <h2 className={classes.header}> NGO Partners</h2>
+          <hr className={classes.line} />
           <Grid container spacing={3} justify="center">
             {NGOImages}
           </Grid>
         </Fade>
         <Fade bottom>
-          <h2 className={classes.header2}> Company Partners</h2>
+          <h2 className={classes.header}> Company Partners</h2>
+          <hr className={classes.line} />
           <div className={classes.container}>
+            <div className={classes.wraper}>
+              <h3 className={classes.subHeader}> Energy Partner</h3>
+              <Grid container spacing={3} justify="center">
+                {Energy}
+              </Grid>
+            </div>
+
             <div className={classes.wraper}>
               <h3 className={classes.subHeader}> Training Partner</h3>
               <Grid container spacing={3} justify="center">
                 {Training}
               </Grid>
             </div>
-            <div className={classes.wraper}>
-              <h3 className={classes.subHeader}> Goodness Partner</h3>
-              <Grid container spacing={3} justify="center">
-                {GoodNess}
-              </Grid>
-            </div>
+
             <div className={classes.wraper}>
               <h3 className={classes.subHeader}> Ecosystem Partner</h3>
               <Grid container spacing={3} justify="center">
                 {Ecosystem}
               </Grid>
             </div>
+
+            <div className={classes.wraper}>
+              <h3 className={classes.subHeader}> Sustainability Partner</h3>
+              <Grid container spacing={3} justify="center">
+                {Sustainability}
+              </Grid>
+            </div>
+
             <div className={classes.wraper}>
               <h3 className={classes.subHeader}> CSR Partner</h3>
               <Grid container spacing={3} justify="center">
@@ -339,10 +446,18 @@ export default function NgoPartner() {
               </Grid>
             </div>
           </div>
-          <h2 className={classes.header2}> Restruant Partners</h2>
+          <h2 className={classes.header}> Restaurant Partners</h2>
+          <hr className={classes.line} />
           <div className={classes.container}>
             <Grid container spacing={3} justify="center">
-              {Restruant}
+              {Restaurant}
+            </Grid>
+          </div>
+          <h2 className={classes.header}> Patronized By</h2>
+          <hr className={classes.line} />
+          <div className={classes.container}>
+            <Grid container spacing={3} justify="center">
+              {Unesco}
             </Grid>
           </div>
         </Fade>
