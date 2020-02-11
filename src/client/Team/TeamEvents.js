@@ -13,6 +13,7 @@ const useStyles = makeStyles(theme => ({
   },
   container: {
     display: "flex",
+    flexWrap: "wrap",
     justifyContent: "space-evenly",
     marginTop: "5vh"
   },
