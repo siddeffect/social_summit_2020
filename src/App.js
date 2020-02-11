@@ -16,7 +16,7 @@ import SpeakerData from "./client/Speakers/SpeakerData";
 import Partners from "./client/Partners/Partners";
 import Speakers from "./client/Speakers/Speakers";
 import ContactUs from "./client/Contact/ContactUs";
-// import Team from "./client/Team/Index";
+// import Team from "./client/Team/Team";
 import Timeline from "./client/Timeline/Timeline";
 import SpeakerDetail from "./client/Speakers/SpeakerDetail";
 
