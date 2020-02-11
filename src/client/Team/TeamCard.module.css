@@ -51,7 +51,7 @@
 .iconList {
   position: absolute;
   right: 25px;
-  top: 60px;
+  top: 75px;
   z-index: 1;
   margin: 0;
   padding: 0;
@@ -67,7 +67,7 @@
 .icon {
   position: relative;
   color: #00a650;
-  font-size: 30px !important;
+  font-size: 35px !important;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -109,4 +109,82 @@
   font-weight: 300;
   z-index: 1;
   font-size: 24px;
+}
+
+@media screen and (min-width: 390px) and (max-width: 768px) {
+  .box {
+    position: relative;
+    padding: 35px 50px 25px 0px;
+    width: 350px;
+  }
+  .image {
+    width: 80%;
+    left: 20px;
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 380px) {
+  .box {
+    position: relative;
+    padding: 35px 25px 20px 0px;
+    width: 325px;
+  }
+
+  .box:hover::after {
+    width: 79%;
+  }
+
+  .image {
+    width: 75%;
+    left: 15px;
+  }
+
+  .iconList {
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .box {
+    position: relative;
+    padding: 35px 15px 20px 0px;
+    width: 280px;
+  }
+
+  .box:hover::after {
+    width: 75%;
+  }
+
+  .image {
+    width: 60%;
+    left: 25px;
+  }
+
+  .iconList {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .icon {
+    font-size: 28px !important;
+  }
+
+  .name {
+    font-weight: 600;
+  }
+
+  .post {
+    font-weight: 250;
+  }
 }
