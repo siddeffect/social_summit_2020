@@ -262,7 +262,7 @@ function ParticipantSignUp(props) {
                       <TextField
                         {...params}
                         variant="outlined"
-                        label="Seconary Events"
+                        label="Secondary Events"
                         fullWidth
                       />
                     )}
