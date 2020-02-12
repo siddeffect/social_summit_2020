@@ -445,6 +445,27 @@ function Timeline() {
                   <div className={classes.col}>
                     <div className={classes.event}>
                       <img
+                        src="/Images/Speakers/ajay_shankar-min.jpg"
+                        alt=""
+                        className={classes.img}
+                      />
+                      <div className={classes.eventContent}>
+                        <span className={classes.time}>
+                          03:00 PM - 04:00 PM
+                        </span>
+                        <p className={classes.title}>Keynote Session</p>
+                        <p className={classes.content}>Venue: MAC Auditorium</p>
+                        <p className={classes.author}>
+                          {" "}
+                          by{" "}
+                          <span className={classes.span}>Mr. Ajay Shankar</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={classes.col}>
+                    <div className={classes.event}>
+                      <img
                         src="/Images/Speakers/shweta-min.jpg"
                         alt=""
                         className={classes.img}
@@ -558,6 +579,45 @@ function Timeline() {
                         <span className={classes.time}>10:00 AM - 12:00PM</span>
                         <p className={classes.title}>Round Table Conference</p>
                         <p className={classes.content}>Venue: TBA</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={classes.col}>
+                    <div className={classes.event}>
+                      <img
+                        src="/Images/SocialConclave/conclave.jpg"
+                        alt=""
+                        className={classes.img}
+                      />
+                      <div className={classes.eventContent}>
+                        <span className={classes.time}>
+                          10:30 AM - 01:30 PM
+                        </span>
+                        <p className={classes.title}>Social Conclave</p>
+                        <p className={classes.content}>Venue: MAC Auditorium</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={classes.col}>
+                    <div className={classes.event}>
+                      <img
+                        src="/Images/Speakers/abhishek_jain-min.jpg"
+                        alt=""
+                        className={classes.img}
+                      />
+                      <div className={classes.eventContent}>
+                        <span className={classes.time}>
+                          02:00 PM - 03:00 PM
+                        </span>
+                        <p className={classes.title}>Keynote Session</p>
+                        <p className={classes.content}>Venue: MAC Auditorium</p>
+                        <p className={classes.author}>
+                          {" "}
+                          by{" "}
+                          <span className={classes.span}>
+                            Mr. Abhishek Jain
+                          </span>
+                        </p>
                       </div>
                     </div>
                   </div>
