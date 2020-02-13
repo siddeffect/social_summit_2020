@@ -2,7 +2,6 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import TeamCard from "./TeamCard";
 import Fade from "react-reveal/Fade";
-
 import Aux from "../../hoc/Aux";
 
 const useStyles = makeStyles(theme => ({
@@ -10,65 +9,53 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     flexFlow: "column",
     textAlign: "center",
-    backgroundColor: "#111"
+    backgroundColor: "#111",
+    paddingTop: "10vh"
   },
   container: {
     display: "flex",
-    justifyContent: "space-evenly"
+    flexWrap: "wrap",
+    justifyContent: "space-evenly",
+    marginTop: "5vh"
+  },
+  wraper: {
+    width: "auto",
+    position: "relative",
+    display: "inline-block"
   },
   header: {
     textAlign: "center",
-    fontSize: "56px",
+    fontSize: "3.75rem",
     color: "#cc8c19",
-    lineHeight: "10px",
+    lineHeight: "60px",
     fontFamily: "Roboto !important",
     boxSizing: "border-box",
-    padding: "5vh 0 5vh 0",
-    "@media (min-width:1260px) and (max-width:1450px)": {
-      fontSize: "46px",
-      padding: "10vh 0 5vh 0"
+
+    // "@media(min-width:1024px)": {
+    //   position: "absolute",
+    //   top: "70vh",
+    //   left: "-5vw",
+    //   marginLeft: "0",
+    //   transformOrigin: "0 1",
+    //   transform: "rotate(270deg)"
+    // },
+
+    "@media (min-width:1260px) and (max-width:1650px)": {
+      fontSize: "3rem"
     },
     "@media (min-width:600px) and (max-width:768px)": {
-      fontSize: "40px",
-      padding: "10vh 0 5vh 0"
+      fontSize: "40px"
     },
     "@media (max-width:500px)": {
-      fontSize: "28px",
-      padding: "10vh 0 5vh 0"
+      fontSize: "28px"
     },
     "@media (max-width:320px)": {
-      fontSize: "24px",
-      padding: "12vh 0 2.5vh 0"
-    }
-  },
-  headerManager: {
-    textAlign: "center",
-    fontSize: "56px",
-    color: "#cc8c19",
-    lineHeight: "10px",
-    fontFamily: "Roboto !important",
-    boxSizing: "border-box",
-    padding: "1.5vh 0 1.5vh 0",
-    "@media (min-width:1260px) and (max-width:1450px)": {
-      fontSize: "46px",
-      padding: "2.5vh 0 2.5vh 0"
-    },
-    "@media (min-width:600px) and (max-width:768px)": {
-      fontSize: "40px",
-      padding: "1vh 0 1vh 0"
-    },
-    "@media (max-width:500px)": {
-      fontSize: "28px",
-      padding: "1vh 0 1vh 0"
-    },
-    "@media (max-width:320px)": {
-      fontSize: "24px",
-      padding: "2vh 0 1.5vh 0"
+      fontSize: "24px"
     }
   }
 }));
 
-function Team() {
+export default function TeamHeads() {
   const classes = useStyles();
 
   const ConvenorsArray = [
@@ -77,7 +64,7 @@ function Team() {
       post: "Convenor",
       src: "./Images/Speakers/abhishek_jain-min.jpg",
       socialHandleLink: {
-        facebook: "",
+        facebook: "https://www.facebook.com/",
         linkedin: "",
         instagram: ""
       }
@@ -93,6 +80,7 @@ function Team() {
       }
     }
   ];
+
   const CoConvenorsArray = [
     {
       name: "Akshay Meena",
@@ -105,7 +93,7 @@ function Team() {
       }
     },
     {
-      name: "Ankit",
+      name: "Ankit Gaeg",
       post: "Co-Convenor",
       src: "./Images//Speakers/sonam_wangchu-min.jpg",
       socialHandleLink: {
@@ -115,7 +103,7 @@ function Team() {
       }
     },
     {
-      name: "Sanskar ",
+      name: "Sanskar Chordiya",
       post: "Co-Convenor",
       src: "./Images/Speakers/abhishek_jain-min.jpg",
       socialHandleLink: {
@@ -291,6 +279,7 @@ function Team() {
       }
     }
   ];
+
   const PromotionsArray2 = [
     {
       name: "Adarsh Dubey",
@@ -357,6 +346,7 @@ function Team() {
       }
     }
   ];
+
   const SponsersArray2 = [
     {
       name: "Arjun Aryan",
@@ -563,69 +553,66 @@ function Team() {
     <Aux>
       <div className={classes.outerContainer}>
         <Fade bottom>
-          <p className={classes.header}> Meet The Team</p>
+          <div className={classes.wraper}>
+            <label className={classes.header}> Team Heads</label>
+          </div>
           <div className={classes.container}>{Convenors}</div>
-          <div className={classes.container}>{CoConvenors}</div>
+          <div className={classes.container}>{CoConvenors}</div> <br /> <br />
           <div className={classes.container}>{TechHead}</div>
         </Fade>
       </div>
-
       <div className={classes.outerContainer}>
         <Fade bottom>
-          <p className={classes.headerManager}> Team Operations </p>
+          <div className={classes.wraper}>
+            <label className={classes.header}> Team Operations </label>
+          </div>
           <div className={classes.container}>{Operations1}</div>
           <div className={classes.container}>{Operations2}</div>
         </Fade>
       </div>
-
       <div className={classes.outerContainer}>
         <Fade bottom>
-          <p className={classes.headerManager}> Team Events </p>
+          <div className={classes.wraper}>
+            <label className={classes.header}> Team Events </label>
+          </div>
           <div className={classes.container}>{Events1}</div>
           <div className={classes.container}>{Events2}</div>
         </Fade>
       </div>
-
       <div className={classes.outerContainer}>
         <Fade bottom>
-          <p className={classes.headerManager}> Team Promotions </p>
+          <div className={classes.wraper}>
+            <label className={classes.header}> Team Promotions </label>
+          </div>
           <div className={classes.container}>{Promotions1}</div>
           <div className={classes.container}>{Promotions2}</div>
         </Fade>
       </div>
-
       <div className={classes.outerContainer}>
         <Fade bottom>
-          <p className={classes.headerManager}> Team Sponsers </p>
+          <div className={classes.wraper}>
+            <label className={classes.header}> Team Sponsers </label>
+          </div>
           <div className={classes.container}>{Sponsers1}</div>
           <div className={classes.container}>{Sponsers2}</div>
         </Fade>
       </div>
-
       <div className={classes.outerContainer}>
         <Fade bottom>
-          <p className={classes.headerManager}> Web Designers </p>
+          <div className={classes.wraper}>
+            <label className={classes.header}> Designers </label>
+          </div>
           <div className={classes.container}>{Designers}</div>
         </Fade>
       </div>
-
       <div className={classes.outerContainer}>
         <Fade bottom>
-          <p className={classes.headerManager}> Web Developer </p>
-          <div className={classes.container}>{Developer}</div>
-        </Fade>
-      </div>
-
-      <div className={classes.outerContainer}>
-        <Fade bottom>
-          <p className={classes.headerManager}> Executive Members </p>
-          <div className={classes.container}>
-            {/* Group Image to be displayed */}
+          <div className={classes.wraper}>
+            <label className={classes.header}> Web Developer </label>
           </div>
+          <div className={classes.container}>{Developer}</div>
         </Fade>
       </div>
     </Aux>
   );
 }
-
-export default Team;
