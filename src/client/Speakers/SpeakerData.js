@@ -79,6 +79,38 @@ const speakerData = [
       wikipedia: null,
       instagram: null
     }
+  },
+  {
+    name: "Ajay Shankar",
+    route: "/speakers/ajayShankar",
+    designation: "Distinguished Fellow, Director's Office",
+    shortDesignation: "The Energy and Resources Institute",
+    description:
+      "Ajay Shankar has had rich and varied experience in public service for over forty years, primarily in the fields of industry, the power sector and urban development. He was a member of the premier Indian Administrative Service which he joined in 1973 and retired as Secretary, Department of Industrial Policy and Promotion in the Government of India in December, 2009. He had also been a Principal Advisor in the Planning Commission looking after Environment and Forests, Water and Sanitation as well as provision of Rural Infrastructure.",
+    photoRoute: "/Images/Speakers/ajay_shankar-min.jpg",
+    socialHandleLink: {
+      linkedin: null,
+      twitter: null,
+      facebook: null,
+      wikipedia: null,
+      instagram: null
+    }
+  },
+  {
+    name: "Pranav Hebbar",
+    route: "/speakers/pranavHebbar",
+    designation: "Co-founder",
+    shortDesignation: "Make Room India",
+    description:
+      "Pranav Hebbar is a social entrepreneur, startup consultant and an adviser to not-for-profit enterprises. Passionate about education and creating an inclusive society, he co-founded Make Room India, an Indo-European social change ecosystem. At Make Room India, Pranav leads global partnerships and focuses on building an ecosystem that nurtures young changemakers to create impact.",
+    photoRoute: "/Images/Speakers/pranav_hebbar-min.jpg",
+    socialHandleLink: {
+      linkedin: null,
+      twitter: null,
+      facebook: null,
+      wikipedia: null,
+      instagram: null
+    }
   }
 ];
 

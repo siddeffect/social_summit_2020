@@ -171,6 +171,12 @@ function App() {
         <Route exact path="/speakers/abhishekJain">
           <SpeakerDetail details={SpeakerData[4]} />
         </Route>
+        <Route exact path="/speakers/ajayShankar">
+          <SpeakerDetail details={SpeakerData[5]} />
+        </Route>
+        <Route exact path="/speakers/pranavHebbar">
+          <SpeakerDetail details={SpeakerData[6]} />
+        </Route>
 
         <Route exact path="/about">
           <ComingSoon />

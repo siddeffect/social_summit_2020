@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { Button, Snackbar } from "@material-ui/core";
 import MuiAlert from "@material-ui/lab/Alert";
 import Fade from "react-reveal/Fade";
+import SocialAttacheLeague from "./SocialAttacheLeague";
 
 function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -130,6 +131,10 @@ const useStyles = makeStyles(theme => ({
   },
   snackbar: {
     zIndex: "+99"
+  },
+  label: {
+    fontSize: "1.4rem",
+    marginBottom: "1rem"
   }
 }));
 
@@ -153,14 +158,14 @@ export default function Hero() {
     <footer className={classes.root}>
       <Snackbar
         className={classes.snackbar}
-        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
         open={open}
-        autoHideDuration={10000}
+        autoHideDuration={20000}
         onClose={handleClose}
       >
         <Alert onClose={handleClose} severity="success">
-          The deadline for abstract submission has been extended until 10th of
-          Feb
+          <label className={classes.label}>Social Attaché League</label>
+          <SocialAttacheLeague />
         </Alert>
       </Snackbar>
       <Fade>
