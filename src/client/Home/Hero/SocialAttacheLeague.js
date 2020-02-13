@@ -11,8 +11,8 @@ function createData(name, college, points) {
 }
 
 const rows = [
-  createData("Arpil Sharma", "NCU", 3350),
-  createData("Karan Gosain", "SRM", 2720),
+  createData("Arpil Sharma", "NCU", 3900),
+  createData("Karan Gosain", "SRM", 3740),
   createData("Akashjyoti", "Graphic Era", 1570)
 ];
 
