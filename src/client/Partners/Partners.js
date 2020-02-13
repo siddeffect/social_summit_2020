@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   image2: {
-    width: "6.5vw",
+    width: "12vw",
     height: "11vh",
     verticalAlign: "middle",
     "@media(max-width:320px)": {
@@ -99,17 +99,20 @@ const useStyles = makeStyles(theme => ({
     "@media(min-width:350px) and (max-width:605px)": {
       fontSize: "30px",
       fontWeight: 400,
-      letterSpacing: 0
+      letterSpacing: 0,
+      lineHeight: "40px"
     },
     "@media(min-width:350px) and (max-width:420px)": {
       fontSize: "32px",
       fontWeight: 400,
-      letterSpacing: 0
+      letterSpacing: 0,
+      lineHeight: "40px"
     },
     "@media (max-width:320px)": {
       fontSize: "24px",
       fontWeight: 375,
-      letterSpacing: 0
+      letterSpacing: 0,
+      lineHeight: "40px"
     }
   },
 
@@ -186,6 +189,81 @@ export default function NgoPartner() {
     {
       src:
         "/Images/Partners/Company/Swayambhu Innovative Solutions PVT. LTD._CSR Partner.png",
+      link: null
+    }
+  ];
+
+  const HostingPartner = [
+    {
+      src: "/Images/Partners/Company/D2C.png",
+      link: null
+    }
+  ];
+
+  const PaymentPartner = [
+    {
+      src: "/Images/Partners/Company/thecollegefever.png",
+      link: null
+    }
+  ];
+
+  const MerchandisePartner = [
+    {
+      src: "/Images/Partners/Company/TheSouledStore.png",
+      link: null
+    }
+  ];
+
+  const EventPartner = [
+    {
+      src: "/Images/Partners/Company/HackerEarth.png",
+      link: null
+    }
+  ];
+
+  const WorkshopPartner = [
+    {
+      src: "/Images/Partners/Company/DIC IITR.png",
+      link: null
+    }
+  ];
+
+  const NewspaperPartner = [
+    {
+      src: "/Images/Partners/Company/Amar Ujala.jpg",
+      link: null
+    }
+  ];
+
+  const CollaborationPartner = [
+    {
+      src: "/Images/Partners/Company/Swatantra Theartre.jpg",
+      link: null
+    }
+  ];
+
+  const MediaPartner = [
+    {
+      src: "/Images/Partners/Company/DU Express.png",
+      link: null
+    },
+    {
+      src: "/Images/Partners/Company/The Education Tree.jpg",
+      link: null
+    },
+    {
+      src: "/Images/Partners/Company/youth incorporated.png",
+      link: null
+    }
+  ];
+
+  const IncubationPartner = [
+    {
+      src: "/Images/Partners/Company/GHV Accelerator.png",
+      link: null
+    },
+    {
+      src: "/Images/Partners/Company/Tides.png",
       link: null
     }
   ];
@@ -352,6 +430,203 @@ export default function NgoPartner() {
     );
   });
 
+  const Hosting = HostingPartner.map(item => {
+    return (
+      <Grid
+        alignItems="center"
+        justify="center"
+        item
+        xs={6}
+        sm={2}
+        key={item}
+        container
+      >
+        <div className={classes.image_bucket}>
+          <Fade bottom>
+            <a href={item.link} target="_blank" rel="noopener noreferrer">
+              <img src={item.src} alt={item.link} className={classes.image2} />
+            </a>
+          </Fade>
+        </div>
+      </Grid>
+    );
+  });
+
+  const Payment = PaymentPartner.map(item => {
+    return (
+      <Grid
+        alignItems="center"
+        justify="center"
+        item
+        xs={6}
+        sm={2}
+        key={item}
+        container
+      >
+        <div className={classes.image_bucket}>
+          <Fade bottom>
+            <a href={item.link} target="_blank" rel="noopener noreferrer">
+              <img src={item.src} alt={item.link} className={classes.image2} />
+            </a>
+          </Fade>
+        </div>
+      </Grid>
+    );
+  });
+
+  const Merchandise = MerchandisePartner.map(item => {
+    return (
+      <Grid
+        alignItems="center"
+        justify="center"
+        item
+        xs={6}
+        sm={2}
+        key={item}
+        container
+      >
+        <div className={classes.image_bucket}>
+          <Fade bottom>
+            <a href={item.link} target="_blank" rel="noopener noreferrer">
+              <img src={item.src} alt={item.link} className={classes.image2} />
+            </a>
+          </Fade>
+        </div>
+      </Grid>
+    );
+  });
+
+  const Event = EventPartner.map(item => {
+    return (
+      <Grid
+        alignItems="center"
+        justify="center"
+        item
+        xs={6}
+        sm={2}
+        key={item}
+        container
+      >
+        <div className={classes.image_bucket}>
+          <Fade bottom>
+            <a href={item.link} target="_blank" rel="noopener noreferrer">
+              <img src={item.src} alt={item.link} className={classes.image} />
+            </a>
+          </Fade>
+        </div>
+      </Grid>
+    );
+  });
+
+  const Workshop = WorkshopPartner.map(item => {
+    return (
+      <Grid
+        alignItems="center"
+        justify="center"
+        item
+        xs={6}
+        sm={2}
+        key={item}
+        container
+      >
+        <div className={classes.image_bucket}>
+          <Fade bottom>
+            <a href={item.link} target="_blank" rel="noopener noreferrer">
+              <img src={item.src} alt={item.link} className={classes.image2} />
+            </a>
+          </Fade>
+        </div>
+      </Grid>
+    );
+  });
+
+  const Newspaper = NewspaperPartner.map(item => {
+    return (
+      <Grid
+        alignItems="center"
+        justify="center"
+        item
+        xs={6}
+        sm={2}
+        key={item}
+        container
+      >
+        <div className={classes.image_bucket}>
+          <Fade bottom>
+            <a href={item.link} target="_blank" rel="noopener noreferrer">
+              <img src={item.src} alt={item.link} className={classes.image2} />
+            </a>
+          </Fade>
+        </div>
+      </Grid>
+    );
+  });
+  const Collaboration = CollaborationPartner.map(item => {
+    return (
+      <Grid
+        alignItems="center"
+        justify="center"
+        item
+        xs={6}
+        sm={2}
+        key={item}
+        container
+      >
+        <div className={classes.image_bucket}>
+          <Fade bottom>
+            <a href={item.link} target="_blank" rel="noopener noreferrer">
+              <img src={item.src} alt={item.link} className={classes.image2} />
+            </a>
+          </Fade>
+        </div>
+      </Grid>
+    );
+  });
+
+  const Media = MediaPartner.map(item => {
+    return (
+      <Grid
+        alignItems="center"
+        justify="center"
+        item
+        xs={6}
+        sm={2}
+        key={item}
+        container
+      >
+        <div className={classes.image_bucket}>
+          <Fade bottom>
+            <a href={item.link} target="_blank" rel="noopener noreferrer">
+              <img src={item.src} alt={item.link} className={classes.image} />
+            </a>
+          </Fade>
+        </div>
+      </Grid>
+    );
+  });
+
+  const Incubation = IncubationPartner.map(item => {
+    return (
+      <Grid
+        alignItems="center"
+        justify="center"
+        item
+        xs={6}
+        sm={2}
+        key={item}
+        container
+      >
+        <div className={classes.image_bucket}>
+          <Fade bottom>
+            <a href={item.link} target="_blank" rel="noopener noreferrer">
+              <img src={item.src} alt={item.link} className={classes.image} />
+            </a>
+          </Fade>
+        </div>
+      </Grid>
+    );
+  });
+
   const Restaurant = RestaurantPartner.map(item => {
     return (
       <Grid
@@ -445,10 +720,72 @@ export default function NgoPartner() {
                 {CSR}
               </Grid>
             </div>
+            <div className={classes.wraper}>
+              <h3 className={classes.subHeader}> Merchandise Partner</h3>
+              <Grid container spacing={3} justify="center">
+                {Merchandise}
+              </Grid>
+            </div>
+            <div className={classes.wraper}>
+              <h3 className={classes.subHeader}> Workshop Partner</h3>
+              <Grid container spacing={3} justify="center">
+                {Workshop}
+              </Grid>
+            </div>
+            <div className={classes.wraper}>
+              <h3 className={classes.subHeader}> Event Partner</h3>
+              <Grid container spacing={3} justify="center">
+                {Event}
+              </Grid>
+            </div>
+            <div className={classes.wraper}>
+              <h3 className={classes.subHeader}> Newspaper Partner</h3>
+              <Grid container spacing={3} justify="center">
+                {Newspaper}
+              </Grid>
+            </div>
+            <div className={classes.wraper}>
+              <h3 className={classes.subHeader}> Collaboration Partner</h3>
+              <Grid container spacing={3} justify="center">
+                {Collaboration}
+              </Grid>
+            </div>
+            <div className={classes.wraper}>
+              <h3 className={classes.subHeader}>
+                {" "}
+                Offficial Online Hosting Partner
+              </h3>
+              <Grid container spacing={3} justify="center">
+                {Hosting}
+              </Grid>
+            </div>
+            <div className={classes.wraper}>
+              <h3 className={classes.subHeader}>
+                {" "}
+                Offficial Online Payment Partner
+              </h3>
+              <Grid container spacing={3} justify="center">
+                {Payment}
+              </Grid>
+            </div>
+          </div>
+          <h2 className={classes.header}> Online Media Partners</h2>
+          <hr className={classes.line} />
+          <div className={classes.wraper}>
+            <Grid container spacing={3} justify="center">
+              {Media}
+            </Grid>
+          </div>
+          <h2 className={classes.header}> Incubation Partners</h2>
+          <hr className={classes.line} />
+          <div className={classes.wraper}>
+            <Grid container spacing={3} justify="center">
+              {Incubation}
+            </Grid>
           </div>
           <h2 className={classes.header}> Restaurant Partners</h2>
           <hr className={classes.line} />
-          <div className={classes.container}>
+          <div className={classes.wraper}>
             <Grid container spacing={3} justify="center">
               {Restaurant}
             </Grid>
