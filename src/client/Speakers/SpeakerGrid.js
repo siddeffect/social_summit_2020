@@ -11,15 +11,6 @@ const useStyles = makeStyles(theme => ({
     margin: "15vh auto",
     textAlign: "center"
   },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary
-  },
-  image: {
-    width: "auto",
-    backgroundSize: "cover"
-  },
   line: {
     position: "relative",
     background: "#46A651",

@@ -1,5 +1,8 @@
 .card {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .box {
@@ -85,6 +88,7 @@
   z-index: 1;
   position: relative;
   width: 85%;
+  border-radius: 8px;
 }
 
 .content {
@@ -95,7 +99,7 @@
 
 .name {
   position: relative;
-  color: #e20351;
+  color: #45a650;
   font-size: 20px;
   font-weight: 750;
   z-index: 1;

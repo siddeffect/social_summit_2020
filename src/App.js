@@ -16,7 +16,7 @@ import SpeakerData from "./client/Speakers/SpeakerData";
 import Partners from "./client/Partners/Partners";
 import Speakers from "./client/Speakers/Speakers";
 import ContactUs from "./client/Contact/ContactUs";
-// import Team from "./client/Team/Index";
+import Team from "./client/Team/Index";
 import Timeline from "./client/Timeline/Timeline";
 import SpeakerDetail from "./client/Speakers/SpeakerDetail";
 
@@ -91,9 +91,9 @@ function App() {
         <Route exact path="/partners">
           <Partners />
         </Route>
-        {/* <Route exact path="/team">
+        <Route exact path="/team">
           <Team />
-        </Route> */}
+        </Route>
 
         <Route exact path="/speakers">
           <Speakers />
