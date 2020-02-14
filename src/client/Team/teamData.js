@@ -262,7 +262,7 @@ const team = [
     ]
   },
   {
-    header: "team Sponsors",
+    header: "team Relations",
     array: [
       {
         name: "Jaskaran Sethi",
