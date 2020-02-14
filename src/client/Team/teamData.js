@@ -53,7 +53,7 @@ const team = [
         src: "./Images/team/Sanskar.jpg",
         socialHandleLink: {
           facebook: null,
-          linkedin: null,
+          linkedin: "www.linkedin.com/in/sanskar-chordiya-455692148",
           instagram: null
         }
       }
@@ -67,9 +67,9 @@ const team = [
         post: "Technical Head",
         src: "./Images/team/Siddharth.jpg",
         socialHandleLink: {
-          facebook: null,
-          linkedin: null,
-          instagram: null
+          facebook: "https://www.facebook.com/siddharth.98varshney",
+          linkedin: "https://www.linkedin.com/in/siddharth-varshney-ab4b70151/",
+          instagram: "https://www.instagram.com/sid_bit/"
         }
       }
     ]
